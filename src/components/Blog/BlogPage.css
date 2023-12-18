@@ -1,0 +1,1353 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ----------------- */
+/* Blog CSS */
+/* ----------------- */
+/* - Blog First - */
+#Blog_First {
+  border: 0px solid transparent;
+  padding: 2em 1em;
+}
+#sub_Blog_First {
+  border: 0.1px solid transparent;
+  padding: 1em 1em;
+}
+#Blog_First_Box {
+  border: 0.1px solid transparent;
+  padding: 1em 0.5em;
+  width: 90%;
+  margin: 0em auto;
+  display: flex;
+  flex-direction: row;
+}
+#blog_first_0 {
+  border: 0.1px solid transparent;
+  padding: 0.1em 0.1em;
+  width: 87%;
+  margin: 0em 1.3em;
+}
+#blog_first_0 h3 {
+  border: 0.1px solid transparent;
+  font-size: 2em;
+  margin: 0.9em 0em 0.9em 0em;
+  font-weight: bold;
+}
+#blog_first_0 p {
+  border: 0.1px solid transparent;
+  font-size: 1.13em;
+}
+#blog_first_1 {
+  border: 0.1px solid transparent;
+  padding: 0.1em 0.1em;
+  width: 87%;
+  margin: 0em 1.3em;
+}
+#blog_first_1 {
+  border: 0.1px solid transparent;
+  padding: 0.1em 0.1em;
+  width: 87%;
+  margin: 0em 1.3em;
+}
+#sub_blog_first_1 {
+  border: 0.1px solid transparent;
+  padding: 11em 0.5em;
+  background: url("../Pics/aus.jpg") no-repeat center center/cover;
+  border-radius: 15px;
+}
+#sub_blog_first_1:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+#blog_first_2 {
+  border: 0.1px solid transparent;
+  padding: 0.1em 0.1em;
+  width: 87%;
+  margin: 0em 1.3em;
+}
+#sub_blog_first_2 {
+  border: 0.1px solid transparent;
+  padding: 11em 0.5em;
+  background: url("../Pics/visaBlog.jpg") no-repeat center center/cover;
+  border-radius: 15px;
+}
+#sub_blog_first_2:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* - Blog Second - */
+#Blog_Second {
+  border: 0px solid transparent;
+  padding: 2.5em 1em;
+}
+#sub_Blog_Second {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#sub_Blog_Second h1 {
+  border: 0px solid transparent;
+  /* border: 0.1px solid black; */
+  padding: 0.5em 0.1em;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  color: black;
+}
+#sub_Blog_Second h1:hover {
+  text-shadow: 1px 1.5px brown;
+}
+#Blog_Second_1 {
+  border: 0px solid transparent;
+  width: 85%;
+  margin: 0em auto;
+  padding: 1em 0.5em 0em 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#Blog_Second_1 p:first-child {
+  /* border: 0.1px solid black; */
+  padding: 0.4em 1.5em;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #ff512f, #f09819);
+  transition: 0.5s;
+  /* color: white; */
+}
+#Blog_Second_1 p {
+  /* border: 0.1px solid black; */
+  padding: 0.4em 1.5em;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #03cdfa, #018bb9);
+  transition: 0.5s;
+  /* color: white; */
+}
+#Blog_Second_1 p:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #f05f43, #ff9500);
+}
+/* Blog Third */
+#Blog_Third {
+  border: 0px solid transparent;
+  padding: 2.5em 2em;
+}
+#sub_Blog_Third {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#s_B_T_head {
+  border: 0px solid transparent;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#sBT_head_1 {
+  border: 1px solid black;
+  padding: 0.1em;
+  background-color: black;
+  width: 25%;
+}
+#sBT_head_2 {
+  /* border: 1px solid black; */
+  padding: 0.1em;
+  width: 85%;
+}
+#sBT_head_2 h1 {
+  /* border: 0.1px solid black; */
+  padding: 0.1em;
+  font-size: 3em;
+  font-weight: bold;
+  color: #001400;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  -webkit-text-stroke: 1.5px #001400;
+  text-transform: uppercase;
+  text-shadow: 2px 2px brown;
+}
+#blogGrid {
+  padding: 1.5em 0em 0em 0em;
+  border: 0px solid transparent;
+  margin: 0em auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+}
+#blogBox {
+  /* border: 0.1px solid black; */
+  width: 75%;
+  margin: 1.2em auto;
+  /* padding: 0.2em; */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-decoration: none;
+}
+#blogBox:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#Blog_Third_Box {
+  /* border: 0.1px solid black; */
+  width: 100%;
+  border-radius: 20px;
+}
+#BT_imgParent {
+  border: 0px solid transparent;
+  background-color: #c7ecee;
+  border-radius: 20px 20px 0px 0px;
+  padding: 2.5em;
+}
+#BT_imgParent img {
+  border: 0px solid transparent;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 13vh;
+}
+#BT_First_P {
+  /* border: 0.1px solid black; */
+  margin: 1.5em 0em;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.05em;
+  color: black;
+}
+#BT_Last_P {
+  /* border: 0.1px solid black; */
+  padding: 0.3em 0.5em;
+  text-transform: capitalize;
+  text-align: center;
+  color: black;
+}
+/* ----- BlogUniDatisl.js ----- */
+#ApiData {
+  border: 0px solid transparent;
+  padding: 5em 4em;
+}
+#ApiData_ImgParent {
+  border: 0px solid transparent;
+  padding: 3em 1em;
+}
+#sub_ApiData_ImgParent {
+  border: 0px solid transparent;
+  padding: 1em 0.3em;
+  width: 18%;
+  margin: 0em auto;
+}
+#sub_ApiData_ImgParent img {
+  border: 0px solid transparent;
+  width: 100%;
+}
+#ApiData h1 {
+  border: 0px solid transparent;
+  font-size: 3em;
+  padding: 0.4em 0.3em;
+  margin: 0.1em 0em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-text-stroke: 1px black;
+  color: #001400;
+}
+#ApiData h3 {
+  border: 0px solid transparent;
+  font-size: 1.6em;
+  padding: 0.4em 0.8em;
+  margin: 0.3em 0em 0.1em 0em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-text-stroke: 1px black;
+  color: #001400;
+}
+#ApiData p {
+  border: 0px solid transparent;
+  font-size: 1.2em;
+  padding: 0.3em 1em;
+  margin: 0.1em 0em;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  color: #001400;
+}
+/* ------- */
+/* 2 - BloagPage2_H.js */
+#Blog_Third2 {
+  border: 0px solid transparent;
+  padding: 2.5em 2em;
+}
+#sub_Blog_Third2 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#s_B_T_head2 {
+  border: 0px solid transparent;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#sBT_head2_1 {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  background-color: black;
+  width: 15%;
+}
+#sBT_head2_2 {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  width: 56%;
+}
+#sBT_head2_2 h1 {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  font-size: 3.2em;
+  font-weight: bold;
+  color: #001400;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  -webkit-text-stroke: 1.5px #001400;
+  text-transform: uppercase;
+  text-shadow: 2px 2px brown;
+}
+#Blog_Third2_2 {
+  border: 0px solid transparent;
+  padding: 2em 2.5em;
+}
+#sub_Blog_Third2_2 {
+  border: 0px solid transparent;
+  padding: 1em 2em;
+}
+#Blog_Third2_2 h4 {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #001400;
+}
+#Blog_Third2_2 p {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  font-size: 1.2em;
+  color: #001400;
+}
+#Blog_Third2_2 h2 {
+  border: 0px solid transparent;
+  padding: 0.1em;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #001400;
+}
+/* Start */
+
+/* ------------------------------ */
+/*   Media Quesries In CSS */
+/* ------------------------------ */
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 1em;
+  }
+  #sub_Blog_First {
+    padding: 1em 1em;
+  }
+  #Blog_First_Box {
+    padding: 1em 0.5em;
+    width: 90%;
+    margin: 0em auto;
+    display: flex;
+    flex-direction: row;
+  }
+  #blog_first_0 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.7em;
+    margin: 1.4em 0em 0.9em 0em;
+  }
+  #blog_first_0 p {
+    font-size: 1.15em;
+  }
+  #blog_first_1 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+  }
+  #blog_first_2 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_2 {
+    padding: 11em 0.5em;
+  }
+  /* 2 - Blog Second */
+  #sub_Blog_Second h1 {
+    padding: 0.1em;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  #Blog_Second_1 {
+    width: 90%;
+    margin: 0em auto;
+    padding: 1em 0.5em 0em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #Blog_Second_1 p:first-child {
+    padding: 0.4em 1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  #Blog_Second_1 p {
+    padding: 0.4em 1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  /* 3 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 5em 4em;
+  }
+  #ApiData_ImgParent {
+    padding: 3em 1em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 0.3em;
+    width: 18%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    font-size: 2.5em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData h3 {
+    font-size: 1.6em;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    font-size: 1.1em;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 4 - No Css For BlogPage2_H.js */
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 1em;
+  }
+  #sub_Blog_First {
+    padding: 1em 1em;
+  }
+  #Blog_First_Box {
+    padding: 1em 0.5em;
+    width: 90%;
+    margin: 0em auto;
+    display: flex;
+    flex-direction: row;
+  }
+  #blog_first_0 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.4em;
+    margin: 1.4em 0em 0.9em 0em;
+  }
+  #blog_first_0 p {
+    font-size: 1.071em;
+  }
+  #blog_first_1 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+  }
+  #blog_first_2 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_2 {
+    padding: 11em 0.5em;
+  }
+  /* 2 - Blog Second */
+  #Blog_Second {
+    padding: 1em 0.5em;
+  }
+  #sub_Blog_Second {
+    padding: 1em 0.5em;
+  }
+  #sub_Blog_Second h1 {
+    padding: 0.1em;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  #Blog_Second_1 {
+    width: 99%;
+    margin: 0em auto;
+    padding: 1em 0.5em 0em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #Blog_Second_1 p:first-child {
+    padding: 0.4em 0.6em;
+    font-size: 0.67em;
+    letter-spacing: 1px;
+  }
+  #Blog_Second_1 p {
+    padding: 0.4em 0.6em;
+    font-size: 0.67em;
+    letter-spacing: 1px;
+  }
+  /* 3 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 3em 2em;
+  }
+  #ApiData_ImgParent {
+    padding: 3em 1em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 0.3em;
+    width: 18%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    font-size: 2.5em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData h3 {
+    font-size: 1.6em;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    font-size: 1.1em;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 2 - BloagPage2_H.js */
+  #Blog_Third2 {
+    padding: 2.5em 2em;
+  }
+  #sub_Blog_Third2 {
+    padding: 1em 1em;
+  }
+  #s_B_T_head2 {
+    padding: 2em 1em;
+  }
+  #sBT_head2_1 {
+    padding: 0.08em;
+    width: 15%;
+  }
+  #sBT_head2_2 {
+    padding: 0.1em;
+    width: 63%;
+  }
+  #sBT_head2_2 h1 {
+    padding: 0.1em;
+    font-size: 2.9em;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third2_2 {
+    padding: 1em 1.5em;
+  }
+  #sub_Blog_Third2_2 {
+    padding: 1em 2em;
+  }
+  #Blog_Third2_2 h4 {
+    padding: 0.1em;
+    font-size: 1.2em;
+  }
+  #Blog_Third2_2 p {
+    padding: 0.1em;
+    font-size: 1.1em;
+  }
+  #Blog_Third2_2 h2 {
+    padding: 0.1em;
+    font-size: 2em;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 0.2em;
+  }
+  #sub_Blog_First {
+    padding: 1em 0.2em;
+  }
+  #Blog_First_Box {
+    padding: 1em 0.2em;
+    width: 92%;
+    margin: 0em auto;
+    display: flex;
+    flex-direction: row;
+  }
+  #blog_first_0 {
+    padding: 0.1em 0.1em;
+    width: 90%;
+    margin: 0em 0.6em;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.28em;
+    margin: 1.3em 0em 0.9em 0em;
+  }
+  #blog_first_0 p {
+    font-size: 1.05em;
+  }
+  #blog_first_1 {
+    padding: 0.1em 0.1em;
+    width: 90%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+  }
+  #blog_first_2 {
+    padding: 0.1em 0.1em;
+    width: 87%;
+    margin: 0em 1.3em;
+  }
+  #sub_blog_first_2 {
+    padding: 11em 0.5em;
+  }
+  /* 2 - Blog Second */
+  /* No CSS Blog Second , Move To Direct 800px */
+  /* 3 - Blog Third */
+  #s_B_T_head {
+    padding: 2em 1em;
+  }
+  #sBT_head_1 {
+    padding: 0.1em;
+    width: 30%;
+  }
+  #sBT_head_2 {
+    padding: 0.1em;
+    width: 70%;
+  }
+  #sBT_head_2 h1 {
+    padding: 0.1em;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third {
+    padding: 4em 2em;
+  }
+  #sub_Blog_Third {
+    padding: 1em 1em;
+  }
+  #blogGrid {
+    margin: 0em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 97%;
+  }
+  #blogBox {
+    width: 75%;
+    margin: 1em auto;
+  }
+  #Blog_Third_Box {
+    width: 100%;
+    border-radius: 20px;
+  }
+  #BT_imgParent {
+    border-radius: 20px 20px 0px 0px;
+    padding: 2em;
+  }
+  #BT_imgParent img {
+    width: 100%;
+    height: 13vh;
+  }
+  #BT_First_P {
+    margin: 1em 0em;
+    font-size: 1em;
+  }
+  #BT_Last_P {
+    padding: 0.3em 0.5em;
+    font-size: 0.9em;
+  }
+  /* 4 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 3em 2em;
+  }
+  #ApiData_ImgParent {
+    padding: 3em 1em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 0.3em;
+    width: 20%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    font-size: 2em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData h3 {
+    font-size: 1.5em;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    font-size: 1em;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 2 - BloagPage2_H.js */
+  #Blog_Third2 {
+    padding: 2.5em 2em;
+  }
+  #sub_Blog_Third2 {
+    padding: 1em 1em;
+  }
+  #s_B_T_head2 {
+    padding: 2em 1em;
+  }
+  #sBT_head2_1 {
+    padding: 0.08em;
+    width: 15%;
+  }
+  #sBT_head2_2 {
+    padding: 0.1em;
+    width: 75%;
+  }
+  #sBT_head2_2 h1 {
+    padding: 0.1em;
+    font-size: 2.6em;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third2_2 {
+    padding: 1em 1em;
+  }
+  #sub_Blog_Third2_2 {
+    padding: 1em 2em;
+  }
+  #Blog_Third2_2 h4 {
+    padding: 0.1em;
+    font-size: 1.1em;
+  }
+  #Blog_Third2_2 p {
+    padding: 0.1em;
+    font-size: 1em;
+  }
+  #Blog_Third2_2 h2 {
+    padding: 0.1em;
+    font-size: 1.7em;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 0.2em;
+  }
+  #sub_Blog_First {
+    padding: 1em 0.2em;
+  }
+  #Blog_First_Box {
+    padding: 1em 0.2em;
+    width: 95%;
+    margin: 0em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #blog_first_0 {
+    padding: 0em 0.1em 1em 0.1em;
+    width: 100%;
+    margin: 0em auto;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.9em;
+    margin: 1.3em 0em 0.9em 0em;
+    padding: 0em 1em;
+    text-align: center;
+  }
+  #blog_first_0 p {
+    font-size: 1.05em;
+    padding: 0em 2em;
+    text-align: center;
+  }
+  #blog_first_1 {
+    padding: 0.1em 0.1em;
+    width: 43%;
+    margin: 0em 0em 0em 0em;
+    display: inline-block;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+    height: 5vh;
+  }
+  #blog_first_2 {
+    padding: 0.1em 0.1em;
+    width: 43%;
+    margin: 0em 0em 0em 1.4em;
+    display: inline-block;
+  }
+  #sub_blog_first_2 {
+    padding: 11em 0.5em;
+  }
+  /* 2 - Blog Second */
+  #Blog_Second {
+    padding: 0.5em 0.5em;
+  }
+  #sub_Blog_Second {
+    padding: 0.5em 0.5em;
+  }
+  #sub_Blog_Second h1 {
+    padding: 0.1em;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+  }
+  #Blog_Second_1 {
+    width: 100%;
+    margin: 0em auto;
+    padding: 0.5em 0.5em 0em 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Blog_Second_1 p:first-child {
+    padding: 0.4em 0.8em;
+    margin: 0.8em 1em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  #Blog_Second_1 p {
+    margin: 0.8em 1em;
+    padding: 0.4em 0.8em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  /* 3 - Blog Third */
+  #s_B_T_head {
+    padding: 2em 1em;
+  }
+  #sBT_head_1 {
+    padding: 0.1em;
+    width: 30%;
+  }
+  #sBT_head_2 {
+    padding: 0.1em;
+    width: 70%;
+  }
+  #sBT_head_2 h1 {
+    padding: 0.1em;
+    font-size: 2.1em;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third {
+    padding: 4em 0.5em;
+  }
+  #sub_Blog_Third {
+    padding: 1em 0.5em;
+  }
+  #blogGrid {
+    margin: 0em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  #blogBox {
+    width: 75%;
+    margin: 1em auto;
+  }
+  #Blog_Third_Box {
+    width: 100%;
+    border-radius: 20px;
+  }
+  #BT_imgParent {
+    border-radius: 20px 20px 0px 0px;
+    padding: 2em;
+  }
+  #BT_imgParent img {
+    width: 100%;
+    height: 13vh;
+  }
+  #BT_First_P {
+    margin: 1em 0em;
+    font-size: 0.9em;
+  }
+  #BT_Last_P {
+    padding: 0.3em 0.5em;
+    font-size: 0.85em;
+  }
+  /* 4 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 2em 1em;
+  }
+  #ApiData_ImgParent {
+    padding: 3em 1em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 0.3em;
+    width: 20%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    font-size: 1.5em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData h3 {
+    font-size: 1.1em;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    font-size: 0.95em;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 4 - BlogPage2_H.js */
+  #Blog_Third2_2 {
+    padding: 0.5em 1em;
+  }
+  #sub_Blog_Third2_2 {
+    padding: 0.5em 1em;
+  }
+  #Blog_Third2_2 h4 {
+    padding: 0.1em;
+    font-size: 1em;
+  }
+  #Blog_Third2_2 p {
+    padding: 0.1em;
+    font-size: 0.95em;
+  }
+  #Blog_Third2_2 h2 {
+    padding: 0.1em;
+    font-size: 1.7em;
+  }
+  /* - */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 0.2em;
+  }
+  #sub_Blog_First {
+    padding: 1em 0.2em;
+  }
+  #Blog_First_Box {
+    padding: 1em 0.2em;
+    width: 95%;
+    margin: 0em auto;
+  }
+  #blog_first_0 {
+    padding: 0em 0.1em 1em 0.1em;
+    width: 100%;
+    margin: 0em auto;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.6em;
+    margin: 1.3em 0em 0.9em 0em;
+    padding: 0em 1em;
+    text-align: center;
+  }
+  #blog_first_0 p {
+    font-size: 1.03em;
+    padding: 0em 2em;
+    text-align: center;
+  }
+  #blog_first_1 {
+    padding: 0.5em 0.1em 0.1em 0.1em;
+    width: 70%;
+    margin: 0em 0em 0em 0em;
+    display: inline-block;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+    height: 5vh;
+  }
+  #blog_first_2 {
+    display: none;
+  }
+  /* 2 - Blog Second */
+  #sub_Blog_Second h1 {
+    padding: 0.1em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
+  /* 3 - Blog Third */
+  #s_B_T_head {
+    padding: 0em 1em;
+  }
+  #sBT_head_1 {
+    padding: 0.01em;
+    width: 10%;
+  }
+  #sBT_head_2 {
+    padding: 0.1em;
+    width: 90%;
+  }
+  #sBT_head_2 h1 {
+    padding: 0.1em;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px brown;
+  }
+  #Blog_Third {
+    padding: 4em 0.1em;
+  }
+  #sub_Blog_Third {
+    padding: 1em 0.1em;
+  }
+  #blogGrid {
+    margin: 0em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  #blogBox {
+    width: 75%;
+    margin: 1em auto;
+  }
+  #Blog_Third_Box {
+    width: 100%;
+    border-radius: 20px;
+  }
+  #BT_imgParent {
+    border-radius: 20px 20px 0px 0px;
+    padding: 1.5em;
+  }
+  #BT_imgParent img {
+    width: 100%;
+    height: 13vh;
+  }
+  #BT_First_P {
+    margin: 1em 0em;
+    font-size: 0.9em;
+  }
+  #BT_Last_P {
+    padding: 0.3em 0.5em;
+    font-size: 0.85em;
+  }
+  /* 4 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 2em 0.2em;
+  }
+  #ApiData_ImgParent {
+    padding: 1em 0.2em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 1em 0.3em;
+    width: 25%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 1.5px;
+  }
+  #ApiData h3 {
+    font-size: 1em;
+    text-align: center;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 5 - BloagPage2_H.js */
+  #Blog_Third2 {
+    padding: 1.5em 0.2em;
+  }
+  #sub_Blog_Third2 {
+    padding: 1em 0.2em;
+  }
+  #s_B_T_head2 {
+    padding: 2em 0.5em;
+  }
+  #sBT_head2_1 {
+    padding: 0.08em;
+    width: 15%;
+  }
+  #sBT_head2_2 {
+    padding: 0.1em;
+    width: 85%;
+  }
+  #sBT_head2_2 h1 {
+    padding: 0.1em;
+    font-size: 2em;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third2_2 {
+    padding: 0.5em 0.5em;
+  }
+  #sub_Blog_Third2_2 {
+    padding: 0.5em 0.7em;
+  }
+  #Blog_Third2_2 h4 {
+    padding: 0.1em;
+    font-size: 0.9em;
+  }
+  #Blog_Third2_2 p {
+    padding: 0.1em;
+    font-size: 0.9em;
+  }
+  #Blog_Third2_2 h2 {
+    padding: 0em;
+    font-size: 1.3em;
+  }
+  #sub_Blog_Third2_2 a{
+    font-size: 0.9em;
+  }
+  /* - */
+}
+/* 6 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - Blog First */
+  #Blog_First {
+    padding: 2em 0em;
+  }
+  #sub_Blog_First {
+    padding: 0.5em 0em;
+  }
+  #Blog_First_Box {
+    padding: 0.5em 0em;
+    width: 95%;
+    margin: 0em auto;
+  }
+  #blog_first_0 {
+    padding: 0em 0em;
+    width: 100%;
+    margin: 0em auto;
+  }
+  #blog_first_0 h3 {
+    font-size: 1.4em;
+    margin: 1.3em 0em 0.9em 0em;
+    padding: 0em 0.7em;
+    text-align: center;
+  }
+  #blog_first_0 p {
+    font-size: 1em;
+    padding: 0em 1em;
+    text-align: center;
+  }
+  #blog_first_1 {
+    padding: 0.5em 0.1em 0.1em 0.1em;
+    width: 80%;
+    margin: 0em 0em 0em 0em;
+    display: inline-block;
+  }
+  #sub_blog_first_1 {
+    padding: 11em 0.5em;
+    height: 5vh;
+  }
+  /* 2 - Blog Second */
+  #Blog_Second {
+    padding: 1em 0em;
+  }
+  #sub_Blog_Second {
+    padding: 1em 0em;
+  }
+  #sub_Blog_Second h1 {
+    padding: 0.1em;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+  }
+  /* 3 - Blog Third */
+  #s_B_T_head {
+    padding: 2em 1em;
+  }
+  #sBT_head_1 {
+    padding: 0.01em;
+    width: 5%;
+  }
+  #sBT_head_2 {
+    padding: 0.1em;
+    width: 95%;
+  }
+  #sBT_head_2 h1 {
+    padding: 0.1em;
+    font-size: 1em;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px brown;
+  }
+  #Blog_Third {
+    padding: 4em 0.1em;
+  }
+  #sub_Blog_Third {
+    padding: 1em 0.1em;
+  }
+  #blogGrid {
+    margin: 0em auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  #blogBox {
+    width: 75%;
+    margin: 1em auto;
+  }
+  #Blog_Third_Box {
+    width: 100%;
+    border-radius: 20px;
+  }
+  #BT_imgParent {
+    border-radius: 20px 20px 0px 0px;
+    padding: 2em;
+  }
+  #BT_imgParent img {
+    width: 100%;
+    height: 13vh;
+  }
+  #BT_First_P {
+    margin: 1em 0em;
+    font-size: 0.9em;
+  }
+  #BT_Last_P {
+    padding: 0.3em 0.5em;
+    font-size: 0.85em;
+  }
+  /* 4 - BlogUniDatisl.js */
+  #ApiData {
+    padding: 2em 0.2em;
+  }
+  #ApiData_ImgParent {
+    padding: 0.5em 0.2em;
+  }
+  #sub_ApiData_ImgParent {
+    padding: 0.3em;
+    width: 35%;
+    margin: 0em auto;
+  }
+  #ApiData h1 {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0.4em 0.3em;
+    margin: 0.1em 0em;
+    letter-spacing: 1.5px;
+  }
+  #ApiData h3 {
+    text-align: center;
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+    margin: 0.3em 0em 0.1em 0em;
+    letter-spacing: 2px;
+  }
+  #ApiData p {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0.3em 1em;
+    margin: 0.1em 0em;
+    letter-spacing: 0.5px;
+  }
+  /* 5 - BloagPage2_H.js */
+  #Blog_Third2 {
+    padding: 1.5em 0.2em;
+  }
+  #sub_Blog_Third2 {
+    padding: 1em 0.2em;
+  }
+  #s_B_T_head2 {
+    padding: 2em 0.5em;
+  }
+  #sBT_head2_1 {
+    padding: 0.02em;
+    width: 10%;
+  }
+  #sBT_head2_2 {
+    padding: 0.1em;
+    width: 90%;
+  }
+  #sBT_head2_2 h1 {
+    padding: 0.1em;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px brown;
+  }
+  #Blog_Third2_2 {
+    padding: 0.5em 0.3em;
+  }
+  #sub_Blog_Third2_2 {
+    padding: 0.5em 0.3em;
+  }
+  #Blog_Third2_2 h4 {
+    padding: 0.1em;
+    font-size: 0.7em;
+  }
+  #Blog_Third2_2 p {
+    padding: 0.1em;
+    font-size: 0.7em;
+  }
+  #Blog_Third2_2 h2 {
+    padding: 0em;
+    font-size: 1em;
+  }
+  #sub_Blog_Third2_2 a{
+    font-size: 0.67em;
+  }
+  /* - */
+}

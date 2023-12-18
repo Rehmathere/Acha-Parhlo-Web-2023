@@ -1,0 +1,118 @@
+*, *::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ---  PAbout.css  --- */
+#PAbout_container{
+    border: 0.1px solid black;
+}
+/* 1 - PAbout First */
+#PAbout_First{
+    border: 0.1px solid black;
+    padding: 1em 0.6em;
+    display: flex;
+    flex-direction: row;
+}
+#PAbout_First_1{
+    border: 0.1px solid black;
+    padding: 1em 0.6em;
+    width: 75%;
+}
+#PAbout_First_1_Box{
+    border: 0.1px solid black;
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: row;
+    background-color: #001400;
+    border-radius: 20px;
+}
+#PAbout_First_1_Box_1{
+    border: 0.1px solid white;
+    padding: 1em 0.5em;
+    width: 70%;
+}
+#PAbout_First_1_Box_1_P1{
+    border: 0.1px solid white;
+    padding: 0.5em 1em;
+    color: white;
+    width: 90%;
+    margin: 0.6em auto;   
+    letter-spacing: 0.5px;
+    font-size: 0.95em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#PAbout_First_1_Box_1 h3{
+    border: 0.1px solid white;
+    padding: 0.2em 0.65em;
+    color: white;
+    width: 90%;
+    margin: 1.5em auto 0.2em auto;   
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#PAbout_First_1_Box_1_P2{
+    border: 0.1px solid white;
+    padding: 0.5em 1em;
+    color: white;
+    width: 90%;
+    margin: 0em auto;   
+    font-size: 0.95em;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+#PAbout_First_1_Box_2{
+    border: 0.1px solid white;
+    padding: 0.5em 0.5em;
+    width: 30%;
+}
+#PAbout_First_1_Box_2_ImgParent{
+    border: 0.1px solid white;
+    padding: 0.1em;   
+}
+#sub_PAbout_First_1_Box_2_ImgParent{
+    border: 0.1px solid white;
+    padding: 0.1em;
+}
+#sub_PAbout_First_1_Box_2_ImgParent img{
+    border: 0.1px solid white;
+    width: 100%;
+}
+/* Start */
+#PAbout_First_2{
+    border: 0.1px solid black;
+    padding: 1em 1em;
+    width: 25%;
+}
+#PAbout_First_2_Box{
+    border: 0.1px solid black;
+    padding: 1em 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

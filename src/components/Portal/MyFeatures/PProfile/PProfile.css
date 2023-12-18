@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+/* 1 - PProfile.js */
+#Header {
+  border: 0px solid transparent;
+  /* border: 1px solid #e3e8f5; */
+  padding: 0.3em 1em;
+  background: #dff9fb;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+#sub_Header {
+  border: 0px solid transparent;
+  padding: 0.2em 0.2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#Head_1 {
+  border: 0px solid transparent;
+  padding: 0.1em 1em;
+  width: 94%;
+  margin: 0em 1em;
+}
+#Head_1 p {
+  border: 0px solid transparent;
+  padding: 0.1em 0.1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1.3px;
+  font-weight: bold;
+  margin: auto;
+  color: #001400;
+  text-align: center;
+}
+#Head_2 {
+  border: 0px solid transparent;
+  width: 6%;
+  padding: 0.1em 0.1em;
+}
+#sub_Head_2 {
+  border: 0px solid transparent;
+  width: 75%;
+  background-color: #001400;
+  border-radius: 5px;
+  padding: 0.3em 0.5em;
+  display: block;
+  margin: 0em auto;
+}
+#sub_Head_2:hover {
+  background-color: #032903;
+}
+#sub_Head_2 img {
+  border: 0px solid transparent;
+  width: 71%;
+}
+
+/* -------------------------------- */
+/* Media Queries In CSS */
+/* -------------------------------- */
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.3em 1em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 1em;
+    width: 94%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.05em 0.1em;
+    font-size: 1.5em;
+    letter-spacing: 1.3px;
+  }
+  #Head_2 {
+    width: 6%;
+    padding: 0.05em 0.1em;
+  }
+  #sub_Head_2 {
+    width: 75%;
+    padding: 0.3em 0.5em;
+  }
+  #sub_Head_2 img {
+    width: 80%;
+  }
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.3em 1em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 1em;
+    width: 94%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.05em 0.1em;
+    font-size: 1.4em;
+    letter-spacing: 1.3px;
+  }
+  #Head_2 {
+    width: 6%;
+    padding: 0.05em 0.1em;
+  }
+  #sub_Head_2 {
+    width: 75%;
+    padding: 0.3em 0.5em;
+  }
+  #sub_Head_2 img {
+    width: 84%;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.3em 1em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 1em;
+    width: 94%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.15em 0.1em;
+    font-size: 1.3em;
+    letter-spacing: 1.1px;
+  }
+  #Head_2 {
+    width: 6%;
+    padding: 0.05em 0.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 {
+    width: 75%;
+    padding: 0.2em 0.4em;
+  }
+  #sub_Head_2 img {
+    width: 100%;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.4em 1em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 1em;
+    width: 94%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.15em 0.1em;
+    font-size: 1.1em;
+    letter-spacing: 1.1px;
+  }
+  #Head_2 {
+    width: 6%;
+    padding: 0.05em 0.05em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 {
+    width: 80%;
+    padding: 0.2em 0.2em;
+  }
+  #sub_Head_2 img {
+    width: 100%;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.4em 0.5em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 0.5em;
+    width: 90%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.4em 0.1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  #Head_2 {
+    width: 10%;
+    padding: 0.05em 0.05em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 {
+    width: 80%;
+    padding: 0.1em 0.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 img {
+    width: 65%;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - Header */
+  #Header {
+    padding: 0.4em 0.1em;
+  }
+  #sub_Header {
+    padding: 0.1em 0.1em;
+    width: 100%;
+  }
+  #Head_1 {
+    padding: 0.05em 0.5em;
+    width: 90%;
+    margin: 0em 1em;
+  }
+  #Head_1 p {
+    padding: 0.4em 0.1em;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #Head_2 {
+    width: 10%;
+    padding: 0.05em 0.05em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 {
+    width: 90%;
+    padding: 0.6em 0.3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub_Head_2 img {
+    width: 100%;
+  }
+  /* - */
+}
