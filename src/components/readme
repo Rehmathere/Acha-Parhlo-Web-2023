@@ -1,0 +1,11 @@
+-------- Make New React Project & Run The Run The Project --------
+
+npx create-react-app ( Project Name ) ----- ( Rent A Project )
+
+npm create-react-app ( Project Name ) ----- ( Purchase A Project )
+
+npm run start
+--- Or ---
+npm start
+
+---------------------------------------------------------------------------------
