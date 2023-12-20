@@ -8,8 +8,9 @@
 #Header {
   border: 0px solid transparent;
   /* border: 1px solid #e3e8f5; */
-  padding: 0.3em 1em;
-  background: #dff9fb;
+  padding: 0.5em 1em;
+  /* background: #A2C2C3; */
+  background: #ffaf40;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -60,6 +61,248 @@
   border: 0px solid transparent;
   width: 71%;
 }
+/* 1 - Profile Heading */
+#Prof_Heading {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#Prof_Heading h1 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 94%;
+  font-weight: bold;
+  margin: 0em auto;
+  color: #001400;
+  letter-spacing: 1.5px;
+}
+#Prof_Heading h1 i {
+  border: 0px solid transparent;
+  padding: 0.2em 0.05em;
+  color: #001400;
+  font-size: 35px;
+}
+/* 2 - Main Profile Body */
+#MainProfile {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+}
+#subMainProfile {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+}
+#MainProfileBox {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  width: 90%;
+  margin: 0em auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: gray 0px 5px 15px;
+}
+#ProfileBox_1 {
+  border: 0px solid transparent;
+  padding: 0.3em 1em;
+}
+#subProfileBox_1 {
+  border: 0px solid transparent;
+  padding: 0.3em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#ProfileBox_1_O_1_B1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0px 0px;
+}
+#ProfileBox_1_O_1_B2 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0px 0px;
+}
+#ProfileBox_1_O_1_B3 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0px 0px;
+}
+#ProfileBox_1_O_1_P {
+  border: 0px solid transparent;
+  padding: 0em 1em;
+  font-size: 1.25em;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+#ProfileBox_1_O_1_P i {
+  /* border: 0.1px solid black; */
+  padding: 0em 0.4em;
+  color: #f92500;
+  font-size: 20px;
+}
+#ProfileBox_2 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#ProfileBox_2_Part_1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#sub_ProfileBox_2_Part_1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#ProfileBox_2_Part_1_1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  width: 40%;
+}
+#sub_ProfileBox_2_Part_1_1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#ProfileBox_2_Part_1_1_P1 {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+}
+#ProfileBox_2_Part_1_1_P1_ImgP {
+  border: 0px solid transparent;
+  padding: 1em;
+  width: 60%;
+  border-radius: 50%;
+  margin: 0em auto;
+  background-color: lightgray;
+}
+#ProfileBox_2_Part_1_1_P1_ImgP img {
+  border: 0px solid transparent;
+  width: 100%;
+  border-radius: 50%;
+}
+#ProfileBox_2_Part_1_1_P2 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+}
+#ProfileBox_2_Part_1_1_P2 p {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+}
+#ProfileBox_2_Part_1_2 {
+  border: 0px solid transparent;
+  padding: 1.9em 1em;
+  width: 60%;
+}
+#ProfileBox_2_Input_Box {
+  border: 0px solid transparent;
+  padding: 0.05em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#ProfileBox_2_Input_Box_1 {
+  border: 0px solid transparent;
+  padding: 0.6em 2em;
+  width: 25%;
+  letter-spacing: 2px;
+  border-radius: 15px 0px 0px 15px;
+  font-size: 1.1em;
+  background-color: #dff9fb;
+}
+#ProfileBox_2_Input_Box_2 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 5%;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #dff9fb;
+}
+#ProfileBox_2_Input_Box_3 {
+  border: 0px solid transparent;
+  padding: 0.6em 2em;
+  width: 70%;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  background-color: #dff9fb;
+}
+#ProfileBox_2_Input_Box_3_E {
+  border: 0px solid transparent;
+  padding: 0.75em 0em 0.75em 2em;
+  width: 70%;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 1em;
+  letter-spacing: 0.8px;
+  font-weight: bold;
+  background-color: #dff9fb;
+}
+#ProfileBox_2_Input_Box_1_W {
+  border: 0px solid transparent;
+  padding: 0.6em 2em;
+  width: 25%;
+  letter-spacing: 2px;
+  border-radius: 15px 0px 0px 15px;
+  font-size: 1.1em;
+  background-color: white;
+}
+#ProfileBox_2_Input_Box_2_W {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 5%;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+}
+#ProfileBox_2_Input_Box_3_W {
+  border: 0px solid transparent;
+  padding: 0.6em 2em;
+  width: 70%;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  background-color: white;
+}
+/* ------ */
+#ProfileBox_2_Part_2 {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  background-color: lightpink;
+}
+/* ------ */
+#ProfileBox_2_Part_3 {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  background-color: lightgreen;
+}
 
 /* -------------------------------- */
 /* Media Queries In CSS */
@@ -68,7 +311,7 @@
 @media screen and (min-width: 1px) and (max-width: 1400px) {
   /* 1 - Header */
   #Header {
-    padding: 0.3em 1em;
+    padding: 0.5em 1em;
   }
   #sub_Header {
     padding: 0.1em 0.2em;
@@ -95,13 +338,144 @@
   #sub_Head_2 img {
     width: 80%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 0.4em 1em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 1em;
+    width: 94%;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 0.3em 1em;
+  }
+  #subMainProfile {
+    padding: 0.2em 1em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 1em;
+    width: 90%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 1em;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 1em;
+    width: 28%;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 1em;
+    width: 28%;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 1em;
+    width: 28%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0.2em;
+    font-size: 1.1em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0.4em;
+  }
+  #ProfileBox_2 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+    width: 40%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 1em;
+    width: 60%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 1em;
+    width: 60%;
+  }
+  #ProfileBox_2_Input_Box {
+    padding: 0.1em 0.1em;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.75em 2em;
+    width: 25%;
+    font-size: 0.95em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.6em 1em;
+    width: 5%;
+    font-size: 1.05em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.74em 2em;
+    width: 70%;
+    font-size: 0.95em;
+    letter-spacing: 2.5px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.89em 0em 0.85em 2em;
+    width: 70%;
+    font-size: 0.87em;
+    letter-spacing: 0.8px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.75em 2em;
+    width: 25%;
+    letter-spacing: 2px;
+    font-size: 1em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.75em 1em;
+    width: 5%;
+    font-size: 1em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.75em 2em;
+    width: 70%;
+    font-size: 1em;
+    letter-spacing: 2.5px;
+  }
   /* - */
 }
 /* 2 */
 @media screen and (min-width: 1px) and (max-width: 1200px) {
   /* 1 - Header */
   #Header {
-    padding: 0.3em 1em;
+    padding: 0.5em 1em;
   }
   #sub_Header {
     padding: 0.1em 0.2em;
@@ -128,13 +502,144 @@
   #sub_Head_2 img {
     width: 84%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 0.8em 1em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 1em;
+    width: 100%;
+    font-size: 1.8em;
+    letter-spacing: 1.5px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 0.3em 1em;
+  }
+  #subMainProfile {
+    padding: 0.2em 1em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 0.5em;
+    width: 97%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 1em;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 1em;
+    width: 29%;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 1em;
+    width: 29%;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 1em;
+    width: 29%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0.2em;
+    font-size: 0.9em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0.4em;
+  }
+  #ProfileBox_2 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+    width: 40%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 1em;
+    width: 60%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 1em;
+    width: 60%;
+  }
+  #ProfileBox_2_Input_Box {
+    padding: 0.2em 0.1em;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.75em 2em;
+    width: 25%;
+    font-size: 0.9em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.6em 1em;
+    width: 5%;
+    font-size: 1em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.74em 2em;
+    width: 70%;
+    font-size: 0.9em;
+    letter-spacing: 2.5px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.89em 0em 0.85em 2em;
+    width: 70%;
+    font-size: 0.83em;
+    letter-spacing: 0.8px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.75em 2em;
+    width: 25%;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.75em 1em;
+    width: 5%;
+    font-size: 0.9em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.75em 2em;
+    width: 70%;
+    font-size: 0.9em;
+    letter-spacing: 2.5px;
+  }
   /* - */
 }
 /* 3 */
 @media screen and (min-width: 1px) and (max-width: 1000px) {
   /* 1 - Header */
   #Header {
-    padding: 0.3em 1em;
+    padding: 0.5em 1em;
   }
   #sub_Header {
     padding: 0.1em 0.2em;
@@ -165,13 +670,150 @@
   #sub_Head_2 img {
     width: 100%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 1.6em 0.9em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 0.1em;
+    width: 100%;
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+  }
+  #Prof_Heading h1 i {
+    padding: 0.2em 0.05em;
+    font-size: 32px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 1.3em 0.5em;
+  }
+  #subMainProfile {
+    padding: 0.5em 0.5em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 0.5em;
+    width: 100%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 0.5em;
+    border-radius: 10px;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 0.1em;
+    width: 29%;
+    margin: 0em 1em;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 0.1em;
+    width: 29%;
+    margin: 0em 1em 0em 0em;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 0.1em;
+    width: 29%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0.2em;
+    font-size: 0.85em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0.4em;
+    font-size: 18px;
+  }
+  #ProfileBox_2 {
+    padding: 0.9em 0.5em;
+    border-radius: 10px;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+    width: 35%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 0.3em;
+    width: 70%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 0.5em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 0.5em;
+    width: 65%;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.47em 2em;
+    width: 25%;
+    font-size: 0.8em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.4em 1em;
+    width: 5%;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.44em 2em;
+    width: 70%;
+    font-size: 0.82em;
+    letter-spacing: 2.5px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.5em 0em 0.5em 2em;
+    width: 70%;
+    font-size: 0.78em;
+    letter-spacing: 0.8px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.5em 2em;
+    width: 25%;
+    letter-spacing: 2px;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.5em 1em;
+    width: 5%;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.5em 2em;
+    width: 70%;
+    font-size: 0.85em;
+    letter-spacing: 2.5px;
+  }
   /* - */
 }
 /* 3 */
 @media screen and (min-width: 1px) and (max-width: 800px) {
   /* 1 - Header */
   #Header {
-    padding: 0.4em 1em;
+    padding: 0.5em 1em;
   }
   #sub_Header {
     padding: 0.1em 0.2em;
@@ -202,13 +844,152 @@
   #sub_Head_2 img {
     width: 100%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 1em 0.8em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 0.4em;
+    width: 100%;
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+  }
+  #Prof_Heading h1 i {
+    padding: 0.2em 0.05em;
+    font-size: 30px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 0.3em 0em;
+  }
+  #subMainProfile {
+    padding: 0.2em 0.5em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 0.5em;
+    width: 95%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 0.5em;
+    border-radius: 10px;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 0em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 0em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 0em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0em;
+    font-size: 0em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0em;
+    font-size: 20px;
+  }
+  #ProfileBox_2 {
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.5em 1em;
+    width: 60%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 0.3em;
+    width: 70%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 0.5em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 0.5em;
+    width: 97%;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.47em 1.5em;
+    width: 25%;
+    font-size: 0.8em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.4em 1em;
+    width: 5%;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.44em 1.5em;
+    width: 70%;
+    font-size: 0.82em;
+    letter-spacing: 2.5px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.5em 0em 0.5em 1.5em;
+    width: 70%;
+    font-size: 0.78em;
+    letter-spacing: 0.8px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.5em 1.5em;
+    width: 25%;
+    letter-spacing: 2px;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.5em 1em;
+    width: 5%;
+    font-size: 0.85em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.5em 1.5em;
+    width: 70%;
+    font-size: 0.85em;
+    letter-spacing: 2.5px;
+  }
   /* - */
 }
 /* 4 */
 @media screen and (min-width: 1px) and (max-width: 600px) {
   /* 1 - Header */
   #Header {
-    padding: 0.4em 0.5em;
+    padding: 0.5em 0.5em;
   }
   #sub_Header {
     padding: 0.1em 0.2em;
@@ -243,13 +1024,153 @@
   #sub_Head_2 img {
     width: 65%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 1em 0.8em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 0.4em;
+    width: 100%;
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+  }
+  #Prof_Heading h1 i {
+    padding: 0.2em 0.05em;
+    font-size: 30px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 0.3em 0em;
+  }
+  #subMainProfile {
+    padding: 0.2em 0.2em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 0.3em;
+    width: 98%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 0.2em;
+    border-radius: 10px;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0em;
+    font-size: 0em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0em;
+    font-size: 18px;
+  }
+  #ProfileBox_2 {
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 0.5em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.5em 0.5em;
+    width: 85%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 0.3em;
+    width: 70%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 0.5em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 0.1em;
+    width: 100%;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.47em 1.2em;
+    width: 25%;
+    letter-spacing: 0.5px;
+    font-size: 0.72em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.46em 1em;
+    width: 5%;
+    font-size: 0.72em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.46em 0.5em;
+    width: 70%;
+    font-size: 0.72em;
+    letter-spacing: 2px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.5em 0em 0.5em 0.5em;
+    width: 70%;
+    font-size: 0.7em;
+    letter-spacing: 0px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.5em 1.5em;
+    width: 25%;
+    letter-spacing: 0.5px;
+    font-size: 0.72em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.5em 1em;
+    width: 5%;
+    font-size: 0.72em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.5em 0.5em;
+    width: 70%;
+    font-size: 0.72em;
+    letter-spacing: 0.5.5px;
+  }
   /* - */
 }
 /* 4 */
 @media screen and (min-width: 1px) and (max-width: 400px) {
   /* 1 - Header */
   #Header {
-    padding: 0.4em 0.1em;
+    padding: 0.5em 0.1em;
   }
   #sub_Header {
     padding: 0.1em 0.1em;
@@ -284,5 +1205,174 @@
   #sub_Head_2 img {
     width: 100%;
   }
+  /* 1 - Profile Heading */
+  #Prof_Heading {
+    padding: 1em 0.8em;
+  }
+  #Prof_Heading h1 {
+    padding: 0.1em 0.4em;
+    width: 100%;
+    font-size: 1.3em;
+    letter-spacing: 1.5px;
+  }
+  #Prof_Heading h1 i {
+    padding: 0.2em 0.05em;
+    font-size: 23px;
+  }
+  /* 2 - Main Profile Body */
+  #MainProfile {
+    padding: 0.3em 0em;
+  }
+  #subMainProfile {
+    padding: 0.2em 0.1em;
+  }
+  #MainProfileBox {
+    padding: 0.5em 0.1em;
+    width: 100%;
+  }
+  #ProfileBox_1 {
+    padding: 0.3em 0.2em;
+    border-radius: 10px;
+  }
+  #subProfileBox_1 {
+    padding: 0.3em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #ProfileBox_1_O_1_B1 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B2 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_B3 {
+    padding: 1em 0.1em;
+    width: 20%;
+  }
+  #ProfileBox_1_O_1_P {
+    padding: 0em 0em;
+    font-size: 0em;
+  }
+  #ProfileBox_1_O_1_P i {
+    padding: 0em 0em;
+    font-size: 12px;
+  }
+  #ProfileBox_2 {
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+  }
+  #ProfileBox_2_Part_1 {
+    padding: 0.2em 0.5em;
+  }
+  #sub_ProfileBox_2_Part_1 {
+    padding: 0.2em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_1_1 {
+    padding: 0.5em 0.5em;
+    width: 95%;
+  }
+  #sub_ProfileBox_2_Part_1_1 {
+    padding: 0.2em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP {
+    padding: 0.3em;
+    width: 70%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P1_ImgP img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  #ProfileBox_2_Part_1_1_P2 {
+    padding: 0.5em 0.5em;
+  }
+  #ProfileBox_2_Part_1_1_P2 p {
+    padding: 1em 1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_1_2 {
+    padding: 0.3em 0.1em;
+    width: 100%;
+  }
+  #ProfileBox_2_Input_Box_1 {
+    padding: 0.47em 0.7em;
+    width: 25%;
+    letter-spacing: 0px;
+    font-size: 0.6em;
+  }
+  #ProfileBox_2_Input_Box_2 {
+    padding: 0.46em 1em;
+    width: 5%;
+    font-size: 0.6em;
+  }
+  #ProfileBox_2_Input_Box_3 {
+    padding: 0.46em 0.5em;
+    width: 70%;
+    font-size: 0.6em;
+    letter-spacing: 2px;
+  }
+  #ProfileBox_2_Input_Box_3_E {
+    padding: 0.5em 0em 0.5em 0.5em;
+    width: 70%;
+    font-size: 0.6em;
+    letter-spacing: 0.2px;
+  }
+  #ProfileBox_2_Input_Box_1_W {
+    padding: 0.5em 0.5em;
+    width: 25%;
+    letter-spacing: 0px;
+    font-size: 0.6em;
+  }
+  #ProfileBox_2_Input_Box_2_W {
+    padding: 0.5em 1em;
+    width: 5%;
+    font-size: 0.6em;
+  }
+  #ProfileBox_2_Input_Box_3_W {
+    padding: 0.5em 0.5em;
+    width: 70%;
+    font-size: 0.6em;
+    letter-spacing: 0.5px;
+  }
   /* - */
 }
+
+/* ----------------------------- */
+/* ----------------------------- */
+/* ----------------------------- */
+#Pic_Area {
+  border: 1px solid red;
+  padding: 1em;
+  width: 15%;
+  background-color: lightblue;
+}
+#Pic_Area img {
+  border: 1px solid red;
+  width: 100%;
+}
+#Name {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1em;
+  width: 15%;
+  padding: 1em 0em;
+}
+#Edit_Profile_Btn {
+  margin: 1em;
+  padding: 1em;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+/* ----------------------------- */

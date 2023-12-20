@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+import './Portal/MyFeatures/PProfile/PProfile.css';
+import user from './Pics/user_P.png';
+
+export default function Z_Test() {
+  // State to store the uploaded image
+  const [image, setImage] = useState(null);
+  // State to store the entered name
+  const [name, setName] = useState('');
+  // State to track whether the Edit Profile button is clicked
+  const [isEditing, setIsEditing] = useState(true); // Initialize to true
+
+  // Function to handle file input change
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    // Use FileReader to convert the selected file to a data URL
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Function to handle name input change
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  // Function to handle Edit Profile button click
+  const handleEditProfile = () => {
+    // Add logic to handle the edit profile action, e.g., update backend, show success message, etc.
+    // For now, you can log the image data and name to the console.
+    console.log('Uploaded Image:', image);
+    console.log('Entered Name:', name);
+
+    // Toggle the isEditing state to false after the edit profile action
+    setIsEditing(true);
+  };
+
+  return (
+    <div>
+      <h1>Testing Part</h1>
+      <br />
+      {/* Display Area - Render only when isEditing is true */}
+      {isEditing && (
+        <div id="Pic_Area">
+          {/* Use the state variable for the image source */}
+          <img src={image ? image : user} alt="Na" />
+        </div>
+      )}
+      {isEditing && <div id='Name'>{name}</div>}
+      <br />
+      <br />
+      {/* Insert Area */}
+      {/* Add onChange event handlers for file and name inputs */}
+      <input type="file" onChange={handleFileChange} />
+      <br />
+      <input type="text" name="Name" value={name} onChange={handleNameChange} />
+      <br />
+      {/* Add onClick event handler for the Edit Profile button */}
+      <button id="Edit_Profile_Btn" onClick={handleEditProfile}>
+        Edit Profile
+      </button>
+    </div>
+  );
+}
