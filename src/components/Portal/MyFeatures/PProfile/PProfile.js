@@ -29,9 +29,9 @@ export default function PProfile() {
 
     // Functions
     const getButtonStyle = (buttonClicked) => ({
-        borderBottomWidth: buttonClicked ? '2px' : '0px',
+        borderBottomWidth: buttonClicked ? '2.5px' : '0px',
         borderBottomColor: buttonClicked ? 'orangered' : 'black',
-        backgroundColor: buttonClicked ? '#F3F1F0' : 'transparent',
+        backgroundColor: buttonClicked ? '#dfe6e9' : 'transparent',
     });
     // Functions
     const profileBox2Part1Style = {
@@ -198,7 +198,101 @@ export default function PProfile() {
                                 </div>
                                 {/* Edit Profile */}
                                 <div id="ProfileBox_2_Part_2" style={profileBox2Part2Style}>
-                                    <h1>Edit Profile</h1>
+                                    <div id="sub_ProfileBox_2_Part_2">
+                                        {/* 1 */}
+                                        <div id="ProfileBox_2_Sec_Part_1">
+                                            <div id="ProfileBox_2_Sec_Part_1_P1">
+                                                <div id="ProfileBox_2_Sec_Part_1_P1_Box">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+                                            </div>
+                                            <div id="ProfileBox_2_Sec_Part_1_P2">
+                                                <div id="ProfileBox_2_Sec_Part_1_P2_Box">
+                                                    {/* Image */}
+                                                    <div id="sub_ProBx_2_Sc_Prt_1_P2_Bx">
+                                                        <div id="PrBx_2_Sec_Part_1_P2_Box">
+                                                            <img src={user} alt="NA" />
+                                                        </div>
+                                                    </div>
+                                                    {/* Button */}
+                                                    <div id="sub_ProBx_2_Sc_Prt_1_P2_Bx">
+                                                        <button>Upload</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* 2 */}
+                                        <div id="ProfileBox_2_Sec_Part_2">
+                                            {/* Row 1 */}
+                                            <div id="ProfileBox_2_Row">
+                                                {/* 1 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Name</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="text" placeholder='Enter Full Name' />
+                                                    </div>
+                                                </div>
+                                                {/* 2 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Age</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="number" placeholder='Enter Your Age' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Row 2 */}
+                                            <div id="ProfileBox_2_Row">
+                                                {/* 1 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Email Address</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="email" placeholder='Enter Full Email Address' />
+                                                    </div>
+                                                </div>
+                                                {/* 2 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Phone No</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="tel" placeholder='Enter Your Phone No' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Row 3 */}
+                                            <div id="ProfileBox_2_Row">
+                                                {/* 1 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Country</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="text" placeholder='Enter Full Email Address' />
+                                                    </div>
+                                                </div>
+                                                {/* 2 */}
+                                                <div id="ProfileBox_2_Row_Part_1">
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <span>Status</span>
+                                                    </div>
+                                                    <div id="ProfileBox_2_Row_Part_1_P1">
+                                                        <input type="text" placeholder='Enter Your Phone No' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Row 4 */}
+                                            <div id="ProfileBox_2_Row">
+                                                {/* Submit Button */}
+                                                <input type="submit" value="Edit Profile" id='ProfileBox_2_Row_Submit_Btn' />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 {/* Reset Password */}
                                 <div id="ProfileBox_2_Part_3" style={profileBox2Part3Style}>
