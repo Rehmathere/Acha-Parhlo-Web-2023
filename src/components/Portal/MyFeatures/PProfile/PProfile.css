@@ -9,7 +9,9 @@
   border: 0px solid transparent;
   padding: 0.5em 1em;
   /* background: #A2C2C3; */
-  background: #ffad3a;
+  /* background: #ffad3a; */
+  background: #F28500;
+  /* background: rgb(241, 103, 10); */
   display: flex;
   flex-direction: row;
 }
@@ -62,11 +64,11 @@
 /* 1 - Profile Heading */
 #Prof_Heading {
   border: 0px solid transparent;
-  padding: 0.5em 1em;
+  padding: 0.8em 1em;
 }
 #Prof_Heading h1 {
   border: 0px solid transparent;
-  padding: 0.5em 1em;
+  padding: 0.7em 1em;
   width: 94%;
   font-weight: bold;
   margin: 0em auto;
@@ -442,13 +444,63 @@
   outline: none;
   border-color: lightgreen;
 }
-/* ------ */
+/* 3 - Reset Password */
 #ProfileBox_2_Part_3 {
-  border: 0.1px solid black;
-  padding: 1em 1em;
-  background-color: lightgreen;
+  border: 0px solid transparent;
+  padding: 2em 1em 3.5em 1em;
 }
-
+#sub_ProfileBox_2_Part_3 {
+  border: 0px solid transparent;
+  padding: 2em 1em;
+  width: 50%;
+  margin: 0em auto;
+}
+#sub_ProfileBox_2_Part_3 h2 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+  font-size: 2.5em;
+  color: #001400;
+}
+#ProfileBox_2_Part_3_Input_Box {
+  border: 0px solid transparent;
+  padding: 1.5em 0.5em;
+  margin: 0em 0em 0.5em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#ProfileBox_2_Part_3_Input_Box label {
+  font-size: 1.1em;
+  color: #001400;
+  padding: 0em 1em;
+  letter-spacing: 1px;
+}
+#ProfileBox_2_Part_3_Input_Box input {
+  border: 1px solid grey;
+  padding: 0.3em 1em;
+  width: 60%;
+  margin: 0em 0em 0.35em 0em;
+  border-radius: 10px;
+}
+#ProfileBox_2_Part_3_Input_Box input:focus {
+  outline: none;
+  border-color: rgb(51, 50, 50);
+}
+#ProfileBox_2_Part_3_Input_Box_2 {
+  border: 0px solid transparent;
+  padding: 1em 1.5em;
+}
+#ProfileBox_2_Part_3_Input_Box_2 button {
+  border: 1px solid #0652dd;
+  padding: 0.5em 1em;
+  width: 100%;
+  background-color: #0652dd;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
 /* -------------------------------- */
 /* Media Queries In CSS */
 /* -------------------------------- */
@@ -613,6 +665,44 @@
     width: 70%;
     font-size: 1em;
     letter-spacing: 2.5px;
+  }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 1em 1em 2em 1em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 2em 1em;
+    width: 60%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    padding: 0.3em 0.5em;
+    font-size: 2.3em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1.1em;
+    padding: 0em 1em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.3em 1em;
+    width: 60%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.5em 1em;
+    font-size: 1.1em;
+    letter-spacing: 2px;
   }
   /* - */
 }
@@ -871,6 +961,45 @@
     font-size: 1.1em;
     padding: 0.2em 1em;
     margin: 1em 0em 0em 0em;
+    letter-spacing: 2px;
+  }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 1.8em 1em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 1em 1em;
+    width: 60%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    letter-spacing: 1px;
+    padding: 0.3em 0.5em;
+    font-size: 2.1em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 1.5em 0em 1.5em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1.1em;
+    padding: 0em 1em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.3em 1em;
+    width: 55%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 1em 1em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.5em 1em;
+    font-size: 1.1em;
     letter-spacing: 2px;
   }
   /* - */
@@ -1142,6 +1271,45 @@
     margin: 1em 0em 0em 0em;
     letter-spacing: 2px;
   }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 2em 1em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 2em 1em;
+    width: 60%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    letter-spacing: 1px;
+    padding: 0.3em 0.5em;
+    font-size: 1.5em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 1em 0em 1em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1em;
+    padding: 0em 0.5em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.2em 1em;
+    width: 50%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.4em 1em;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
   /* - */
 }
 /* 3 */
@@ -1411,6 +1579,45 @@
     font-size: 0.9em;
     padding: 0.2em 1em;
     margin: 1em 0em 0em 0em;
+    letter-spacing: 2px;
+  }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 3em 1em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 1em 1em;
+    width: 85%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    letter-spacing: 1px;
+    padding: 0.5em 0.5em;
+    font-size: 1.5em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 1.5em 0em 1.5em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1em;
+    padding: 0em 0.5em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.2em 1em;
+    width: 50%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.4em 1em;
+    font-size: 1em;
     letter-spacing: 2px;
   }
   /* - */
@@ -1690,6 +1897,46 @@
     margin: 1em 0em 0em 0em;
     letter-spacing: 2px;
   }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 2.2em 1em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 1em 1em;
+    width: 85%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    letter-spacing: 1px;
+    padding: 0.4em 0.5em;
+    font-size: 1.5em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 1.5em 0em 1.5em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1em;
+    padding: 0em 0.5em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.2em 1em;
+    margin: 0.5em 0em 0em 0.5em;
+    width: 90%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 0.5em 1em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.4em 1em;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
   /* - */
 }
 /* 4 */
@@ -1733,10 +1980,10 @@
   }
   /* 1 - Profile Heading */
   #Prof_Heading {
-    padding: 1em 0.8em;
+    padding: 1em 0.2em;
   }
   #Prof_Heading h1 {
-    padding: 0.1em 0.4em;
+    padding: 0.1em 0em;
     width: 100%;
     font-size: 1.3em;
     letter-spacing: 1.5px;
@@ -1972,6 +2219,46 @@
     padding: 0.2em 0em;
     margin: 1em 0em 0em 0em;
     letter-spacing: 1.5px;
+  }
+  /* 3 - Reset Password */
+  #ProfileBox_2_Part_3 {
+    padding: 3.1em 0.3em;
+  }
+  #sub_ProfileBox_2_Part_3 {
+    padding: 1em 0.2em;
+    width: 100%;
+    margin: 0em auto;
+  }
+  #sub_ProfileBox_2_Part_3 h2 {
+    letter-spacing: 0.5px;
+    padding: 0.4em 0em 0.4em 0.5em;
+    font-size: 1.1em;
+    color: #001400;
+  }
+  #ProfileBox_2_Part_3_Input_Box {
+    padding: 2.4em 0em 1.5em 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #ProfileBox_2_Part_3_Input_Box label {
+    font-size: 1em;
+    padding: 0em 0.5em;
+    letter-spacing: 1px;
+  }
+  #ProfileBox_2_Part_3_Input_Box input {
+    padding: 0.2em 0.2em;
+    margin: 0.6em 0em 0em 0.5em;
+    width: 90%;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 {
+    padding: 0.8em 0.5em;
+  }
+  #ProfileBox_2_Part_3_Input_Box_2 button {
+    padding: 0.45em 1em;
+    font-size: 0.75em;
+    letter-spacing: 1px;
   }
   /* - */
 }

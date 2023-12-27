@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // Firebase
 import { database } from './firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'

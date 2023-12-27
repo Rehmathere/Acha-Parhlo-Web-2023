@@ -1,11 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PSidebar from '../PSidebar'
 import '../PProfile/PProfile.css'
 import logout from '../../../Pics/logout.png'
 // Images
 import user from '../../../Pics/user_P.png'
+// Reset Password 
+import { database } from '../../firebase'
+import { updatePassword } from 'firebase/auth'
+
 
 export default function PProfile() {
+    const [newPassword, setNewPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChangePassword = async () => {
+        try {
+            const user = database.currentUser;
+
+            if (user) {
+                await updatePassword(user, newPassword);
+                setErrorMessage('');
+            } else {
+                setErrorMessage('User not found. Please log in again.');
+            }
+        } catch (error) {
+            setErrorMessage(error.message);
+        }
+    };
+    // Edit Profile useSatte
+    const [image, setImage] = useState(null);
+    const [isEditing, setIsEditing] = useState(true);
+    // 6 Input Field
+    const [name, setName] = useState('');
+    const [name2, setName2] = useState('');
+    const [name3, setName3] = useState('');
+    const [name4, setName4] = useState('');
+    const [name5, setName5] = useState('');
+    const [name6, setName6] = useState('');
+    // 6 input Field Function
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+    };
+    const handleNameChange2 = (e) => {
+        setName2(e.target.value);
+    };
+    const handleNameChange3 = (e) => {
+        setName3(e.target.value);
+    };
+    const handleNameChange4 = (e) => {
+        setName4(e.target.value);
+    };
+    const handleNameChange5 = (e) => {
+        setName5(e.target.value);
+    };
+    const handleNameChange6 = (e) => {
+        setName6(e.target.value);
+    };
+    // Upload Image Of Edit Profile Logic
+    const fileInputRef = useRef(null);
+    const handleUploadClick = () => {
+        // Trigger the hidden file input
+        fileInputRef.current.click();
+    };
+    // Function to handle file input change
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        // Use FileReader to convert the selected file to a data URL
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
     // Profile Logic
     const [isPart1Visible, setPart1Visible] = useState(true);
     const [isPart2Visible, setPart2Visible] = useState(false);
@@ -111,12 +180,16 @@ export default function PProfile() {
                                         <div id="ProfileBox_2_Part_1_1">
                                             <div id="sub_ProfileBox_2_Part_1_1">
                                                 <div id="ProfileBox_2_Part_1_1_P1">
-                                                    <div id="ProfileBox_2_Part_1_1_P1_ImgP">
-                                                        <img src={user} alt="Na" />
-                                                    </div>
+                                                    {isEditing && (
+                                                        <div id="ProfileBox_2_Part_1_1_P1_ImgP">
+                                                            {/* Use the state variable for the image source */}
+                                                            <img src={image ? image : user} alt="Na" />
+                                                        </div>
+                                                    )}
                                                 </div>
                                                 <div id="ProfileBox_2_Part_1_1_P2">
-                                                    <p>Rehmat Qazi</p>
+                                                    {isEditing && <p>{name || " - Empty - "}</p>
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
@@ -129,9 +202,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3">
-                                                    Rehmat Qazi
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name || " - Empty - "}</div>
+                                                }
                                             </div>
                                             {/* Input Name White 1 */}
                                             <div id="ProfileBox_2_Input_Box">
@@ -141,9 +213,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3_W">
-                                                    20
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name2 || " - Empty - "}</div>
+                                                }
                                             </div>
                                             {/* Input Name 2 */}
                                             <div id="ProfileBox_2_Input_Box">
@@ -153,9 +224,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3_E">
-                                                    Rehmat.qazi000
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_E'>{name3 || " - Empty - "}</div>
+                                                }
                                             </div>
                                             {/* Input Name White 2 */}
                                             <div id="ProfileBox_2_Input_Box">
@@ -165,9 +235,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3_W">
-                                                    +92 3335448744
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name4 || " - Empty - "}</div>
+                                                }
                                             </div>
                                             {/* Input Name 1 */}
                                             <div id="ProfileBox_2_Input_Box">
@@ -177,9 +246,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3">
-                                                    Pakistan
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name5 || " - Empty - "}</div>
+                                                }
                                             </div>
                                             {/* Input Name White 1 */}
                                             <div id="ProfileBox_2_Input_Box">
@@ -189,9 +257,8 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                <div id="ProfileBox_2_Input_Box_3_W">
-                                                    Student
-                                                </div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name6 || " - Empty - "}</div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -210,13 +277,24 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Sec_Part_1_P2_Box">
                                                     {/* Image */}
                                                     <div id="sub_ProBx_2_Sc_Prt_1_P2_Bx">
-                                                        <div id="PrBx_2_Sec_Part_1_P2_Box">
-                                                            <img src={user} alt="NA" />
-                                                        </div>
+                                                        {/* Display Area - Render only when isEditing is true */}
+                                                        {isEditing && (
+                                                            <div id="PrBx_2_Sec_Part_1_P2_Box">
+                                                                {/* Use the state variable for the image source */}
+                                                                <img src={image ? image : user} alt="Na" />
+                                                            </div>
+                                                        )}
                                                     </div>
                                                     {/* Button */}
                                                     <div id="sub_ProBx_2_Sc_Prt_1_P2_Bx">
-                                                        <button>Upload</button>
+                                                        {/* Hidden file input */}
+                                                        <input
+                                                            type="file"
+                                                            onChange={handleFileChange}
+                                                            style={{ display: 'none' }}
+                                                            ref={fileInputRef}
+                                                        />
+                                                        <button onClick={handleUploadClick}>Upload</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -231,7 +309,7 @@ export default function PProfile() {
                                                         <span>Name</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="text" placeholder='Enter Full Name' />
+                                                        <input type="text" placeholder='Enter Full Name' onChange={handleNameChange} />
                                                     </div>
                                                 </div>
                                                 {/* 2 */}
@@ -240,7 +318,7 @@ export default function PProfile() {
                                                         <span>Age</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="number" placeholder='Enter Your Age' />
+                                                        <input type="number" placeholder='Enter Your Age' onChange={handleNameChange2} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -252,7 +330,7 @@ export default function PProfile() {
                                                         <span>Email Address</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="email" placeholder='Enter Full Email Address' />
+                                                        <input type="email" placeholder='Enter Full Email Address' onChange={handleNameChange3} />
                                                     </div>
                                                 </div>
                                                 {/* 2 */}
@@ -261,7 +339,7 @@ export default function PProfile() {
                                                         <span>Phone No</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="tel" placeholder='Enter Your Phone No' />
+                                                        <input type="tel" placeholder='Enter Your Phone No' onChange={handleNameChange4} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -273,7 +351,7 @@ export default function PProfile() {
                                                         <span>Country</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="text" placeholder='Enter Full Email Address' />
+                                                        <input type="text" placeholder='Enter Full Email Address' onChange={handleNameChange5} />
                                                     </div>
                                                 </div>
                                                 {/* 2 */}
@@ -282,7 +360,7 @@ export default function PProfile() {
                                                         <span>Status</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="text" placeholder='Enter Your Phone No' />
+                                                        <input type="text" placeholder='Enter Your Phone No' onChange={handleNameChange6} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,7 +374,23 @@ export default function PProfile() {
                                 </div>
                                 {/* Reset Password */}
                                 <div id="ProfileBox_2_Part_3" style={profileBox2Part3Style}>
-                                    <h1>Reset Password</h1>
+                                    {/* Reset Password */}
+                                    <div id="sub_ProfileBox_2_Part_3">
+                                        <h2>Change Password</h2>
+                                        <div id='ProfileBox_2_Part_3_Input_Box'>
+                                            <label>New Password:</label>
+                                            <input
+                                                type="password"
+                                                value={newPassword}
+                                                onChange={(e) => setNewPassword(e.target.value)}
+                                            />
+                                        </div>
+                                        <div id='ProfileBox_2_Part_3_Input_Box_2'>
+                                            <button onClick={handleChangePassword}>Change Password</button>
+                                        </div>
+                                        {/* Errorr Message */}
+                                        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                                    </div>
                                 </div>
                             </div>
                         </div>
