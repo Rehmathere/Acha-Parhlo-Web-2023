@@ -8,8 +8,12 @@ import "../../App.css"
 import logo from '../Pics/logo2.png'
 import img1 from '../Pics/logo2.png'
 import img2 from '../Pics/menu2.png'
+// Navigate
+import { useNavigate } from 'react-router-dom'
 
 const BlogUniDetails = () => {
+    // useNavigate
+    const navigate = useNavigate();
     //   Some Contact Js
     // ---------------------------------------------
     // 1 - Function
@@ -40,10 +44,10 @@ const BlogUniDetails = () => {
                         </div>
                         <div id="fir_2">
                             <div id="fir_2_sub">
-                                <a href="#" id="fir_2_s">Home</a>
-                                <a href="#" id="fir_2_s">About</a>
-                                <a href="#" id="fir_2_s">Blogs</a>
-                                <a href="#" id="fir_2_s">Contact</a>
+                                <a href="#" id="fir_2_s" onClick={() => navigate('/')}>Home</a>
+                                <a href="#" id="fir_2_s" onClick={() => navigate('/about')}>About</a>
+                                <a href="#" id="fir_2_s" onClick={() => navigate('/blogpage')}>Blogs</a>
+                                <a href="#" id="fir_2_s" onClick={() => navigate('/contact')}>Contact</a>
                             </div>
                         </div>
                         <div id="fir_3">
@@ -64,10 +68,10 @@ const BlogUniDetails = () => {
                         </div>
                         {/* Slider Menu */}
                         <div id="fir_5" style={{ display: sliderMenuVisible ? 'block' : 'none', backgroundColor: '#001400' }}>
-                            <a href="#" id="fir_2_s" style={{ color: "white" }}>Home</a>
-                            <a href="#" id="fir_2_s" style={{ color: "white" }}>About</a>
-                            <a href="#" id="fir_2_s" style={{ color: "white" }}>Services</a>
-                            <a href="#" id="fir_2_s" style={{ color: "white" }}>Contact</a>
+                            <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/')}>Home</a>
+                            <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/about')}>About</a>
+                            <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/blogpage')}>Blogs</a>
+                            <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/contact')}>Contact</a>
                             {/* Shining Color Button */}
                             <a href="#" id="fir_3_1" style={{ color: "white" }}>
                                 <span></span>
