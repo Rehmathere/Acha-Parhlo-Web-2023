@@ -1,0 +1,1082 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ----------------- */
+/* Contact CSS */
+/* ----------------- */
+/* - Contact First - */
+#con_fir {
+  border: 0px solid transparent;
+  position: relative;
+  padding: 3em 1em;
+  z-index: 0;
+}
+#con_fir::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../Pics/wood.jpg") no-repeat center center/cover;
+  opacity: 0.8;
+  z-index: -1;
+}
+#sub_con_fir {
+  border: 0.1px solid transparent;
+  padding: 3em 1em;
+}
+#sub_con_fir h1 {
+  border: 0.1px solid transparent;
+  color: white;
+  text-align: center;
+  font-size: 4.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  -webkit-text-stroke: 1px white;
+}
+/* Contact Second */
+#con_sec {
+  border: 0px solid transparent;
+  padding: 4em 1em;
+}
+#sub_con_sec0 {
+  border: 0px solid transparent;
+  padding: 3.1em 1em 3em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+#sub_con_sec0 img {
+  border: 0px solid transparent;
+  width: 19%;
+}
+#sub_con_sec {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+#sub_con_sec h6 {
+  border: 0px solid transparent;
+  border-bottom: 4px solid #001400;
+  font-size: 5em;
+  color: #001400;
+  font-weight: bold;
+  padding: 0.15em 0.1em;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#sub_con_sec_1 {
+  border: 0px solid transparent;
+  padding: 0.5em;
+}
+#sub_con_sec_1 p {
+  border: 0px solid transparent;
+  padding: 1em 9em;
+  color: #001400;
+  text-transform: capitalize;
+  font-size: 1.1em;
+  text-align: center;
+}
+/* Contact Third */
+#con_third {
+  border: 0px solid transparent;
+  padding: 0em 1em;
+  background-color: #c3eefa;
+}
+#sub_con_third {
+  border: 0px solid transparent;
+  padding: 0em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#con_third_1 {
+  border: 0px solid transparent;
+  padding: 2em 1em;
+  width: 45%;
+}
+#con_third_1_sub {
+  border: 0px solid transparent;
+  padding: 0.5em;
+  width: 80%;
+  margin: 0em auto;
+}
+#con_third_1_sub h3 {
+  border: 0px solid transparent;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 6em;
+  text-transform: uppercase;
+  color: #187e9b;
+  padding: 0em 0em 0em 0.1em;
+}
+#con_third_1_sub h4 {
+  border: 0px solid transparent;
+  text-align: letf;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 3.7em;
+  text-transform: uppercase;
+  color: #187e9b;
+  padding: 0em 0em 0em 0.2em;
+}
+#con_third_1_sub p {
+  border: 0px solid transparent;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+  color: #2c3e50;
+}
+#con_third_1_sub button {
+  border: 0.1px solid #187e9b;
+  font-size: 1em;
+  padding: 0.3em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #187e9b;
+  margin: 0em 0em 0em 0.9em;
+}
+#con_third_2 {
+  border: 0px solid transparent;
+  padding: 0em 0em;
+  width: 43%;
+  display: grid;
+  place-items: center;
+  background: url("../Pics/qr2.png") no-repeat center center/cover;
+}
+#sub_con_third_2 {
+  border: 0px solid transparent;
+  width: 85%;
+}
+#sub_con_third_2 img {
+  border: 0px solid transparent;
+  width: 80%;
+  display: block;
+  margin: 0em auto;
+}
+/* Contact Forth */
+#con_forth {
+  border: 0px solid transparent;
+  padding: 3em 1em;
+}
+#sub_con_forth {
+  border: 0.1px solid transparent;
+  padding: 1em 0.5em;
+  width: 84%;
+  margin: 0em auto;
+}
+#con_forth_1 {
+  border: 0.1px solid transparent;
+  padding: 0.5em 1em;
+}
+#con_forth_1 h6 {
+  border: 0.1px solid transparent;
+  padding: 0em 0.2em;
+  color: #001400;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+}
+#con_forth_1 h6 span {
+  color: orangered;
+}
+#con_forth_1 P{
+  border: 0.1px solid transparent;
+  padding: 0.1em 1em;
+  width: 50%;
+  color: #001400;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+}
+#con_forth_2 {
+  border: 0.1px solid transparent;
+  padding: 1em 0.5em;
+  margin: 0.2em 0em;
+}
+#con_forth_row {
+  border: 0.1px solid transparent;
+  padding: 1em 0.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#con_forth_row_box {
+  /* background-color: lightgray; */
+  border: 0.1px solid transparent;
+  padding: 0.3em 0.5em;
+  width: 30.5%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+#con_forth_row_box:hover{
+  cursor: pointer;
+  border-bottom: 0.1px solid #EB2F06;
+  background-color: #dbdcdf;
+}
+#con_forth_box_side_1 {
+  border: 0.1px solid transparent;
+  padding: 0.3em 0.3em 0em 0.3em;
+  width: 20%;
+}
+#con_forth_box_side_1 img {
+  border: 0.1px solid transparent;
+  display: block;
+  width: 100%;
+  margin: 0em auto;
+}
+#con_forth_box_side_2 {
+  border: 0.1px solid transparent;
+  padding: 0.3em 0.6em 0em 0.6em;
+  width: 80%;
+}
+#con_forth_box_side_2 h6 {
+  border: 0.1px solid transparent;
+  font-weight: bold;
+  padding: 0em 0.3em;
+  font-size: 1.15em;
+  letter-spacing: 2px;
+}
+#con_forth_box_side_2 p {
+  border: 0.1px solid transparent;
+  padding: 0em 0.3em;
+  font-size: 1em;
+  color: black;
+  letter-spacing: 1px;
+}
+/* Start */
+
+/* ----------------------------------- */
+/* Media Quesries In CSS */
+/* ----------------------------------- */
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - Contact Third */
+  #con_third {
+    padding: 0em 1em;
+  }
+  #sub_con_third {
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 2em 1em;
+    width: 45%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em;
+    width: 80%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 5.5em;
+    padding: 0em 0em 0em 0.1em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    font-size: 3.25em;
+    padding: 0em 0em 0em 0.2em;
+  }
+  #con_third_1_sub p {
+    font-size: 1.02em;
+    padding: 0.5em 1em;
+  }
+  #con_third_1_sub button {
+    font-size: 0.9em;
+    padding: 0.3em 0.5em;
+    letter-spacing: 1px;
+    margin: 0em 0em 0em 0.9em;
+  }
+  #con_third_2 {
+    padding: 0em 0em;
+    width: 43%;
+  }
+  #sub_con_third_2 {
+    width: 85%;
+  }
+  #sub_con_third_2 img {
+    width: 80%;
+  }
+  /* 2 - Contact Forth */
+  #con_forth {
+    padding: 3em 0.3em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 84%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 1em;
+  }
+  #con_forth_1 h6 {
+    padding: 0em 0.2em;
+    font-size: 3em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P{
+    padding: 0.1em 1em;
+    width: 50%;
+    font-size: 0.85em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.5em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_row_box {
+    padding: 0.3em 0.3em;
+    width: 30.5%;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.3em 0em 0.3em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.6em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.3em;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.9em;
+    letter-spacing: 0.7px;
+  }
+  /* --- */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - Contact Third */
+  #con_third {
+    padding: 0em 0.5em;
+  }
+  #sub_con_third {
+    padding: 0em 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 1em 0em;
+    width: 50%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em;
+    width: 85%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 4.3em;
+    padding: 0em 0em 0em 0.1em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    font-size: 2.6em;
+    padding: 0em 0em 0em 0.2em;
+  }
+  #con_third_1_sub p {
+    font-size: 0.9em;
+    padding: 0.3em 1em;
+  }
+  #con_third_1_sub button {
+    font-size: 0.8em;
+    padding: 0.1em 0.5em;
+    letter-spacing: 1px;
+    margin: 0em 0em 0em 0.9em;
+  }
+  #con_third_2 {
+    padding: 0em 0em;
+    width: 40%;
+  }
+  #sub_con_third_2 {
+    width: 86%;
+  }
+  #sub_con_third_2 img {
+    width: 80%;
+  }
+  /* 2 - Contact Second */
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 22%;
+  }
+  /* 3 - Contact Forth */
+  #con_forth {
+    padding: 3em 0em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 85%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 1em;
+  }
+  #con_forth_1 h6 {
+    padding: 0em 0.2em;
+    font-size: 3em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P {
+    padding: 0.1em 1em;
+    width: 50%;
+    font-size: 0.83em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.3em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_row_box {
+    padding: 0.3em 0.2em;
+    width: 30.5%;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.3em 0em 0.3em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.1em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.3em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 0.6px;
+  }
+  /* --- */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - Contact First */
+  #sub_con_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 4em;
+  }
+  /* 2 - Contact Third */
+  #con_third {
+    padding: 0em 0.2em;
+  }
+  #sub_con_third {
+    padding: 0em 0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 0.8em 0em;
+    width: 50%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em;
+    width: 90%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 3.3em;
+    padding: 0em 0em 0em 0.1em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    font-size: 2.2em;
+    padding: 0em 0em 0em 0.2em;
+  }
+  #con_third_1_sub p {
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+  }
+  #con_third_1_sub button {
+    font-size: 0.75em;
+    padding: 0.1em 0.5em;
+    letter-spacing: 1px;
+    margin: 0em 0em 0em 0.9em;
+  }
+  #con_third_2 {
+    padding: 0em 0em;
+    width: 40%;
+  }
+  #sub_con_third_2 {
+    width: 100%;
+  }
+  #sub_con_third_2 img {
+    width: 80%;
+  }
+  /* 2 - Contact Second */
+  #con_sec {
+    padding: 4em 0.2em;
+  }
+  #sub_con_sec {
+    padding: 0.5em 0.2em;
+  }
+  #sub_con_sec h6 {
+    border-bottom: 3px solid #130f40;
+    font-size: 4em;
+    padding: 0em 0.1em;
+  }
+  #sub_con_sec_1 {
+    padding: 0.5em;
+  }
+  #sub_con_sec_1 p {
+    padding: 1em 4.5em;
+    font-size: 1em;
+  }
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 25%;
+  }
+  /* 2 - Contact Second */
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 22%;
+  }
+  /* 4 - Contact Forth */
+  #con_forth {
+    padding: 3em 0em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 93%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 1em;
+  }
+  #con_forth_1 h6 {
+    padding: 0em 0.2em;
+    font-size: 3em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P {
+    padding: 0.1em 1em;
+    width: 50%;
+    font-size: 0.83em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.3em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_row_box {
+    padding: 0.3em 0.1em;
+    width: 32%;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.1em 0em 0.1em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.1em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.3em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 0.6px;
+  }
+  /* --- */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - Contact First */
+  #con_fir {
+    padding: 3em 0.5em;
+  }
+  #sub_con_fir {
+    border: 0.1px solid transparent;
+    padding: 2em 0.5em;
+  }
+  #sub_con_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 3em;
+  }
+  /* 2 - Contact Third */
+  #con_third {
+    padding: 0em 0.2em;
+  }
+  #sub_con_third {
+    padding: 0em 0.1em 0em 0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 1em 0em;
+    width: 50%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em 0.1em;
+    width: 90%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 2.7em;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    font-size: 1.65em;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub p {
+    font-size: 0.75em;
+    padding: 0.3em 0.2em;
+  }
+  #con_third_1_sub button {
+    font-size: 0.7em;
+    padding: 0.2em 0.5em;
+    letter-spacing: 1px;
+    margin: 0em 0em 0em 0.1em;
+  }
+  #con_third_2 {
+    padding: 0em 0em;
+    width: 40%;
+  }
+  #sub_con_third_2 {
+    width: 100%;
+  }
+  #sub_con_third_2 img {
+    width: 80%;
+  }
+  /* 2 - Contact Second */
+  #con_sec {
+    padding: 4em 0em;
+  }
+  #sub_con_sec {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec h6 {
+    border-bottom: 3px solid #130f40;
+    font-size: 3em;
+    padding: 0em 0em;
+  }
+  #sub_con_sec_1 {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec_1 p {
+    padding: 1em 3em;
+    font-size: 0.92em;
+  }
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 32%;
+  }
+  /* 4 - Contact Forth */
+  #con_forth {
+    padding: 3em 0em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 93%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 1em;
+  }
+  #con_forth_1 h6 {
+    padding: 0em 0.2em;
+    font-size: 2.5em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P {
+    padding: 0.1em 1em;
+    width: 70%;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.3em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_row_box {
+    padding: 0.3em 0.1em;
+    width: 32%;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.1em 0em 0.1em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.1em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.2em;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+  }
+  /* --- */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - Contact First */
+  #sub_con_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 2.3em;
+  }
+  /* 2 - Contact Third */
+  #con_third {
+    padding: 0em 0em;
+  }
+  #sub_con_third {
+    padding: 0em 0em 0em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 0.8em 0em;
+    width: 100%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em 0.1em;
+    width: 90%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 4.5em;
+    text-align: center;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 2.7em;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0.8em 3em;
+  }
+  #con_third_1_sub button {
+    font-size: 1em;
+    padding: 0.4em 1em;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0em auto;
+  }
+  #con_third_2 {
+    padding: 2em 0em;
+    width: 100%;
+  }
+  #sub_con_third_2 {
+    width: 70%;
+  }
+  #sub_con_third_2 img {
+    width: 80%;
+  }
+  /* 2 - Contact Second */
+  #con_sec {
+    padding: 4em 0em;
+  }
+  #sub_con_sec {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec h6 {
+    border-bottom: 2px solid #130f40;
+    font-size: 2em;
+    word-wrap: break-word;
+    padding: 0em 0em;
+  }
+  #sub_con_sec_1 {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec_1 p {
+    padding: 1em 3em;
+    font-size: 0.88em;
+  }
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 36%;
+  }
+  /* 4 - Contact Forth */
+  #con_forth {
+    padding: 2em 0em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 100%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 0.2em;
+  }
+  #con_forth_1 h6 {
+    text-align: center;
+    padding: 0em 0.2em;
+    font-size: 3em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P {
+    text-align: center;
+    padding: 0.5em 4em;
+    width: 100%;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.3em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #con_forth_row_box {
+    padding: 1em 0.1em;
+    width: 54%;
+    display: flex;
+    flex-direction: row;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.1em 0em 0.1em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.1em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.2em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+  }
+  /* --- */
+}
+/* 6 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - Contact First */
+  #sub_con_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+  }
+  /* 2 - Contact Third */
+  #con_third {
+    padding: 0em 0em;
+  }
+  #sub_con_third {
+    padding: 0em 0em 0em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #con_third_1 {
+    padding: 0.8em 0em;
+    width: 100%;
+  }
+  #con_third_1_sub {
+    padding: 0.5em 0.1em;
+    width: 90%;
+  }
+  #con_third_1_sub h3 {
+    letter-spacing: 5px;
+    font-size: 4em;
+    text-align: center;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub h4 {
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 2.4em;
+    padding: 0em 0em 0em 0em;
+  }
+  #con_third_1_sub p {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.8em 3em;
+  }
+  #con_third_1_sub button {
+    font-size: 1em;
+    padding: 0.3em 0.7em;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0em auto;
+  }
+  #sub_con_third_2 {
+    width: 80%;
+  }
+  /* 2 - Contact Second */
+  #con_sec {
+    padding: 4em 0em;
+  }
+  #sub_con_sec {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec h6 {
+    border-bottom: 0px solid #130f40;
+    font-size: 1.8em;
+    word-wrap: break-word;
+    padding: 0em 1em;
+  }
+  #sub_con_sec_1 {
+    padding: 0.5em 0em;
+  }
+  #sub_con_sec_1 p {
+    padding: 1em 3em;
+    font-size: 0.88em;
+  }
+  #sub_con_sec0 {
+    padding: 1.7em 1em;
+  }
+  #sub_con_sec0 img {
+    width: 48%;
+  }
+  /* 4 - Contact Forth */
+  #con_forth {
+    padding: 2em 0em;
+  }
+  #sub_con_forth {
+    padding: 1em 0.3em;
+    width: 100%;
+  }
+  #con_forth_1 {
+    padding: 0.5em 0.2em;
+  }
+  #con_forth_1 h6 {
+    text-align: center;
+    padding: 0em 0.2em;
+    font-size: 2.2em;
+    letter-spacing: 0.8px;
+  }
+  #con_forth_1 P {
+    text-align: center;
+    padding: 0.5em 4em;
+    width: 100%;
+    font-size: 0.85em;
+    letter-spacing: 0.3px;
+  }
+  #con_forth_2 {
+    padding: 1em 0.3em;
+    margin: 0.2em 0em;
+  }
+  #con_forth_row {
+    padding: 0.1em 0em; 
+  }
+  #con_forth_row_box {
+    padding: 1em 0.1em;
+    width: 78%;
+  }
+  #con_forth_box_side_1 {
+    padding: 0.3em 0.1em 0em 0.1em;
+    width: 20%;
+  }
+  #con_forth_box_side_1 img {
+    width: 100%;
+    margin: 0em auto;
+  }
+  #con_forth_box_side_2 {
+    padding: 0.3em 0.1em 0em 0.6em;
+    width: 80%;
+  }
+  #con_forth_box_side_2 h6 {
+    padding: 0em 0.2em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+  #con_forth_box_side_2 p {
+    padding: 0em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+  }
+  /* --- */
+}
