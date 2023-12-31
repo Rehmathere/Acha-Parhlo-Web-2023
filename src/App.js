@@ -11,6 +11,9 @@ import BlogPage2_H from "./components/Blog/BlogPage2_H";
 import BlogPage3_V from "./components/Blog/BlogPage3_V";
 import BlogPage4_D from "./components/Blog/BlogPage4_D";
 import BlogPage5_E from "./components/Blog/BlogPage5_E";
+// --- Extra Work ---
+import NavigatePortal from './components/Portal/NavigatePortal'
+import Z_Test from './components/Z_Test'
 
 export default function App() {
   const [showImgSlider, setShowImgSlider] = useState(false);
@@ -32,34 +35,29 @@ export default function App() {
 
   return (
     <>
+      {/* --------------------------------------------------- */}
       {/* Final Code */}
-      <BrowserRouter>
-        {showNavbar && <Navbar />} {/* Display Navbar if showNavbar is true */}
+      {/* <BrowserRouter>
+        {showNavbar && <Navbar />}
         <Routes>
-          {/* HomeLast Route */}
           {showImgSlider && (
             <Route path="/" element={<HomeLast />} />
           )}
-          {/* Other Routes */}
-          {/* - Spere Rout For Home - */}
           <Route path="/home2" element={<HomeLast />} />
-          {/* - Spere Rout For Home - */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blogpage" element={<BlogPage />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Blog Pages Link */}
           <Route path='/blogUniDetails/:blogId' element={<BlogUniDetails />} />
-          {/* Blog Page 2 */}
           <Route path='/blogPage2_H' element={<BlogPage2_H />} />
-          {/* Blog Page 3 */}
           <Route path='/BlogPage3_V' element={<BlogPage3_V />} />
-          {/* Blog Page 4 */}
           <Route path='/BlogPage4_D' element={<BlogPage4_D />} />
-          {/* Blog Page 5 */}
           <Route path='/BlogPage5_E' element={<BlogPage5_E />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* --------------------------------------------------- */}
       {/* Extra Working */}
+      <NavigatePortal />
+      {/* <Z_Test /> */}
     </>
   );
 }
