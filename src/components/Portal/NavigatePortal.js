@@ -7,6 +7,7 @@ import PSidebar from './MyFeatures/PSidebar'
 import PAbout from './MyFeatures/PAbout/PAbout'
 import PAppointments from './MyFeatures/PAppointments/PAppointments'
 import PTracking from './MyFeatures/PTracking/PTracking'
+import PTStatus from './MyFeatures/PTracking/PTStatus'
 import PRecords from './MyFeatures/PRecords/PRecords'
 import PChat from './MyFeatures/PChat/PChat'
 import PAdd_Uni from './MyFeatures/PAdd_Uni/PAdd_Uni'
@@ -34,6 +35,8 @@ export default function NavigatePortal() {
                 <Route path='/PAppointments' element={<PAppointments />} />
                 {/* 8 */}
                 <Route path='/PTracking' element={<PTracking />} />
+                {/* 8 - Sub File */}
+                <Route path='/PTStatus' element={<PTStatus />} />
                 {/* 9 */}
                 <Route path='/PRecords' element={<PRecords />} />
                 {/* 10 */}
