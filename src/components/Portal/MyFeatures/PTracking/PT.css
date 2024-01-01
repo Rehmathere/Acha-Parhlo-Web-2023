@@ -166,19 +166,19 @@
 }
 /* 2 - PTS_Pre */
 #PTS_Pre {
-  border: 0.1px solid black;
-  padding: 2em 2em;
+  border: 0px solid transparent;
+  padding: 1em 1.5em;
 }
 #sub_PTS_Pre {
-  border: 0.1px solid black;
-  padding: 2em 1em;
+  border: 0px solid transparent;
+  padding: 1em 1em;
 }
 #PTS_Pre_Box {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 1em 1em;
 }
 #PTS_Pre_Box h2 {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.5em 0.4em;
   color: #001400;
   text-transform: uppercase;
@@ -186,20 +186,20 @@
   font-weight: bold;
   letter-spacing: 1px;
 }
-#PTS_Pre_Box h2 i{
-  border: 0.1px solid black;
+#PTS_Pre_Box h2 i {
+  border: 0px solid transparent;
   padding: 0.3em 0.5em;
   color: #001400;
   font-size: 1.1em;
 }
 #PTS_Pre_Box_Detail {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 1em 0.7em;
 }
 #PTS_Pre_Box_Detail_Box {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.05em 0.1em;
-  background-color: rgb(247, 208, 135);
+  background-color: #ffbe76;
   width: 60%;
   margin: 0.05em 0em;
   border-radius: 10px;
@@ -209,7 +209,7 @@
   align-items: center;
 }
 #PTS_Pre_Box_Detail_Box_L {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.1em 0.1em;
   background-color: rgb(230, 225, 225);
   width: 60%;
@@ -220,24 +220,24 @@
   justify-content: center;
   align-items: center;
 }
-#PTS_Pre_Box_Detail_Box_P1{
+#PTS_Pre_Box_Detail_Box_P1 {
   border-radius: 10px;
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.3em 0.7em;
   width: 30%;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
 }
-#PTS_Pre_Box_Detail_Box_P2{
+#PTS_Pre_Box_Detail_Box_P2 {
   border-radius: 10px;
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.3em 3em;
   width: 80%;
-  text-transform:capitalize;
-  /* font-weight: bold; */
   letter-spacing: 2px;
 }
+/* ----- PTracking.js ----- */
+
 /* -------------------------------- */
 /* Media Queries In CSS */
 /* -------------------------------- */
@@ -336,6 +336,50 @@
     width: 100%;
     font-size: 0.9em;
     letter-spacing: 0.5px;
+  }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1em 1.3em 0.5em 1.5em;
+  }
+  #sub_PTS_Pre {
+    padding: 1em 1em 0.5em 1em;
+  }
+  #PTS_Pre_Box {
+    padding: 1em 1em 0.5em 1em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 0.3em 0.4em;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.3em 0.5em;
+    font-size: 1.1em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 1em 0.7em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.1em 0.1em;
+    width: 65%;
+    font-size: 0.9em;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.1em 0.1em;
+    width: 65%;
+    font-size: 0.9em;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0.7em;
+    width: 30%;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 3em;
+    width: 80%;
+    letter-spacing: 2px;
   }
   /* - */
 }
@@ -437,6 +481,50 @@
     font-size: 0.7em;
     letter-spacing: 0.5px;
   }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1em 1em 0.5em 1em;
+  }
+  #sub_PTS_Pre {
+    padding: 1em 1em 0.5em 1em;
+  }
+  #PTS_Pre_Box {
+    padding: 1em 0.7em 0.5em 0.7em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 0.1em 0.4em;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.1em 0.5em;
+    font-size: 1em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 1.3em 0.7em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.15em 0.1em;
+    width: 65%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.15em 0.1em;
+    width: 65%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0.7em;
+    width: 35%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 3em;
+    width: 80%;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
   /* - */
 }
 /* 3 */
@@ -536,6 +624,50 @@
     width: 100%;
     font-size: 0.8em;
     letter-spacing: 0.5px;
+  }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1.5em 1em 0.2em 1em;
+  }
+  #sub_PTS_Pre {
+    padding: 0.5em 1em 0.2em 1em;
+  }
+  #PTS_Pre_Box {
+    padding: 0.5em 0.45em 0.2em 0.45em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 0.1em 0.4em;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.1em 0.5em;
+    font-size: 1em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 1.3em 0.7em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.15em 0.1em;
+    width: 70%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.15em 0.1em;
+    width: 70%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0em 0.3em 0.7em;
+    width: 40%;
+    font-size: 0.85em;
+    letter-spacing: 0.8px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 1.5em;
+    width: 75%;
+    font-size: 0.88em;
+    letter-spacing: 2px;
   }
   /* - */
 }
@@ -639,6 +771,50 @@
     width: 100%;
     font-size: 0.7em;
     letter-spacing: 0.5px;
+  }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1.5em 0.5em 0.2em 0.5em;
+  }
+  #sub_PTS_Pre {
+    padding: 0.5em 0.5em 0.2em 0.5em;
+  }
+  #PTS_Pre_Box {
+    padding: 0.5em 0.45em 0.2em 0.45em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 0.1em 0.4em;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.1em 0.5em;
+    font-size: 1.2em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 1em 0.5em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.15em 0.1em;
+    width: 85%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.15em 0.1em;
+    width: 85%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0em 0.3em 0.7em;
+    width: 45%;
+    font-size: 0.8em;
+    letter-spacing: 0.9px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 1.5em;
+    width: 75%;
+    font-size: 0.8em;
+    letter-spacing: 2px;
   }
   /* - */
 }
@@ -749,6 +925,51 @@
     font-size: 0.7em;
     letter-spacing: 0.5px;
   }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1em 0.1em 0.2em 0.1em;
+  }
+  #sub_PTS_Pre {
+    padding: 0.5em 0.1em 0.2em 0.1em;
+  }
+  #PTS_Pre_Box {
+    padding: 0.5em 0.1em 0.2em 0.1em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 0.1em 0.4em;
+    font-size: 1.27em;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.1em 0.1em;
+    font-size: 1.2em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 1em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.15em 0.1em;
+    width: 100%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.15em 0.1em;
+    width: 100%;
+    margin: 0.05em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0em 0.3em 0.5em;
+    width: 45%;
+    font-size: 0.7em;
+    letter-spacing: 0px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 1.5em;
+    width: 75%;
+    font-size: 0.7em;
+    letter-spacing: 0.1px;
+  }
   /* - */
 }
 /* 6 */
@@ -763,13 +984,13 @@
   #PTS_first_Box h3 {
     padding: 0.1em 0.7em;
     letter-spacing: 0.5px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: center;
   }
   #PTS_first_Box h4 {
     text-align: center;
     padding: 0.2em 1em;
-    font-size: 0.9em;
+    font-size: 0.85em;
     letter-spacing: 0.8px;
   }
   #pre_Box_Light {
@@ -825,7 +1046,7 @@
   }
   #PT_Button h3 {
     padding: 1em 0em 0.2em 0em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center;
   }
   #sub_PT_Button {
@@ -862,6 +1083,61 @@
     padding: 0.58em 0.5em;
     width: 100%;
     font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  /* 3 - PTS_Pre */
+  #PTS_Pre {
+    padding: 1em 0em 0.2em 0em;
+  }
+  #sub_PTS_Pre {
+    padding: 0.5em 0em 0.2em 0em;
+  }
+  #PTS_Pre_Box {
+    padding: 0.5em 0em 0.2em 0em;
+  }
+  #PTS_Pre_Box h2 {
+    padding: 1em 0em;
+    font-size: 1.1em;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+  #PTS_Pre_Box h2 i {
+    padding: 0.1em 0em;
+    font-size: 1.1em;
+  }
+  #PTS_Pre_Box_Detail {
+    padding: 0.5em 0em;
+  }
+  #PTS_Pre_Box_Detail_Box {
+    padding: 0.2em 0em;
+    width: 100%;
+    margin: 0.2em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PTS_Pre_Box_Detail_Box_L {
+    padding: 0.2em 0em;
+    width: 100%;
+    margin: 0.2em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PTS_Pre_Box_Detail_Box_P1 {
+    padding: 0.3em 0em 0.3em 0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+  }
+  #PTS_Pre_Box_Detail_Box_P2 {
+    padding: 0.3em 0em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
     letter-spacing: 0.5px;
   }
   /* - */

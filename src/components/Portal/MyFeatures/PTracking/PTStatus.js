@@ -38,6 +38,15 @@ export default function PTStatus() {
     const handleButton1Click = () => {
         // Button 1
         setButton1Color('#FFC300');
+        // ---- Extra Color Off ----
+        setButton2Color('white');
+        setButton3Color('white');
+        setButton4Color('white');
+        setButton5Color('white');
+        setButton6Color('white');
+        setButton7Color('white');
+        setButton8Color('white');
+        
     };
     // 2
     const handleButton2Click = () => {
@@ -47,6 +56,13 @@ export default function PTStatus() {
         setButton1Color('#FBD1A5');
         // -- Line 1
         setLine1Color('#001400');
+        // ---- Extra Color Off ----
+        setButton3Color('white');
+        setButton4Color('white');
+        setButton5Color('white');
+        setButton6Color('white');
+        setButton7Color('white');
+        setButton8Color('white');
     };
     // 3
     const handleButton3Click = () => {
@@ -60,6 +76,12 @@ export default function PTStatus() {
         setLine1Color('#001400');
         // -- Line 2
         setLine2Color('#001400');
+        // ---- Extra Color Off ----
+        setButton4Color('white');
+        setButton5Color('white');
+        setButton6Color('white');
+        setButton7Color('white');
+        setButton8Color('white');
     };
     // 4
     const handleButton4Click = () => {
@@ -77,6 +99,11 @@ export default function PTStatus() {
         setLine2Color('#001400');
         // -- Line 3
         setLine3Color('#001400');
+        // ---- Extra Color Off ----
+        setButton5Color('white');
+        setButton6Color('white');
+        setButton7Color('white');
+        setButton8Color('white');
     };
     // 5
     const handleButton5Click = () => {
@@ -98,6 +125,10 @@ export default function PTStatus() {
         setLine3Color('#001400');
         // -- Line 4
         setLine4Color('#001400');
+        // ---- Extra Color Off ----
+        setButton6Color('white');
+        setButton7Color('white');
+        setButton8Color('white');
     };
     // 6
     const handleButton6Click = () => {
@@ -123,6 +154,9 @@ export default function PTStatus() {
         setLine4Color('#001400');
         // -- Line 5
         setLine5Color('#001400');
+        // ---- Extra Color Off ----
+        setButton7Color('white');
+        setButton8Color('white');
     };
     // 7
     const handleButton7Click = () => {
@@ -152,6 +186,8 @@ export default function PTStatus() {
         setLine5Color('#001400');
         // -- Line 6
         setLine6Color('#001400');
+        // ---- Extra Color Off ----
+        setButton8Color('white');
     };
     // 8
     const handleButton8Click = () => {
@@ -221,10 +257,28 @@ export default function PTStatus() {
                                 {/* 1 - G */}
                                 <div id="PTS_Pre_Box_Detail_Box_L">
                                     <div id="PTS_Pre_Box_Detail_Box_P1">
-                                        Father Name
+                                        Email
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        Qazi Jawed Hussain Ullah
+                                        Rehmat.qazi000@gmail.com
+                                    </div>
+                                </div>
+                                {/* 2 - O */}
+                                <div id="PTS_Pre_Box_Detail_Box">
+                                    <div id="PTS_Pre_Box_Detail_Box_P1">
+                                        University Name
+                                    </div>
+                                    <div id="PTS_Pre_Box_Detail_Box_P2">
+                                        Deakin University
+                                    </div>
+                                </div>
+                                {/* 2 - G */}
+                                <div id="PTS_Pre_Box_Detail_Box_L">
+                                    <div id="PTS_Pre_Box_Detail_Box_P1">
+                                        Course Name
+                                    </div>
+                                    <div id="PTS_Pre_Box_Detail_Box_P2">
+                                        Applied Sciences
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +304,7 @@ export default function PTStatus() {
                             {/* Line 1 */}
                             <div id="Main_Box_Light_L">
                                 <div id="F_Main_B_L_2">
-                                    <div id="Main_B_L_2" style={{ backgroundColor: Line1Color }}> 
+                                    <div id="Main_B_L_2" style={{ backgroundColor: Line1Color }}>
                                         {/* Line 1 */}
                                     </div>
                                 </div>
