@@ -1,0 +1,558 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ---  PRecords.css  --- */
+/* 1 - PR_Second */
+#PR_Second {
+  border: 0px solid transparent;
+  padding: 0.2em 2em;
+  margin: 0.1em 0em;
+}
+#sub_PR_Second {
+  border: 0px solid transparent;
+  padding: 0.1em 2em;
+}
+#PR_Second_Box {
+  border: 0px solid transparent;
+  padding: 0.35em 0.2em;
+  background-color: rgb(214, 210, 210);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+#PR_Second_Box_Part_0 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 20%;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #001400;
+  font-weight: bold;
+}
+#PR_Second_Box_Part_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0em;
+  width: 20%;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #001400;
+  font-weight: bold;
+}
+#PR_Second_Box_Part_2,
+#PR_Second_Box_Part_3 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 30%;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #001400;
+  font-weight: bold;
+}
+/* Start */
+/* 2 - PR_Third */
+#PR_Third {
+  border: 0px solid transparent;
+  padding: 0.1em 2em 20.5em 2em;
+}
+#sub_PR_Third {
+  border: 0px solid transparent;
+  padding: 0.1em 2em;
+}
+#PR_Third_Box {
+  border: 0px solid transparent;
+  padding: 0.75em 1em;
+  /* background-color: #ffbe76; */
+  background-color: #001400;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.1em 0em;
+  border-radius: 5px;
+}
+#PR_Third_Box:hover {
+  background-color: #014101;
+}
+#PR_Third_Box:focus {
+  outline: none;
+  background-color: #014101;
+}
+#PR_Third_Box_Part_0 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 20%;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#PR_Third_Box_Part_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0em;
+  width: 20%;
+}
+#PR_Third_Box_Part_1 img {
+  border: 0px solid transparent;
+  display: block;
+  margin: 0em auto;
+}
+#PR_Third_Box_Part_2,
+#PR_Third_Box_Part_3 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  width: 30%;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* --------------- */
+/* 1 - PR_List */
+#PR_List {
+  border: 0.1px solid black;
+  padding: 1em 1.5em;
+}
+#sub_PR_List {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+}
+#PR_List_Box {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+}
+#PR_List_Box h2 {
+  border: 0.1px solid black;
+  padding: 0.5em 0.4em;
+  color: #001400;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#PR_List_Box h2 i {
+  border: 0.1px solid black;
+  padding: 0.3em 0.5em;
+  color: #001400;
+  font-size: 1.1em;
+}
+/* Start */
+
+/* ---------------------------- */
+/* Media Queries In CSS */
+/* ---------------------------- */
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.2em 2em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 2em;
+  }
+  #PR_Second_Box {
+    padding: 0.35em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.1em 2em 20.5em 2em;
+  }
+  #sub_PR_Third {
+    padding: 0.1em 2em;
+  }
+  #PR_Third_Box {
+    padding: 0.7em 1em;
+    margin: 0.1em 0em;
+    border-radius: 5px;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 20%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.1em 2em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 2em;
+  }
+  #PR_Second_Box {
+    padding: 0.25em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.05em 2em 20.5em 2em;
+  }
+  #sub_PR_Third {
+    padding: 0.05em 2em;
+  }
+  #PR_Third_Box {
+    padding: 0.65em 1em;
+    margin: 0.1em 0em;
+    border-radius: 5px;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 20%;
+  }
+  #PR_Third_Box_Part_1 img {
+    width: 30%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.1em 0.65em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 1em;
+  }
+  #PR_Second_Box {
+    padding: 0.25em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.05em 0.6em 20.5em 0.6em;
+  }
+  #sub_PR_Third {
+    padding: 0.05em 1em;
+  }
+  #PR_Third_Box {
+    padding: 0.5em 1em;
+    margin: 0.1em 0em;
+    border-radius: 6px;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.9em;
+    letter-spacing: 0.7px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 20%;
+  }
+  #PR_Third_Box_Part_1 img {
+    width: 30%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.9em;
+    letter-spacing: 0.7px;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.1em 0.2em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 0.5em;
+  }
+  #PR_Second_Box {
+    padding: 0.25em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.05em 0.2em 20.5em 0.2em;
+  }
+  #sub_PR_Third {
+    padding: 0.05em 0.5em;
+  }
+  #PR_Third_Box {
+    padding: 0.5em 1em;
+    margin: 0.1em 0em;
+    border-radius: 6px;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.8em;
+    letter-spacing: 0px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 20%;
+  }
+  #PR_Third_Box_Part_1 img {
+    width: 30%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.8em;
+    letter-spacing: 0px;
+  }
+  /* - */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.1em 0em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 0.25em;
+  }
+  #PR_Second_Box {
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.05em 0em 20.5em 0em;
+  }
+  #sub_PR_Third {
+    padding: 0.05em 0.25em;
+  }
+  #PR_Third_Box {
+    padding: 0.4em 1em;
+    margin: 0.1em 0em;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.3em 1em;
+    width: 100%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 100%;
+  }
+  #PR_Third_Box_Part_1 img {
+    width: 10%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.3em 1em;
+    width: 100%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 6 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - PR_Second */
+  #PR_Second {
+    padding: 0.1em 0em;
+    margin: 0.1em 0em;
+  }
+  #sub_PR_Second {
+    padding: 0.1em 0em;
+  }
+  #PR_Second_Box {
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+  }
+  #PR_Second_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 20%;
+    font-size: 0.6em;
+    letter-spacing: 0px;
+  }
+  #PR_Second_Box_Part_1 {
+    padding: 0.5em 0em;
+    width: 20%;
+    font-size: 0.6em;
+    letter-spacing: 0px;
+  }
+  #PR_Second_Box_Part_2,
+  #PR_Second_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 30%;
+    font-size: 0.6em;
+    letter-spacing: 0px;
+  }
+  /* 2 - PR_Third */
+  #PR_Third {
+    padding: 0.05em 0em 20.5em 0em;
+  }
+  #sub_PR_Third {
+    padding: 0.05em 0em;
+  }
+  #PR_Third_Box {
+    padding: 0.5em 1em;
+    margin: 0.1em 0em;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PR_Third_Box_Part_0 {
+    padding: 0.5em 1em;
+    width: 100%;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  #PR_Third_Box_Part_1 {
+    padding: 0.2em 0em;
+    width: 100%;
+  }
+  #PR_Third_Box_Part_1 img {
+    width: 10%;
+  }
+  #PR_Third_Box_Part_2,
+  #PR_Third_Box_Part_3 {
+    padding: 0.5em 1em;
+    width: 100%;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}

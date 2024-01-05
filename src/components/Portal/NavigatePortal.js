@@ -12,6 +12,7 @@ import PRecords from './MyFeatures/PRecords/PRecords'
 import PChat from './MyFeatures/PChat/PChat'
 import PAdd_Uni from './MyFeatures/PAdd_Uni/PAdd_Uni'
 import PProfile from './MyFeatures/PProfile/PProfile'
+import PR_List from './MyFeatures/PRecords/PR_List'
 
 export default function NavigatePortal() {
     // Main Body
@@ -39,6 +40,8 @@ export default function NavigatePortal() {
                 <Route path='/PTStatus' element={<PTStatus />} />
                 {/* 9 */}
                 <Route path='/PRecords' element={<PRecords />} />
+                {/* 9 - Sub File */}
+                <Route path='/PR_List' element={<PR_List />} />
                 {/* 10 */}
                 <Route path='/PChat' element={<PChat />} />
                 {/* 11 */}

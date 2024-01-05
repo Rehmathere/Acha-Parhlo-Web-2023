@@ -78,6 +78,21 @@ export default function PTracking() {
                                         Apllied Science
                                     </div>
                                 </div>
+                                {/* Box2 Number 1 */}
+                                <div id="PTr_sec_Part2_Box" onClick={() => navigate('/PTStatus')}>
+                                    <div id="PTr_sec_Part2_1">
+                                        2
+                                    </div>
+                                    <div id="PTr_sec_Part2_2">
+                                        Zain
+                                    </div>
+                                    <div id="PTr_sec_Part2_3">
+                                        Deakin
+                                    </div>
+                                    <div id="PTr_sec_Part2_4">
+                                        Arts
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Start */}

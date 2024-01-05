@@ -55,7 +55,8 @@ main {
   transition: all 0.5s;
 }
 .active {
-  background: linear-gradient(to right, orangered, #eb7405);  
+  /* background: linear-gradient(to right, orangered, #eb7405);   */
+  background: #eb7405;  
   color: #000;
   margin: 0.1em 0em;
   border-radius: 10px;
