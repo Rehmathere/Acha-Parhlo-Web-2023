@@ -211,7 +211,8 @@
 #PTS_Pre_Box_Detail_Box_L {
   border: 0px solid transparent;
   padding: 0.1em 0.1em;
-  background-color: rgb(230, 225, 225);
+  /* background-color: rgb(230, 225, 225); */
+  background-color: #dafada;
   width: 60%;
   margin: 0.05em 0em;
   border-radius: 10px;

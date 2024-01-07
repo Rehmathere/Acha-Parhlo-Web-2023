@@ -96,10 +96,7 @@ export default function PAbout() {
                 {/* Logout Button */}
                 <button onClick={handleClick}>Logout</button>
                 <br /><br />
-                {/* USename Display */}
-                <h1>Hello, {userEmail.slice(0, 10)}</h1>
                 <p>Current Time: {currentDateTime.toLocaleTimeString()}</p>
-                <p>Current Date: {currentDateTime.toDateString()}</p>
             </PSidebar>
         </div>
     )

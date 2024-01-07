@@ -118,19 +118,19 @@
 /* --------------- */
 /* 1 - PR_List */
 #PR_List {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 1em 1.5em;
 }
 #sub_PR_List {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 1em 1em;
 }
 #PR_List_Box {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 1em 1em;
 }
 #PR_List_Box h2 {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.5em 0.4em;
   color: #001400;
   text-transform: uppercase;
@@ -139,10 +139,65 @@
   letter-spacing: 1px;
 }
 #PR_List_Box h2 i {
-  border: 0.1px solid black;
+  border: 0px solid transparent;
   padding: 0.3em 0.5em;
   color: #001400;
   font-size: 1.1em;
+}
+#PR_List_Detail {
+  border: 0px solid transparent;
+  padding: 1em 1em 0.2em 1em;
+}
+#PR_List_Detail h3 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.65em;
+  font-size: 1.2em;
+  margin: 0.5em 0em 0em 0em;
+  color: #001400;
+}
+#PR_Detail_P_Hint {
+  border: 0px solid transparent;
+  padding: 0.3em 1em;
+  font-size: 0.9em;
+  margin: 0.1em 0em 0.5em 0em;
+  text-transform: capitalize;
+  color: #001400;
+}
+#PR_Detail_Part {
+  border: 0px solid transparent;
+  padding: 0.2em 0.9em;
+}
+#PR_Detail_Box {
+  border: 0px solid transparent;
+  padding: 0.025em 0.1em;
+  /* background-color: #dfe4ea; */
+  background-color: #dafada;
+  width: 75%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1em 0em;
+}
+#PR_D_B_1 {
+  border: 0px solid transparent;
+  padding: 0.23em 1em 0.15em 1em;
+  width: 40%;
+  font-size: 0.85em;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  /* font-weight: bold; */
+  color: #001400;
+}
+#PR_D_B_2 {
+  border: 0px solid transparent;
+  padding: 0.1em 0.2em;
+  width: 60%;
+  font-size: 0.95em;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #001400;
 }
 /* Start */
 
@@ -211,6 +266,41 @@
     font-size: 1.1em;
     letter-spacing: 1px;
   }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 1em 0.1em 1em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.2em 0.65em;
+    font-size: 1.1em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.85em;
+    margin: 0.1em 0em 0.5em 0em;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.8em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 78%;
+    margin: 0.1em 0em;
+  }
+  #PR_D_B_1 {
+    padding: 0.23em 1em 0.15em 1em;
+    width: 40%;
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
+  }
+  #PR_D_B_2 {
+    padding: 0.1em 0.2em;
+    width: 60%;
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
+  }
   /* - */
 }
 /* 2 */
@@ -277,6 +367,41 @@
     width: 30%;
     font-size: 1em;
     letter-spacing: 1px;
+  }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 1em 0em 1em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.2em 0.3em;
+    font-size: 1.05em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.73em;
+    margin: 0.1em 0em 0.5em 0em;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.3em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 80%;
+    margin: 0.1em 0em;
+  }
+  #PR_D_B_1 {
+    padding: 0.23em 1em 0.15em 1em;
+    width: 40%;
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
+  }
+  #PR_D_B_2 {
+    padding: 0.1em 0.2em;
+    width: 60%;
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
   }
   /* - */
 }
@@ -345,6 +470,41 @@
     font-size: 0.9em;
     letter-spacing: 0.7px;
   }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 0.7em 0em 0.7em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.2em 0.3em;
+    font-size: 1em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.73em;
+    margin: 0.1em 0em 0.5em 0em;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.3em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 90%;
+    margin: 0.1em 0em;
+  }
+  #PR_D_B_1 {
+    padding: 0.23em 1em 0.15em 1em;
+    width: 40%;
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
+  }
+  #PR_D_B_2 {
+    padding: 0.1em 0.2em;
+    width: 60%;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+  }
   /* - */
 }
 /* 4 */
@@ -410,6 +570,41 @@
     padding: 0.5em 1em;
     width: 30%;
     font-size: 0.8em;
+    letter-spacing: 0px;
+  }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 0.6em 0em 0.6em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.2em 0.3em;
+    font-size: 1em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.73em;
+    margin: 0.1em 0em 0.5em 0em;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.3em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 100%;
+    margin: 0.1em 0em;
+  }
+  #PR_D_B_1 {
+    padding: 0.23em 1em 0.15em 1em;
+    width: 40%;
+    font-size: 0.65em;
+    letter-spacing: 0px;
+  }
+  #PR_D_B_2 {
+    padding: 0.1em 0.2em;
+    width: 60%;
+    font-size: 0.65em;
     letter-spacing: 0px;
   }
   /* - */
@@ -483,6 +678,46 @@
     font-size: 0.9em;
     letter-spacing: 1px;
   }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 0em 0em 0em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.2em 0.3em;
+    font-size: 0.8em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.7em;
+    margin: 0.1em 0em 0.5em 0em;
+    text-align: center;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.1em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 100%;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PR_D_B_1 {
+    padding: 0.25em 1em 0.15em 1em;
+    width: 100%;
+    font-size: 0.6em;
+    letter-spacing: 0px;
+  }
+  #PR_D_B_2 {
+    padding: 0.5em 0.2em;
+    width: 100%;
+    font-size: 0.6em;
+    letter-spacing: 0px;
+  }
   /* - */
 }
 /* 6 */
@@ -553,6 +788,44 @@
     width: 100%;
     font-size: 0.7em;
     letter-spacing: 1px;
+  }
+  /* --- PR_List.js --- */
+  /* 1 - PR_List */
+  #PR_List_Detail {
+    padding: 0em 0em 0em 0em;
+  }
+  #PR_List_Detail h3 {
+    padding: 0.25em 0.3em;
+    font-size: 0.65em;
+    margin: 0.5em 0em 0em 0em;
+  }
+  #PR_Detail_P_Hint {
+    padding: 0.3em 1em;
+    font-size: 0.7em;
+    margin: 0.1em 0em 0.5em 0em;
+    text-align: center;
+  }
+  #PR_Detail_Part {
+    padding: 0.1em 0.1em;
+  }
+  #PR_Detail_Box {
+    padding: 0.024em 0.1em;
+    width: 100%;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PR_D_B_1 {
+    padding: 0.23em 1em 0.15em 1em;
+    width: 100%;
+    font-size: 0.55em;
+  }
+  #PR_D_B_2 {
+    padding: 0.5em 0.2em;
+    width: 100%;
+    font-size: 0.55em;
   }
   /* - */
 }

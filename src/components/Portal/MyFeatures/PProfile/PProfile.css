@@ -238,7 +238,7 @@
   letter-spacing: 2px;
   border-radius: 15px 0px 0px 15px;
   font-size: 1.1em;
-  background-color: #dff9fb;
+  background-color: #dafada;
 }
 #ProfileBox_2_Input_Box_2 {
   border: 0px solid transparent;
@@ -247,7 +247,8 @@
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
-  background-color: #dff9fb;
+  background-color: #dafada;
+
 }
 #ProfileBox_2_Input_Box_3 {
   border: 0px solid transparent;
@@ -258,7 +259,7 @@
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: bold;
-  background-color: #dff9fb;
+  background-color: #dafada;
 }
 #ProfileBox_2_Input_Box_3_E {
   border: 0px solid transparent;
@@ -268,7 +269,7 @@
   font-size: 1em;
   letter-spacing: 0.8px;
   font-weight: bold;
-  background-color: #dff9fb;
+  background-color: #dafada;
 }
 #ProfileBox_2_Input_Box_1_W {
   border: 0px solid transparent;
@@ -497,10 +498,10 @@
   padding: 1em 1.5em;
 }
 #ProfileBox_2_Part_3_Input_Box_2 button {
-  border: 1px solid #0652dd;
+  border: 1px solid #001400;
   padding: 0.5em 1em;
   width: 100%;
-  background-color: #0652dd;
+  background-color: #001400;
   border-radius: 10px;
   color: white;
   font-size: 1.1em;
