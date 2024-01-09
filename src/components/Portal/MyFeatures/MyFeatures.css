@@ -49,15 +49,18 @@ main {
   transition: all 0.5s;
 }
 .link:hover {
-  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  /* background: linear-gradient(to right, #b6fbff, #83a4d4); */
+  /* background: #f1cca8;   */
+  /* background: rgb(248, 222, 205);   */
+  background-color: #035503;
   text-decoration: none;
-  color: #000;
+  color: orangered;
   transition: all 0.5s;
 }
 .active {
   /* background: linear-gradient(to right, orangered, #eb7405);   */
   background: #eb7405;  
-  color: #000;
+  color: #001400;
   margin: 0.1em 0em;
   border-radius: 10px;
 }

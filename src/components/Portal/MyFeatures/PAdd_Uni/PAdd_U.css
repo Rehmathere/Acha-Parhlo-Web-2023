@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ------------------------- */
+/* -- PAdd_U.css -- */
+/* ------------------------- */
+/* 1 - PAdd_U_first */
+#PAdd_U_first {
+  border: 0.1px solid black;
+  padding: 1em 2em;
+  margin: 0.1em 0em;
+}
+#sub_PAdd_U_first {
+  border: 0.1px solid black;
+  padding: 1em 2em;
+}
+
+/* Start */
+/* ---------------------------- */
+/* Media Queries In CSS */
+/* ---------------------------- */
+/* 1 */

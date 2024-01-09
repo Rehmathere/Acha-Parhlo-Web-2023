@@ -1,9 +1,12 @@
 import React, { useState, useRef } from 'react';
 import PSidebar from '../PSidebar'
+// CSS
 import '../PProfile/PProfile.css'
-import logout from '../../../Pics/logout.png'
+import '../PRecords/PRecords.css'
 // Images
+import logout from '../../../Pics/logout.png'
 import user from '../../../Pics/user_P.png'
+import Str_P from "../../../Pics/Str_P.png"
 // Reset Password 
 import { database } from '../../firebase'
 import { updatePassword } from 'firebase/auth'
@@ -131,9 +134,20 @@ export default function PProfile() {
             {/* ------------- */}
             <PSidebar>
                 {/* Profile Heading */}
-                <div id="Prof_Heading">
+                {/* <div id="Prof_Heading">
                     <h1>My Profile <i className="fa fa-user-circle-o" ></i></h1>
-                </div>
+                </div> */}
+                {/* Profile Heading New */}
+                <div id="PTr_first">
+                        <div id="sub_PTr_first">
+                            <div id="PTr_first_1">
+                                <h1>My Profile</h1>
+                            </div>
+                            <div id="PTr_first_2">
+                                <img src={Str_P} alt="Na" />
+                            </div>
+                        </div>
+                    </div>
                 {/* Main Profile Body */}
                 <div id="MainProfile">
                     <div id="subMainProfile">
