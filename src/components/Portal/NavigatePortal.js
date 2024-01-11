@@ -13,6 +13,7 @@ import PChat from './MyFeatures/PChat/PChat'
 import PAdd_Uni from './MyFeatures/PAdd_Uni/PAdd_Uni'
 import PProfile from './MyFeatures/PProfile/PProfile'
 import PR_List from './MyFeatures/PRecords/PR_List'
+import PAppoint_Detail from './MyFeatures/PAppointments/PAppoint_Detail'
 
 export default function NavigatePortal() {
     // Main Body
@@ -34,6 +35,8 @@ export default function NavigatePortal() {
                 <Route path='/PProfile' element={<PProfile />} />
                 {/* 7 */}
                 <Route path='/PAppointments' element={<PAppointments />} />
+                {/* 7 */}
+                <Route path='/PAppointDetail' element={<PAppoint_Detail />} />
                 {/* 8 */}
                 <Route path='/PTracking' element={<PTracking />} />
                 {/* 8 - Sub File */}

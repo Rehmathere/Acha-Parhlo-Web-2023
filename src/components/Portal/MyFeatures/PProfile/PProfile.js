@@ -202,7 +202,7 @@ export default function PProfile() {
                                                     )}
                                                 </div>
                                                 <div id="ProfileBox_2_Part_1_1_P2">
-                                                    {isEditing && <p>{name || " - Empty - "}</p>
+                                                    {isEditing && <p>{name || " ----- "}</p>
                                                     }
                                                 </div>
                                             </div>
@@ -216,7 +216,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name || " ----------- "}</div>
                                                 }
                                             </div>
                                             {/* Input Name White 1 */}
@@ -227,7 +227,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name2 || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name2 || " ----------- "}</div>
                                                 }
                                             </div>
                                             {/* Input Name 2 */}
@@ -238,7 +238,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_E'>{name3 || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_E'>{name3 || " ----------- "}</div>
                                                 }
                                             </div>
                                             {/* Input Name White 2 */}
@@ -249,7 +249,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name4 || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name4 || " ----------- "}</div>
                                                 }
                                             </div>
                                             {/* Input Name 1 */}
@@ -260,7 +260,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name5 || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3'>{name5 || " ----------- "}</div>
                                                 }
                                             </div>
                                             {/* Input Name White 1 */}
@@ -271,7 +271,7 @@ export default function PProfile() {
                                                 <div id="ProfileBox_2_Input_Box_2_W">
                                                     :
                                                 </div>
-                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name6 || " - Empty - "}</div>
+                                                {isEditing && <div id='ProfileBox_2_Input_Box_3_W'>{name6 || " ----------- "}</div>
                                                 }
                                             </div>
                                         </div>

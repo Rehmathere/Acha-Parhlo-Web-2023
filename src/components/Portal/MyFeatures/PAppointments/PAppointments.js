@@ -9,6 +9,7 @@ import "../PAppointments/PAppoint.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import Str_4 from "../../../Pics/Str_4.png"
+import Str_5 from "../../../Pics/Str_5.png"
 
 export default function PAppointments() {
     // useNavigate
@@ -44,11 +45,60 @@ export default function PAppointments() {
                         </div>
                     </div>
                     {/* PAppointments Code Start From Here */}
-                    {/* 2 - PR_first */}
-                    <div id="PApp_first">
-                        <div id="sub_PApp_first">
-                            {/* Start */}
+                    {/* 2 - PR_Second */}
+                    <div id="PR_Second">
+                        <div id="sub_PR_Second">
+                            <div id="PR_Second_Box">
+                                <div id="PR_Second_Box_Part_0">
+                                    ID
+                                </div>
+                                <div id="PR_Second_Box_Part_1">
+                                    Image
+                                </div>
+                                <div id="PR_Second_Box_Part_2">
+                                    Name
+                                </div>
+                                <div id="PR_Second_Box_Part_3">
+                                    Date
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    {/* 3 - PR_Third */}
+                    <div id="PR_Third">
+                        <div id="sub_PR_Third">
+                            {/* Record Box 1 */}
+                            <div id="PR_Third_Box" onClick={() => navigate('/PAppointDetail')}>
+                                <div id="PR_Third_Box_Part_0">
+                                    1234567890
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_5} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Qazi Rehmat Hussain
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    12 / 01 / 2024
+                                </div>
+                            </div>
+                            {/* Record Box 2 */}
+                            <div id="PR_Third_Box" onClick={() => navigate('/PAppointDetail')}>
+                                <div id="PR_Third_Box_Part_0">
+                                    00000000
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_5} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Zain
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    12 / 01 / 2024
+                                </div>
+                            </div>
+                        </div>
+                        {/* End */}
                     </div>
                 </>
             </PSidebar>

@@ -7,6 +7,7 @@ import '../PProfile/PProfile.css'
 // Images
 import logout from '../../../Pics/logout.png'
 import Ptr from "../../../Pics/PTr.png"
+import Str_8 from "../../../Pics/Str_8.png"
 
 export default function PTracking() {
     // useNavigate
@@ -42,61 +43,60 @@ export default function PTracking() {
                         </div>
                     </div>
                     {/* 2 - Ptr_Second */}
-                    <div id="PTr_second">
-                        <div id="sub_PTr_second">
-                            {/* 2 - Part 1 */}
-                            <div id="PTr_second_Part1">
-                                <div id="PTr_second_Part1_Box">
-                                    <div id="PTr_second_Part1_1">
-                                        Sr No.
-                                    </div>
-                                    <div id="PTr_second_Part1_2">
-                                        Name
-                                    </div>
-                                    <div id="PTr_second_Part1_3">
-                                        University
-                                    </div>
-                                    <div id="PTr_second_Part1_4">
-                                        Course
-                                    </div>
+                    {/* 2 - PR_Second */}
+                    <div id="PR_Second">
+                        <div id="sub_PR_Second">
+                            <div id="PR_Second_Box">
+                                <div id="PR_Second_Box_Part_0">
+                                    ID
+                                </div>
+                                <div id="PR_Second_Box_Part_1">
+                                    Image
+                                </div>
+                                <div id="PR_Second_Box_Part_2">
+                                    Name
+                                </div>
+                                <div id="PR_Second_Box_Part_3">
+                                    University
                                 </div>
                             </div>
-                            {/* 2 - Part 2 */}
-                            <div id="PTr_second_Part2">
-                                {/* Box2 Number 1 */}
-                                <div id="PTr_sec_Part2_Box" onClick={() => navigate('/PTStatus')}>
-                                    <div id="PTr_sec_Part2_1">
-                                        1
-                                    </div>
-                                    <div id="PTr_sec_Part2_2">
-                                        Qazi Rehmat Hussain
-                                    </div>
-                                    <div id="PTr_sec_Part2_3">
-                                        The Western Sdyney
-                                    </div>
-                                    <div id="PTr_sec_Part2_4">
-                                        Apllied Science
-                                    </div>
-                                </div>
-                                {/* Box2 Number 1 */}
-                                <div id="PTr_sec_Part2_Box" onClick={() => navigate('/PTStatus')}>
-                                    <div id="PTr_sec_Part2_1">
-                                        2
-                                    </div>
-                                    <div id="PTr_sec_Part2_2">
-                                        Zain
-                                    </div>
-                                    <div id="PTr_sec_Part2_3">
-                                        Deakin
-                                    </div>
-                                    <div id="PTr_sec_Part2_4">
-                                        Arts
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Start */}
                         </div>
+                    </div>
+                    {/* 3 - PR_Third */}
+                    <div id="PR_Third">
+                        <div id="sub_PR_Third">
+                            {/* Record Box 1 */}
+                            <div id="PR_Third_Box" onClick={() => navigate('/PTStatus')}>
+                                <div id="PR_Third_Box_Part_0">
+                                    1234567890
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_8} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Qazi Rehmat Hussain
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    Deakin
+                                </div>
+                            </div>
+                            {/* Record Box 2 */}
+                            <div id="PR_Third_Box" onClick={() => navigate('/PTStatus')}>
+                                <div id="PR_Third_Box_Part_0">
+                                    00000000
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_8} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Zain
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    Deakin
+                                </div>
+                            </div>
+                        </div>
+                        {/* End */}
                     </div>
                     {/* --------------------------------------------- */}
                     {/* <br />
