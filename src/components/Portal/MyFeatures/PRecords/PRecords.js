@@ -82,20 +82,6 @@ export default function PRecords() {
                                 </div>
                             </div>
                             {/* Record Box 2 */}
-                            <div id="PR_Third_Box" onClick={() => navigate('/PR_List')}>
-                                <div id="PR_Third_Box_Part_0">
-                                    00000000
-                                </div>
-                                <div id="PR_Third_Box_Part_1">
-                                    <img src={Str_3} alt="NA" />
-                                </div>
-                                <div id="PR_Third_Box_Part_2">
-                                    Zain
-                                </div>
-                                <div id="PR_Third_Box_Part_3">
-                                    wr501-209936-9
-                                </div>
-                            </div>
                         </div>
                         {/* End */}
                     </div>

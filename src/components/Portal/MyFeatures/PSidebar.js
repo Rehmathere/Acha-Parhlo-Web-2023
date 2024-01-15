@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaUserAlt, FaCalendarAlt, FaCommentAlt, FaFileAlt, FaMapMarkerAlt, FaUniversity, FaTh } from "react-icons/fa";
+import { FaBars, FaUserAlt, FaCalendarAlt, FaComment, FaFileAlt, FaMapMarkerAlt, FaUniversity, FaTh } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import './MyFeatures.css';
 
@@ -36,7 +36,7 @@ export default function PSidebar({ children }) {
         {
             path: "/PChat",
             name: "Chat",
-            icon: <FaCommentAlt />
+            icon: <FaComment />
         },
         {
             path: "/PAdd_Uni",

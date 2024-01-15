@@ -36,6 +36,26 @@ export default function PAppoint_Detail() {
                         {/* Start */}
                     </div>
                 </div>
+                <div id="PAD_first">
+                    <div id="sub_PAD_first">
+                        {/* Box */}
+                        <div id="PAD_first_Box">
+                            {/* 1 */}
+                            <div id="PAD_first_B_1">
+                                {/* Image */}
+                            </div>
+                            {/* 2 */}
+                            <div id="PAD_first_B_2">
+                                <div id="PAD_first_B_2_P1">
+                                    {/* Info 1 */}
+                                </div>
+                                <div id="PAD_first_B_2_P2">
+                                    {/* Info 2 */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* Start */}
             </PSidebar>
         </div>

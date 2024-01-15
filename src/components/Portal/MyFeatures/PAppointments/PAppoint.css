@@ -11,15 +11,56 @@
 /* 1 - PApp_first */
 #PApp_first {
   border: 0.1px solid black;
-  padding: 1em 2em;
+  padding: 1em 1em;
   margin: 0.1em 0em;
 }
 #sub_PApp_first {
   border: 0.1px solid black;
-  padding: 1em 2em;
+  padding: 1em 1em;
 }
-
+#PAD_first{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+}
+#sub_PAD_first{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+}
+#PAD_first_Box{
+  border: 0.1px solid black;
+  padding: 0.5em 1em;
+}
+#PAD_first_B_1{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  background-color: aquamarine;
+}
+#PAD_first_B_2{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  margin: 0.2em 0em;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#PAD_first_B_2_P1{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  margin: 0.2em 0em;
+  background-color: aquamarine;
+  width: 50%;
+}
+#PAD_first_B_2_P2{
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  margin: 0.2em 0em;
+  background-color: aquamarine;
+  width: 50%;
+}
 /* Start */
+
 /* ---------------------------- */
 /* Media Queries In CSS */
 /* ---------------------------- */

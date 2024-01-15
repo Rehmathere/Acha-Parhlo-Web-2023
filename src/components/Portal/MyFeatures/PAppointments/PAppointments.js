@@ -83,20 +83,6 @@ export default function PAppointments() {
                                 </div>
                             </div>
                             {/* Record Box 2 */}
-                            <div id="PR_Third_Box" onClick={() => navigate('/PAppointDetail')}>
-                                <div id="PR_Third_Box_Part_0">
-                                    00000000
-                                </div>
-                                <div id="PR_Third_Box_Part_1">
-                                    <img src={Str_5} alt="NA" />
-                                </div>
-                                <div id="PR_Third_Box_Part_2">
-                                    Zain
-                                </div>
-                                <div id="PR_Third_Box_Part_3">
-                                    12 / 01 / 2024
-                                </div>
-                            </div>
                         </div>
                         {/* End */}
                     </div>

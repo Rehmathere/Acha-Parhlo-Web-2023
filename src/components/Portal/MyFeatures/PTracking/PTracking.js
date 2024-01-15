@@ -81,20 +81,6 @@ export default function PTracking() {
                                 </div>
                             </div>
                             {/* Record Box 2 */}
-                            <div id="PR_Third_Box" onClick={() => navigate('/PTStatus')}>
-                                <div id="PR_Third_Box_Part_0">
-                                    00000000
-                                </div>
-                                <div id="PR_Third_Box_Part_1">
-                                    <img src={Str_8} alt="NA" />
-                                </div>
-                                <div id="PR_Third_Box_Part_2">
-                                    Zain
-                                </div>
-                                <div id="PR_Third_Box_Part_3">
-                                    Deakin
-                                </div>
-                            </div>
                         </div>
                         {/* End */}
                     </div>
