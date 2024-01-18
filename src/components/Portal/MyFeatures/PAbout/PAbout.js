@@ -34,6 +34,14 @@ export default function PAbout() {
         // Cleanup interval on component unmount
         return () => clearInterval(intervalId);
     }, []);
+    // ------ Logout Logic ------
+    // Use state to manage the visibility of the Logout Box
+    const [isLogoutBoxVisible, setLogoutBoxVisibility] = useState(false);
+    // Function to toggle the visibility of the Logout Box
+    const toggleLogoutBox = () => {
+        setLogoutBoxVisibility(!isLogoutBoxVisible);
+    };
+    // ----------------------------------------------------
     // Main Body
     return (
         <div id='PAbout_container'>
@@ -44,7 +52,7 @@ export default function PAbout() {
                         <p>Acha Parhlo Consultant Portal</p>
                     </div>
                     <div id="Head_2">
-                        <button id="sub_Head_2">
+                        <button id="sub_Head_2" onClick={toggleLogoutBox}>
                             <img src={logout} alt="NA" />
                         </button>
                     </div>
@@ -93,10 +101,20 @@ export default function PAbout() {
                 </div>
                 <br />
                 <br />
-                {/* Logout Button */}
-                <button onClick={handleClick}>Logout</button>
-                <br /><br />
-                <p>Current Time: {currentDateTime.toLocaleTimeString()}</p>
+                {/* ---Logout Logic --- */}
+                {isLogoutBoxVisible && (
+                    <div id="Logout_Box">
+                        <div id="sub_Logout_Box">
+                            <div id="Logout_Box_1">
+                                Are You Sure You Want To Logout ?
+                            </div>
+                            <div id="Logout_Box_2">
+                                <button onClick={handleClick}>Yes, Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {/* ------------------- */}
             </PSidebar>
         </div>
     )

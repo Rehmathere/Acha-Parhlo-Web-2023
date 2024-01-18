@@ -1,18 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PSidebar from '../PSidebar'
 // useNavigate
 import { useNavigate } from 'react-router-dom'
 // CSS
 import '../PProfile/PProfile.css'
 import '../PRecords/PRecords.css'
-import "../PChat/PChat.css"
+import "./PChat.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import Str_7 from "../../../Pics/Str_7.png"
+// Logout Logic 
+import { database } from '../../firebase'
+import { signOut } from 'firebase/auth'
+import "../PAppointments/PAppoint.css"
 
 export default function PChat() {
-    // useNavigate
+    // ------ Logout Logic ------
+    // useNavigate 
     const navigate = useNavigate();
+    // Logout Function
+    const handleClick = () => {
+        signOut(database).then(val => {
+            console.log(val, 'val');
+            navigate('/');
+        })
+    }
+    // Use state to manage the visibility of the Logout Box
+    const [isLogoutBoxVisible, setLogoutBoxVisibility] = useState(false);
+    // Function to toggle the visibility of the Logout Box
+    const toggleLogoutBox = () => {
+        setLogoutBoxVisibility(!isLogoutBoxVisible);
+    };
+    // ----------------------------------------------------
     // Main Body
     return (
         <div>
@@ -23,7 +42,7 @@ export default function PChat() {
                         <p>Acha Parhlo Consultant Portal</p>
                     </div>
                     <div id="Head_2">
-                        <button id="sub_Head_2">
+                        <button id="sub_Head_2" onClick={toggleLogoutBox}>
                             <img src={logout} alt="NA" />
                         </button>
                     </div>
@@ -50,6 +69,21 @@ export default function PChat() {
                             {/* Start */}
                         </div>
                     </div>
+                    {/* ------------------- */}
+                    {/* ---Logout Logic --- */}
+                    {isLogoutBoxVisible && (
+                        <div id="Logout_Box">
+                            <div id="sub_Logout_Box">
+                                <div id="Logout_Box_1">
+                                    Are You Sure You Want To Logout ?
+                                </div>
+                                <div id="Logout_Box_2">
+                                    <button onClick={handleClick}>Yes, Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    {/* ------------------- */}
                 </>
             </PSidebar>
         </div>

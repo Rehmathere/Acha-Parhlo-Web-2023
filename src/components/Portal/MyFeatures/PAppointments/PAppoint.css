@@ -8,60 +8,861 @@
 /* ------------------------- */
 /* -- PAppointment.css -- */
 /* ------------------------- */
-/* 1 - PApp_first */
-#PApp_first {
-  border: 0.1px solid black;
-  padding: 1em 1em;
-  margin: 0.1em 0em;
+/* 1 - PAD_first */
+#PAD_first {
+  border: 0px solid transparent;
+  padding: 0.5em 0.7em 3em 0.7em;
 }
-#sub_PApp_first {
-  border: 0.1px solid black;
-  padding: 1em 1em;
+#sub_PAD_first {
+  border: 0px solid transparent;
+  padding: 0.5em 0.7em;
 }
-#PAD_first{
-  border: 0.1px solid black;
-  padding: 1em 1em;
+#PAD_first_Box {
+  border: 0px solid transparent;
+  padding: 0.1em 0.75em;
 }
-#sub_PAD_first{
-  border: 0.1px solid black;
-  padding: 1em 1em;
+#PAD_first_B_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.7em 0.2em 1.3em;
 }
-#PAD_first_Box{
-  border: 0.1px solid black;
-  padding: 0.5em 1em;
+#PAD_first_B_1_Box {
+  border: 0px solid transparent;
+  padding: 0.2em 0.2em;
+  width: 11%;
 }
-#PAD_first_B_1{
-  border: 0.1px solid black;
-  padding: 1em 1em;
-  background-color: aquamarine;
+#PAD_first_B_1_Box img {
+  border: 0px solid transparent;
+  padding: 0.15em 0.15em;
+  width: 100%;
 }
-#PAD_first_B_2{
-  border: 0.1px solid black;
-  padding: 1em 1em;
+#PAD_first_B_2 {
+  border: 0px solid transparent;
+  padding: 1em 0.55em;
   margin: 0.2em 0em;
-  background-color: aquamarine;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#PAD_first_B_2_P1{
-  border: 0.1px solid black;
-  padding: 1em 1em;
+#PAD_first_B_2_P1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em;
   margin: 0.2em 0em;
-  background-color: aquamarine;
   width: 50%;
 }
-#PAD_first_B_2_P2{
-  border: 0.1px solid black;
-  padding: 1em 1em;
-  margin: 0.2em 0em;
-  background-color: aquamarine;
+#PAD_first_B_2_P2 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em;
   width: 50%;
+  color: #001400;
 }
+#PAD_first_B_2_P_InputBox {
+  border: 0px solid transparent;
+  padding: 0.3em 0.3em;
+  margin: 0.15em 0em 0em 0em;
+}
+#PAD_first_B_2_P_InputBox_P1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.4em;
+  font-weight: bold;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+#PAD_first_B_2_P_InputBox_P2 {
+  border: 0px solid transparent;
+  padding: 0.45em 0.5em;
+  margin: 0.1em 0em 0em 0em;
+  letter-spacing: 3px;
+  font-size: 1em;
+}
+#PAD_first_B_3 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.55em;
+  margin: 0.2em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#PAD_first_B_3_Box {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em;
+  margin: 0.2em 0em;
+  width: 33.3%;
+}
+#PAD_first_B_3_Box_Btn1 {
+  border: 0px solid #0652dd;
+  padding: 0.45em 0.55em;
+  margin: 0.2em 0em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #0652dd;
+  width: 100%;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+#PAD_first_B_3_Box_Btn1:hover {
+  background-color: #023491;
+}
+#PAD_first_B_3_Box_Btn2 {
+  border: 0px solid #e90c13;
+  padding: 0.45em 0.55em;
+  margin: 0.2em 0em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #e90c13;
+  width: 100%;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+#PAD_first_B_3_Box_Btn2:hover {
+  background-color: #9e0a0f;
+}
+#PAD_first_B_3_Box_Btn3 {
+  border: 0px solid #1e2224;
+  padding: 0.45em 0.55em;
+  margin: 0.2em 0em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #1e2224;
+  width: 100%;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+#PAD_first_B_3_Box_Btn3:hover {
+  background-color: #0e1011;
+}
+#PAD_first_B_3_Box_Btn1:focus,
+#PAD_first_B_3_Box_Btn2:focus,
+#PAD_first_B_3_Box_Btn3:focus {
+  outline: none;
+  background-color: orange;
+  color: #001400;
+}
+/* -- Logout -- */
+#Logout_Box {
+  border: 0px solid transparent;
+  padding: 0.6em 0.5em;
+  width: 30%;
+  /* background-color: white; */
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.30) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: absolute;
+  top: 4.2em;
+  right: 1em;
+}
+#sub_Logout_Box {
+  border: 0px solid transparent;
+  padding: 0.6em 0.1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#Logout_Box_1 {
+  border: 0px solid transparent;
+  padding: 0.75em 0.3em;
+  font-size: 0.85em;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+#Logout_Box_2 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em;
+}
+#Logout_Box_2 button {
+  border: 0px solid transparent;
+  padding: 0.7em 2em;
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+#Logout_Box_2 button:hover {
+  background-color: rgb(211, 3, 3);
+}
+#Logout_Box_2 button:focus {
+  background-color: orange;
+  color: black;
+  outline: none;
+}
+/* -- Logout -- */
 /* Start */
 
 /* ---------------------------- */
 /* Media Queries In CSS */
 /* ---------------------------- */
 /* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 0.1em 0.7em 5em 0.7em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0.7em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0.75em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0.7em 0.2em 1.3em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.2em 0.2em;
+    width: 10.5%;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.1em 0.15em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.3em 0.3em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.2em 0.4em;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.45em 0.5em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 3px;
+    font-size: 1em;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 33.3%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 1em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 1em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 1em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.5em 0.3em;
+    width: 33%;
+    position: absolute;
+    top: 3.8em;
+    right: 0.5em;
+  }
+  #sub_Logout_Box {
+    padding: 0.6em 0.1em;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.3em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.5em;
+  }
+  #Logout_Box_2 button {
+    padding: 0.7em 2em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 1em 0.7em 7em 0.5em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0.5em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0.5em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0.7em 0.2em 1.1em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.05em 0.05em;
+    width: 10%;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.1em 0.15em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.1em 0.1em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.45em 0.5em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 3px;
+    font-size: 0.9em;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 33.3%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.3em 0.3em;
+    width: 37%;
+    position: absolute;
+    top: 3.5em;
+    right: 0.5em;
+  }
+  #sub_Logout_Box {
+    padding: 0.3em 0.1em;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.2em;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.3em;
+  }
+  #Logout_Box_2 button {
+    padding: 0.6em 2em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 1.5em 0.7em 15em 0.5em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0.4em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0.5em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0.7em 0.2em 1.1em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.05em 0.05em;
+    width: 9.5%;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.1em 0.15em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.1em 0.1em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.2em 0.4em;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.45em 0.5em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 3px;
+    font-size: 0.75em;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 33.3%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.75em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.75em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.4em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.3em 0.3em;
+    width: 43%;
+    position: absolute;
+    top: 3.5em;
+    right: 0.5em;
+  }
+  #sub_Logout_Box {
+    padding: 0.3em 0.1em;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.2em;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.3em;
+  }
+  #Logout_Box_2 button {
+    padding: 0.6em 2em;
+    font-size: 0.68em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 1.5em 0.1em 15em 0.1em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0.1em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0.1em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0.7em 0.2em 1.1em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.05em 0.05em;
+    width: 9.5%;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.1em 0.15em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.1em 0.1em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.2em 0.4em;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.45em 0.5em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 3px;
+    font-size: 0.7em;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0.55em;
+    margin: 0.2em 0em;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0em;
+    width: 33.3%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.2em 0.1em;
+    width: 54%;
+    position: absolute;
+    top: 3.35em;
+    right: 0.5em;
+  }
+  #sub_Logout_Box {
+    padding: 0.25em 0.1em;
+    border: 10px;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.1em;
+    font-size: 0.68em;
+    letter-spacing: 0.5px;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.3em;
+  }
+  #Logout_Box_2 button {
+    padding: 0.45em 2em;
+    font-size: 0.68em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 1em 0.1em 20em 0.1em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0.1em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0.1em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0.7em 0.2em 1.1em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.05em 0.05em;
+    width: 12%;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.05em 0.15em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 1em 0.55em;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.1em 0.5em;
+    margin: 0.1em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.1em 0.5em;
+    width: 100%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.1em 0.1em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.1em 0.4em;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.45em 0.5em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 3px;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0.55em;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.05em 0.5em;
+    margin: 0.05em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.2em 0.1em;
+    width: 70%;
+    position: absolute;
+    top: 3.1em;
+    right: 0.5em;
+  }
+  #sub_Logout_Box {
+    padding: 0.3em 0.1em;
+    border: 10px;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.1em;
+    font-size: 0.68em;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.3em;
+  }
+  #Logout_Box_2 button {
+    padding: 0.45em 1em;
+    font-size: 0.68em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}
+/* 6 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - PAD_first */
+  #PAD_first {
+    padding: 0.5em 1em 1em 1em;
+  }
+  #sub_PAD_first {
+    padding: 0.1em 0em;
+  }
+  #PAD_first_Box {
+    padding: 0.1em 0em;
+  }
+  #PAD_first_B_1 {
+    padding: 0.2em 0em 0.2em 0em;
+  }
+  #PAD_first_B_1_Box {
+    padding: 0.05em 0em;
+    width: 30%;
+    margin: 0em auto;
+  }
+  #PAD_first_B_1_Box img {
+    padding: 0.05em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_2 {
+    padding: 1em 0em;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAD_first_B_2_P1 {
+    padding: 0.1em 0em;
+    margin: 0.1em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_2_P2 {
+    padding: 0.1em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_2_P_InputBox {
+    padding: 0.1em 0em;
+    margin: 0.15em 0em 0em 0em;
+  }
+  #PAD_first_B_2_P_InputBox_P1 {
+    padding: 0.4em 0.4em;
+    font-size: 0.7em;
+    /* text-align: center; */
+    letter-spacing: 0.5px;
+  }
+  #PAD_first_B_2_P_InputBox_P2 {
+    padding: 0.6em 0em;
+    margin: 0.1em 0em 0em 0em;
+    letter-spacing: 1px;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  #PAD_first_B_3 {
+    padding: 0.2em 0em;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAD_first_B_3_Box {
+    padding: 0.05em 0em;
+    margin: 0.05em 0em;
+    width: 100%;
+  }
+  #PAD_first_B_3_Box_Btn1 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn2 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  #PAD_first_B_3_Box_Btn3 {
+    padding: 0.5em 0.55em;
+    margin: 0.2em 0em;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  /* -- Logout -- */
+  #Logout_Box {
+    padding: 0.2em 0.1em;
+    width: 87%;
+    position: absolute;
+    top: 4em;
+    right: 0em;
+  }
+  #sub_Logout_Box {
+    padding: 0.2em 0.1em;
+    border: 10px;
+  }
+  #Logout_Box_1 {
+    padding: 0.75em 0.1em;
+    font-size: 0.6em;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  #Logout_Box_2 {
+    padding: 0.2em 0.3em;
+    border-radius: 10px;
+  }
+  #Logout_Box_2 button {
+    padding: 0.45em 1em;
+    font-size: 0.6em;
+    letter-spacing: 1px;
+  }
+  /* - */
+}

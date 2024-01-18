@@ -10,7 +10,10 @@ import Str_P from "../../../Pics/Str_P.png"
 // Reset Password 
 import { database } from '../../firebase'
 import { updatePassword } from 'firebase/auth'
-
+// Logout Logic 
+import { useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import "../PAppointments/PAppoint.css"
 
 export default function PProfile() {
     const [newPassword, setNewPassword] = useState('');
@@ -115,6 +118,23 @@ export default function PProfile() {
     const profileBox2Part3Style = {
         display: isPart3Visible ? 'block' : 'none',
     };
+    // ------ Logout Logic ------
+    // useNavigate 
+    const navigate = useNavigate();
+    // Logout Function
+    const handleClick = () => {
+        signOut(database).then(val => {
+            console.log(val, 'val');
+            navigate('/');
+        })
+    }
+    // Use state to manage the visibility of the Logout Box
+    const [isLogoutBoxVisible, setLogoutBoxVisibility] = useState(false);
+    // Function to toggle the visibility of the Logout Box
+    const toggleLogoutBox = () => {
+        setLogoutBoxVisibility(!isLogoutBoxVisible);
+    };
+    // ----------------------------------------------------
     // Main Body
     return (
         <div>
@@ -125,7 +145,7 @@ export default function PProfile() {
                         <p>Acha Parhlo Consultant Portal</p>
                     </div>
                     <div id="Head_2">
-                        <button id="sub_Head_2">
+                        <button id="sub_Head_2" onClick={toggleLogoutBox}>
                             <img src={logout} alt="NA" />
                         </button>
                     </div>
@@ -139,15 +159,15 @@ export default function PProfile() {
                 </div> */}
                 {/* Profile Heading New */}
                 <div id="PTr_first">
-                        <div id="sub_PTr_first">
-                            <div id="PTr_first_1">
-                                <h1>My Profile</h1>
-                            </div>
-                            <div id="PTr_first_2">
-                                <img src={Str_P} alt="Na" />
-                            </div>
+                    <div id="sub_PTr_first">
+                        <div id="PTr_first_1">
+                            <h1>My Profile</h1>
+                        </div>
+                        <div id="PTr_first_2">
+                            <img src={Str_P} alt="Na" />
                         </div>
                     </div>
+                </div>
                 {/* Main Profile Body */}
                 <div id="MainProfile">
                     <div id="subMainProfile">
@@ -409,6 +429,20 @@ export default function PProfile() {
                             </div>
                         </div>
                     </div>
+                    {/* ---Logout Logic --- */}
+                    {isLogoutBoxVisible && (
+                        <div id="Logout_Box">
+                            <div id="sub_Logout_Box">
+                                <div id="Logout_Box_1">
+                                    Are You Sure You Want To Logout ?
+                                </div>
+                                <div id="Logout_Box_2">
+                                    <button onClick={handleClick}>Yes, Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    {/* ------------------- */}
                 </div>
             </PSidebar>
         </div>
