@@ -10,17 +10,367 @@
 /* ------------------------- */
 /* 1 - PAdd_U_first */
 #PAdd_U_first {
-  border: 0.1px solid black;
-  padding: 1em 2em;
-  margin: 0.1em 0em;
+  border: 0px solid transparent;
+  padding: 0.5em 2em 2em 2em;
 }
 #sub_PAdd_U_first {
-  border: 0.1px solid black;
-  padding: 1em 2em;
+  border: 0px solid transparent;
+  padding: 0.8em 2em;
 }
-
+#PAdd_U_first_Box {
+  border: 0.1px solid #f28500;
+  padding: 0.2em 1em;
+  border-radius: 20px;
+  background-color: #f28500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#PAdd_U_f_B_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 1em;
+  width: 75%;
+}
+#PAdd_U_f_B_1_Box {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+#PAdd_U_f_B_1_Box button {
+  border: 0px solid transparent;
+  background-color: #0652dd;
+  padding: 0.18em 1.4em;
+  margin: 0em 1.5em;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+#PAdd_U_f_B_1_Box button:hover {
+  background-color: #013aa3;
+  cursor: pointer;
+}
+#PAdd_U_f_B_1_Box button:focus {
+  outline: none;
+  background-color: #013aa3;
+}
+#PAdd_U_f_B_1_Box button i {
+  border: 0px solid transparent;
+  padding: 0em 0.25em;
+  font-size: 0.9em;
+  color: white;
+}
+#PAdd_U_f_B_2 {
+  border: 0px solid transparent;
+  padding: 0.2em 1em;
+  width: 25%;
+}
+#PAdd_U_f_B_2_Box {
+  border: 0px solid transparent;
+  padding: 0.2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#PAdd_U_f_B_2_Box img {
+  border: 0px solid transparent;
+  width: 47%;
+}
+/* Start */
+/* 3 - PAU_Third */
+#PAdd_U_Third {
+  border: 0.1px solid black;
+  padding: 0.1em 2em;
+}
+#sub_PAdd_U_Third {
+  border: 0.1px solid black;
+  padding: 0.1em 2em;
+}
+#PAdd_U_Third_Box {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  background-color: #001400;
+  border-radius: 5px;
+  margin: 0em 0em 0.5em 0em;
+}
 /* Start */
 /* ---------------------------- */
 /* Media Queries In CSS */
 /* ---------------------------- */
 /* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0.5em 2em 2em 2em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0.5em 2em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.1em 0.5em;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 0.2em 1em;
+    width: 75%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 1em;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0.18em 1.4em;
+    margin: 0em 1.5em;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.9em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0.2em 1em;
+    width: 25%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.2em 1em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 47%;
+  }
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0.5em 2em 2em 2em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0.5em 2em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.1em 0.5em;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 0.2em 0.2em;
+    width: 75%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 0.5em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0.25em 1.2em;
+    margin: 0em 1.5em;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.9em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0.2em 0.5em;
+    width: 25%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.2em 1em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 47%;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0.5em 1em 2em 1em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0.5em 0.5em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.1em 0.5em;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 0.2em 0.05em;
+    width: 75%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 0.5em;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0.25em 1em;
+    margin: 0em 1.5em;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.9em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0.2em 0.1em;
+    width: 25%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.2em 0.5em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 47%;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0.5em 0.3em 2em 0.3em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0.5em 0.3em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.1em 0em;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 0.2em 0em 0.2em 0em;
+    width: 75%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 0.5em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0.25em 1em;
+    margin: 0em 1em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.9em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0.2em 0.1em;
+    width: 25%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.2em 0.5em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 47%;
+  }
+  /* - */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0.5em 0.1em 2em 0.1em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0.5em 0em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 1em 0em 0.5em 0em;
+    width: 100%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 0.5em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 2em;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0.3em 1.5em;
+    margin: 0em 1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.9em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0.5em 0.1em;
+    width: 100%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.2em 0.5em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 30%;
+  }
+  /* - */
+}
+/* 6 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - PAdd_U_first */
+  #PAdd_U_first {
+    padding: 0em 0em 2.5em 0em;
+  }
+  #sub_PAdd_U_first {
+    padding: 0em 0em;
+  }
+  #PAdd_U_first_Box {
+    padding: 0.2em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+  #PAdd_U_f_B_1 {
+    padding: 0.5em 0em 0.5em 0em;
+    width: 100%;
+  }
+  #PAdd_U_f_B_1_Box {
+    padding: 0.5em 1.3em;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 3em;
+  }
+  #PAdd_U_f_B_1_Box button {
+    padding: 0em 1.8em;
+    margin: 1em 1em 0.7em 1em;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+  }
+  #PAdd_U_f_B_1_Box button i {
+    padding: 0em 0.25em;
+    font-size: 0.75em;
+  }
+  #PAdd_U_f_B_2 {
+    padding: 0em 0.1em 0.6em 0.1em;
+    width: 100%;
+  }
+  #PAdd_U_f_B_2_Box {
+    padding: 0.3em 0.5em;
+  }
+  #PAdd_U_f_B_2_Box img {
+    width: 35%;
+  }
+  /* - */
+}

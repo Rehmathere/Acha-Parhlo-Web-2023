@@ -9,6 +9,7 @@ import "./PChat.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import Str_7 from "../../../Pics/Str_7.png"
+import Str_10 from "../../../Pics/Str_10.png"
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
@@ -64,9 +65,50 @@ export default function PChat() {
                     </div>
                     {/* PChat Code Start From Here */}
                     {/* 2 - PChat__first */}
-                    <div id="PChat_first">
+                    {/* <div id="PChat_first">
                         <div id="sub_PChat_first">
-                            {/* Start */}
+                            Start
+                        </div>
+                    </div> */}
+                    {/* ----- Previous Code ----- */}
+                    {/* 2 - PR_Second */}
+                    <div id="PR_Second">
+                        <div id="sub_PR_Second">
+                            <div id="PR_Second_Box">
+                                <div id="PR_Second_Box_Part_0">
+                                    Sr No
+                                </div>
+                                <div id="PR_Second_Box_Part_1">
+                                    Image
+                                </div>
+                                <div id="PR_Second_Box_Part_2">
+                                    Name
+                                </div>
+                                <div id="PR_Second_Box_Part_3">
+                                    Time
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* ----- Previous Code Part 2 ----- */}
+                    <div id="PR_Third">
+                        <div id="sub_PR_Third">
+                            {/* Record Box 1 */}
+                            <div id="PR_Third_Box">
+                                <div id="PR_Third_Box_Part_0">
+                                    1
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_10} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Rehmat Qazi
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    9 : 00
+                                </div>
+                            </div>
+                            {/* Record Box 2 */}
                         </div>
                     </div>
                     {/* ------------------- */}

@@ -9,6 +9,8 @@ import "../PAdd_Uni/PAdd_U.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import Str_6 from "../../../Pics/Str_6.png"
+import PADD_Img from "../../../Pics/Adduni_z.png"
+import Str_9 from "../../../Pics/Str_9.png"
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
@@ -66,7 +68,61 @@ export default function PAdd_Uni() {
                     {/* 2 - PAdd_U_first */}
                     <div id="PAdd_U_first">
                         <div id="sub_PAdd_U_first">
-                            {/* Start */}
+                            <div id="PAdd_U_first_Box">
+                                <div id="PAdd_U_f_B_1">
+                                    <div id="PAdd_U_f_B_1_Box">
+                                        Want To Append a New Educational Institution?
+                                        <button>Add <i class="fa fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div id="PAdd_U_f_B_2">
+                                    <div id="PAdd_U_f_B_2_Box">
+                                        <img src={PADD_Img} alt="NA" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Previous Code */}
+                    {/* 2 - PR_Second */}
+                    <div id="PR_Second">
+                        <div id="sub_PR_Second">
+                            <div id="PR_Second_Box">
+                                <div id="PR_Second_Box_Part_0">
+                                    Sr No
+                                </div>
+                                <div id="PR_Second_Box_Part_1">
+                                    Image
+                                </div>
+                                <div id="PR_Second_Box_Part_2">
+                                    University
+                                </div>
+                                <div id="PR_Second_Box_Part_3">
+                                    Subject
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* ----- Previous Code ----- */}
+                    {/* 3 - PAdd_U_Third */}
+                    <div id="PR_Third">
+                        <div id="sub_PR_Third">
+                            {/* Record Box 1 */}
+                            <div id="PR_Third_Box">
+                                <div id="PR_Third_Box_Part_0">
+                                    1
+                                </div>
+                                <div id="PR_Third_Box_Part_1">
+                                    <img src={Str_9} alt="NA" />
+                                </div>
+                                <div id="PR_Third_Box_Part_2">
+                                    Deakin
+                                </div>
+                                <div id="PR_Third_Box_Part_3">
+                                    Applied Science
+                                </div>
+                            </div>
+                            {/* Record Box 2 */}
                         </div>
                     </div>
                     {/* ------------------- */}
