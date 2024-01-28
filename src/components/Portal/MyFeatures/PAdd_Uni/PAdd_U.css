@@ -6,6 +6,34 @@
   box-sizing: border-box;
 }
 /* ------------------------- */
+/* --- PADD_U_Third Update Button --- */
+/* 0 - P_U_T_Update_Button */
+#PR_Third_Box_Part_0 {
+  border: 0px solid transparent;
+}
+#PR_Third_Box_Part_0 button {
+  border: 0.1px solid red;
+  background-color: red;
+  padding: 0.2em 1em;
+  color: white;
+  border-radius: 15px;
+}
+#PR_Third_Box_Part_0 button:hover {
+  border: 0.1px solid rgb(189, 2, 2);
+  background-color: rgb(189, 2, 2);
+  color: white;
+}
+#PR_Third_Box_Part_0 button:focus {
+  border: 0.1px solid rgb(189, 2, 2);
+  background-color: rgb(189, 2, 2);
+  outline: none;
+}
+#PR_Third_Box_Part_0 button i {
+  border: 0px solid transparent;
+  padding: 0.1em 0.3em;
+  color: white;
+  font-size: 1em;
+}
 /* -- PAdd_U.css -- */
 /* ------------------------- */
 /* 1 - PAdd_U_first */
@@ -81,7 +109,6 @@
   border: 0px solid transparent;
   width: 47%;
 }
-/* Start */
 /* 3 - PAU_Third */
 #PAdd_U_Third {
   border: 0.1px solid black;
@@ -98,6 +125,265 @@
   border-radius: 5px;
   margin: 0em 0em 0.5em 0em;
 }
+/* 4 - P_U_AU_1 */
+#P_U_AU_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em 2em 0.5em;
+  color: #001400;
+}
+#sub_P_U_AU_1 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.5em;
+}
+#P_U_AU_1_box {
+  border: 0px solid transparent;
+  padding: 0.2em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+#P_U_AU_1_box_P1 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+  width: 50%;
+}
+#P_U_AU_1_box h5 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em 1.5em 0.5em;
+  letter-spacing: 1px;
+}
+#P_U_AU_1_box_P1_Input {
+  border: 0px solid transparent;
+  padding: 0.8em 0.5em 0.2em 0.5em;
+}
+#P_U_AU_1_box_P1_Input h6 {
+  border: 0px solid transparent;
+  padding: 0.1em 0.2em;
+}
+#P_U_AU_1_box_P1_Input input {
+  background-color: rgb(248, 246, 246);
+  border: 0.1px solid rgb(197, 195, 195);
+  padding: 0.4em 0.8em;
+  letter-spacing: 2px;
+  margin: 0em 0.2em;
+  width: 100%;
+  border-radius: 10px;
+}
+#P_U_AU_1_box_P1_Input input:focus {
+  background-color: rgb(233, 230, 230);
+  outline: none;
+}
+#P_U_AU_1_box_P2 {
+  border: 0px solid transparent;
+  padding: 0.5em 3em;
+  width: 40%;
+}
+#P_U_AU_1_box_P2_PicBox {
+  border: 0px solid transparent;
+  padding: 0.5em 0.3em;
+}
+#P_U_AU_1_box_P2_PicBox p {
+  border: 0px solid transparent;
+  padding: 0.35em 0.3em;
+  text-transform: capitalize;
+  color: rgb(109, 108, 108);
+  letter-spacing: 0.7px;
+}
+#P_U_AU_1_box_P2_sub_PicBox {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_s {
+  border: 0px solid transparent;
+  width: 40%;
+  border-radius: 20px;
+  margin: 0em auto;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_s img {
+  border: 0px solid transparent;
+  padding: 0em 0em;
+  width: 100%;
+  border-radius: 20px;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_1 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+  border: 0px solid transparent;
+  padding: 0.3em 0.5em;
+  width: 40%;
+  display: block;
+  margin: 0em auto;
+  border-radius: 20px;
+  background-color: rgb(27, 27, 243);
+  color: white;
+  letter-spacing: 1.5px;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_1 button:hover {
+  background-color: rgb(0, 0, 148);
+  cursor: pointer;
+}
+#P_U_AU_1_box_P2_sub_PicBox_s_1 button:focus {
+  outline: none;
+  background-color: rgb(0, 0, 148);
+}
+#P_U_AU_1_button_parent {
+  border: 0px solid transparent;
+  padding: 2em 2em;
+}
+#P_U_AU_1_button_parent button {
+  border: 0px solid transparent;
+  padding: 0.6em 0.5em;
+  width: 50%;
+  display: block;
+  margin: 0em auto;
+  border-radius: 10px;
+  background-color: #001400;
+  color: white;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#P_U_AU_1_button_parent button:hover {
+  background-color: #013601;
+  cursor: pointer;
+}
+#P_U_AU_1_button_parent button:focus {
+  outline: none;
+  background-color: #f28500;
+  color: black;
+}
+/* ---- Confirm Add University ---- */
+/* 4 - Confirm Add University */
+#PA_U_ConfirmAdd_Parent {
+  border: 0px solid transparent;
+  padding: 1em 1em;
+  position: fixed; /* Change to fixed for full viewport coverage */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: 999; /* Set a higher z-index to ensure it appears above other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sub_PA_U_ConfirmAdd_Parent {
+  border: 0px solid transparent;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+#PA_U_ConfirmAdd_Parent_Box {
+  border: 0px solid transparent;
+  padding: 0.2em 0.2em;
+  background-color: white;
+  width: 35%;
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.664) 0px 22px 70px 4px;
+}
+#PA_U_ConfirmAdd_1 {
+  border: 0px solid transparent;
+  padding: 1.5em 2em;
+  background-color: white;
+  border-radius: 40px;
+}
+#PA_U_ConfirmAdd_1 h3 {
+  border: 0px solid transparent;
+  padding: 0.1em 0.1em;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.3em;
+  letter-spacing: 1.3px;
+}
+#PA_U_ConfirmAdd_1 p {
+  border: 0px solid transparent;
+  padding: 0.1em 1.1em;
+  text-transform: capitalize;
+  text-align: center;
+  color: rgb(73, 72, 72);
+}
+#PA_U_ConfirmAdd_img {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+}
+#PA_U_ConfirmAdd_img img {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+  display: block;
+  margin: 0em auto;
+}
+#PA_U_ConfirmAdd_1_A {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  border: 0px solid transparent;
+  background-color: #001400;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 20px;
+}
+#PA_U_ConfirmAdd_1_A:hover {
+  background-color: #014701;
+  box-shadow: grey 0px 5px 15px;
+  cursor: pointer;
+}
+#PA_U_ConfirmAdd_1_A:focus {
+  outline: none;
+  background-color: #014701;
+}
+#PA_U_ConfirmAdd_1_B {
+  display: block;
+  width: 100%;
+  margin: 0.8em 0em 0.8em 0em;
+  padding: 0.5em 0.5em;
+  border: 1px solid rgb(224, 0, 0);
+  background-color: transparent;
+  color: rgb(224, 0, 0);
+  letter-spacing: 1.2px;
+  font-size: 1.1em;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+#PA_U_ConfirmAdd_1_B:hover {
+  border: 1px solid rgb(224, 0, 0);
+  background-color: rgb(224, 0, 0);
+  color: white;
+  box-shadow: grey 0px 5px 15px;
+}
+#PA_U_ConfirmAdd_1_B:focus {
+  outline: none;
+  background-color: rgb(224, 0, 0);
+}
+#PA_U_ConfirmAdd_2 {
+  border: 0px solid transparent;
+  padding: 2.5em 2em;
+  background-color: white;
+  border-radius: 40px;
+}
+#PA_U_ConfirmAdd_2 h3 {
+  border: 0px solid transparent;
+  padding: 0.3em 0.1em;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.4em;
+  margin: 0em 0em 0.4em 0em;
+  letter-spacing: 1.3px;
+}
+/* -------------------------------- */
 /* Start */
 /* ---------------------------- */
 /* Media Queries In CSS */
@@ -143,6 +429,126 @@
   #PAdd_U_f_B_2_Box img {
     width: 47%;
   }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.1em 1em 10em 1em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 0.1em 1em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0.8em;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.3em 0.5em;
+    width: 50%;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.6em 0.5em 0.2em 0.5em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.1em 0.2em;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.3em 0.8em;
+    letter-spacing: 1.5px;
+    margin: 0em 0.2em;
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.3em 3em;
+    width: 50%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0.3em 0.3em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0.2em 0.3em;
+    letter-spacing: 0.7px;
+    font-size: 0.98em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 40%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 40%;
+    letter-spacing: 1.5px;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 2em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 50%;
+    letter-spacing: 4.5px;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.5em 0.5em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.1em 0.1em;
+    width: 40%;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 1.5em 2em;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 1.3em;
+    letter-spacing: 1.3px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1.1em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 1.1em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    padding: 2.5em 2em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.3em 0.1em;
+    font-size: 1.4em;
+    letter-spacing: 1.3px;
+  }
   /* - */
 }
 /* 2 */
@@ -185,6 +591,128 @@
   }
   #PAdd_U_f_B_2_Box img {
     width: 47%;
+  }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.1em 0.5em 10em 0.5em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 0.1em 0.9em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0.8em;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.3em 0.5em;
+    width: 50%;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.6em 0.5em 0.2em 0.5em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.1em 0.2em;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.3em 0.8em;
+    letter-spacing: 1.5px;
+    margin: 0em 0.2em;
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.3em 2em;
+    width: 50%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0.3em 0.3em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0.2em 0.3em;
+    letter-spacing: 0.7px;
+    font-size: 0.95em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 40%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 40%;
+    letter-spacing: 1.5px;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 2em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 50%;
+    letter-spacing: 4.5px;
+    font-size: 0.9em;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.5em 0.5em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.1em 0.1em;
+    width: 50%;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 1em 2em;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 1.2em;
+    letter-spacing: 1.3px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1.1em;
+    font-size: 0.9em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 1em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    padding: 2.5em 2em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.3em 0.1em;
+    font-size: 1.4em;
+    letter-spacing: 1.3px;
   }
   /* - */
 }
@@ -229,6 +757,129 @@
   #PAdd_U_f_B_2_Box img {
     width: 47%;
   }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.1em 0.5em 10em 0.5em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 0.1em 0.5em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0.8em;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1.05em;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.4em 0.5em 0.2em 0.5em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.1em 0.2em;
+    font-size: 0.85em;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.2em 0.8em;
+    letter-spacing: 1px;
+    margin: 0em 0.2em;
+    width: 100%;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.1em 2em;
+    width: 50%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0.1em 0.3em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0.2em 0.3em;
+    letter-spacing: 0.7px;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 40%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 40%;
+    letter-spacing: 1.5px;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 2em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 60%;
+    letter-spacing: 4.5px;
+    font-size: 0.85em;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0em 0em;
+    width: 60%;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 0.8em 2em;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 1.1em;
+    letter-spacing: 1.3px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1.1em;
+    font-size: 0.88em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 0.9em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    padding: 2.5em 2em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.3em 0.1em;
+    font-size: 1.4em;
+    letter-spacing: 1.3px;
+  }
   /* - */
 }
 /* 4 */
@@ -272,6 +923,130 @@
   }
   #PAdd_U_f_B_2_Box img {
     width: 47%;
+  }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.1em 0.1em 10em 0.1em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 0.3em 0.1em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0.5em;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.2em 0.5em;
+    width: 50%;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 1em;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.3em 0.5em 0.2em 0.5em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.1em 0.2em;
+    font-size: 0.8em;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.15em 0.8em;
+    letter-spacing: 0px;
+    margin: 0em 0.2em;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.1em 1em;
+    width: 50%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0.1em 0.3em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0.2em 0.3em;
+    letter-spacing: 0.7px;
+    font-size: 0.85em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 40%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 50%;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 2em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 60%;
+    letter-spacing: 4.5px;
+    font-size: 0.85em;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0em 0em;
+    width: 60%;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 0.8em 1em;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 1.1em;
+    letter-spacing: 1.3px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1.1em;
+    font-size: 0.86em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 0.85em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    padding: 2.5em 1.5em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.3em 0.1em;
+    font-size: 1.15em;
+    letter-spacing: 1.3px;
   }
   /* - */
 }
@@ -322,6 +1097,140 @@
   #PAdd_U_f_B_2_Box img {
     width: 30%;
   }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.5em 0.1em 10em 0.1em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 1em 0.1em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0.5em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.5em 0.2em;
+    width: 100%;
+    margin: 1em 0em 0em 0em;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 1em 0.5em 1em 0.5em;
+    letter-spacing: 1.5px;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.3em 0.5em 0.2em 0.5em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.1em 0.2em;
+    font-size: 0.9em;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.4em 0.8em;
+    letter-spacing: 0.5px;
+    margin: 0em 0.2em;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.1em 0.2em;
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0.1em 0.3em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0.2em 0.3em;
+    letter-spacing: 0.7px;
+    font-size: 0.85em;
+    text-align: center;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 40%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0.5em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 50%;
+    letter-spacing: 1px;
+    font-size: 0.95em;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 1.6em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 100%;
+    letter-spacing: 4.5px;
+    font-size: 0.83em;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0em 0.2em;
+    width: 70%;
+    border-radius: 30px;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 0.8em 0.9em;
+    border-radius: 30px;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 1em;
+    letter-spacing: 1.1px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1.1em;
+    font-size: 0.86em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 0.85em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    border-radius: 30px;
+    padding: 2.5em 1.5em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.3em 0.1em;
+    font-size: 1em;
+    letter-spacing: 1.3px;
+  }
   /* - */
 }
 /* 6 */
@@ -371,6 +1280,138 @@
   }
   #PAdd_U_f_B_2_Box img {
     width: 35%;
+  }
+  /* 4 - P_U_AU_1 */
+  #P_U_AU_1 {
+    padding: 0.5em 0em 10em 0em;
+  }
+  #sub_P_U_AU_1 {
+    padding: 1em 0.5em;
+  }
+  #P_U_AU_1_box {
+    padding: 0.1em 0em;
+  }
+  #P_U_AU_1_box_P1 {
+    padding: 0.5em 0em;
+    width: 100%;
+    margin: 1em 0em 0em 0em;
+  }
+  #P_U_AU_1_box h5 {
+    padding: 0.3em 0em 2em 0em;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-align: center;
+  }
+  #P_U_AU_1_box_P1_Input {
+    padding: 0.3em 0em 0.2em 0em;
+    margin: 0.2em 0em 0em 0em;
+  }
+  #P_U_AU_1_box_P1_Input h6 {
+    padding: 0.15em 0em;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+  }
+  #P_U_AU_1_box_P1_Input input {
+    padding: 0.5em 0.8em;
+    letter-spacing: 0px;
+    margin: 0em 0em;
+    width: 100%;
+    font-size: 0.7em;
+  }
+  #P_U_AU_1_box_P2 {
+    padding: 0.1em 0em;
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_PicBox {
+    padding: 0em 0em 1em 0em;
+  }
+  #P_U_AU_1_box_P2_PicBox p {
+    padding: 0em 1em 0.2em 1em;
+    letter-spacing: 0.7px;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox {
+    padding: 0.5em 0em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s {
+    padding: 0.5em 0em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s {
+    width: 50%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_s img {
+    width: 100%;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 {
+    padding: 0.5em 0em;
+  }
+  #P_U_AU_1_box_P2_sub_PicBox_s_1 button {
+    padding: 0.3em 0.5em;
+    width: 70%;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+  }
+  #P_U_AU_1_button_parent {
+    padding: 2em 0em;
+  }
+  #P_U_AU_1_button_parent button {
+    padding: 0.6em 0.5em;
+    width: 100%;
+    letter-spacing: 2px;
+    font-size: 0.7em;
+  }
+  /* 4 - Confirm Add University */
+  #PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #PA_U_ConfirmAdd_Parent_Box {
+    padding: 0em 0.2em;
+    width: 85%;
+    border-radius: 30px;
+  }
+  #PA_U_ConfirmAdd_1 {
+    padding: 0.8em 0.9em;
+    border-radius: 30px;
+  }
+  #PA_U_ConfirmAdd_1 h3 {
+    padding: 0.1em 0.1em;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  #PA_U_ConfirmAdd_1 p {
+    padding: 0.1em 1em;
+    font-size: 0.72em;
+  }
+  #PA_U_ConfirmAdd_img {
+    padding: 0.5em 0.5em;
+  }
+  #PA_U_ConfirmAdd_img img {
+    padding: 0.1em 0.1em;
+  }
+  #PA_U_ConfirmAdd_1_A {
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+    font-size: 0.78em;
+  }
+  #PA_U_ConfirmAdd_1_B {
+    margin: 0.8em 0em 0.8em 0em;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1.2px;
+    font-size: 0.78em;
+  }
+  #PA_U_ConfirmAdd_2 {
+    border-radius: 30px;
+    padding: 2.5em 1.5em;
+  }
+  #PA_U_ConfirmAdd_2 h3 {
+    padding: 0.8em 0.1em;
+    font-size: 1em;
+    letter-spacing: 1.3px;
   }
   /* - */
 }

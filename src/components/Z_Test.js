@@ -1,64 +1,64 @@
-// ChangePassword.js
 import React, { useState } from 'react';
-// CSS
-import './Portal/MyFeatures/PTracking/PT.css'
-// Images
-import fir from './Pics/Z_Call.png'
+import './Portal/MyFeatures/PAdd_Uni/PAdd_U.css';
 
 export default function Z_Test() {
-  // Status Logic
-  const [button1Color, setButton1Color] = useState('lightgray');
-  const [button2Color, setButton2Color] = useState('lightgray');
-  const [button3Color, setButton3Color] = useState('lightgray');
-  // Functions
-  // 1
-  const handleButton1Click = () => {
-    // Button 1
-    setButton1Color('green');
+  // ------ Confirm Add University Logic ------
+  // State to manage which box to display
+  const [showBox2, setShowBox2] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showParent, setShowParent] = useState(false);
+  // Function to handle button click and toggle between boxes
+  const handleButtonClick = () => {
+    if (!showBox2) {
+      setShowConfirmation(true);
+    }
+    setShowBox2(!showBox2);
+    if (!showBox2) {
+      // Set a timeout to hide the parent after 3 seconds
+      setTimeout(() => {
+        setShowParent(false);
+      }, 3000);
+    }
   };
-  // 2
-  const handleButton2Click = () => {
-    // Button 2
-    setButton2Color('green');
-    // Button 1 
-    setButton1Color('lightgreen');
+  const handleAddUniversityClick = () => {
+    setShowParent(true); // Show the parent div
+    setShowConfirmation(true);
+    setShowBox2(false); // Reset showBox2 when Add University is clicked
   };
-  // 3
-  const handleButton3Click = () => {
-    // Button 3
-    setButton3Color('green');
-    // Button 1 
-    setButton1Color('lightgreen');
-    // Button 2 
-    setButton2Color('lightgreen');
+  const handleCancelClick = () => {
+    setShowParent(false);
   };
   // Main Body
   return (
-    <div>
-      <h1>Application Tracking Setting</h1>
-      <br /><br />
-      {/* Box 1 */}
-      <div id="Z_box" style={{ backgroundColor: button1Color }}>
-        <img src={fir} alt="NA" />
+    <>
+      {/* first */}
+      <div>
+        <h1>Confirm Portion Below</h1>
+        <button onClick={handleAddUniversityClick}>Add University</button>
       </div>
-      <br />
-      <button onClick={handleButton1Click}>First Step</button>
-      <br /><br />
-      {/* Box 2 */}
-      <div id="Z_box" style={{ backgroundColor: button2Color }}>
-        <img src={fir} alt="NA" />
+      {/* second */}
+      <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
+        <h1>Are You Sure To Add University ?</h1>
+        <br /><br />
+        <br /><br />
+        {/* Basic Logic */}
+        <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
+          <div id="PA_U_ConfirmAdd_Parent_Box">
+            {/* Box 1 */}
+            <div id="PA_U_ConfirmAdd_1" style={{ display: !showBox2 ? 'block' : 'none' }}>
+              <h1>Box 1</h1>
+              <button onClick={handleButtonClick}>Move To Next Box</button>
+              {/* Cancel Button */}
+              <button onClick={handleCancelClick}>Don't Add This University</button>
+            </div>
+            {/* Box 2 */}
+            <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
+              <h1>Now, It's Box 2</h1>
+              <button>Final Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <br />
-      <button onClick={handleButton2Click}>First Step</button>
-      <br /><br />
-      {/* Box 3 */}
-      <div id="Z_box" style={{ backgroundColor: button3Color }}>
-        <img src={fir} alt="NA" />
-      </div>
-      <br />
-      <button onClick={handleButton3Click}>First Step</button>
-      <br />
-    </div>
+    </>
   );
 };
-

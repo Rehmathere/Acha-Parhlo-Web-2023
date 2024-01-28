@@ -14,6 +14,7 @@ import PAdd_Uni from './MyFeatures/PAdd_Uni/PAdd_Uni'
 import PProfile from './MyFeatures/PProfile/PProfile'
 import PR_List from './MyFeatures/PRecords/PR_List'
 import PAppoint_Detail from './MyFeatures/PAppointments/PAppoint_Detail'
+import PAdd_U_add from './MyFeatures/PAdd_Uni/PAdd_U_add'
 
 export default function NavigatePortal() {
     // Main Body
@@ -49,6 +50,8 @@ export default function NavigatePortal() {
                 <Route path='/PChat' element={<PChat />} />
                 {/* 11 */}
                 <Route path='/PAdd_Uni' element={<PAdd_Uni />} />
+                {/* 12 */}
+                <Route path='/PAdd_U_add' element={<PAdd_U_add />} />
             </Routes>
         </BrowserRouter>
     )
