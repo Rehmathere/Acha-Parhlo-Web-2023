@@ -14,6 +14,13 @@ import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 
 export default function PAppoint_Detail() {
+    // ----- Press Button & Value Passed -----
+    const [selectedValue, setSelectedValue] = useState('');
+    const [textColor, setTextColor] = useState('');
+    const handleButtonClick = (value, color) => {
+        setSelectedValue(value);
+        setTextColor(color);
+    };
     // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
@@ -50,7 +57,6 @@ export default function PAppoint_Detail() {
             {/* ------------- */}
             <PSidebar>
                 {/* PR_List */}
-                {/* PTS_Pre, sub_PTS_Pre, PTS_Pre_Box Are Write For Media Query Identification */}
                 <div id="PTS_Pre">
                     <div id="sub_PTS_Pre">
                         <div id="PTS_Pre_Box">
@@ -68,6 +74,9 @@ export default function PAppoint_Detail() {
                             <div id="PAD_first_B_1">
                                 <div id="PAD_first_B_1_Box">
                                     <img src={appoint_img} alt="NA" />
+                                </div>
+                                <div id="PAD_first_B_1_Box_2">
+                                    <p> Status :  <span style={{ color: textColor }}>{selectedValue}</span> </p>
                                 </div>
                             </div>
                             {/* 2 */}
@@ -119,15 +128,15 @@ export default function PAppoint_Detail() {
                             <div id="PAD_first_B_3">
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn1">Accept</button>
+                                    <button id="PAD_first_B_3_Box_Btn1" onClick={() => handleButtonClick('Accept', 'green')}>Accept</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn2">Reject</button>
+                                    <button id="PAD_first_B_3_Box_Btn2" onClick={() => handleButtonClick('Reject', 'red')}>Reject</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn3">Delay</button>
+                                    <button id="PAD_first_B_3_Box_Btn3" onClick={() => handleButtonClick('Delay', 'blue')}>Delay</button>
                                 </div>
                             </div>
                         </div>

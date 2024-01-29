@@ -34,7 +34,7 @@ export default function PAdd_Uni() {
             // Set a timeout to hide the parent after 3 seconds
             setTimeout(() => {
                 setShowParent(false);
-            }, 3000);
+            }, 2000);
         }
     };
     const handleAddUniversityClick = () => {
