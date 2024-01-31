@@ -142,15 +142,15 @@ export default function PAdd_Uni() {
                             {/* Record Box 1 */}
                             <div id="PR_Third_Box">
                                 {/* Part 3 */}
-                                <div id="PR_Third_Box_Part_2">
+                                <div id="PR_Third_Box_Part_2" onClick={() => navigate('/PAdd_Uni_Update')}>
                                     Deakin
                                 </div>
                                 {/* Part 2 */}
-                                <div id="PR_Third_Box_Part_1">
+                                <div id="PR_Third_Box_Part_1" onClick={() => navigate('/PAdd_Uni_Update')}>
                                     <img src={Str_9} alt="NA" />
                                 </div>
                                 {/* Part 4 */}
-                                <div id="PR_Third_Box_Part_3">
+                                <div id="PR_Third_Box_Part_3" onClick={() => navigate('/PAdd_Uni_Update')}>
                                     Applied Science
                                 </div>
                                 {/* Part 1 */}

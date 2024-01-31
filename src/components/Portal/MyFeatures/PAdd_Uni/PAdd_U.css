@@ -282,6 +282,59 @@
   background-color: #f28500;
   color: black;
 }
+/* Update New Button */
+#P_U_AU_1_button_parent_For_Btn {
+  border: 0px solid transparent;
+  padding: 2em 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#New_Update_btn_1 {
+  border: 0px solid transparent;
+  padding: 0.6em 0.1em;
+  width: 35%;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+#New_Update_btn_1:hover {
+  cursor: pointer;
+  background-color: rgb(177, 0, 0);
+  color: white;
+}
+#New_Update_btn_1:focus {
+  outline: none;
+  background-color: rgb(177, 0, 0);
+  color: white;
+}
+#New_Update_btn_2 {
+  border: 0px solid transparent;
+  padding: 0.6em 0.1em;
+  width: 35%;
+  border-radius: 10px;
+  background-color: #001400;
+  color: white;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+#New_Update_btn_2:hover {
+  cursor: pointer;
+  background-color: #014701;
+  color: white;
+}
+#New_Update_btn_2:focus {
+  outline: none;
+  background-color: #f28500;
+  color: black;
+}
 /* ---- Confirm Add University ---- */
 /* 4 - Confirm Add University */
 #PA_U_ConfirmAdd_Parent {
@@ -572,6 +625,22 @@
     font-size: 1.4em;
     letter-spacing: 1.3px;
   }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 2em 1em;
+  }
+  #New_Update_btn_1 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.9em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.9em;
+  }
   /* - */
 }
 /* 2 */
@@ -736,6 +805,22 @@
     padding: 0.3em 0.1em;
     font-size: 1.4em;
     letter-spacing: 1.3px;
+  }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 2em 1em;
+  }
+  #New_Update_btn_1 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.8em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.8em;
   }
   /* - */
 }
@@ -902,6 +987,22 @@
     padding: 0.3em 0.1em;
     font-size: 1.4em;
     letter-spacing: 1.3px;
+  }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 2em 0.5em;
+  }
+  #New_Update_btn_1 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.7em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.5em 0.1em;
+    width: 35%;
+    letter-spacing: 4.5px;
+    font-size: 0.7em;
   }
   /* - */
 }
@@ -1070,6 +1171,22 @@
     padding: 0.3em 0.1em;
     font-size: 1.15em;
     letter-spacing: 1.3px;
+  }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 2em 0.5em;
+  }
+  #New_Update_btn_1 {
+    padding: 0.5em 0.1em;
+    width: 40%;
+    letter-spacing: 4.5px;
+    font-size: 0.6em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.5em 0.1em;
+    width: 40%;
+    letter-spacing: 4.5px;
+    font-size: 0.6em;
   }
   /* - */
 }
@@ -1254,6 +1371,26 @@
     font-size: 1em;
     letter-spacing: 1.3px;
   }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #New_Update_btn_1 {
+    padding: 0.5em 0.1em;
+    width: 75%;
+    letter-spacing: 4.5px;
+    font-size: 0.6em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.5em 0.1em;
+    width: 75%;
+    letter-spacing: 4.5px;
+    font-size: 0.6em;
+  }
   /* - */
 }
 /* 6 */
@@ -1435,6 +1572,26 @@
     padding: 0.8em 0.1em;
     font-size: 0.9em;
     letter-spacing: 1.3px;
+  }
+  /* Update New Button */
+  #P_U_AU_1_button_parent_For_Btn {
+    padding: 1.3em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #New_Update_btn_1 {
+    padding: 0.6em 0.1em;
+    width: 100%;
+    letter-spacing: 4.5px;
+    font-size: 0.55em;
+  }
+  #New_Update_btn_2 {
+    padding: 0.6em 0.1em;
+    width: 100%;
+    letter-spacing: 4.5px;
+    font-size: 0.55em;
   }
   /* - */
 }
