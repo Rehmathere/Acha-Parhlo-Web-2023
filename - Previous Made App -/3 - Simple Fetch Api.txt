@@ -1,0 +1,78 @@
+
+
+------------------ App.js ---------------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar.js";
+import Rehmat from "./components/Rehmat.js";
+
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        {/* Navbar.js */}
+        <div>
+          <Navbar />
+        </div>
+        {/* Rehmat.js */}
+        <div>
+          <Rehmat />
+        </div>
+
+      </>
+    );
+  }
+}
+
+------------------ Rehmat.js ---------------------
+
+import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
+
+export default function Rehmat() {
+  
+  const [records,setRecords] = useState([]);
+  // Simple Fetch Api
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => setRecords(data))
+    .catch(err => console.log(err))
+  })
+  // Main
+  return (
+    <div className='container'>
+      {/* Making Table For Fetching Data */}
+      <table>
+        {/* Table Heading */}
+        {/* Table Body */}
+        <tbody>
+          {           
+            records.map((r,i)=>{
+              return(
+              <tr key={i}>
+                <td>{r.name}</td>
+                <td>{r.username}</td>
+                <td>{r.email}</td>
+              </tr>
+              )
+            })
+          }
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

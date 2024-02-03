@@ -1,0 +1,50 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar"
+
+export default class App extends Component {
+  render() {
+    {/* 1 - Parent To Child Data Passing */}
+    // String Name
+    // let hero = " Rehmat Qazi "
+    // ------------------------------------------
+    return(
+      <>
+      {/* Component 1 */}
+      {/* 2 - Parent To Child Data Passing */}
+      {/* <Navbar name={hero} /> */}
+      {/* -------------------------------- */}
+      {/* Child To Parent Data Passing */}
+      <Navbar />
+      </>
+    );
+  }
+}
+
+---------------- Navbar.js ---------------------
+
+import React from 'react'
+
+export default function Navbar(props) {
+  // Child To Parent
+  function myName(){
+    let name = " Rehmat Qazi"
+    alert(name)
+  }
+  return (
+    // Parent To Child Transfer
+    // <div>
+    //   <h1>User Name : {props.name}</h1>
+    // </div>
+    // -----------------------------------------
+    // Child To Parent Transfer
+    <div>
+      <h1>User Name : </h1>
+      <button onClick={myName}>Click For Data Transfering</button>
+    </div>
+  )
+}
+
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,143 @@
+import React, { useState, useEffect } from "react";
+// Images
+import img1 from './Pics/logo2.png'
+import img2 from './Pics/menu.png'
+// Loading Spinner Header File
+import gsap from "gsap";
+
+export default function Navbar() {
+  // 1 - Function
+  function hiddingBtn() {
+    let hide = document.getElementById("fir_4_img")
+    let show = document.getElementById("fir_5")
+    hide.addEventListener("click", () => {
+      show.style.display = "block"
+    })
+  }
+  // 2 - Function
+  function hiddingBtn_2() {
+    let hide = document.getElementById("fir_4_img")
+    let show = document.getElementById("fir_5")
+    hide.addEventListener("dblclick", () => {
+      show.style.display = "none"
+    })
+  }
+  // ----- Load Spinner JS -----
+  useEffect(() => {
+    gsap.fromTo(
+      ".loading-page",
+      { opacity: 1 },
+      {
+        opacity: 0,
+        display: "none",
+        duration: 2.5,
+        delay: 6,
+      }
+    );
+    gsap.fromTo(
+      ".logo-name",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        delay: 0.7,
+      }
+    );
+  }, []);
+  // ----------------------------
+  // Main Body
+  return (
+    <>
+      {/* // 1 - Navbar */}
+      <div id="first">
+        <div className="container-fluid" id="sub_first">
+          <div className="row" id="sub_sub_first">
+            <div id="fir_1">
+              <div id="fir_1_img">
+                <img src={img1} alt="" />
+              </div>
+            </div>
+            <div id="fir_2">
+              <div id="fir_2_sub">
+                <a href="#" id="fir_2_s">Home</a>
+                <a href="#" id="fir_2_s">About</a>
+                <a href="#" id="fir_2_s">Services</a>
+                <a href="#" id="fir_2_s">Contact</a>
+              </div>
+            </div>
+            <div id="fir_3">
+              <a href="#" id="fir_3_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                JOIN
+              </a>
+            </div>
+            {/* Menu Option Button */}
+            <div id="fir_4">
+              <div id="sub_fir_4">
+                <img src={img2} alt="" id="fir_4_img" onClick={hiddingBtn} onDoubleClick={hiddingBtn_2} />
+              </div>
+            </div>
+            {/* Slider Menu */}
+            <div id="fir_5" style={{ display: "none" }}>
+              <a href="#" id="fir_2_s">Home</a>
+              <a href="#" id="fir_2_s">About</a>
+              <a href="#" id="fir_2_s">Services</a>
+              <a href="#" id="fir_2_s">Contact</a>
+              <a href="#" id="fir_3_1" style={{color:"white"}}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                JOIN
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ------------------------------------------------ */}
+      <div>
+        {/* <!-- 1 - Loading Soinning Process --> */}
+        <div className="loading-page">
+          {/* <!-- Spinner Loader --> */}
+          <section>
+            <div className="loader">
+              <span style={{ "--i": 1 }}></span>
+              <span style={{ "--i": 2 }}></span>
+              <span style={{ "--i": 3 }}></span>
+              <span style={{ "--i": 4 }}></span>
+              <span style={{ "--i": 5 }}></span>
+              <span style={{ "--i": 6 }}></span>
+              <span style={{ "--i": 7 }}></span>
+              <span style={{ "--i": 8 }}></span>
+              <span style={{ "--i": 9 }}></span>
+              <span style={{ "--i": 10 }}></span>
+              <span style={{ "--i": 11 }}></span>
+              <span style={{ "--i": 12 }}></span>
+              <span style={{ "--i": 13 }}></span>
+              <span style={{ "--i": 14 }}></span>
+              <span style={{ "--i": 15 }}></span>
+              <span style={{ "--i": 16 }}></span>
+              <span style={{ "--i": 17 }}></span>
+              <span style={{ "--i": 18 }}></span>
+              <span style={{ "--i": 19 }}></span>
+              <span style={{ "--i": 20 }}></span>
+            </div>
+
+          </section>
+          {/* <!-- Name Loader --> */}
+          <div className="name-container">
+            <div className="logo-name">Acha Parhlo</div>
+          </div>
+        </div>
+      </div>
+      {/* ------------------------------------------------ */}
+    </>
+  );
+}

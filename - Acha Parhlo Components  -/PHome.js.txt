@@ -1,0 +1,27 @@
+import React from 'react'
+// Firebase
+import { signOut } from 'firebase/auth'
+import { database } from '../firebase'
+// useNavigate
+import { useNavigate } from 'react-router-dom'
+
+export default function PHome() {
+    // useNavigate 
+    const navigate = useNavigate();
+    // Logout Function
+    const handleClick = () => {
+        signOut(database).then(val=>{
+            console.log(val, 'val');
+            navigate('/');
+        })
+    }
+    // Main Body
+    return (
+        <div>
+            <h1>PHome</h1>
+            {/* Logout Button */}
+            <button onClick={handleClick}>Logout</button>
+        </div>
+    )
+}
+

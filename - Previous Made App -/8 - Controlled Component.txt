@@ -1,0 +1,34 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
+}
+export default App;
+
+---------------- Navbar.js ---------------------
+
+import React, { useState } from 'react'
+
+export default function Navbar() {
+  // 1 - useState
+  let [val, setVal] = useState(null);
+  // Main Body
+  return (
+    <div className='container py-5'>
+      <h1 className='text-danger py-5'>Controlled Component</h1>
+      <h6>Enter Name : -</h6>
+      <input type="text" value={val} onChange={(e)=>setVal(e.target.value)} />
+      <h6 className='py-5'>Name : {val}</h6>
+    </div>
+  )
+}
+
+---------------------------------------------------------------------------------------------

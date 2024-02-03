@@ -1,0 +1,27 @@
+import React, { useState } from 'react';
+import './Portal/MyFeatures/PAdd_Uni/PAdd_U.css';
+
+export default function Z_Test() {
+  // ----- Press Button & Value Passed -----
+  const [selectedValue, setSelectedValue] = useState('');
+  const [textColor, setTextColor] = useState('');
+  const handleButtonClick = (value, color) => {
+    setSelectedValue(value);
+    setTextColor(color);
+  };
+  // Main Body
+  return (
+    <>
+      <div>
+        <h1>Press Button & Value Passed</h1>
+      </div>
+      <br /><br />
+      <p> Status :  <span style={{ color: textColor }}>{selectedValue}</span> </p>
+      <button onClick={() => handleButtonClick('Accept', 'green')}>Accept</button>
+      <br /><br />
+      <button onClick={() => handleButtonClick('Reject', 'red')}>Reject</button>
+      <br /><br />
+      <button onClick={() => handleButtonClick('Delay', 'blue')}>Delay</button>
+    </>
+  );
+};

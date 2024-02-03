@@ -1,0 +1,936 @@
+/* Import Swap */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Muli:wght@400;500&display=swap");
+/* My Internal CSS */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: black;
+}
+/* 0 - Previous Navbar */
+/* About US Page CSS Start */
+#MainBody {
+  border: 0px solid transparent;
+}
+/* 1 - About Fir */
+#About_fir {
+  border: 0px solid transparent;
+  width: 100%;
+  height: 60vh;
+}
+#sub_About_fir {
+  border: 0px solid transparent;
+  width: 100%;
+  height: 60vh;
+  background: url("../Pics//About.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1.5;
+  z-index: -1;
+}
+#sub_About_fir h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border: 0.1px solid transparent;
+  color: white;
+  font-size: 5.5em;
+  font-weight: bold;
+  letter-spacing: 7px;
+  -webkit-text-stroke: 2px white;
+}
+/* 2 - About Us Content */
+#About_sec {
+  border: 0px solid transparent;
+  padding: 3em 1em 3em 1em;
+}
+#sub_About_sec {
+  border: 0.1px solid transparent;
+  padding: 1em;
+  width: 84%;
+  margin: 0em auto;
+  display: flex;
+  flex-direction: row;
+}
+#About_sec_1 {
+  border: 0.1px solid transparent;
+  width: 50%;
+  padding: 0em 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#About_sec_1 h1 {
+  font-size: 2.9em;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: #34495e;
+}
+#About_sec_1 p {
+  color: #2f3640;
+  margin: 0em 2em 0em 0em;
+}
+#About_sec_1 h1 span {
+  color: #eb2f06;
+}
+#About_sec_2 {
+  border: 0.1px solid transparent;
+  width: 50%;
+  padding: 1.5em;
+}
+#About_sec_2 img {
+  border: 0.1px solid transparent;
+  width: 100%;
+}
+#About_sec_2 img:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+/* 3 - About Us Number Scroll */
+#About_third {
+  border: 0px solid transparent;
+  padding: 1em;
+  background-color: #d1d8e0;
+}
+#sub_About_third {
+  border: 0.1px solid transparent;
+  padding: 1em;
+  width: 84%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0em auto;
+}
+#About_third_1 {
+  border: 0.1px solid transparent;
+  padding: 0.5em;
+  width: 47%;
+}
+#About_third_1 img {
+  border: 0.1px solid transparent;
+  width: 100%;
+}
+#About_third_2 {
+  border: 0.1px solid transparent;
+  padding: 1em 2em;
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#About_third_2 h2 {
+  border: 0.1px solid transparent;
+  font-size: 2.2em;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #310706;
+  text-align: center;
+}
+#About_third_2 p {
+  border: 0.1px solid transparent;
+  font-size: 1em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #141129;
+  text-align: center;
+}
+#counter_Parent {
+  border: 0.1px solid transparent;
+  display: flex;
+  padding: 0.3em 0em;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#counter {
+  border: 0px solid transparent;
+  width: 35%;
+  padding: 0.5em 0em;
+  border-radius: 5px;
+  text-align: center;
+  background-image: linear-gradient(to right, #615e5e 0%, black 100%);
+  cursor: pointer;
+}
+#counter h3 {
+  padding: 0.1em 0em;
+  font-weight: bold;
+  font-size: 2.1em;
+  text-align: center;
+  color: white;
+}
+#counter h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+  color: white;
+}
+/* 4 - About Us Last Portion */
+#About_ten {
+  border: 0px solid transparent;
+  padding: 1em;
+}
+#sub_About_ten {
+  border: 0.1px solid transparent;
+  padding: 1em;
+  width: 70%;
+  margin: 0em auto;
+}
+#sub_About_ten h2 {
+  border: 0.1px solid transparent;
+  text-align: center;
+  font-size: 2.5em;
+  color: #ea2027;
+  padding: 0.7em 0em 1em 0em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+/* -------------------------- */
+/* FAQS Part Start */
+#sub_box_ten {
+  border: 0.1px solid transparent;
+  padding: 1em 2em;
+  width: 70%;
+  margin: 0em auto;
+}
+/* FAQS Part End */
+/* -------------------------- */
+/* Faq.css */
+.sub_ten {
+  text-align: center;
+}
+.ten_1_1 {
+  width: 100%;
+  padding: 5px 5px;
+  border: 2px solid #d35400;
+  cursor: pointer;
+  display: flex;
+  margin: 13px 0;
+  border-radius: 150px;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+.ten_1_1.active {
+  border: 2px solid #e67e22;
+  background-color: #e67e22;
+  color: white;
+}
+.ten_1_1_icon {
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 30px;
+  background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+    no-repeat 8px 7px #d35400;
+  border-radius: 50%;
+  float: left;
+  transition: all 0.5s ease-in;
+}
+.ten_1_1.active .ten_1_1_icon {
+  background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+    no-repeat 8px -25px white;
+}
+.ten_1_1 h6 {
+  font-size: 18px;
+  margin: 0;
+  padding: 3px 0 0 20px;
+  font-weight: bold;
+  color: #2d3436;
+}
+.ten_1_2 {
+  padding: 0 15px;
+  border-left: 1px solid #e67e22;
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in;
+}
+.ten_1_2.active {
+  background-color: transparent;
+  max-height: 1000px; /* Adjust as needed */
+}
+/* - Last Footer Navbar - */
+/* Start */
+
+/* -------------------------------- */
+/* ----- Media Queries In CSS ----- */
+/* -------------------------------- */
+/* 0 - Pre First Media Queries */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 2em 0.5em 1em 0.5em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 90%;
+    padding: 1em 0.3em;
+    display: flex;
+    flex-direction: row;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 50%;
+    padding: 0em 1em;
+  }
+  #About_sec_1 h1 {
+    font-size: 2.3em;
+    letter-spacing: 0.4px;
+  }
+  #About_sec_1 p {
+    font-size: 1em;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 1em;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+  }
+  /* - Start - */
+}
+/* 1 - First Media Queries */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - About Fir */
+  #sub_About_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 5em;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 2px white;
+  }
+  /* 2 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 2em 0.5em 1em 0.5em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 90%;
+    padding: 1em 0.3em;
+    display: flex;
+    flex-direction: row;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 50%;
+    padding: 0em 1em;
+  }
+  #About_sec_1 h1 {
+    font-size: 2em;
+    letter-spacing: 0.4px;
+  }
+  #About_sec_1 p {
+    font-size: 0.97em;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 1em;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+    width: 100%;
+  }
+  /* 3 - About Us Number Scroll */
+  #About_third {
+    border: 0px solid transparent;
+    padding: 1em 0.5em;
+  }
+  #sub_About_third {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 89%;
+  }
+  #About_third_1 {
+    border: 0.1px solid transparent;
+    padding: 1em;
+    width: 47%;
+  }
+  #About_third_1 img {
+    border: 0.1px solid transparent;
+    width: 100%;
+  }
+  #About_third_2 {
+    border: 0.1px solid transparent;
+    padding: 1em 2em;
+    width: 53%;
+  }
+  #About_third_2 h2 {
+    border: 0.1px solid transparent;
+    font-size: 2em;
+  }
+  #About_third_2 p {
+    border: 0.1px solid transparent;
+    font-size: 0.9em;
+  }
+  #counter_Parent {
+    border: 0.1px solid transparent;
+    padding: 0.3em 0em;
+  }
+  #counter {
+    width: 40%;
+    padding: 0em 0em;
+  }
+  #counter h3 {
+    padding: 0.1em 0em;
+    font-size: 2em;
+  }
+  #counter h2 {
+    font-size: 0.8em;
+  }
+  /* 4 - About Us Last Portion */
+  #About_ten {
+    border: 0px solid transparent;
+    padding: 0.5em 1em;
+  }
+  #sub_About_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 1em;
+    width: 80%;
+  }
+  #sub_About_ten h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.7em;
+    color: #ea2027;
+    padding: 0.4em 0em 0.2em 0em;
+    letter-spacing: 3px;
+  }
+  /* -------------------------- */
+  /* FAQS Part Start */
+  #sub_box_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 2em;
+    width: 75%;
+  }
+  /* FAQS Part End */
+  /* -------------------------- */
+  /* Faq.css */
+  .ten_1_1 {
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #d35400;
+    margin: 12px 0;
+  }
+  .ten_1_1.active {
+    border: 2px solid #e67e22;
+  }
+  .ten_1_1_icon {
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+  }
+  .ten_1_1 h6 {
+    font-size: 16px;
+    padding: 0px 0px 0px 20px;
+  }
+  .ten_1_2 {
+    padding: 0 15px;
+    border-left: 1px solid #e67e22;
+    margin-left: 25px;
+    font-size: 14px;
+  }
+  /* Start */
+}
+/* 2 - Second Media Queries */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - About Fir */
+  #sub_About_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 4em;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 2px white;
+  }
+  /* 2 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 3em 0.5em 3em 0.5em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 99%;
+    padding: 1em 0.3em;
+    display: flex;
+    flex-direction: row;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 50%;
+    padding: 0em 2em;
+  }
+  #About_sec_1 h1 {
+    font-size: 1.6em;
+    letter-spacing: 0.4px;
+  }
+  #About_sec_1 p {
+    font-size: 0.85em;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 0.5em 1.8em;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+  }
+  /* 3 - About Us Number Scroll */
+  #About_third {
+    border: 0px solid transparent;
+    padding: 1em 0.3em;
+  }
+  #sub_About_third {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.3em;
+    width: 92%;
+  }
+  #About_third_1 {
+    border: 0.1px solid transparent;
+    padding: 1em 0.5em;
+    width: 47%;
+  }
+  #About_third_1 img {
+    border: 0.1px solid transparent;
+    width: 100%;
+  }
+  #About_third_2 {
+    border: 0.1px solid transparent;
+    padding: 1em 1em;
+    width: 53%;
+  }
+  #About_third_2 h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.5em;
+  }
+  #About_third_2 p {
+    border: 0.1px solid transparent;
+    font-size: 0.8em;
+  }
+  #counter_Parent {
+    border: 0.1px solid transparent;
+    padding: 0.3em 0em;
+  }
+  #counter {
+    width: 37%;
+  }
+  #counter h3 {
+    padding: 0.1em 0em;
+    font-size: 1.5em;
+  }
+  #counter h2 {
+    font-size: 0.8em;
+  }
+  /* Start */
+}
+/* 3 - Third Media Queries */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - About Fir */
+  #sub_About_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 3.5em;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 2px white;
+  }
+  /* 2 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 3em 0.2em 3em 0.2em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 97%;
+    padding: 0.1em 0.2em;
+    display: flex;
+    flex-direction: row;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 50%;
+    padding: 0em 0.3em;
+  }
+  #About_sec_1 h1 {
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  #About_sec_1 p {
+    font-size: 0.76em;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 1em 0.3;
+    width: 50%;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+  }
+  /* 3 - About Us Number Scroll */
+  #About_third {
+    border: 0px solid transparent;
+    padding: 1em 0.3em;
+  }
+  #sub_About_third {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.3em;
+    width: 92%;
+  }
+  #About_third_1 {
+    border: 0.1px solid transparent;
+    padding: 1em 0.5em;
+    width: 50%;
+  }
+  #About_third_1 img {
+    border: 0.1px solid transparent;
+    width: 100%;
+  }
+  #About_third_2 {
+    border: 0.1px solid transparent;
+    padding: 1em 1em;
+    width: 50%;
+  }
+  #About_third_2 h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.2em;
+  }
+  #About_third_2 p {
+    border: 0.1px solid transparent;
+    font-size: 0.7em;
+  }
+  #counter_Parent {
+    border: 0.1px solid transparent;
+    padding: 0.3em 0em;
+  }
+  #counter {
+    width: 38%;
+  }
+  #counter h3 {
+    padding: 0.2em 0em 0em 0em;
+    font-size: 0.8em;
+  }
+  #counter h2 {
+    font-size: 0.45em;
+  }
+  /* 4 - About Us Last Portion */
+  #About_ten {
+    border: 0px solid transparent;
+    padding: 0.5em 1em;
+  }
+  #sub_About_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 90%;
+  }
+  #sub_About_ten h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.5em;
+    color: #ea2027;
+    padding: 0.3em 0em 0.4em 0em;
+    letter-spacing: 3px;
+  }
+  /* -------------------------- */
+  /* FAQS Part Start */
+  #sub_box_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 75%;
+  }
+  /* FAQS Part End */
+  /* -------------------------- */
+  /* Faq.css */
+  .ten_1_1 {
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #d35400;
+    margin: 8px 0;
+  }
+  .ten_1_1.active {
+    border: 2px solid #e67e22;
+  }
+  .ten_1_1 h6 {
+    font-size: 14px;
+    padding: 0px 0px 0px 20px;
+  }
+  .ten_1_1_icon {
+    margin: 0 10px 0 0;
+    width: 23px;
+    height: 23px;
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px 4px #d35400;
+  }
+  .ten_1_1.active .ten_1_1_icon {
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px -29px white;
+  }
+  /* Start */
+}
+/* 4 - Forth Media Queries */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - About Fir */
+  #sub_About_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 3em;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 2px white;
+  }
+  /* 2 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 2em 0.2em 3em 0.2em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 98%;
+    padding: 0.1em 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 90%;
+    padding: 0.5em 0.3em;
+  }
+  #About_sec_1 h1 {
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  #About_sec_1 p {
+    font-size: 1em;
+    text-align: center;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 0.1em;
+    width: 60%;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+  }
+  /* 3 - About Us Number Scroll */
+  #About_third {
+    border: 0px solid transparent;
+    padding: 0.5em 0.2em;
+  }
+  #sub_About_third {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.2em;
+    width: 92%;
+  }
+  #About_third_1 {
+    display: none;
+  }
+  #About_third_2 {
+    border: 0.1px solid transparent;
+    padding: 1em 0.5em;
+    width: 100%;
+  }
+  #About_third_2 h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.7em;
+  }
+  #About_third_2 p {
+    border: 0.1px solid transparent;
+    font-size: 1em;
+  }
+  #counter_Parent {
+    border: 0.1px solid transparent;
+    padding: 0.3em 0em;
+  }
+  #counter {
+    width: 35%;
+  }
+  #counter h3 {
+    padding: 0.3em 0em 0em 0em;
+    font-size: 1.5em;
+  }
+  #counter h2 {
+    font-size: 0.7em;
+  }
+  /* 4 - About Us Last Portion */
+  #About_ten {
+    border: 0px solid transparent;
+    padding: 0.5em 1em;
+  }
+  #sub_About_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 100%;
+  }
+  #sub_About_ten h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.4em;
+    color: #ea2027;
+    padding: 0.3em 0em 0.4em 0em;
+    letter-spacing: 2px;
+  }
+  /* -------------------------- */
+  /* FAQS Part Start */
+  #sub_box_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 80%;
+  }
+  /* FAQS Part End */
+  /* -------------------------- */
+  /* Faq.css */
+  .ten_1_1 {
+    width: 100%;
+    padding: 5px 5px;
+    border: 1.95px solid #d35400;
+    margin: 8px 0;
+  }
+  .ten_1_1.active {
+    border: 2px solid #e67e22;
+  }
+  .ten_1_1 h6 {
+    font-size: 13px;
+    padding: 0px 0px 0px 20px;
+  }
+  .ten_1_1_icon {
+    margin: 0 10px 0 0;
+    width: 23px;
+    height: 23px;
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px 4px #d35400;
+  }
+  .ten_1_1.active .ten_1_1_icon {
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px -29px white;
+  }
+  /* Start */
+}
+/* 5 - Fifth Media Queries */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - About Fir */
+  #sub_About_fir h1 {
+    border: 0.1px solid transparent;
+    font-size: 2em;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 2px white;
+  }
+  /* 2 - About Us Content */
+  #About_sec {
+    border: 0px solid transparent;
+    padding: 3em 0.2em 3em 0.2em;
+  }
+  #sub_About_sec {
+    border: 0.1px solid transparent;
+    width: 98%;
+    padding: 0.1em 0.2em;
+  }
+  #About_sec_1 {
+    border: 0.1px solid transparent;
+    width: 95%;
+    padding: 0.5em 0.3em;
+  }
+  #About_sec_1 h1 {
+    font-size: 1.6em;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  #About_sec_1 p {
+    padding: 0.5em 0em 0em 0em;
+    font-size: 0.85em;
+    text-align: center;
+  }
+  #About_sec_2 {
+    border: 0.1px solid transparent;
+    padding: 0.1em;
+    width: 70%;
+  }
+  #About_sec_2 img {
+    border: 0.1px solid transparent;
+  }
+  /* 3 - About Us Number Scroll */
+  #About_third {
+    border: 0px solid transparent;
+    padding: 0.5em 0.2em;
+  }
+  #sub_About_third {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.2em;
+    width: 92%;
+  }
+  #About_third_2 {
+    border: 0.1px solid transparent;
+  }
+  #About_third_2 h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.4em;
+  }
+  #About_third_2 p {
+    border: 0.1px solid transparent;
+    font-size: 0.9em;
+  }
+  #counter_Parent {
+    border: 1px solid transparent;
+    padding: 0.3em 0em;
+  }
+  #counter {
+    width: 36%;
+  }
+  #counter h3 {
+    padding: 0.3em 0em 0em 0em;
+    font-size: 1.4em;
+  }
+  #counter h2 {
+    font-size: 0.6em;
+  }
+  /* 4 - About Us Last Portion */
+  #About_ten {
+    border: 0px solid transparent;
+    padding: 0.5em 0.3em;
+  }
+  #sub_About_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.3em;
+    width: 100%;
+  }
+  #sub_About_ten h2 {
+    border: 0.1px solid transparent;
+    font-size: 1.2em;
+    padding: 0.3em 0em 0.4em 0em;
+    letter-spacing: 1px;
+  }
+  /* -------------------------- */
+  /* FAQS Part Start */
+  #sub_box_ten {
+    border: 0.1px solid transparent;
+    padding: 0.5em 0.5em;
+    width: 85%;
+  }
+  /* FAQS Part End */
+  /* -------------------------- */
+  /* Faq.css */
+  .ten_1_1 {
+    width: 100%;
+    padding: 5px 5px;
+    border: 1.95px solid #d35400;
+    margin: 8px 0;
+  }
+  .ten_1_1.active {
+    border: 2px solid #e67e22;
+  }
+  .ten_1_1 h6 {
+    font-size: 11px;
+    padding: 0px 0px 0px 0px;
+  }
+  .ten_1_1_icon {
+    margin: 0 10px 0 0;
+    width: 23px;
+    height: 23px;
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px 4px #d35400;
+  }
+  .ten_1_1.active .ten_1_1_icon {
+    background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+      no-repeat 4px -29px white;
+  }
+  .ten_1_2 p{
+    font-size: 0.82em;
+  }
+  /* End */
+}

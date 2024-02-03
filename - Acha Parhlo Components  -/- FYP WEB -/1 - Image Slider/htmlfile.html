@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>skip ad</title>
+	<link rel="stylesheet" href="cssfile.css">
+</head>
+<body style="height: 2000px;">
+	<!-- Image Slider Body -->
+	<div class="slider">
+		<!-- 1 - Sdyney -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Sdyney</h1>
+				<p>Sydney, where the sun rises over the Pacific</p>
+			</div>
+			<img src="./e1.jpg" style="width: 100%; height: 100%; opacity: 0.8;">
+		</div>
+		<!-- 2 - Perth -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Perth</h1>
+				<p>Perth, the sunniest capital city in Australia</p>
+			</div>
+			<img src="./e2.jpg" style="width: 100%; height: 100%; opacity: 0.8;">
+		</div>
+		<!-- 3 - Brisbane -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Brisbane</h1>
+				<p>Brisbane, the subtropical river city</p>
+			</div>
+			<img src="./e3.jpg" style="width: 100%; height: 100%; opacity: 0.9;">
+		</div>
+		<!-- 4 - Melbourne -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Melbourne</h1>
+				<p>Melbourne, the cultural heart of Australia</p>
+			</div>
+			<img src="./e4.jpg" style="width: 100%; height: 100%; opacity: 0.8;">
+		</div>
+		<!-- 5 - Adelaide -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Adelaide</h1>
+				<p>Adelaide, the city of churches</p>
+			</div>
+			<img src="./e5.jpg" style="width: 100%; height: 100%; opacity: 0.8;">
+		</div>
+		<!-- onclick js -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		</div>
+	</div>
+</body>
+<script src="jsfile.js"></script>
+
+</html>

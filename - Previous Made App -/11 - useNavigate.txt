@@ -1,0 +1,77 @@
+npm install react react-dom react-router-dom
+npm update react react-dom react-router-dom
+
+---------------- App.js -----------------
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Page1 from './components/Page1';
+import Page2 from './components/Page2'; // Import Page2
+import Page3 from './components/Page3'; // Import Page2
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Page1 />} />
+        <Route path="/page2" element={<Page2 />} /> {/* Define the Page2 route */}
+        <Route path="/Page3" element={<Page3 />} />
+        {/* Define other routes here */}
+      </Routes>
+    </Router>
+  );
+}
+
+---------------- Page1.js ---------------------
+
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function Page1() {
+  // Navigation
+  const navigate = useNavigate();
+  // Main Body
+  return (
+    <div className='bg-success p-5'>
+      <h1 className='text-center font-weight-bold mb-5 text-white'>Page 1 Screen</h1>
+      <button className='m-auto d-block btn-danger p-3 rounded' onClick={() => navigate('page2')}>Move To Second Screen</button>
+    </div>
+  );
+}
+
+---------------- Page2.js ---------------------
+
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function Page2() {
+    // Navigation
+    const navigate = useNavigate();
+    // Main Body
+    return (
+        <div className='bg-primary p-5 m-5'>
+            <h1 className='text-center font-weight-bold mb-5 text-white'>Page 2</h1>
+            <button className='m-auto d-block btn-warning p-3 rounded' onClick={() => navigate('/Page3')}>Move Screen 3</button>
+        </div>
+    );
+}
+
+---------------- Page3.js ---------------------
+
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function Page3() {
+  // Navigation
+  const navigate = useNavigate();
+  // Main Body
+  return (
+    <div className='bg-danger p-5'>
+      <h1 className='text-center font-weight-bold mb-5 text-white'>Page 3</h1>
+      <button className='m-auto d-block btn-warning p-3 rounded' onClick={() => navigate('/')}>Move To Page 1</button>
+      <button className='m-auto d-block btn-primary p-3 rounded' onClick={() => navigate(-1)}>Page 2</button>
+    </div>
+  );
+}
+
+---------------------------------------------------------------------------------------------

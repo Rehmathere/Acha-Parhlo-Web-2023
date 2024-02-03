@@ -1,0 +1,52 @@
+
+
+                     React JS
+
+
+import FirstImage from './Pics/1.jpg';
+import SecondImage from './Pics/Qr.png';
+
+const Courses = [
+  {
+    id: 1,
+    title: "First",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quod numquam consectetur ratione sapiente reiciendis porro, beatae error impedit aut.",
+    image: FirstImage,
+    price: 120,
+  },
+  {
+    id: 2,
+    title: "Second",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quod numquam consectetur ratione sapiente reiciendis porro, beatae error impedit aut.",
+    image: SecondImage,
+    price: 340,
+  }
+];
+
+
+------------------------------------------------------
+
+
+                     React Native
+
+
+
+const Courses = [
+  {
+    id: 1,
+    title:"First",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quod numquam consectetur ratione sapiente reiciendis porro, beatae error impedit aut.",
+    image: require('./Pics/1.jpg'),
+    price: 120,
+  },
+  {
+    id: 2,
+    title:"Second",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quod numquam consectetur ratione sapiente reiciendis porro, beatae error impedit aut.",
+    image: require('./Pics/Qr.png'),
+    price: 340,
+  }
+]
+
+
+------------------------------------------------------

@@ -1,0 +1,49 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar"
+
+export default class App extends Component {
+  render() {
+    return(
+      <>
+      <Navbar />
+      </>
+    );
+  }
+}
+
+---------------- Navbar.js ---------------------
+
+import React, { useMemo, useState } from 'react'
+
+export default function Navbar() {
+  // useState
+  const [count , setCount] = useState(0);
+  const [item , setItem] = useState(10);
+  // Function
+  // const myPlay = () => {
+  //   console.log(" Function Called ")
+  //   return count-2;
+  // }
+  // 2 - useMemo
+  const myPlay_2 = useMemo(function my(){
+      console.log(" Function Called ")
+      return count-2;
+  },{count})
+  return (
+    <div>
+      <h1>useMemo Hook</h1>
+      <p>Means Just To Remove Un-wanted Function Calling.</p>
+      <h2>Count : {count}</h2>
+      <h2>Item : {item}</h2>
+      <h2>{myPlay_2}</h2>
+      <button onClick={()=> setCount(count+1)}>Add Count</button>
+      <button onClick={()=> setCount(count*0)}>Reset Count</button>
+      <button onClick={()=> setCount(count*5)}>Set Item Count</button>
+    </div>
+  )
+}
+
+---------------------------------------------------------------------------------------------

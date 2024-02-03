@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react'
+// Conatct CSS
+import "./BlogPage.css"
+import "../../App.css"
+// Images
+import img1 from '../Pics/logo2.png'
+// import img2 from '../Pics/menu.png'
+import img2 from '../Pics/menu2.png'
+import logo from '../Pics/logo2.png'
+// Uni data JS APi 
+import Uni_Api from './API_Data/Uni_Api'
+
+export default function BlogPage() {
+//   Some Contact Js
+    const [records, setRecords] = useState([]);
+    // Simple Fetch Api
+    useEffect(() => {
+        // Fetching data from the Uni_Api endpoint
+        const fetchData = async () => {
+            try {
+                // Assuming Uni_Api is an array of objects
+                setRecords(Uni_Api);
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+//   Main Body
+    return (
+        <div id='MainBody'>
+            <div id="first">
+              {/* Blog Third */}
+              <div id="Blog_Third">
+                <div id="sub_Blog_Third">
+                    {records.map((r, i) => (
+                        <div key={i}>
+                            <p>{r.id}</p>
+                            <p>{r.title}</p>
+                        </div>
+                    ))}
+                </div>
+              </div>
+         </div>
+
+-----------------------------------------------------------------------------------

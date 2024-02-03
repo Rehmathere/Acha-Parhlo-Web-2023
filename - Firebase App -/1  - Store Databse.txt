@@ -1,0 +1,38 @@
+import "./App.css";
+import React, { Component } from 'react'
+import Navbar from "./components/Navbar.js";
+import Rehmat from "./components/Rehmat.js";
+import { getDatabase , set , ref } from 'firebase/database';
+
+const db = getDatabase();
+// Firebase
+const putData = () =>{
+  set(ref(db , "users/rehmat"),{
+    id: 1,
+    name: "Rehmat Qazi",
+    section: "BSCS",
+  });
+};
+// -----------------------------------------
+export default class App extends Component {
+  render() {
+    return (
+      <>
+      {/* Navbar.js */}
+      <div>
+        <Navbar/>
+      </div>
+      {/* Rehmat.js */}
+      <div>
+      <Rehmat name="My Name" image_url="https://picsum.photos/200/300" />
+      </div>
+      {/* Firebase */}
+      <div>
+        <button className="p-3 rounded border-black d-block mx-auto my-3 btn btn-primary" onClick={putData}>Save In FireBase</button>
+      </div>
+      </>
+    )
+  }
+}
+
+// --------------------------------------------------------------------------------------------------------------------------

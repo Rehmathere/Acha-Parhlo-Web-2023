@@ -1,0 +1,82 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React from "react";
+import Page1 from './components/Page1'
+import Page2 from './components/Page2'
+import Page3 from './components/Page3'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+export default function App() {
+  // -- Main Body --
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Page1/>} />
+        <Route path="/page2" element={<Page2/>} />
+        <Route path="/page3" element={<Page3/>} />
+        <Route path="/google" element={"https://www.google.com"} />
+      </Routes>
+    </Router>
+  );
+}
+
+---------------- Page1.js ---------------------
+
+import React from 'react';
+import { Link } from 'react-router-dom'
+
+export default function Page1() {
+  // Onclick Function For Yahoo
+  const My_Yahoo = () => {
+    window.location.href="https://www.yahoo.com"
+  }
+  // Main Body
+  return (
+    <div className='bg-success p-5'>
+      <h1 className='text-center font-weight-bold mb-5 text-white'>Page 1 Screen</h1>
+      <Link to="/" className='text-danger font-weight-bold border p-3 bg-white rounded'>Page 1</Link>
+      <Link to="/page2" className='text-white font-weight-bold border-primary p-3 ml-5 bg-primary rounded'>Page 2</Link>
+      {/* Many Times Anchor Tag Will Not Work So Alternative Method Is Below Than Anchor Tag */}
+      <a href="https://www.google.com" className='text-danger font-weight-bold border-warning ml-5 p-3 bg-warning rounded'>Google</a>
+      {/* Alternative Method */}
+      <button onClick={My_Yahoo} className='btn btn-light text-primary ml-5 p-2 font-weight-bold'>yahoo</button>
+    </div>
+  );
+}
+
+---------------- Page2.js ---------------------
+
+import React from 'react';
+import { Link } from 'react-router-dom'
+
+export default function Page2() {
+    // Main Body
+    return (
+        <div className='bg-primary p-5 m-5'>
+            <h1 className='text-center font-weight-bold mb-5 text-white'>Page 2</h1>
+            <Link to="/" className='text-danger font-weight-bold m-5 border p-1 bg-white rounded'>Page-1</Link>
+            <Link to="/page3" className='text-danger font-weight-bold m-5 border-warning p-2 bg-warning rounded'>Page-3</Link>
+        </div>
+    );
+}
+
+---------------- Page3.js ---------------------
+
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function Page3() {
+  // Navigation
+  const navigate = useNavigate();
+  // Main Body
+  return (
+    <div className='bg-danger p-5'>
+      <h1 className='text-center font-weight-bold mb-5 text-white'>Page 3</h1>
+      <button className='m-auto d-block btn-warning p-3 rounded' onClick={() => navigate('/')}>Move To Page 1</button>
+      <button className='m-auto d-block btn-primary p-3 rounded' onClick={() => navigate(-1)}>Page 2</button>
+    </div>
+  );
+}
+
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,344 @@
+---------------------- App.js ---------------------- 
+
+import "./App.css";
+import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
+import MyToggle from "./components/MyToggle";
+// Importing File For React Router DOM
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+function App() {
+  return (
+    <>
+      <Router>
+        {/* Navbar Remains Static */}
+        <Navbar title="Hello Rehmat" />
+        {/* Below Them Are Changed When Clicked */}
+        <Routes>
+          <Route exact path='/TextForm' element={<TextForm/>} />
+        </Routes>
+        <Routes>
+          <Route exact path='/MyToggle' element={<MyToggle/>} />
+        </Routes>
+      </Router>
+    </>
+  );
+}
+
+export default App;
+
+---------------------- 1 - Navbar.js ---------------------- 
+
+import React from "react";
+import PropTypes from "prop-types";
+
+export default function Navbar(props) {
+  return (
+    // HTML
+    <div className="My_Nav">
+      <a href="/">Home</a>
+      <a href="/TextForm">TextForm</a>
+      <a href="/MyToggle">MyToggle</a>
+      <a href="/">{props.title}</a>
+    </div>
+  );
+}
+
+// Giving Prob A Datat Type
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+---------------------- 2 - TextForm.js ---------------------- 
+
+// Start Header File
+import React, { useState } from "react";
+
+export default function Text_Form() {
+  // 1 - Always Define {useState} In Component Means In The Function
+  const [text, setText] = useState("");
+  // 2 - setMyText("PTCL");
+  // 3 - Function 1
+  const fun1 = () => {
+    console.log(" Fun1 Used ");
+    // 6 - Uppercase
+    let newText = text.toUpperCase();
+    setText(newText);
+  };
+  // 4 - Function 2
+  const fun2 = (event) => {
+    console.log(" OnChange Applied ");
+    // 5 - Event Handler
+    setText(event.target.value);
+  };
+  // 7
+  const fun3 = () => {
+    // 6 - Lowercase
+    let newText = text.toLowerCase();
+    setText(newText);
+  };
+  // 8
+  const fun4 = () => {
+    // 6 - Reset
+    let text = "";
+    setText(text);
+  };
+
+  // HTML
+  return (
+    <>
+      {/* First */}
+      <div className="bg-info">
+        <div className="container">
+          <h1 className="text-center text-black display-3 fw-bold">
+            Enter Text Below :
+          </h1>
+          <textarea
+            className="m-auto d-block p-3"
+            cols="100"
+            value={text}
+            rows="10"
+            onChange={fun2}
+          ></textarea>
+          <div className="d-flex flex-row m-auto w-50 p-2">
+            <div>
+              <button onClick={fun1} className="my-2 mx-2 btn btn-danger">
+                CLick For Uppercase
+              </button>
+            </div>
+            <div>
+              <button onClick={fun3} className="my-2 mx-2 btn btn-danger">
+                CLick For Lowercase
+              </button>
+            </div>
+            <div>
+              <button onClick={fun4} className="my-2 mx-2 btn btn-warning">
+                Reset Text
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Second */}
+      <div id="second" className="bg-info">
+        {/* 1 */}
+        <div className="container w-100 text-center p-1">
+          <p>
+            Total Words : <span>{text.split(" ").length}</span> & Total
+            Characters : <span>{text.length}</span>
+          </p>
+        </div>
+        {/* 2 */}
+        <div id="sec_last" className="w-100 text-center p-1">
+          <h2>Text Preview</h2>
+          <p id="sec_last">{text}</p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+---------------------- 3 - MyToggle.js ---------------------- 
+
+import React from 'react'
+
+export default function MyToggle() {
+  return (
+    <div className='bg-danger'>
+        <div className="container py-3">
+            {/* Data Toggle */}
+            <a id='My_Tog' href="#" className='dropdown-toggle' data-toggle="dropdown">My Data Toggle</a>
+            <ul className='dropdown-menu'>
+                <li><a className='dropdown-item' href="#">First</a></li>
+                <li><a className='dropdown-item' href="#">Second</a></li>
+                <li><a className='dropdown-item' href="#">Third</a></li>
+            </ul>
+        </div>
+    </div>
+  )
+}
+
+---------------------- Index.js ---------------------- 
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+---------------------- App.css ---------------------- 
+
+/* My Internal CSS */
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    list-style: none;
+    margin: 0em 0em 0em 3em;
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px black;
+}
+.My_Nav{
+    border: 0.1px solid rgb(19, 19, 59);
+    background-color: rgb(69, 69, 110);
+    padding: 1em 0em;
+}
+/* Second */
+#second p{
+    font-size: 1.5em;
+}
+#second span{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+#sec_last p{
+    font-size: 1em;
+}
+/* .container{
+    border: 0.1px solid black;
+} */
+/* MyToggle.js */
+#My_Tog{
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    color: darkblue;
+    font-weight: bold;
+    width: 18%;
+    border: 0.1px solid white;
+    /* border: 0.1px solid black; */
+    display: block;
+    margin: 0em auto;
+    text-decoration: none;
+}
+#My_Tog:hover{
+    background-color: white;
+    color: transparent;
+    border: 0.1px solid white;
+}
+.dropdown-item{
+    width: 100%;
+    /* background-color: aqua; */
+}
+.dropdown-item:hover{
+    width: 100%;
+    /* background-color: aqua; */
+    color: black;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 520px) {
+    a{
+        font-size: 1em;
+        font-weight: bold;
+        list-style: none;
+        margin: 0em 0em 0em 0em;
+        color: white;
+        padding: 2em 0.5em;
+        border: 0.1px solid rgb(19, 19, 59);
+        text-align: center;
+    }        
+    .My_Nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+---------------------- Index.html ---------------------- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <!-- --------------------------------------------------------- -->
+  <!-- Boostrap CSS External File -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Boostrap JS External File -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+  <!-- --------------------------------------------------------- -->
+  <title>React Coding</title>
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <!-- ---------------------------------------------------------- -->
+  <!-- Boostrap JS External File -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- ---------------------------------------------------------- -->
+</body>
+
+</html>
+
+--------------------------------------------------------------------------------------------------------------
+ 

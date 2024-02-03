@@ -1,0 +1,41 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar"
+
+export default class App extends Component {
+  render() {
+    return(
+      <>
+      <Navbar />
+      </>
+    );
+  }
+}
+
+---------------- Navbar.js ---------------------
+
+import React, { useRef } from 'react'
+
+export default function Navbar() {
+  // 1 - useRef
+  let myRef = useRef();
+  function myFunc(){
+    myRef.current.style.color="red";
+    myRef.current.focus();
+    // Style Css
+    myRef.current.style.backgroundColor="lightgreen";
+    myRef.current.style.padding="10px 20px";
+  }
+  // Main Body
+  return (
+    <div>
+      <h1>useRef Hook</h1>
+      <input type="text" ref={myRef} />
+      <button onClick={myFunc}>Click Me</button>
+    </div>
+  )
+}
+
+---------------------------------------------------------------------------------------------

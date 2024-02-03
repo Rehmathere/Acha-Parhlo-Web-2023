@@ -1,0 +1,46 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
+}
+export default App;
+
+---------------- Navbar.js ---------------------
+
+import React, { useRef } from "react";
+
+export default function Navbar() {
+  // 1 - ref variable
+  let inputRef = useRef(null);
+  // 2 - ref variable
+  let inputRef1 = useRef(null);
+  // function
+  function MyFunc(e){
+    e.preventDefault();
+  }
+  // Main Body
+  return (
+    <div className="container py-5">
+      <h1 className="text-danger py-5">Un-Controlled Component</h1>
+      <form onSubmit={MyFunc}>
+        <h6>1 - Enter Your Name : -</h6>
+        <input type="text" ref={inputRef} className="d-block px-2 py-1" />
+        <h6>2 - Enter Your Class : -</h6>
+        <input type="text" ref={inputRef1} className="d-block px-2 py-1" />
+        <button className="mt-3 btn-primary py-1 px-3 border-danger rounded ">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
+
+---------------------------------------------------------------------------------------------

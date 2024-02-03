@@ -1,0 +1,59 @@
+
+
+------------------ App.js ---------------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar.js";
+import Rehmat from "./components/Rehmat.js";
+
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        {/* Navbar.js */}
+        <div>
+          <Navbar />
+        </div>
+        {/* Rehmat.js */}
+        <div>
+          <Rehmat />
+        </div>
+
+      </>
+    );
+  }
+}
+
+------------------ Rehmat.js ---------------------
+
+import React from "react";
+import {useState}  from "react";
+import {useEffect}  from "react";
+import axios from 'axios';
+
+export default function Rehmat() {
+  // Fetch Api
+  const [records, setRecords] = useState([])
+  // useEffect
+  useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(res => {setRecords(res.data)})
+    .catch(err => console.log(err))
+  },[])
+  // Main
+  return (
+    <div className="container">
+      {/* Feth Api */}
+      <ul>
+        {records.map((r, i)=>{
+          return(
+            <li key={i}> {r.id} | {r.name} | {r.username} | {r.email} </li>
+          )
+        })}
+      </ul>
+    </div>
+  );
+}
+
+---------------------------------------------------------------------------------------------------

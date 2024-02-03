@@ -1,0 +1,40 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+
+function App() {
+  return (
+    <>
+      <MyName cmd={Navbar} />
+    </>
+  );
+}
+export default App;
+
+
+function MyName(props){
+  return(
+    <h1>< props.cmd /></h1>
+  )
+}
+
+---------------- Navbar.js ---------------------
+
+import React, { useState } from "react";
+
+export default function Navbar() {
+  // 1 - useState
+  const [count, setCount] = useState(0)
+  // Main Body
+  return (
+    <div className="container py-5">
+      <h1 className="text-center">My Counter</h1>
+      <h2 className="text-center">{count}</h2>
+      <button onClick={()=>setCount(count+1)} className="btn-danger px-5 py-1 rounded d-block m-auto">Click Me</button>
+    </div>
+  );
+}
+
+---------------------------------------------------------------------------------------------

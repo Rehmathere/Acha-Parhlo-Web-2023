@@ -1,0 +1,427 @@
+-------- Z_Test_Parent.js --------
+
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom'
+import Z_Test from './Z_Test'
+import Z_Test_2 from './Z_Test_2'
+import Z_Test_C from './Z_Test_C'
+
+export default function Z_Test_Parent() {
+    // Main Body
+    return (
+        // Navigation Part
+        <BrowserRouter>
+            <Routes>
+                {/* 1 Home Page */}
+                <Route path='/' element={<Z_Test />} />
+                {/*2 Update Page */}
+                <Route path='/Z_Test_2/:id/:name1/:name2/:name3/:name4/:name5' element={<Z_Test_2 />} />
+                {/*2 Create Page */}
+                <Route path='/Z_Test_C' element={<Z_Test_C />} />
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
+-------- Z_Test.js --------
+
+import React, { useEffect, useState } from 'react';
+import { database1 } from '../Portal/firebase';
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css"
+
+export default function Z_Test() {
+  const navigate = useNavigate();
+  const [val, setVal] = useState([]);
+  const value = collection(database1, "demo");
+
+  const getData = async () => {
+    const dbVal = await getDocs(value);
+    setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const handleDelete = async (id) => {
+    const deleteVal = doc(database1, "demo", id);
+    await deleteDoc(deleteVal);
+    getData();
+  }
+
+  const handleEdit = (id, name1, name2, name3,name4, name5) => {
+    navigate(`/Z_Test_2/${id}/${name1}/${name2}/${name3}/${name4}/${name5}`);
+  }
+
+  return (
+    <>
+      <div id="Z_Create">
+        <div id="Z_Create_Part_1">
+          <h4>Want To Add University ?</h4>
+        </div>
+        <div id="Z_Create_Part_2">
+          <button onClick={() => navigate('Z_Test_C')}>Add</button>
+        </div>
+      </div>
+      <div className='container'>
+        {
+          val.map(values =>
+            <div id='Z_T_1_Box' key={values.id}>
+              <h4>1 - {values.name1}</h4>
+              <h4>2 - {values.name2}</h4>
+              <h4>3 - {values.name3}</h4>
+              <h4>4 - {values.name4}</h4>
+              <h4>5 - {values.name5}</h4>
+              <img id="Img_Upload" src={values.image} alt="" />
+              <button onClick={() => handleDelete(values.id)}>Delete</button>
+              <button onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5)}>Edit</button>
+            </div>)
+        }
+      </div>
+    </>
+  );
+};
+
+-------- Z_Test_2.js --------
+
+import React, { useState, useRef } from 'react';
+import { database1 } from '../Portal/firebase';
+import { collection, doc, updateDoc } from 'firebase/firestore';
+import { useParams, useNavigate } from 'react-router-dom';
+import user from '../Pics/user_P.png'
+import "../Portal/MyFeatures/PChat/FinalChat.css"
+
+
+export default function Z_Test_2() {
+  const { id, name1, name2, name3, name4, name5, myimage } = useParams();
+  const navigate = useNavigate();
+  const [fname, setFname] = useState(name1);
+  const [lname, setLname] = useState(name2);
+  const [name_1, setName_1] = useState(name3)
+  const [name_2, setName_2] = useState(name4)
+  const [name_3, setName_3] = useState(name5)
+  const [image, setImage] = useState(myimage);
+
+
+  const handleUpdate = async () => {
+    const value = collection(database1, "demo");
+    const updateData = doc(database1, "demo", id);
+    await updateDoc(updateData, { name1: fname, name2: lname, name3: name_1, name4: name_2, name5: name_3 });
+    navigate('/');
+  }
+
+  const fileInputRef = useRef(null);
+
+  const handleUploadClick = () => {
+      fileInputRef.current.click();
+  };
+
+  const handleFileChange = (e) => {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onloadend = () => {
+          setImage(reader.result);
+      };
+      if (file) {
+          reader.readAsDataURL(file);
+      }
+  };
+
+
+  return (
+    <>
+      <div className='container'>
+        <div id="Z_T_C_Box">
+          <h6>1 - Enter University Name</h6>
+          <input value={fname} onChange={(e) => setFname(e.target.value)} placeholder=' Enter University Name ' />
+          <h6>2 - Enter Basic Overview</h6>
+          <input value={lname} onChange={(e) => setLname(e.target.value)} placeholder=' Enter Basic Overview ' />
+          <h6>3 - Enter Courses Name</h6>
+          <input value={name_1} onChange={(e) => setName_1(e.target.value)} placeholder=' Enter Courses Name ' />
+          <h6>4 - Enter Fees</h6>
+          <input value={name_2} onChange={(e) => setName_2(e.target.value)} placeholder=' Enter Fees ' />
+          <h6>5 - Enter Degree Duration</h6>
+          <input value={name_3} onChange={(e) => setName_3(e.target.value)} placeholder=' Enter Degree Duration ' />
+          <h6>6 - Enter Logo / Picture</h6>
+          <img src={image ? myimage : user} alt="Logo/Picture" />
+          <input
+            type="file"
+            onChange={handleFileChange}
+            style={{ display: 'none' }}
+            ref={fileInputRef}
+            id='Img_Upload'
+          />
+          <button id='Img_Upload' onClick={handleUploadClick}>Upload</button>
+          {/* Button */}
+          <button id='Btn_C_1' onClick={handleUpdate}>Update Values</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+-------- Z_Test_C.js --------
+
+import React, { useEffect, useState, useRef } from 'react'
+import { database1 } from '../Portal/firebase'
+import { addDoc, collection, getDocs } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
+import user from '../Pics/user_P.png'
+import "../Portal/MyFeatures/PChat/FinalChat.css"
+
+export default function Z_Test_C() {
+    const navigate = useNavigate();
+    const [fname, setFname] = useState('')
+    const [lname, setLname] = useState('')
+    const [name_1, setName_1] = useState('')
+    const [name_2, setName_2] = useState('')
+    const [name_3, setName_3] = useState('')
+    const [name_4, setName_4] = useState('')
+    const [val, setVal] = useState([])
+    const [image, setImage] = useState(null);
+
+    const value = collection(database1, "demo")
+
+    useEffect(() => {
+        const getData = async () => {
+            const dbVal = await getDocs(value)
+            setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+        }
+        getData();
+    }, [value]);
+
+    const handleCreate = async () => {
+        await addDoc(value, {
+            name1: fname,
+            name2: lname,
+            name3: name_1,
+            name4: name_2,
+            name5: name_3,
+            name6: name_4,
+            image: image // Added image to the Firestore document
+        });
+        setFname("");
+        setLname("");
+        setName_1("");
+        setName_2("");
+        setName_3("");
+        setName_4("");
+        setImage(null);
+    }
+
+    const fileInputRef = useRef(null);
+
+    const handleUploadClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
+    return (
+        <>
+            <div className='container'>
+                <div id="Z_T_C_Box">
+                    <h1>Enter Box Details</h1>
+                    <h6>1 - Enter University Name</h6>
+                    <input value={fname} onChange={(e) => setFname(e.target.value)} placeholder=' Enter University Name ' />
+                    <h6>2 - Enter Basic Overview</h6>
+                    <input value={lname} onChange={(e) => setLname(e.target.value)} placeholder=' Enter Basic Overview ' />
+                    <h6>3 - Enter Courses Name</h6>
+                    <input value={name_1} onChange={(e) => setName_1(e.target.value)} placeholder=' Enter Courses Name ' />
+                    <h6>4 - Enter Fees</h6>
+                    <input value={name_2} onChange={(e) => setName_2(e.target.value)} placeholder=' Enter Fees ' />
+                    <h6>5 - Enter Degree Duration</h6>
+                    <input value={name_3} onChange={(e) => setName_3(e.target.value)} placeholder=' Enter Degree Duration ' />
+                    <h6>6 - Enter Logo / Picture</h6>
+                    <img src={image ? image : user} alt="Logo/Picture" />
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                        style={{ display: 'none' }}
+                        ref={fileInputRef}
+                        id='Img_Upload'
+                    />
+                    <button id='Img_Upload' onClick={handleUploadClick}>Upload</button>
+                    <button id='Btn_C_1' onClick={handleCreate}>Create Box</button>
+                    <p id="Btn_C_2" onClick={() => navigate('/')}>Move To Home page</p>
+                </div>
+            </div>
+        </>
+    );
+};
+
+-------- FinalChat.css --------
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* -- Z_Test.js --  ( CRUD ) */
+/* 1 - Create Box Enter */
+#Z_Create{
+  border: 0.1px solid aqua;
+  padding: 1em 1em;
+  width: 45%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  border-radius: 20px;
+}
+#Z_Create_Part_1{
+  border: 0px solid transparent;
+  padding: 0.1em 0.5em;
+  width: 60%;
+}
+#Z_Create_Part_1 h4{
+  padding: 0.1em 0.2em;
+  text-align: center;
+}
+#Z_Create_Part_2{
+  border: 0px solid transparent;
+  padding: 0.1em 0.5em;
+  width: 40%;
+}
+#Z_Create_Part_2 button {
+  border: 0.1px solid red;
+  background-color: red;
+  padding: 0.3em 0.5em;
+  width: 50%;
+  display: block;
+  margin: 0em auto;
+  font-size: 1.2em;
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+}
+/* 2 - List Box */
+#Z_T_1_Box{
+  border: 0.1px solid rgb(255, 174, 0);
+  width: 38%;
+  background-color: rgb(255, 174, 0);
+  border-radius: 20px;
+  margin: 0.5em 0em;
+  padding: 0.5em 0em;
+}
+#Z_T_1_Box h4{
+  border: 0px solid transparent;
+  padding: 0.1em 2em;
+  font-size: 0.9em;
+}
+#Z_T_1_Box button{
+  border: 0.1px solid blue;
+  padding: 0.2em 0.5em;
+  display: block;
+  margin: 1em auto;
+  width: 80%;
+  color: white;
+  background-color: blue;
+  font-size: 1em;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+/* 3 - Create List */
+#Z_T_C_Box{
+  border: 0.1px solid lightcoral;
+  width: 50%;
+  background-color: lightcoral;
+  padding: 1em 3em;
+  border-radius: 20px;
+  margin: 2em 0em;
+}
+#Z_T_C_Box h1{
+  border: 0px solid transparent;
+  text-align: center;
+  padding: 0.5em 0em;
+}
+#Z_T_C_Box h6{
+  border: 0px solid transparent;
+  padding: 0.3em 0em;
+  margin: 0.8em 0em 0em 0em;
+  font-size: 0.8em;
+}
+#Z_T_C_Box input{
+  border: 0.1px solid grey;
+  padding: 0.2em 1em;
+  width: 100%;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+#Z_T_C_Box img{
+  border: 0.1px solid black;
+  padding: 0.1em 0.1em;
+  width: 20%;
+  display: block;
+  margin: 1em auto;
+  border-radius: 10px;
+}
+#Btn_C_1{
+  border: 0px solid transparent;
+  background-color: blue;
+  color: white;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  margin: 1em 0em 0em 0em;
+}
+#Btn_C_2{
+  border: 0px solid transparent;
+  background-color: red;
+  color: white;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  margin: 1em 0em 1em 0em;
+  text-align: center;
+}
+#Img_Upload{
+  border: 0.1px solid black;
+  background-color: black;
+  color: white;
+  width: 20%;
+  padding: 0em 0em;
+  letter-spacing: 2px;
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+
+
+
+
+/* ------------------------- */
+/* -- FinalChat.css -- */
+/* ------------------------- */
+
+
+/* Start */
+/*  */
+/* ---------------------------- */
+/* Media Queries In CSS */
+/* ---------------------------- */
+/* 1 */
+
+----------------------------------------------------------------------------------------

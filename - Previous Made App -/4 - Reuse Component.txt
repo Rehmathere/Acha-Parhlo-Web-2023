@@ -1,0 +1,55 @@
+---------------- App.js -----------------
+
+import "./App.css";
+import React, { Component } from "react";
+import Navbar from "./components/Navbar"
+
+export default class App extends Component {
+  render() {
+    // 1 - Array
+    const rehmat = [
+      { name: "A", email: "A.a@gmail.com", phone: "100" },
+      { name: "B", email: "B.b@gmail.com", phone: "200" },
+      { name: "C", email: "C.c@gmail.com", phone: "300" },
+    ];
+
+    return(
+      <div className="container">
+      {/* Start */}
+      <h1>1 - Reuse Component</h1>
+      <div>
+        {/* 1 - Reuse Method 1 */}
+        {/* {rehmat.map((item, index) => (
+          <>
+            <h6>{item.name}</h6>
+            <h6>{item.email}</h6>
+            <h6>{item.phone}</h6>
+          </>
+        ))} */}
+        {/* 2 - Reuse Method 2 */}
+        {
+          rehmat.map((item , index) =>
+            <Navbar data={item} />
+          )
+        }
+      </div>
+    </div>
+    );
+  }
+}
+
+---------------- Navbar.js ---------------------
+
+function My_Code(props) {
+  return (
+    <div id="first" className="">
+      <h6>{props.data.name}</h6>
+      <h6>{props.data.email}</h6>
+      <h6>{props.data.phone}</h6>
+    </div>
+  );
+}
+
+export default My_Code;
+
+---------------------------------------------------------------------------------------------

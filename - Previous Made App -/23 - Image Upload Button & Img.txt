@@ -1,0 +1,53 @@
+import React, { useState, useRef } from 'react'
+// Image
+import user from './Pics/user_P.png'
+// CSS
+import "./Portal/MyFeatures/PAdd_Uni/PAdd_U.css"
+
+export default function Free() {
+    // Upload Image Logic 
+    // Edit Profile useSatte
+    const [image, setImage] = useState(null);
+    const [isEditing, setIsEditing] = useState(true);
+    // Upload Image Of Edit Profile Logic
+    const fileInputRef = useRef(null);
+    const handleUploadClick = () => {
+        // Trigger the hidden file input
+        fileInputRef.current.click();
+    };
+    // Function to handle file input change
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        // Use FileReader to convert the selected file to a data URL
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+    // Main Body
+    return (
+        <>
+            <div>
+                <h1>Image</h1>
+                {isEditing && (
+                    <div id="P_U_AU_1_box_P2_sub_PicBox_s_s">
+                        {/* Use the state variable for the image source */}
+                        <img src={image ? image : user} alt="Na" />
+                    </div>
+                )}
+                {/* Button */}
+                <input
+                    type="file"
+                    onChange={handleFileChange}
+                    style={{ display: 'none' }}
+                    ref={fileInputRef}
+                />
+                <button onClick={handleUploadClick}>Upload</button>
+            </div>
+        </>
+    )
+}
+
