@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import PSidebar from '../PSidebar'
 // useNavigate
 import { useNavigate } from 'react-router-dom'
@@ -15,8 +15,60 @@ import confirm_u from '../../../Pics/add_confirm.png'
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
+// Firebase
+import { database1 } from '../../firebase';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 
 export default function PAdd_U_add() {
+    // ------------- Backend Logic Part -------------
+    // Create Box Data 
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [name_1, setName_1] = useState('');
+    const [name_2, setName_2] = useState('');
+    const [name_3, setName_3] = useState('');
+    const [val, setVal] = useState([]);
+    const [image, setImage] = useState(null);
+    const value = collection(database1, "1 - Add University");
+    useEffect(() => {
+        const getData = async () => {
+            const dbVal = await getDocs(value);
+            setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+        };
+        getData();
+    }, [value]);
+    const handleCreate = async () => {
+        await addDoc(value, {
+            name1: fname,
+            name2: lname,
+            name3: name_1,
+            name4: name_2,
+            name5: name_3,
+            MyImage: image // Added MyImage to the Firestore document
+        });
+        setFname("");
+        setLname("");
+        setName_1("");
+        setName_2("");
+        setName_3("");
+        setImage(null);
+    };
+    // File Upload 
+    const fileInputRef = useRef(null);
+    const handleUploadClick = () => {
+        fileInputRef.current.click();
+    };
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+    // ------------- Backend Logic Part -------------
     // ------ Confirm Add University Logic ------
     // State to manage which box to display
     const [showBox2, setShowBox2] = useState(false);
@@ -35,36 +87,8 @@ export default function PAdd_U_add() {
     const handleCancelClick = () => {
         setShowParent(false);
     };
-    // ------ Previous Logic ------
-    // Edit Profile useSatte
-    const [image, setImage] = useState(null);
-    const [isEditing, setIsEditing] = useState(true);
-    // Upload Image Of Edit Profile Logic
-    const fileInputRef = useRef(null);
-    const handleUploadClick = () => {
-        // Trigger the hidden file input
-        fileInputRef.current.click();
-    };
-    // Function to handle file input change
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        // Use FileReader to convert the selected file to a data URL
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setImage(reader.result);
-        };
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    };
     // ----------------------------
     // ------ Logout Logic ------
-    // 0 - useState
-    const [info1, setInfo1] = useState("");
-    const [info2, setInfo2] = useState("");
-    const [info3, setInfo3] = useState("");
-    const [info4, setInfo4] = useState("");
-    const [info5, setInfo5] = useState("");
     // useNavigate 
     const navigate = useNavigate();
     // Logout Function
@@ -118,27 +142,27 @@ export default function PAdd_U_add() {
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
                                         <h6>Name</h6>
-                                        <input type="text" placeholder='Enter University Name ' value={info1} onChange={(e) => setInfo1(e.target.value)} />
+                                        <input type="text" placeholder='Enter University Name ' value={fname} onChange={(e) => setFname(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
                                         <h6>Basic Overview</h6>
-                                        <input type="" placeholder='Enter University Basic Overview ' value={info2} onChange={(e) => setInfo2(e.target.value)} />
+                                        <input type="" placeholder='Enter University Basic Overview ' value={lname} onChange={(e) => setLname(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
                                         <h6>Courses Offered</h6>
-                                        <input type="text" placeholder='Enter Courses Name Offered ' value={info3} onChange={(e) => setInfo3(e.target.value)} />
+                                        <input type="text" placeholder='Enter Courses Name Offered ' value={name_1} onChange={(e) => setName_1(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
                                         <h6>Admission Fee</h6>
-                                        <input type="text" placeholder='Enter Admission Fee ' value={info4} onChange={(e) => setInfo4(e.target.value)} />
+                                        <input type="text" placeholder='Enter Admission Fee ' value={name_2} onChange={(e) => setName_2(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
                                         <h6>Degree Duration</h6>
-                                        <input type="text" placeholder='Enter Degree Duration ' value={info5} onChange={(e) => setInfo5(e.target.value)} />
+                                        <input type="text" placeholder='Enter Degree Duration ' value={name_3} onChange={(e) => setName_3(e.target.value)} />
                                     </div>
                                 </div>
                                 {/* Part 2 */}
@@ -149,12 +173,10 @@ export default function PAdd_U_add() {
                                         <div id="P_U_AU_1_box_P2_sub_PicBox">
                                             <div id="P_U_AU_1_box_P2_sub_PicBox_s">
                                                 {/* Display Area - Render only when isEditing is true */}
-                                                {isEditing && (
-                                                    <div id="P_U_AU_1_box_P2_sub_PicBox_s_s">
-                                                        {/* Use the state variable for the image source */}
-                                                        <img src={image ? image : user} alt="Na" />
-                                                    </div>
-                                                )}
+                                                <div id="P_U_AU_1_box_P2_sub_PicBox_s_s">
+                                                    {/* Use the state variable for the image source */}
+                                                    <img src={image ? image : user} alt="Logo/Picture" />
+                                                </div>
                                             </div>
                                             {/* Button */}
                                             <div id="P_U_AU_1_box_P2_sub_PicBox_s_1">
@@ -172,7 +194,7 @@ export default function PAdd_U_add() {
                                 </div>
                             </div>
                             <div id="P_U_AU_1_button_parent">
-                                <button onClick={handleAddUniversityClick}>Add University</button>
+                                <button onClick={() => { handleAddUniversityClick(); handleCreate(); }}>Add University</button>
                             </div>
                         </div>
                     </div>

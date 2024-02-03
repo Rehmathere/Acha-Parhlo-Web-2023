@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import PSidebar from '../PSidebar'
 // useNavigate
 import { useNavigate } from 'react-router-dom'
@@ -17,33 +17,43 @@ import confirm_u from '../../../Pics/del_a.png'
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
+// Firebase
+import { database1 } from '../../firebase';
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
 
 export default function PAdd_Uni() {
+    // ------------- Backend Logic Part -------------
+    // Some List Shown, Edit ( Data Passing ) & Delete JS Logic
+    const [val, setVal] = useState([]);
+    const value = collection(database1, "1 - Add University");
+    const getData = async () => {
+        const dbVal = await getDocs(value);
+        setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    }
+    useEffect(() => {
+        getData();
+    }, []);
+    const handleDelete = async (id) => {
+        const deleteVal = doc(database1, "1 - Add University", id);
+        await deleteDoc(deleteVal);
+        getData();
+    }
+    const handleEdit = (id, name1, name2, name3, name4, name5, MyImage) => {
+        navigate(`/PAdd_Uni_Update/${id}/${name1}/${name2}/${name3}/${name4}/${name5}/${encodeURIComponent(MyImage)}`);
+    }
+    // ------------- Backend Logic Part -------------
     // ------ Confirm Add University Logic ------
     // State to manage which box to display
     const [showBox2, setShowBox2] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [showParent, setShowParent] = useState(false);
-    // Function to handle button click and toggle between boxes
-    const handleButtonClick = () => {
-        if (!showBox2) {
-            setShowConfirmation(true);
-        }
-        setShowBox2(!showBox2);
-        if (!showBox2) {
-            // Set a timeout to hide the parent after 3 seconds
-            setTimeout(() => {
-                setShowParent(false);
-            }, 2000);
-        }
-    };
     const handleAddUniversityClick = () => {
-        setShowParent(true); // Show the parent div
+        setShowParent(true);
         setShowConfirmation(true);
-        setShowBox2(false); // Reset showBox2 when Add University is clicked
-    };
-    const handleCancelClick = () => {
-        setShowParent(false);
+        setShowBox2(true); // Set showBox2 to true directly
+        setTimeout(() => {
+            setShowParent(false);
+        }, 2000);
     };
     // ------ Logout Logic ------
     // useNavigate 
@@ -140,24 +150,28 @@ export default function PAdd_Uni() {
                     <div id="PR_Third">
                         <div id="sub_PR_Third">
                             {/* Record Box 1 */}
-                            <div id="PR_Third_Box">
-                                {/* Part 3 */}
-                                <div id="PR_Third_Box_Part_2" onClick={() => navigate('/PAdd_Uni_Update')}>
-                                    Deakin
+                            {val.map(values =>
+                                <div id="PR_Third_Box" key={values.id}>
+                                    {/* Part 3 */}
+                                    <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                        {values.name1}
+                                    </div>
+                                    {/* Part 2 */}
+                                    <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                        <img src={values.MyImage} alt="NA" />
+                                    </div>
+                                    {/* Part 4 */}
+                                    <div id="PR_Third_Box_Part_3" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                        {values.name3}
+                                    </div>
+                                    {/* Part 1 */}
+                                    <div id="PR_Third_Box_Part_0">
+                                        <button onClick={() => { handleDelete(values.id); handleAddUniversityClick(); }}>
+                                            Delete <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                {/* Part 2 */}
-                                <div id="PR_Third_Box_Part_1" onClick={() => navigate('/PAdd_Uni_Update')}>
-                                    <img src={Str_9} alt="NA" />
-                                </div>
-                                {/* Part 4 */}
-                                <div id="PR_Third_Box_Part_3" onClick={() => navigate('/PAdd_Uni_Update')}>
-                                    Applied Science
-                                </div>
-                                {/* Part 1 */}
-                                <div id="PR_Third_Box_Part_0">
-                                    <button onClick={handleAddUniversityClick}>Delete <i class="fa fa-trash"></i></button>
-                                </div>
-                            </div>
+                            )}
                             {/* Record Box 2 */}
                         </div>
                     </div>
@@ -166,16 +180,6 @@ export default function PAdd_Uni() {
                         {/* Basic Logic */}
                         <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
                             <div id="PA_U_ConfirmAdd_Parent_Box">
-                                {/* Box 1 */}
-                                <div id="PA_U_ConfirmAdd_1" style={{ display: showBox2 ? 'none' : 'block' }}>
-                                    <h3>Confirm Delete ?</h3>
-                                    <div id="PA_U_ConfirmAdd_img">
-                                        <img src={add_u} alt="NA" />
-                                    </div>
-                                    <button id='PA_U_ConfirmAdd_1_A' onClick={handleButtonClick}>Delete</button>
-                                    {/* Cancel Button */}
-                                    <button id='PA_U_ConfirmAdd_1_B' onClick={handleCancelClick}>Don't Delete</button>
-                                </div>
                                 {/* Box 2 */}
                                 <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
                                     <div id="PA_U_ConfirmAdd_img">

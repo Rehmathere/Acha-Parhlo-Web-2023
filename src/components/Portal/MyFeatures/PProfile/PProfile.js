@@ -7,6 +7,7 @@ import '../PRecords/PRecords.css'
 import logout from '../../../Pics/logout.png'
 import user from '../../../Pics/user_P.png'
 import Str_P from "../../../Pics/Str_P.png"
+import add_u from '../../../Pics/PassChanged.png'
 // Reset Password 
 import { database } from '../../firebase'
 import { updatePassword } from 'firebase/auth'
@@ -16,6 +17,25 @@ import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
 
 export default function PProfile() {
+    // ------ Confirm Add University Logic ------
+    // State to manage which box to display
+    const [showBox2, setShowBox2] = useState(false);
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [showParent, setShowParent] = useState(false); // Updated to initially hide the parent div
+    // Function to handle button click and toggle between boxes
+    const handleButtonClick = () => {
+        setShowBox2(!showBox2);
+    };
+    // Function to handle "Add University" button click and toggle visibility of confirmation div
+    const handleAddUniversityClick = () => {
+        setShowParent(true); // Show the parent div
+        setShowConfirmation(true);
+    };
+    // Function to handle "Don't Add This University" button click and hide the entire parent div
+    const handleCancelClick = () => {
+        setShowParent(false);
+    };
+    // ------------------------------------------------------
     const [newPassword, setNewPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -420,7 +440,7 @@ export default function PProfile() {
                                             />
                                         </div>
                                         <div id='ProfileBox_2_Part_3_Input_Box_2'>
-                                            <button onClick={handleChangePassword}>Change Password</button>
+                                            <button onClick={() => { handleChangePassword(); handleAddUniversityClick(); }}>Change Password</button>
                                         </div>
                                         {/* Errorr Message */}
                                         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
@@ -429,6 +449,26 @@ export default function PProfile() {
                             </div>
                         </div>
                     </div>
+                    {/* ----- Confirm Add University Logic ----- */}
+                    <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
+                        {/* Basic Logic */}
+                        <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
+                            <div id="PA_U_ConfirmAdd_Parent_Box">
+                                {/* Box 1 */}
+                                <div id="PA_U_ConfirmAdd_1" style={{ display: showBox2 ? 'none' : 'block' }}>
+                                    <div id="PA_U_ConfirmAdd_img">
+                                        <img src={add_u} alt="NA" />
+                                    </div>
+                                    <h3>Password Changed</h3>
+                                    <p>Your Password Has Been Changed, Now Access This Account With Your New Password.</p>
+                                    {/* Close Button */}
+                                    <button id='PA_U_ConfirmAdd_1_A' onClick={handleCancelClick}>Ok, Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Start */}
+                    {/* ---------------------------------------- */}
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">

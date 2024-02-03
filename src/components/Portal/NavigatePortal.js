@@ -54,7 +54,7 @@ export default function NavigatePortal() {
                 {/* 12 Add Uni Form Filling */}
                 <Route path='/PAdd_U_add' element={<PAdd_U_add />} />
                 {/* 13 Update File */}
-                <Route path='/PAdd_Uni_Update' element={<PAdd_Uni_Update />} />
+                <Route path='/PAdd_Uni_Update/:id/:name1/:name2/:name3/:name4/:name5/:MyImage' element={<PAdd_Uni_Update />} />
             </Routes>
         </BrowserRouter>
     )

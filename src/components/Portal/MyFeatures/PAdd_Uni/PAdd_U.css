@@ -57,6 +57,11 @@
   color: white;
   font-size: 1em;
 }
+#PR_Third_Box_Part_1 img{
+  border: 0px solid transparent;
+  width: 25%;
+  border-radius: 10px;
+}
 /* -- PAdd_U.css -- */
 /* ------------------------- */
 /* 1 - PAdd_U_first */
@@ -645,6 +650,9 @@
 }
 /* 2 */
 @media screen and (min-width: 1px) and (max-width: 1200px) {
+  #PR_Third_Box_Part_1 img{
+    width: 35%;
+  }
   /* 1 - PAdd_U_first */
   #PAdd_U_first {
     padding: 0.5em 2em 2em 2em;
@@ -826,6 +834,9 @@
 }
 /* 3 */
 @media screen and (min-width: 1px) and (max-width: 1000px) {
+  #PR_Third_Box_Part_1 img{
+    width: 35%;
+  }
   /* 1 - PAdd_U_first */
   #PAdd_U_first {
     padding: 0.5em 1em 2em 1em;
@@ -1008,6 +1019,9 @@
 }
 /* 4 */
 @media screen and (min-width: 1px) and (max-width: 800px) {
+  #PR_Third_Box_Part_1 img{
+    width: 45%;
+  }
   /* 1 - PAdd_U_first */
   #PAdd_U_first {
     padding: 0.5em 0.3em 2em 0.3em;
@@ -1192,6 +1206,9 @@
 }
 /* 5 */
 @media screen and (min-width: 1px) and (max-width: 600px) {
+  #PR_Third_Box_Part_1 img{
+    width: 13%;
+  }
   /* 1 - PAdd_U_first */
   #PAdd_U_first {
     padding: 0.5em 0.1em 2em 0.1em;
@@ -1395,6 +1412,9 @@
 }
 /* 6 */
 @media screen and (min-width: 1px) and (max-width: 400px) {
+  #PR_Third_Box_Part_1 img{
+    width: 20%;
+  }
   /* 1 - PAdd_U_first */
   #PAdd_U_first {
     padding: 0em 0em 2.5em 0em;
