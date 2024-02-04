@@ -13,7 +13,9 @@ import BlogPage4_D from "./components/Blog/BlogPage4_D";
 import BlogPage5_E from "./components/Blog/BlogPage5_E";
 // --- Extra Work ---
 import NavigatePortal from './components/Portal/NavigatePortal'
-import Z_Test from './components/Z_Test'
+import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
+import Free from "./components/Free";
+
 
 export default function App() {
   const [showImgSlider, setShowImgSlider] = useState(false);
@@ -57,7 +59,9 @@ export default function App() {
       {/* --------------------------------------------------- */}
       {/* Extra Working */}
       <NavigatePortal />
-      {/* <Z_Test /> */}
+      {/* <FinalChat /> */}
+      {/* <Z_Test_Parent /> */}
+      {/* <Free /> */}
     </>
   );
 }
