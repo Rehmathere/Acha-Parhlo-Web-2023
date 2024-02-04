@@ -131,7 +131,7 @@ export default function PAdd_Uni() {
                                 </div>
                                 {/* Part 2 */}
                                 <div id="PR_Second_Box_Part_1">
-                                    Image
+                                    Logo
                                 </div>
                                 {/* Part 4 */}
                                 <div id="PR_Second_Box_Part_3">
@@ -183,7 +183,7 @@ export default function PAdd_Uni() {
                                 {/* Box 2 */}
                                 <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
                                     <div id="PA_U_ConfirmAdd_img">
-                                        <img src={confirm_u} alt="NA" />
+                                        <img src={add_u} alt="NA" />
                                     </div>
                                     <h3>Deleted Successfully !</h3>
                                 </div>

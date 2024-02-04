@@ -69,7 +69,7 @@
 }
 #PR_Third_Box {
   border: 0px solid transparent;
-  padding: 0.75em 1em;
+  padding: 1em 1em;
   /* background-color: #ffbe76; */
   background-color: #001400;
   color: white;
@@ -78,7 +78,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0.1em 0em;
+  margin: 0.3em 0em;
   border-radius: 5px;
 }
 #PR_Third_Box:hover {
