@@ -18,8 +18,23 @@ import { useNavigate } from 'react-router-dom'
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
+// Confirm Submit Btn
+import confirm_u from '../../../Pics/StatusChange.png'
 
 export default function PTStatus() {
+    // ------ Confirm Submit Button Logic ------
+    const [showBox2, setShowBox2] = useState(false);
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [showParent, setShowParent] = useState(false);
+    const handleAddUniversityClick = () => {
+        setShowParent(true);
+        setShowConfirmation(true);
+        setShowBox2(true); // Set showBox2 to true directly
+        setTimeout(() => {
+            setShowParent(false);
+            navigate("/PTracking")
+        }, 5000);
+    };
     // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
@@ -308,6 +323,13 @@ export default function PTStatus() {
                     </div>
                 </div>
                 <br />
+                {/* --- Status Writing --- */}
+                <div id="Ext_Firebase_Status">
+                    <h5>Status : </h5>
+                    <h2>---</h2>
+                </div>
+                {/* --- Status Writing --- */}
+                <br />
                 <div id="PTS_first">
                     <div id="PTS_first_Box">
                         <h3>Application Status</h3>
@@ -457,7 +479,7 @@ export default function PTStatus() {
                                         1 - Application Received
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton1Click}>Application Received</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton1Click(); }}>Application Received</button>
                                     </div>
                                 </div>
                                 {/* 2 */}
@@ -466,7 +488,7 @@ export default function PTStatus() {
                                         2 - Document Verification
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton2Click}>Document Verification</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton2Click(); }}>Document Verification</button>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +500,7 @@ export default function PTStatus() {
                                         3 - Conditional Offer
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton3Click}>Conditional Offer</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton3Click(); }}>Conditional Offer</button>
                                     </div>
                                 </div>
                                 {/* 4 */}
@@ -487,7 +509,7 @@ export default function PTStatus() {
                                         4 - Document Request
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton4Click}>Document Request</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton4Click(); }}>Document Request</button>
                                     </div>
                                 </div>
                             </div>
@@ -499,7 +521,7 @@ export default function PTStatus() {
                                         5 - Unconditional Offer
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton5Click}>Unconditional Offer</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton5Click(); }}>Unconditional Offer</button>
                                     </div>
                                 </div>
                                 {/* 6 */}
@@ -508,7 +530,7 @@ export default function PTStatus() {
                                         6 - Confirmation Enrolment
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton6Click}>Confirmation Enrolment</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton6Click(); }}>Confirmation Enrolment</button>
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +542,7 @@ export default function PTStatus() {
                                         7 - Visa App Submitted
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton7Click}>Visa App Submitted</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton7Click(); }}>Visa App Submitted</button>
                                     </div>
                                 </div>
                                 {/* 8 */}
@@ -529,9 +551,24 @@ export default function PTStatus() {
                                         8 - Visa Granted
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={handleButton8Click}>Visa Granted</button>
+                                        <button onClick={() => { handleAddUniversityClick(); handleButton8Click(); }}>Visa Granted</button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* ----- Confirm Add University Logic ----- */}
+                <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
+                    {/* Basic Logic */}
+                    <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
+                        <div id="PA_U_ConfirmAdd_Parent_Box">
+                            {/* Box 2 */}
+                            <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
+                                <div id="PA_U_ConfirmAdd_img">
+                                    <img src={confirm_u} alt="NA" />
+                                </div>
+                                <h3>Status Is Updated !</h3>
                             </div>
                         </div>
                     </div>

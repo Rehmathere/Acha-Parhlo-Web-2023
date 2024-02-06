@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { database1 } from '../Portal/firebase';
-import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
+import { doc, setDoc, getDocs, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 // CSS
 import "../Portal/MyFeatures/PChat/FinalChat.css";
@@ -8,47 +8,205 @@ import "../Portal/MyFeatures/PChat/FinalChat.css";
 export default function Z_Test() {
   // Navigate
   const navigate = useNavigate();
-  // ------------- Backend Logic Part -------------
-  // Some List Shown, Edit ( Data Passing ) & Delete JS Logic
+  // ------- States -------
   const [val, setVal] = useState([]);
-  const value = collection(database1, "demo");
-  const getData = async () => {
-    const dbVal = await getDocs(value);
-    setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-  }
+  const [name1, setName1] = useState('');
+  const [button1Color, setButton1Color] = useState('white');
+  const [button2Color, setButton2Color] = useState('white');
+  const [button3Color, setButton3Color] = useState('white');
+  const [button4Color, setButton4Color] = useState('white');
+  const [button5Color, setButton5Color] = useState('white');
+  const [button6Color, setButton6Color] = useState('white');
+  const [button7Color, setButton7Color] = useState('white');
+  const [button8Color, setButton8Color] = useState('white');
+  // ------------- Backend Logic -------------
+  // Final, After Converting Both in 1 useEffect ( Create & Fetching Value in Firestore )
   useEffect(() => {
-    getData();
+    const fetchData = async () => {
+      const value = collection(database1, "Practice");
+      const querySnapshot = await getDocs(value);
+      const data = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+      setVal(data);
+      // Setting name1
+      setName1(data.length > 0 ? data[data.length - 1].name1 : '');
+    };
+    fetchData();
   }, []);
-  const handleDelete = async (id) => {
-    const deleteVal = doc(database1, "demo", id);
-    await deleteDoc(deleteVal);
-    getData();
-  }
-  const handleEdit = (id, name1, name2, name3, name4, name5, MyImage) => {
-    navigate(`/Z_Test_2/${id}/${name1}/${name2}/${name3}/${name4}/${name5}/${encodeURIComponent(MyImage)}`);
-  }
-  // ------------- Backend Logic Part -------------
+  const updateFirestoreWithValue = async (newValue) => {
+    const collectionRef = collection(database1, "Practice");
+    const documentRef = doc(collectionRef, 'demo');
+    await setDoc(documentRef, { name1: newValue });
+  };
+  // Matchig Name1 value to change Background Color
+  useEffect(() => {
+    if (name1 === "Process 1") {
+      setButton1Color("#FFC300");
+      setButton2Color("transparent");
+      setButton3Color("transparent");
+      setButton4Color("transparent");
+      setButton5Color("transparent");
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 2") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FFC300');
+      setButton3Color("transparent");
+      setButton4Color("transparent");
+      setButton5Color("transparent");
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 3") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FFC300');
+      setButton4Color("transparent");
+      setButton5Color("transparent");
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 4") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FBD1A5');
+      setButton4Color('#FFC300');
+      setButton5Color("transparent");
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 5") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FBD1A5');
+      setButton4Color('#FBD1A5');
+      setButton5Color('#FFC300');
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 6") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FBD1A5');
+      setButton4Color('#FBD1A5');
+      setButton5Color('#FBD1A5');
+      setButton6Color('#FFC300');
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    } else if (name1 === "Process 7") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FBD1A5');
+      setButton4Color('#FBD1A5');
+      setButton5Color('#FBD1A5');
+      setButton6Color('#FBD1A5');
+      setButton7Color('#FFC300');
+      setButton8Color("transparent");
+    } else if (name1 === "Process 8") {
+      setButton1Color('#FBD1A5');
+      setButton2Color('#FBD1A5');
+      setButton3Color('#FBD1A5');
+      setButton4Color('#FBD1A5');
+      setButton5Color('#FBD1A5');
+      setButton6Color('#FBD1A5');
+      setButton7Color('#FBD1A5');
+      setButton8Color('#FFC300');
+    } else {
+      setButton1Color("transparent");
+      setButton2Color("transparent");
+      setButton3Color("transparent");
+      setButton4Color("transparent");
+      setButton5Color("transparent");
+      setButton6Color("transparent");
+      setButton7Color("transparent");
+      setButton8Color("transparent");
+    }
+  }, [name1]);
+  // ------------- Backend Logic -------------
   // Main Body
   return (
     <>
+      {/* First */}
       <div id="Z_Create">
         <div id="Z_Create_Part_1">
-          <h4>Want To Add University ?</h4>
+          <h4>Move To Page 2</h4>
         </div>
         <div id="Z_Create_Part_2">
-          <button onClick={() => navigate('Z_Test_C')}>Add</button>
+          <button onClick={() => navigate('Z_Test_2')}>Page 2</button>
         </div>
       </div>
-      <div className='container'>
-        {val.map(values =>
-          <div id='Z_T_1_Box' key={values.id}>
-            <h4>1 - {values.name1}</h4>
-            <h4>2 - {values.name2}</h4>
-            <img id="Img_Upload" src={values.MyImage} alt="NA" />
-            <button onClick={() => handleDelete(values.id)}>Delete</button>
-            <button onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>Edit</button>
-          </div>)
-        }
+      {/* Button Portion */}
+      <div id="ParentButton">
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 1")}>Process 1</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 2")}>Process 2</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 3")}>Process 3</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 4")}>Process 4</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 5")}>Process 5</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 6")}>Process 6</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 7")}>Process 7</button>
+        </div>
+        {/* Button */}
+        <div>
+          <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 8")}>Process 8</button>
+        </div>
+      </div>
+      {/* Value Fetch */}
+      <h5>Value Fetch Were :</h5>
+      <h1>{name1}</h1>
+      {/* Boxes Portion */}
+      <div id="ParentBox">
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button1Color }}>
+          <h5>Box 1</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button2Color }}>
+          <h5>Box 2</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button3Color }}>
+          <h5>Box 3</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button4Color }}>
+          <h5>Box 4</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button5Color }}>
+          <h5>Box 5</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button6Color }}>
+          <h5>Box 6</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button7Color }}>
+          <h5>Box 7</h5>
+        </div>
+        {/* - Color Box - */}
+        <div id="Box" style={{ backgroundColor: button8Color }}>
+          <h5>Box 8</h5>
+        </div>
       </div>
     </>
   );

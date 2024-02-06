@@ -135,7 +135,7 @@ export default function PAdd_Uni() {
                                 </div>
                                 {/* Part 4 */}
                                 <div id="PR_Second_Box_Part_3">
-                                    Subject
+                                    Courses
                                 </div>
                                 {/* Part 1 */}
                                 <div id="PR_Second_Box_Part_0">
