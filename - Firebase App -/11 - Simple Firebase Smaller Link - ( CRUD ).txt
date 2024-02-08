@@ -1,0 +1,217 @@
+----------- Z_Test_Parent.js -----------
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Z_Test from './Z_Test';
+import Z_Test_2 from './Z_Test_2';
+import Z_Test_C from './Z_Test_C';
+
+export default function Z_Test_Parent() {
+    // Main Body
+    return (
+        <Router>
+            <Routes>
+                {/* 1 Home Page */}
+                <Route path='/' element={<Z_Test />} />
+                {/* 2 Update Page */}
+                <Route path='/Z_Test_2/:id' element={<Z_Test_2 />} />
+                {/* 3 Create Page */}
+                <Route path='/Z_Test_C' element={<Z_Test_C />} />
+            </Routes>
+        </Router>
+    );
+}
+
+----------- Z_Test.js -----------
+
+import React, { useEffect, useState } from 'react';
+import { database1 } from '../Portal/firebase';
+import { addDoc, collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+
+export default function Z_Test() {
+  // Navigate
+  const navigate = useNavigate();
+  // Some List Shown, Edit ( Data Passing ) & Delete JS Logic
+  const [val, setVal] = useState([]);
+  const value = collection(database1, "Practice");
+  const getData = async () => {
+    const dbVal = await getDocs(value);
+    setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+  }
+  useEffect(() => {
+    getData();
+  }, []);
+  const handleDelete = async (id) => {
+    const deleteVal = doc(database1, "Practice", id);
+    await deleteDoc(deleteVal);
+    getData();
+  }
+  const handleEdit = (id, values) => {
+    navigate(`/Z_Test_2/${id}`, { state: { values } });
+  }
+  // Main Body
+  return (
+    <>
+      <div id="Z_Create">
+        <div id="Z_Create_Part_1">
+          <h4>Want To Add University ?</h4>
+        </div>
+        <div id="Z_Create_Part_2">
+          <button onClick={() => navigate('Z_Test_C')}>Add</button>
+        </div>
+      </div>
+      <div className='container'>
+        {val.map(values =>
+          <div id='Z_T_1_Box' key={values.id}>
+            <h4>1 - {values.name1}</h4>
+            <h4>2 - {values.name2}</h4>
+            <h4>3 - {values.name3}</h4>
+            <h4>4 - {values.name4}</h4>
+            <h4>5 - {values.name5}</h4>
+            <img id="Img_Upload" src={values.MyImage} alt="NA" />
+            <button onClick={() => handleDelete(values.id)}>Delete</button>
+            <button onClick={() => handleEdit(values.id, values)}>View</button>
+          </div>)
+        }
+      </div>
+    </>
+  );
+}
+
+----------- Z_Test_2.js -----------
+
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+
+export default function Z_Test_2() {
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const { values } = state;
+  const { id, name1, name2, name3, name4, name5, MyImage } = values;
+  const [image, setImage] = useState("");
+
+  useEffect(() => {
+    setImage(decodeURIComponent(MyImage));
+  }, [MyImage]);
+  // Main Body
+  return (
+    <>
+      <div className='container'>
+        <div id="Z_T_C_Box">
+          <h6>1 - University Name</h6>
+          <h3>{name1}</h3>
+          <h6>2 - Basic Overview</h6>
+          <h3>{name2}</h3>
+          <h6>3 - Courses Name</h6>
+          <h3>{name3}</h3>
+          <h6>4 - Fees</h6>
+          <h3>{name4}</h3>
+          <h6>5 - Degree Duration</h6>
+          <h3>{name5}</h3>
+          <h6>6 - Logo / Picture</h6>
+          <img src={image} alt="Logo/Picture" />
+          <button id='Btn_C_1' onClick={() => navigate('/')}>Back to List</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+----------- Z_Test_C.js -----------
+
+import React, { useEffect, useState, useRef } from 'react';
+import { database1 } from '../Portal/firebase';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import user from '../Pics/user_P.png';
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+
+export default function Z_Test_C() {
+    // Navigate
+    const navigate = useNavigate();
+    // Create Box Data 
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [name_1, setName_1] = useState('');
+    const [name_2, setName_2] = useState('');
+    const [name_3, setName_3] = useState('');
+    const [val, setVal] = useState([]);
+    const [image, setImage] = useState(null);
+    const value = collection(database1, "Practice");
+    useEffect(() => {
+        const getData = async () => {
+            const dbVal = await getDocs(value);
+            setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+        };
+        getData();
+    }, [value]);
+    const handleCreate = async () => {
+        await addDoc(value, {
+            name1: fname,
+            name2: lname,
+            name3: name_1,
+            name4: name_2,
+            name5: name_3,
+            MyImage: image // Added MyImage to the Firestore document
+        });
+        setFname("");
+        setLname("");
+        setName_1("");
+        setName_2("");
+        setName_3("");
+        setImage(null);
+    };
+    // File Upload 
+    const fileInputRef = useRef(null);
+    const handleUploadClick = () => {
+        fileInputRef.current.click();
+    };
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+    // Main Body
+    return (
+        <>
+            <div className='container'>
+                <div id="Z_T_C_Box">
+                    <h1>Enter Box Details</h1>
+                    <h6>1 - Enter University Name</h6>
+                    <input value={fname} onChange={(e) => setFname(e.target.value)} placeholder=' Enter University Name ' />
+                    <h6>2 - Enter Basic Overview</h6>
+                    <input value={lname} onChange={(e) => setLname(e.target.value)} placeholder=' Enter Basic Overview ' />
+                    <h6>3 - Enter Courses Name</h6>
+                    <input value={name_1} onChange={(e) => setName_1(e.target.value)} placeholder=' Enter Courses Name ' />
+                    <h6>4 - Enter Fees</h6>
+                    <input value={name_2} onChange={(e) => setName_2(e.target.value)} placeholder=' Enter Fees ' />
+                    <h6>5 - Enter Degree Duration</h6>
+                    <input value={name_3} onChange={(e) => setName_3(e.target.value)} placeholder=' Enter Degree Duration ' />
+                    <h6>6 - Enter Logo / Picture</h6>
+                    <img src={image ? image : user} alt="Logo/Picture" />
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                        style={{ display: 'none' }}
+                        ref={fileInputRef}
+                        id='Img_Upload'
+                    />
+                    <button id='Img_Upload' onClick={handleUploadClick}>Upload</button>
+                    <button id='Btn_C_1' onClick={handleCreate}>Create Box</button>
+                    <p id="Btn_C_2" onClick={() => navigate('/')}>Move To Home page</p>
+                </div>
+            </div>
+        </>
+    );
+};
+
+------------------------------------------------------------------
