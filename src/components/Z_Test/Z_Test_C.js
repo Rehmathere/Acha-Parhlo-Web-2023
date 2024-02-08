@@ -8,7 +8,6 @@ import "../Portal/MyFeatures/PChat/FinalChat.css";
 export default function Z_Test_C() {
     // Navigate
     const navigate = useNavigate();
-    // ------------- Backend Logic Part -------------
     // Create Box Data 
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
@@ -17,7 +16,7 @@ export default function Z_Test_C() {
     const [name_3, setName_3] = useState('');
     const [val, setVal] = useState([]);
     const [image, setImage] = useState(null);
-    const value = collection(database1, "demo");
+    const value = collection(database1, "Practice");
     useEffect(() => {
         const getData = async () => {
             const dbVal = await getDocs(value);
@@ -56,7 +55,6 @@ export default function Z_Test_C() {
             reader.readAsDataURL(file);
         }
     };
-    // ------------- Backend Logic Part -------------
     // Main Body
     return (
         <>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PSidebar from '../PSidebar'
 // CSS
 import '../PProfile/PProfile.css'
@@ -20,6 +20,9 @@ import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Confirm Submit Btn
 import confirm_u from '../../../Pics/StatusChange.png'
+import { database1 } from '../../firebase';
+import { doc, setDoc, getDocs, collection } from 'firebase/firestore';
+
 
 export default function PTStatus() {
     // ------ Confirm Submit Button Logic ------
@@ -70,195 +73,218 @@ export default function PTStatus() {
     const [Line5Color, setLine5Color] = useState('#807F7E');
     const [Line6Color, setLine6Color] = useState('#807F7E');
     const [Line7Color, setLine7Color] = useState('#807F7E');
-    // Functions
-    // 1
-    const handleButton1Click = () => {
-        // Button 1
-        setButton1Color('#FFC300');
-        // ---- Extra Color Off ----
-        setButton2Color('white');
-        setButton3Color('white');
-        setButton4Color('white');
-        setButton5Color('white');
-        setButton6Color('white');
-        setButton7Color('white');
-        setButton8Color('white');
-
+    // ------------- Backend Logic -------------
+    const [val, setVal] = useState([]);
+    const [name1, setName1] = useState('');
+    // Final, After Converting Both in 1 useEffect ( Create & Fetching Value in Firestore )
+    useEffect(() => {
+        const fetchData = async () => {
+            const value = collection(database1, "2 - Application Tracking");
+            const querySnapshot = await getDocs(value);
+            const data = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+            setVal(data);
+            // Setting name1
+            setName1(data.length > 0 ? data[data.length - 1].name1 : '');
+        };
+        fetchData();
+    }, []);
+    const updateFirestoreWithValue = async (newValue) => {
+        const collectionRef = collection(database1, "2 - Application Tracking");
+        const documentRef = doc(collectionRef, 'demo');
+        await setDoc(documentRef, { name1: newValue });
     };
-    // 2
-    const handleButton2Click = () => {
-        // Button 2
-        setButton2Color('#FFC300');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // ---- Extra Color Off ----
-        setButton3Color('white');
-        setButton4Color('white');
-        setButton5Color('white');
-        setButton6Color('white');
-        setButton7Color('white');
-        setButton8Color('white');
-    };
-    // 3
-    const handleButton3Click = () => {
-        // Button 3
-        setButton3Color('#FFC300');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // ---- Extra Color Off ----
-        setButton4Color('white');
-        setButton5Color('white');
-        setButton6Color('white');
-        setButton7Color('white');
-        setButton8Color('white');
-    };
-    // 4
-    const handleButton4Click = () => {
-        // Button 4
-        setButton4Color('#FFC300');
-        // Button 3
-        setButton3Color('#FBD1A5');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // -- Line 3
-        setLine3Color('#001400');
-        // ---- Extra Color Off ----
-        setButton5Color('white');
-        setButton6Color('white');
-        setButton7Color('white');
-        setButton8Color('white');
-    };
-    // 5
-    const handleButton5Click = () => {
-        // Button 5
-        setButton5Color('#FFC300');
-        // Button 4
-        setButton4Color('#FBD1A5');
-        // Button 3
-        setButton3Color('#FBD1A5');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // -- Line 3
-        setLine3Color('#001400');
-        // -- Line 4
-        setLine4Color('#001400');
-        // ---- Extra Color Off ----
-        setButton6Color('white');
-        setButton7Color('white');
-        setButton8Color('white');
-    };
-    // 6
-    const handleButton6Click = () => {
-        // Button 6
-        setButton6Color('#FFC300');
-        // Button 5
-        setButton5Color('#FBD1A5');
-        // Button 4
-        setButton4Color('#FBD1A5');
-        // Button 3
-        setButton3Color('#FBD1A5');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // -- Line 3
-        setLine3Color('#001400');
-        // -- Line 4
-        setLine4Color('#001400');
-        // -- Line 5
-        setLine5Color('#001400');
-        // ---- Extra Color Off ----
-        setButton7Color('white');
-        setButton8Color('white');
-    };
-    // 7
-    const handleButton7Click = () => {
-        // Button 7
-        setButton7Color('#FFC300');
-        // Button 6
-        setButton6Color('#FBD1A5');
-        // Button 5
-        setButton5Color('#FBD1A5');
-        // Button 4
-        setButton4Color('#FBD1A5');
-        // Button 3
-        setButton3Color('#FBD1A5');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // -- Line 3
-        setLine3Color('#001400');
-        // -- Line 4
-        setLine4Color('#001400');
-        // -- Line 5
-        setLine5Color('#001400');
-        // -- Line 6
-        setLine6Color('#001400');
-        // ---- Extra Color Off ----
-        setButton8Color('white');
-    };
-    // 8
-    const handleButton8Click = () => {
-        // Button 8
-        setButton8Color('#FFC300');
-        // Button 7
-        setButton7Color('#FBD1A5');
-        // Button 6
-        setButton6Color('#FBD1A5');
-        // Button 5
-        setButton5Color('#FBD1A5');
-        // Button 4
-        setButton4Color('#FBD1A5');
-        // Button 3
-        setButton3Color('#FBD1A5');
-        // Button 2
-        setButton2Color('#FBD1A5');
-        // Button 1
-        setButton1Color('#FBD1A5');
-        // -- Line 1
-        setLine1Color('#001400');
-        // -- Line 2
-        setLine2Color('#001400');
-        // -- Line 3
-        setLine3Color('#001400');
-        // -- Line 4
-        setLine4Color('#001400');
-        // -- Line 5
-        setLine5Color('#001400');
-        // -- Line 6
-        setLine6Color('#001400');
-        // -- Line 7
-        setLine7Color('#001400');
-    };
+    // Matchig Name1 value to change Background Color
+    useEffect(() => {
+        if (name1 === "Application Received") {
+            // Button 1
+            setButton1Color('#FFC300');
+            // ---- Extra Color Off ----
+            setButton2Color('white');
+            setButton3Color('white');
+            setButton4Color('white');
+            setButton5Color('white');
+            setButton6Color('white');
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Document Verification") {
+            // Button 2
+            setButton2Color('#FFC300');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // ---- Extra Color Off ----
+            setButton3Color('white');
+            setButton4Color('white');
+            setButton5Color('white');
+            setButton6Color('white');
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Conditional Offer") {
+            // Button 3
+            setButton3Color('#FFC300');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // ---- Extra Color Off ----
+            setButton4Color('white');
+            setButton5Color('white');
+            setButton6Color('white');
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Document Request") {
+            // Button 4
+            setButton4Color('#FFC300');
+            // Button 3
+            setButton3Color('#FBD1A5');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // -- Line 3
+            setLine3Color('#001400');
+            // ---- Extra Color Off ----
+            setButton5Color('white');
+            setButton6Color('white');
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Unconditional Offer") {
+            // Button 5
+            setButton5Color('#FFC300');
+            // Button 4
+            setButton4Color('#FBD1A5');
+            // Button 3
+            setButton3Color('#FBD1A5');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // -- Line 3
+            setLine3Color('#001400');
+            // -- Line 4
+            setLine4Color('#001400');
+            // ---- Extra Color Off ----
+            setButton6Color('white');
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Confirmation Enrolment") {
+            // Button 6
+            setButton6Color('#FFC300');
+            // Button 5
+            setButton5Color('#FBD1A5');
+            // Button 4
+            setButton4Color('#FBD1A5');
+            // Button 3
+            setButton3Color('#FBD1A5');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // -- Line 3
+            setLine3Color('#001400');
+            // -- Line 4
+            setLine4Color('#001400');
+            // -- Line 5
+            setLine5Color('#001400');
+            // ---- Extra Color Off ----
+            setButton7Color('white');
+            setButton8Color('white');
+        }
+        else if (name1 === "Visa App Submitted") {
+            // Button 7
+            setButton7Color('#FFC300');
+            // Button 6
+            setButton6Color('#FBD1A5');
+            // Button 5
+            setButton5Color('#FBD1A5');
+            // Button 4
+            setButton4Color('#FBD1A5');
+            // Button 3
+            setButton3Color('#FBD1A5');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // -- Line 3
+            setLine3Color('#001400');
+            // -- Line 4
+            setLine4Color('#001400');
+            // -- Line 5
+            setLine5Color('#001400');
+            // -- Line 6
+            setLine6Color('#001400');
+            // ---- Extra Color Off ----
+            setButton8Color('white');
+        }
+        else if (name1 === "Visa Granted") {
+            // Button 8
+            setButton8Color('#FFC300');
+            // Button 7
+            setButton7Color('#FBD1A5');
+            // Button 6
+            setButton6Color('#FBD1A5');
+            // Button 5
+            setButton5Color('#FBD1A5');
+            // Button 4
+            setButton4Color('#FBD1A5');
+            // Button 3
+            setButton3Color('#FBD1A5');
+            // Button 2
+            setButton2Color('#FBD1A5');
+            // Button 1
+            setButton1Color('#FBD1A5');
+            // -- Line 1
+            setLine1Color('#001400');
+            // -- Line 2
+            setLine2Color('#001400');
+            // -- Line 3
+            setLine3Color('#001400');
+            // -- Line 4
+            setLine4Color('#001400');
+            // -- Line 5
+            setLine5Color('#001400');
+            // -- Line 6
+            setLine6Color('#001400');
+            // -- Line 7
+            setLine7Color('#001400');
+        }
+        else {
+            setButton1Color("transparent");
+            setButton2Color("transparent");
+            setButton3Color("transparent");
+            setButton4Color("transparent");
+            setButton5Color("transparent");
+            setButton6Color("transparent");
+            setButton7Color("transparent");
+            setButton8Color("transparent");
+        }
+    }, [name1]);
     // Main Body
     return (
         <div>
@@ -294,10 +320,10 @@ export default function PTStatus() {
                                 {/* 1 - G */}
                                 <div id="PTS_Pre_Box_Detail_Box_L">
                                     <div id="PTS_Pre_Box_Detail_Box_P1">
-                                        Email
+                                        CNIC
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        Rehmat.qazi000@gmail.com
+                                        42501-3205936-9
                                     </div>
                                 </div>
                                 {/* 2 - O */}
@@ -326,7 +352,7 @@ export default function PTStatus() {
                 {/* --- Status Writing --- */}
                 <div id="Ext_Firebase_Status">
                     <h5>Status : </h5>
-                    <h2>---</h2>
+                    <h2>{name1}</h2>
                 </div>
                 {/* --- Status Writing --- */}
                 <br />
@@ -479,7 +505,7 @@ export default function PTStatus() {
                                         1 - Application Received
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton1Click(); }}>Application Received</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Application Received"); }}>Application Received</button>
                                     </div>
                                 </div>
                                 {/* 2 */}
@@ -488,7 +514,7 @@ export default function PTStatus() {
                                         2 - Document Verification
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton2Click(); }}>Document Verification</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Document Verification"); }}>Document Verification</button>
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +526,7 @@ export default function PTStatus() {
                                         3 - Conditional Offer
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton3Click(); }}>Conditional Offer</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Conditional Offer"); }}>Conditional Offer</button>
                                     </div>
                                 </div>
                                 {/* 4 */}
@@ -509,7 +535,7 @@ export default function PTStatus() {
                                         4 - Document Request
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton4Click(); }}>Document Request</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Document Request"); }}>Document Request</button>
                                     </div>
                                 </div>
                             </div>
@@ -521,7 +547,7 @@ export default function PTStatus() {
                                         5 - Unconditional Offer
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton5Click(); }}>Unconditional Offer</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Unconditional Offer"); }}>Unconditional Offer</button>
                                     </div>
                                 </div>
                                 {/* 6 */}
@@ -530,7 +556,7 @@ export default function PTStatus() {
                                         6 - Confirmation Enrolment
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton6Click(); }}>Confirmation Enrolment</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Confirmation Enrolment"); }}>Confirmation Enrolment</button>
                                     </div>
                                 </div>
                             </div>
@@ -542,7 +568,7 @@ export default function PTStatus() {
                                         7 - Visa App Submitted
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton7Click(); }}>Visa App Submitted</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Visa App Submitted"); }}>Visa App Submitted</button>
                                     </div>
                                 </div>
                                 {/* 8 */}
@@ -551,7 +577,7 @@ export default function PTStatus() {
                                         8 - Visa Granted
                                     </div>
                                     <div id="PT_Button_1_P2">
-                                        <button onClick={() => { handleAddUniversityClick(); handleButton8Click(); }}>Visa Granted</button>
+                                        <button onClick={() => { handleAddUniversityClick(); updateFirestoreWithValue("Visa Granted"); }}>Visa Granted</button>
                                     </div>
                                 </div>
                             </div>
@@ -568,7 +594,7 @@ export default function PTStatus() {
                                 <div id="PA_U_ConfirmAdd_img">
                                     <img src={confirm_u} alt="NA" />
                                 </div>
-                                <h3>Status Is Updated !</h3>
+                                <h3>Status is Updated !</h3>
                             </div>
                         </div>
                     </div>

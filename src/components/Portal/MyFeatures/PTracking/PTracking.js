@@ -82,7 +82,7 @@ export default function PTracking() {
                         <div id="sub_PR_Second">
                             <div id="PR_Second_Box">
                                 <div id="PR_Second_Box_Part_0">
-                                    ID
+                                    CNIC
                                 </div>
                                 <div id="PR_Second_Box_Part_1">
                                     Image
@@ -91,7 +91,7 @@ export default function PTracking() {
                                     Name
                                 </div>
                                 <div id="PR_Second_Box_Part_3">
-                                    University
+                                    Action
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ export default function PTracking() {
                             {/* Record Box 1 */}
                             <div id="PR_Third_Box">
                                 <div id="PR_Third_Box_Part_0" onClick={() => navigate('/PTStatus')}>
-                                    1234567890
+                                    42501-3205936-9
                                 </div>
                                 <div id="PR_Third_Box_Part_1" onClick={() => navigate('/PTStatus')}>
                                     <img src={Str_8} alt="NA" />

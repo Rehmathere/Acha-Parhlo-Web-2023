@@ -93,7 +93,7 @@ export default function PAppointments() {
                                     Name
                                 </div>
                                 <div id="PR_Second_Box_Part_3">
-                                    Status
+                                    Action
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ export default function PAppointments() {
                             <div id="PR_Third_Box">
                                 {/* <div id="PR_Third_Box"> */}
                                 <div id="PR_Third_Box_Part_0" onClick={() => navigate('/PAppointDetail')}>
-                                    29 / 01 / 2024
+                                    29
                                 </div>
                                 <div id="PR_Third_Box_Part_1" onClick={() => navigate('/PAppointDetail')}>
                                     <img src={Str_5} alt="NA" />

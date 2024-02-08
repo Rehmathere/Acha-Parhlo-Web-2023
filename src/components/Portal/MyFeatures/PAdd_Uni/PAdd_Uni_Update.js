@@ -17,23 +17,35 @@ import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
 // Firebase
 import { database1 } from '../../firebase';
-import { collection, doc, updateDoc } from 'firebase/firestore';
+import { collection, doc, updateDoc, getDoc } from 'firebase/firestore';
 
 export default function PAdd_Uni_Update() {
     // ------------- Backend Logic Part -------------
     // Update Specific Box Data Logic
-    const { id, name1, name2, name3, name4, name5, MyImage } = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
-    const [fname, setFname] = useState(name1);
-    const [lname, setLname] = useState(name2);
-    const [name_1, setName_1] = useState(name3);
-    const [name_2, setName_2] = useState(name4);
-    const [name_3, setName_3] = useState(name5);
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
+    const [name_1, setName_1] = useState("");
+    const [name_2, setName_2] = useState("");
+    const [name_3, setName_3] = useState("");
     const [image, setImage] = useState("");
     useEffect(() => {
-        // Set the image when the component mounts
-        setImage(decodeURIComponent(MyImage));
-    }, [MyImage]);
+        const fetchData = async () => {
+            const docRef = doc(database1, "1 - Add University", id);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                setFname(data.name1 || "");
+                setLname(data.name2 || "");
+                setName_1(data.name3 || "");
+                setName_2(data.name4 || "");
+                setName_3(data.name5 || "");
+                setImage(data.MyImage || "");
+            }
+        };
+        fetchData();
+    }, [id]);
     const handleUpdate = async () => {
         const value = collection(database1, "1 - Add University");
         const updateData = doc(database1, "1 - Add University", id);

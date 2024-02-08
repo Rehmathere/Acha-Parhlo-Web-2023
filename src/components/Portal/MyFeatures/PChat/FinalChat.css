@@ -91,6 +91,13 @@
   margin: 0.8em 0em 0em 0em;
   font-size: 0.8em;
 }
+#Z_T_C_Box h3{
+  border: 0px solid transparent;
+  padding: 0.1em 0em;
+  margin: 0.8em 0em 0em 0em;
+  font-size: 1.2em;
+  text-align: center;
+}
 #Z_T_C_Box input{
   border: 0.1px solid grey;
   padding: 0.2em 1em;
@@ -148,7 +155,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
+  width: 95%;
 }
 #AT_1{
   border: 0px solid transparent;
@@ -157,7 +164,7 @@
   border-radius: 30px;
   background-color: blue;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.7em;
   letter-spacing: 1.5px;
   margin: 0.5em 1em;
 }

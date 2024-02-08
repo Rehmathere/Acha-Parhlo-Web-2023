@@ -92,7 +92,7 @@ export default function PRecords() {
                                     Name
                                 </div>
                                 <div id="PR_Second_Box_Part_3">
-                                    Status
+                                    Action
                                 </div>
                             </div>
                         </div>

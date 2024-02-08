@@ -38,8 +38,8 @@ export default function PAdd_Uni() {
         await deleteDoc(deleteVal);
         getData();
     }
-    const handleEdit = (id, name1, name2, name3, name4, name5, MyImage) => {
-        navigate(`/PAdd_Uni_Update/${id}/${name1}/${name2}/${name3}/${name4}/${name5}/${encodeURIComponent(MyImage)}`);
+    const handleEdit = (id) => {
+        navigate(`/PAdd_Uni_Update/${id}`);
     }
     // ------------- Backend Logic Part -------------
     // ------ Confirm Add University Logic ------
@@ -153,15 +153,15 @@ export default function PAdd_Uni() {
                             {val.map(values =>
                                 <div id="PR_Third_Box" key={values.id}>
                                     {/* Part 3 */}
-                                    <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                    <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id)}>
                                         {values.name1}
                                     </div>
                                     {/* Part 2 */}
-                                    <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                    <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id)}>
                                         <img src={values.MyImage} alt="NA" />
                                     </div>
                                     {/* Part 4 */}
-                                    <div id="PR_Third_Box_Part_3" onClick={() => handleEdit(values.id, values.name1, values.name2, values.name3, values.name4, values.name5, values.MyImage)}>
+                                    <div id="PR_Third_Box_Part_3" onClick={() => handleEdit(values.id)}>
                                         {values.name3}
                                     </div>
                                     {/* Part 1 */}
