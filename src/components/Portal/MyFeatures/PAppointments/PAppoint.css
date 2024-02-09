@@ -604,13 +604,13 @@
   }
   #PAD_first_B_2_P_InputBox_P1 {
     padding: 0.2em 0.4em;
-    font-size: 0.7em;
+    font-size: 0.65em;
     letter-spacing: 0.5px;
   }
   #PAD_first_B_2_P_InputBox_P2 {
     padding: 0.45em 0.5em;
     margin: 0.1em 0em 0em 0em;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     font-size: 0.7em;
   }
   #PAD_first_B_3 {

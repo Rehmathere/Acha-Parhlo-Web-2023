@@ -6,6 +6,7 @@ import "./PRecords.css"
 import "../PTracking/PT.css"
 // Images
 import logout from '../../../Pics/logout.png'
+import user from '../../../Pics/fileupload.png'
 // useNavigate
 import { useNavigate } from 'react-router-dom'
 // Logout Logic 
@@ -13,6 +14,8 @@ import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 
 export default function PR_List() {
+    // Image Logic
+    const [image, setImage] = useState(null);
     // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
@@ -360,6 +363,103 @@ export default function PR_List() {
                                 <div id="PR_Detail_Box">
                                     <div id="PR_D_B_1">Have you completed a master's degree?</div>
                                     <div id="PR_D_B_2">------</div>
+                                </div>
+                            </div>
+                            {/* --------------------------- */}
+                            {/* ---- 1 - 10th Mark & Certif ---- */}
+                            <h3>7 - 10th Class Marksheet & Certificate </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                    <div id="PR_Detail_Box_Pic_Part_2">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 2 - 11th Mark & Certif ---- */}
+                            <h3>8 - 11th Class Marksheet & Certificate </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                    <div id="PR_Detail_Box_Pic_Part_2">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 3 - Bacheor Deg & Trans ---- */}
+                            <h3>9 - Bachelor Degree & Transcript </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                    <div id="PR_Detail_Box_Pic_Part_2">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 4 - ID Card ---- */}
+                            <h3>10 - ID Card ( Front, Back ) </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                    <div id="PR_Detail_Box_Pic_Part_2">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 5 - IELTS Score ---- */}
+                            <h3>11 - Copy Of IELTS Score </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 6 - Gap Proof ---- */}
+                            <h3>12 - Any Gap Proof </h3>
+                            <p id="PR_Detail_P_Hint">( Any Experience & Job Letter, Diploma Certificate Etc. )</p>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 7 - Resume ---- */}
+                            <h3>13 - Updated Resume </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ---- 8 - Passport ---- */}
+                            <h3>14 - Passport First & Signed Page </h3>
+                            <div id="PR_Detail_Part">
+                                {/* Element */}
+                                <div id="PR_Detail_Box_Pic">
+                                    <div id="PR_Detail_Box_Pic_Part_1">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
+                                    <div id="PR_Detail_Box_Pic_Part_2">
+                                        <img src={image ? image : user} alt="Logo/Picture" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

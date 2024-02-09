@@ -123,6 +123,27 @@ export default function PAppoint_Detail() {
                                         </div>
                                     </div>
                                 </div>
+                                {/* Part 3 */}
+                                <div id="PAD_first_B_2_P2">
+                                    {/* Info 1 */}
+                                    <div id="PAD_first_B_2_P_InputBox">
+                                        <div id="PAD_first_B_2_P_InputBox_P1">
+                                            Email
+                                        </div>
+                                        <div id="PAD_first_B_2_P_InputBox_P2">
+                                            Rehmat.qazi000@gmail.com
+                                        </div>
+                                    </div>
+                                    {/* Info 2 */}
+                                    <div id="PAD_first_B_2_P_InputBox">
+                                        <div id="PAD_first_B_2_P_InputBox_P1">
+                                            Contact No
+                                        </div>
+                                        <div id="PAD_first_B_2_P_InputBox_P2">
+                                            +9233354409876
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             {/* 3 */}
                             <div id="PAD_first_B_3">
