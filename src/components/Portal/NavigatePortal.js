@@ -38,7 +38,7 @@ export default function NavigatePortal() {
                 {/* 7 Student Appointment */}
                 <Route path='/PAppointments' element={<PAppointments />} />
                 {/* 7 Student Appointment Detail */}
-                <Route path='/PAppointDetail' element={<PAppoint_Detail />} />
+                <Route path='/PAppointDetail/:id' element={<PAppoint_Detail />} />
                 {/* 8 Application Tracking */}
                 <Route path='/PTracking' element={<PTracking />} />
                 {/* 8 - Application Status */}

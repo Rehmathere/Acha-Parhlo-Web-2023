@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { database1 } from '../Portal/firebase';
-import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
+// Navigation
 import { useNavigate } from 'react-router-dom';
 // CSS
 import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Firebase
+import { database1 } from '../Portal/firebase';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
 export default function Z_Test() {
   // Navigate
   const navigate = useNavigate();
-  // Some List Shown, Edit ( Data Passing ) & Delete JS Logic
+  // ------------- Backend Part Logic -------------
   const [val, setVal] = useState([]);
-  const value = collection(database1, "Practice");
+  const value = collection(database1, "3 - Appointment");
+  // Function
   const getData = async () => {
     const dbVal = await getDocs(value);
     setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
@@ -18,38 +21,40 @@ export default function Z_Test() {
   useEffect(() => {
     getData();
   }, []);
-  const handleDelete = async (id) => {
-    const deleteVal = doc(database1, "Practice", id);
-    await deleteDoc(deleteVal);
-    getData();
-  }
+  // View
   const handleEdit = (id) => {
     navigate(`/Z_Test_2/${id}`);
   }
+  // Delete logic
+  const handleDelete = async (id) => {
+    await deleteDoc(doc(database1, "3 - Appointment", id));
+    getData(); // Refresh data after delete
+  }
+  // ------------- Backend Part Logic -------------
   // Main Body
   return (
     <>
+      {/* Heading */}
       <div id="Z_Create">
         <div id="Z_Create_Part_1">
-          <h4>Want To Add University ?</h4>
-        </div>
-        <div id="Z_Create_Part_2">
-          <button onClick={() => navigate('Z_Test_C')}>Add</button>
+          <h4>Appointment App Feature</h4>
         </div>
       </div>
+      {/* Box */}
       <div className='container'>
         {val.map(values =>
           <div id='Z_T_1_Box' key={values.id}>
-            <h4>1 - {values.name1}</h4>
-            <h4>2 - {values.name2}</h4>
-            <h4>3 - {values.name3}</h4>
-            <h4>4 - {values.name4}</h4>
-            <h4>5 - {values.name5}</h4>
-            <img id="Img_Upload" src={values.MyImage} alt="NA" />
+            <h4>1 - {values.value_1}</h4>
+            <h4>2 - {values.value_2}</h4>
+            <h4>3 - {values.value_3}</h4>
+            <h4>4 - {values.TimeSlot}</h4>
+            <h4>5 - {values.gender}</h4>
+            <h4>6 - {values.Date}</h4>
+            <button onClick={() => handleEdit(values.id)}>Appointment Detail</button>
+            {/* Delete Btn */}
             <button onClick={() => handleDelete(values.id)}>Delete</button>
-            <button onClick={() => handleEdit(values.id)}>Edit</button>
-          </div>)
-        }
+          </div>
+        )}
       </div>
     </>
   );

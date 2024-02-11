@@ -428,7 +428,8 @@
 }
 #ProfileBox_2_Row_Part_1_P1 input:focus {
   outline: none;
-  border-color: #001400;
+  border-color: rgb(75, 75, 75);
+  background-color: rgb(230, 229, 229);
 }
 #ProfileBox_2_Row_Submit_Btn {
   border: 0px solid transparent;

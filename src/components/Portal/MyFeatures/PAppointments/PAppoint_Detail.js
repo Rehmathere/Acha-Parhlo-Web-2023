@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PSidebar from '../PSidebar'
 // CSS
 import '../PProfile/PProfile.css'
@@ -7,23 +7,81 @@ import "../PTracking/PT.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import appoint_img from '../../../Pics/appoint_2.png'
+import confirm_u from '../../../Pics/appoint_sent.gif';
 // useNavigate
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from "react-router-dom"
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
+import { database1 } from '../../firebase';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+
 
 export default function PAppoint_Detail() {
-    // ----- Press Button & Value Passed -----
-    const [selectedValue, setSelectedValue] = useState('');
-    const [textColor, setTextColor] = useState('');
-    const handleButtonClick = (value, color) => {
-        setSelectedValue(value);
-        setTextColor(color);
-    };
-    // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
+    // ------------- Backend Part Logic -------------
+    const { id } = useParams();
+    const [value_1, setValue_1] = useState("");
+    const [value_2, setValue_2] = useState("");
+    const [value_3, setValue_3] = useState("");
+    const [TimeSlot, setTimeSlot] = useState("");
+    const [gender, setGender] = useState("");
+    const [Date, setDate] = useState("");
+    const [status, setStatus] = useState("Processing"); // Default status
+    // Function
+    useEffect(() => {
+        const fetchData = async () => {
+            const docRef = doc(database1, "3 - Appointment", id);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                setValue_1(data.value_1 || "");
+                setValue_2(data.value_2 || "");
+                setValue_3(data.value_3 || "");
+                setTimeSlot(data.Date || "");
+                setGender(data.gender || "");
+                setDate(data.TimeSlot || "");
+                // Check if status exists, otherwise set default
+                setStatus(data.status || "Processing");
+            }
+        };
+        fetchData();
+    }, [id]);
+    // Status Logic
+    const handleStatusUpdate = async (status) => {
+        const updateData = doc(database1, "3 - Appointment", id);
+        await updateDoc(updateData, { status });
+        setStatus(status); // Update status locally
+    }
+    // Define the status color based on its value
+    const getStatusColor = () => {
+        switch (status) {
+            case "Accepted":
+                return "green";
+            case "Rejected":
+                return "red";
+            case "Delayed":
+                return "blue";
+            default:
+                return "black";
+        }
+    };
+    // ------------- Backend Part Logic -------------
+    const [showBox2, setShowBox2] = useState(false);
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [showParent, setShowParent] = useState(false);
+    const handleAddUniversityClick = () => {
+        setShowParent(true);
+        setShowConfirmation(true);
+        setShowBox2(true); // Set showBox2 to true directly
+        setTimeout(() => {
+            setShowParent(false);
+            // Naviagte
+            navigate("/PAppointments")
+        }, 2000);
+    };
+    // ------ Logout Logic ------
     // Logout Function
     const handleClick = () => {
         signOut(database).then(val => {
@@ -76,7 +134,7 @@ export default function PAppoint_Detail() {
                                     <img src={appoint_img} alt="NA" />
                                 </div>
                                 <div id="PAD_first_B_1_Box_2">
-                                    <p> Status :  <span style={{ color: textColor }}>{selectedValue}</span> </p>
+                                    <p> Status :  <span style={{ color: getStatusColor() }}>{status}</span> </p>
                                 </div>
                             </div>
                             {/* 2 */}
@@ -89,7 +147,7 @@ export default function PAppoint_Detail() {
                                             Name
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            Qazi Rehmat Hussain
+                                            {value_1}
                                         </div>
                                     </div>
                                     {/* Info 2 */}
@@ -98,7 +156,7 @@ export default function PAppoint_Detail() {
                                             Gender
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            Male
+                                            {gender}
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +168,7 @@ export default function PAppoint_Detail() {
                                             Date
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            20
+                                            {Date}
                                         </div>
                                     </div>
                                     {/* Info 2 */}
@@ -119,7 +177,7 @@ export default function PAppoint_Detail() {
                                             Time Slot
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            10:00 - 12:00
+                                            {TimeSlot}
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +189,7 @@ export default function PAppoint_Detail() {
                                             Email
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            Rehmat.qazi000@gmail.com
+                                            {value_2}
                                         </div>
                                     </div>
                                     {/* Info 2 */}
@@ -140,7 +198,7 @@ export default function PAppoint_Detail() {
                                             Contact No
                                         </div>
                                         <div id="PAD_first_B_2_P_InputBox_P2">
-                                            +9233354409876
+                                            {value_3}
                                         </div>
                                     </div>
                                 </div>
@@ -149,16 +207,31 @@ export default function PAppoint_Detail() {
                             <div id="PAD_first_B_3">
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn1" onClick={() => handleButtonClick('Accept', 'green')}>Accept</button>
+                                    <button id="PAD_first_B_3_Box_Btn1" onClick={() => { handleStatusUpdate('Accepted'); handleAddUniversityClick(); }}>Accept</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn2" onClick={() => handleButtonClick('Reject', 'red')}>Reject</button>
+                                    <button id="PAD_first_B_3_Box_Btn2" onClick={() => { handleStatusUpdate('Rejected'); handleAddUniversityClick(); }}>Reject</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn3" onClick={() => handleButtonClick('Delay', 'blue')}>Delay</button>
+                                    <button id="PAD_first_B_3_Box_Btn3" onClick={() => { handleStatusUpdate('Delayed'); handleAddUniversityClick(); }}>Delay</button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* ----- Confirm Add University Logic ----- */}
+                <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
+                    {/* Basic Logic */}
+                    <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
+                        <div id="PA_U_ConfirmAdd_Parent_Box">
+                            {/* Box 2 */}
+                            <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
+                                <div id="PA_U_ConfirmAdd_img">
+                                    <img src={confirm_u} alt="NA" />
+                                </div>
+                                <h3>Status Sent !</h3>
                             </div>
                         </div>
                     </div>
