@@ -182,7 +182,7 @@ body {
   border: 0.1px solid transparent;
   text-align: center;
   font-size: 2.5em;
-  color: #ea2027;
+  color: #001400;
   padding: 0.7em 0em 1em 0em;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -397,7 +397,7 @@ body {
   #sub_About_ten h2 {
     border: 0.1px solid transparent;
     font-size: 1.7em;
-    color: #ea2027;
+    color: #001400;
     padding: 0.4em 0em 0.2em 0em;
     letter-spacing: 3px;
   }

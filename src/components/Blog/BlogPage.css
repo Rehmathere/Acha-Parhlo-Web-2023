@@ -36,10 +36,12 @@
   font-size: 2em;
   margin: 0.9em 0em 0.9em 0em;
   font-weight: bold;
+  color: #001400;
 }
 #blog_first_0 p {
   border: 0.1px solid transparent;
   font-size: 1.13em;
+  color: #001400;
 }
 #blog_first_1 {
   border: 0.1px solid transparent;
@@ -98,7 +100,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2em;
   letter-spacing: 2px;
-  color: black;
+  color: #001400;
 }
 #sub_Blog_Second h1:hover {
   text-shadow: 1px 1.5px brown;
@@ -133,7 +135,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
   border-radius: 50px;
-  background-image: linear-gradient(to right, #03cdfa, #018bb9);
+  background-image: linear-gradient(to right, #07f307, #028302);
   transition: 0.5s;
   /* color: white; */
 }
@@ -212,7 +214,7 @@
 }
 #BT_imgParent {
   border: 0px solid transparent;
-  background-color: #c7ecee;
+  background-color: #9dfc9d;
   border-radius: 20px 20px 0px 0px;
   padding: 2.5em;
 }

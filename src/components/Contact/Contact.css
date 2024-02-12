@@ -91,7 +91,7 @@
 #con_third {
   border: 0px solid transparent;
   padding: 0em 1em;
-  background-color: #c3eefa;
+  background-color: #a6f5a6;
 }
 #sub_con_third {
   border: 0px solid transparent;
@@ -118,7 +118,7 @@
   letter-spacing: 5px;
   font-size: 6em;
   text-transform: uppercase;
-  color: #187e9b;
+  color: #001400;
   padding: 0em 0em 0em 0.1em;
 }
 #con_third_1_sub h4 {
@@ -128,7 +128,7 @@
   letter-spacing: 2px;
   font-size: 3.7em;
   text-transform: uppercase;
-  color: #187e9b;
+  color: #001400;
   padding: 0em 0em 0em 0.2em;
 }
 #con_third_1_sub p {
@@ -136,10 +136,10 @@
   font-size: 1.1em;
   padding: 0.5em 1em;
   text-transform: capitalize;
-  color: #2c3e50;
+  color: #001400;
 }
 #con_third_1_sub button {
-  border: 0.1px solid #187e9b;
+  border: 0.1px solid #001400;
   font-size: 1em;
   padding: 0.3em 1em;
   letter-spacing: 1px;
@@ -147,7 +147,7 @@
   color: white;
   font-weight: bold;
   border-radius: 6px;
-  background-color: #187e9b;
+  background-color: #001400;
   margin: 0em 0em 0em 0.9em;
 }
 #con_third_2 {
@@ -230,7 +230,7 @@
 #con_forth_row_box:hover{
   cursor: pointer;
   border-bottom: 0.1px solid #EB2F06;
-  background-color: #dbdcdf;
+  background-color: #bff1bf;
 }
 #con_forth_box_side_1 {
   border: 0.1px solid transparent;
