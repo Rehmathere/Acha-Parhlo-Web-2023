@@ -491,6 +491,7 @@ section .loader span::before {
   padding: 0.5em;
   font-size: 3em;
   text-align: center;
+  color: #001400;
 }
 #forth_2_sub {
   border: 0.1px solid transparent;
@@ -591,10 +592,10 @@ section .loader span::before {
   padding: 0.3em 0em;
   text-align: center;
   font-size: 2.5em;
-  color: yellow;
+  color: #001400;
   font-weight: bold;
-  -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: orangered;
+  -webkit-text-stroke-width: 0.5px;
 }
 #for_2 h1:hover {
   text-shadow: 0.5px 2px brown;
@@ -817,7 +818,7 @@ section .loader span::before {
 #sixth {
   border: 0px solid transparent;
   padding: 1em 1em;
-  background: linear-gradient(to right, #141e30, #243b55);
+  background: linear-gradient(to right, #002900, #014e01);
 }
 #sub_sixth {
   border: 0.1px solid transparent;
@@ -859,9 +860,9 @@ section .loader span::before {
   padding: 1em 0.5em;
   width: 25%;
   color: white;
-  background: linear-gradient(to right, #0c121d, #182738);
+  background: linear-gradient(to right, #001400, #001400);
   border-bottom: 5px solid orangered;
-  box-shadow: black 0px 5px 15px;
+  box-shadow: rgb(78, 78, 78) 0px 5px 15px;
   cursor: pointer;
   transition: background 0.5s ease-in-out;
 }
@@ -1069,7 +1070,7 @@ section .loader span::before {
   border: 0.1px solid transparent;
   text-align: center;
   /* color: rgb(68, 67, 67); */
-  color: #132043;
+  color: #001400;
   font-size: 3.3em;
   letter-spacing: 0.8px;
   font-family: "DM Serif Display", serif;
@@ -1081,7 +1082,7 @@ section .loader span::before {
 #sub_nine p {
   border: 0.1px solid transparent;
   text-align: center;
-  color: black;
+  color: #001400;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-size: 1.15em;
@@ -1108,7 +1109,7 @@ section .loader span::before {
 }
 #nine_1_1_img:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 #nine_1_1_img img {
   border-radius: 20px;
