@@ -15,6 +15,7 @@ import BlogPage5_E from "./components/Blog/BlogPage5_E";
 import NavigatePortal from './components/Portal/NavigatePortal'
 import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
 import Free from "./components/Free";
+import Z_Test_C from "./components/Z_Test/Z_Test_C";
 
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
       <NavigatePortal />
       {/* <FinalChat /> */}
       {/* <Z_Test_Parent /> */}
+      {/* <Z_Test_C /> */}
       {/* <Free /> */}
     </>
   );
