@@ -46,7 +46,7 @@ export default function NavigatePortal() {
                 {/* 9  Student Records */}
                 <Route path='/PRecords' element={<PRecords />} />
                 {/* 9 - Student Records List */}
-                <Route path='/PR_List' element={<PR_List />} />
+                <Route path='/PR_List/:id' element={<PR_List />} />
                 {/* 10 Chat */}
                 <Route path='/PChat' element={<PChat />} />
                 {/* 11 Add Uni */}

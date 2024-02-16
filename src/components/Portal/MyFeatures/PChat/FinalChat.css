@@ -7,7 +7,7 @@
 }
 /* -- Z_Test.js --  ( CRUD ) */
 /* 1 - Create Box Enter */
-#Z_Create{
+#Z_Create {
   border: 0.1px solid aqua;
   padding: 1em 1em;
   width: 45%;
@@ -19,16 +19,16 @@
   margin: 2em auto;
   border-radius: 20px;
 }
-#Z_Create_Part_1{
+#Z_Create_Part_1 {
   border: 0px solid transparent;
   padding: 0.1em 0.5em;
   width: 60%;
 }
-#Z_Create_Part_1 h4{
+#Z_Create_Part_1 h4 {
   padding: 0.1em 0.2em;
   text-align: center;
 }
-#Z_Create_Part_2{
+#Z_Create_Part_2 {
   border: 0px solid transparent;
   padding: 0.1em 0.5em;
   width: 40%;
@@ -47,7 +47,7 @@
   border-radius: 20px;
 }
 /* 2 - List Box */
-#Z_T_1_Box{
+#Z_T_1_Box {
   border: 0.1px solid rgb(255, 174, 0);
   width: 38%;
   background-color: rgb(255, 174, 0);
@@ -55,12 +55,12 @@
   margin: 0.5em 0em;
   padding: 0.3em 0em;
 }
-#Z_T_1_Box h4{
+#Z_T_1_Box h4 {
   border: 0px solid transparent;
   padding: 0em 2em;
   font-size: 0.8em;
 }
-#Z_T_1_Box button{
+#Z_T_1_Box button {
   border: 0.1px solid blue;
   padding: 0.2em 0.5em;
   margin: 0.15em 1.4em;
@@ -71,27 +71,41 @@
   letter-spacing: 3px;
   border-radius: 5px;
 }
+#Z_T_1_Box img{
+  border: 1px solid black;
+  width: 20%;
+  height: 10vh;
+  display: block;
+  margin: 0em auto;
+}
 /* 3 - Create List */
-#Z_T_C_Box{
+#Z_T_C_Box {
   border: 0.1px solid lightcoral;
-  width: 50%;
+  width: 100%;
   background-color: lightcoral;
   padding: 2em 3em;
   border-radius: 40px;
   margin: 2em 0em;
 }
-#Z_T_C_Box h1{
+#Z_T_C_Box h1 {
   border: 0px solid transparent;
   text-align: center;
-  padding: 0.5em 0em 1em 0em;
+  padding: 0.5em 0em 0.5em 0em;
+  font-size: 1em;
+  background-color: yellow;
+  margin: 0.5em 0em 0em 0em;
 }
-#Z_T_C_Box h6{
+#Z_T_C_Box h6 {
   border: 0px solid transparent;
-  padding: 0.3em 0em;
+  padding: 0.5em 2em;
   margin: 0.8em 0em 0em 0em;
   font-size: 0.8em;
+  font-weight: bold;
+  background-color: aqua;
+  letter-spacing: 2.5px;
 }
-#Z_T_C_Box h3, h5{
+#Z_T_C_Box h3,
+h5 {
   border: 0px solid transparent;
   padding: 0.1em 0em;
   margin: 0.8em 0em 0em 0em;
@@ -100,7 +114,7 @@
   font-weight: bold;
   letter-spacing: 1.5px;
 }
-#Z_T_C_Box input{
+#Z_T_C_Box input {
   border: 0.1px solid grey;
   padding: 0.2em 1em;
   width: 100%;
@@ -108,15 +122,16 @@
   letter-spacing: 1px;
   font-size: 0.9em;
 }
-#Z_T_C_Box img{
-  border: 0.1px solid black;
+#Z_T_C_Box img {
+  border: 0.05px solid black;
   padding: 0.1em 0.1em;
-  width: 20%;
+  width: 15%;
+  height: 15vh;
   display: block;
   margin: 1em auto;
   border-radius: 10px;
 }
-#Btn_C_1{
+#Btn_C_1 {
   border: 0px solid transparent;
   background-color: blue;
   color: white;
@@ -126,7 +141,7 @@
   letter-spacing: 1px;
   margin: 2em 0em 0em 0em;
 }
-#Btn_C_2{
+#Btn_C_2 {
   border: 0px solid transparent;
   background-color: red;
   color: white;
@@ -137,7 +152,7 @@
   margin: 1em 0em 1em 0em;
   text-align: center;
 }
-#Img_Upload{
+#Img_Upload {
   border: 0.1px solid black;
   background-color: black;
   color: white;
@@ -148,8 +163,28 @@
   margin: auto;
   font-size: 0.9em;
 }
+/* Student Record */
+#Z_StudentsRecordBox {
+  border: 0.1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1em 2em;
+  margin: 0.1em 0em;
+  border-radius: 10px;
+}
+#Z_StudentsRecordBox span {
+  border: 0px solid transparent;
+  font-size: 0.85em;
+}
+#Z_StudentsRecordBox #Z_Span_2 {
+  border: 0px solid transparent;
+  font-size: 0.8em;
+  font-weight: bold;
+}
 /* Application Tracking Backend CSS */
-#ParentButton{
+#ParentButton {
   border: 0.1px solid black;
   padding: 2em 0em;
   margin: 1em auto;
@@ -159,7 +194,7 @@
   align-items: center;
   width: 95%;
 }
-#AT_1{
+#AT_1 {
   border: 0px solid transparent;
   width: 100%;
   padding: 0.5em 0.5em;
@@ -170,16 +205,16 @@
   letter-spacing: 1.5px;
   margin: 0.5em 1em;
 }
-#AT_1:hover{
+#AT_1:hover {
   background-color: rgb(0, 0, 126);
   color: white;
 }
-#AT_1:focus{
+#AT_1:focus {
   outline: red;
   background-color: red;
   color: white;
 }
-#ParentBox{
+#ParentBox {
   border: 0.1px solid black;
   padding: 1em 0em;
   margin: 1em 0em;
@@ -188,21 +223,21 @@
   justify-content: center;
   align-items: center;
 }
-#Box{
+#Box {
   border: 0.1px solid grey;
   width: 5.7%;
   padding: 1.6em 0em;
   border-radius: 50%;
   margin: 1em 1em;
 }
-#Box h5{
+#Box h5 {
   border: 0px solid transparent;
   width: 100%;
   text-align: center;
   font-size: 1.1em;
 }
 /* Apppointment Status CSS */
-#Status_Parent{
+#Status_Parent {
   border: 0px solid transparent;
   padding: 1em 0.5em;
   display: flex;
@@ -210,27 +245,27 @@
   justify-content: space-evenly;
   align-items: center;
 }
-#Status_Parent #A_Btn_1{
+#Status_Parent #A_Btn_1 {
   background-color: blue;
-  border: 0.1px solid blue; 
+  border: 0.1px solid blue;
   width: 20%;
   padding: 0.2em 0em;
   color: white;
   letter-spacing: 1.5px;
   border-radius: 10px;
 }
-#Status_Parent #A_Btn_2{
+#Status_Parent #A_Btn_2 {
   background-color: red;
-  border: 0.1px solid red; 
+  border: 0.1px solid red;
   width: 20%;
   padding: 0.2em 0em;
   color: white;
   letter-spacing: 1.5px;
   border-radius: 10px;
 }
-#Status_Parent #A_Btn_3{
+#Status_Parent #A_Btn_3 {
   background-color: black;
-  border: 0.1px solid black; 
+  border: 0.1px solid black;
   width: 20%;
   padding: 0.2em 0em;
   color: white;
@@ -242,27 +277,9 @@
 /* -- FinalChat.css -- */
 /* ------------------------- */
 
-
 /* Start */
 /*  */
 /* ---------------------------- */
 /* Media Queries In CSS */
 /* ---------------------------- */
 /* 1 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
