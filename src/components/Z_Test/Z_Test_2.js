@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-// Firebase
 import { useNavigate, useParams } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { database1 } from '../Portal/firebase';
 
 export default function Z_Test_2() {
-  // Navigate
   const navigate = useNavigate();
-  // --------- Backend Part Logic ---------
   const { id } = useParams();
   const [U1_UniversityName, setU1_UniversityName] = useState('');
   const [U2_Campus, setU2_Campus] = useState('');
   const [U3_intake, setU3_intake] = useState('');
   const [U4_courseName, setU4_courseName] = useState('');
-  // Function
+  const [buttonValue, setbuttonValue] = useState('');
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,19 +23,27 @@ export default function Z_Test_2() {
           setU2_Campus(data.U2_campus || '');
           setU3_intake(data.U3_intake || '');
           setU4_courseName(data.U4_courseName || '');
+          setbuttonValue(data.buttonValue || '');
         } else {
           console.error('Document not found.');
-          // Handle the case where the document with the specified ID does not exist
         }
       } catch (error) {
         console.error('Error fetching data from Firestore:', error);
-        // Handle the error appropriately, e.g., show an error message to the user
       }
     };
     fetchData();
   }, [id]);
-  // --------- Backend Part Logic ---------
-  // Main Body
+
+  const updateFirestoreWithValue = async (value) => {
+    try {
+      const docRef = doc(database1, '4 - Student Records', id);
+      await updateDoc(docRef, { buttonValue: value });
+      console.log('Document successfully updated!');
+    } catch (error) {
+      console.error('Error updating document:', error);
+    }
+  };
+
   return (
     <>
       <div className='container'>
@@ -66,10 +72,24 @@ export default function Z_Test_2() {
             <span>4 - Course Name</span>
             <span id='Z_Span_2'>{U4_courseName}</span>
           </div>
-          {/* --- Upload Documents --- */}
-          <h6>2 - Upload Documents</h6>
-          {/* ------- 1 - University Detail ------- */}
-          <h1>10 Marksheet, Certificate ( 1 )</h1>
+          {/* --- Status --- */}
+          {/* Button Portion */}
+          <div id="ParentButton">
+            {/* Button */}
+            <div>
+              <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 1")}>Process 1</button>
+            </div>
+            {/* Button */}
+            <div>
+              <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 2")}>Process 2</button>
+            </div>
+            {/* Button */}
+            <div>
+              <button id='AT_1' onClick={() => updateFirestoreWithValue("Process 3")}>Process 3</button>
+            </div>
+          </div>
+          {/* Show Status */}
+          <h1>{buttonValue}</h1>
           {/* Back Button */}
           <button id='Btn_C_1' onClick={() => navigate('/')}>
             Move Back

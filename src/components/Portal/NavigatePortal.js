@@ -42,7 +42,7 @@ export default function NavigatePortal() {
                 {/* 8 Application Tracking */}
                 <Route path='/PTracking' element={<PTracking />} />
                 {/* 8 - Application Status */}
-                <Route path='/PTStatus' element={<PTStatus />} />
+                <Route path='/PTStatus/:id' element={<PTStatus />} />
                 {/* 9  Student Records */}
                 <Route path='/PRecords' element={<PRecords />} />
                 {/* 9 - Student Records List */}

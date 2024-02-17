@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PSidebar from '../PSidebar'
 // useNavigate
 import { useNavigate } from 'react-router-dom'
@@ -13,8 +13,29 @@ import confirm_u from '../../../Pics/del_a.png'
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
+// Firebase
+import { doc, getDocs, collection } from 'firebase/firestore';
+import { database1 } from '../../firebase';
 
 export default function PTracking() {
+    // --------- Backend Part Logic ---------  
+    const [val, setVal] = useState([]);
+    const value = collection(database1, "4 - Student Records");
+    const getData = async () => {
+        try {
+            const dbVal = await getDocs(value);
+            setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+        } catch (error) {
+            console.error("Error fetching data from Firestore:", error);
+        }
+    }
+    useEffect(() => {
+        getData();
+    }, []);
+    const handleEdit = (id, values) => {
+        navigate(`/PTStatus/${id}`, { state: { values } });
+    }
+    // --------- Backend Part Logic ---------  
     // ------ Confirm Add University Logic ------
     // State to manage which box to display
     const [showBox2, setShowBox2] = useState(false);
@@ -82,7 +103,7 @@ export default function PTracking() {
                         <div id="sub_PR_Second">
                             <div id="PR_Second_Box">
                                 <div id="PR_Second_Box_Part_0">
-                                    CNIC
+                                    Email
                                 </div>
                                 <div id="PR_Second_Box_Part_1">
                                     Image
@@ -100,20 +121,22 @@ export default function PTracking() {
                     <div id="PR_Third">
                         <div id="sub_PR_Third">
                             {/* Record Box 1 */}
-                            <div id="PR_Third_Box">
-                                <div id="PR_Third_Box_Part_0" onClick={() => navigate('/PTStatus')}>
-                                    42501-3205936-9
+                            {val.map(values => (
+                                <div id="PR_Third_Box">
+                                    <div id="PR_Third_Box_Part_0" onClick={() => handleEdit(values.id)}>
+                                        {values.P8_email}
+                                    </div>
+                                    <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id)}>
+                                        <img src={Str_8} alt="NA" />
+                                    </div>
+                                    <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id)}>
+                                        {values.P3_givenName}
+                                    </div>
+                                    <div id="PR_Third_Box_Part_3">
+                                        <button id='PR_Third_B_P_3_Btn' onClick={handleAddUniversityClick}>Delete <i class="fa fa-trash"></i></button>
+                                    </div>
                                 </div>
-                                <div id="PR_Third_Box_Part_1" onClick={() => navigate('/PTStatus')}>
-                                    <img src={Str_8} alt="NA" />
-                                </div>
-                                <div id="PR_Third_Box_Part_2" onClick={() => navigate('/PTStatus')}>
-                                    Qazi Rehmat Hussain
-                                </div>
-                                <div id="PR_Third_Box_Part_3">
-                                    <button id='PR_Third_B_P_3_Btn' onClick={handleAddUniversityClick}>Delete <i class="fa fa-trash"></i></button>
-                                </div>
-                            </div>
+                            ))}
                             {/* Record Box 2 */}
                         </div>
                     </div>

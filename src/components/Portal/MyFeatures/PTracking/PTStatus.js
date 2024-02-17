@@ -13,15 +13,15 @@ import PT_5 from '../../../Pics/PT_5.png'
 import PT_6 from '../../../Pics/PT_6.png'
 import PT_7 from '../../../Pics/PT_7.png'
 import PT_8 from '../../../Pics/PT_8.png'
-// useNavigate
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { database1 } from '../../firebase';
+
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Confirm Submit Btn
 import confirm_u from '../../../Pics/StatusChange.png'
-import { database1 } from '../../firebase';
-import { doc, setDoc, getDocs, collection } from 'firebase/firestore';
 
 
 export default function PTStatus() {
@@ -74,28 +74,47 @@ export default function PTStatus() {
     const [Line6Color, setLine6Color] = useState('#807F7E');
     const [Line7Color, setLine7Color] = useState('#807F7E');
     // ------------- Backend Logic -------------
-    const [val, setVal] = useState([]);
-    const [name1, setName1] = useState('');
-    // Final, After Converting Both in 1 useEffect ( Create & Fetching Value in Firestore )
+    const { id } = useParams();
+    const [U1_UniversityName, setU1_UniversityName] = useState('');
+    const [P3_givenName, setP3_givenName] = useState('');
+    const [P8_email, setP8_email] = useState('');
+    const [U4_courseName, setU4_courseName] = useState('');
+    const [buttonValue, setbuttonValue] = useState('');
+
     useEffect(() => {
         const fetchData = async () => {
-            const value = collection(database1, "2 - Application Tracking");
-            const querySnapshot = await getDocs(value);
-            const data = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-            setVal(data);
-            // Setting name1
-            setName1(data.length > 0 ? data[data.length - 1].name1 : '');
+            try {
+                const docRef = doc(database1, '4 - Student Records', id);
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    setU1_UniversityName(data.U1_universityName || '');
+                    setP3_givenName(data.P3_givenName || '');
+                    setP8_email(data.P8_email || '');
+                    setU4_courseName(data.U4_courseName || '');
+                    setbuttonValue(data.buttonValue || '');
+                } else {
+                    console.error('Document not found.');
+                }
+            } catch (error) {
+                console.error('Error fetching data from Firestore:', error);
+            }
         };
         fetchData();
-    }, []);
-    const updateFirestoreWithValue = async (newValue) => {
-        const collectionRef = collection(database1, "2 - Application Tracking");
-        const documentRef = doc(collectionRef, 'demo');
-        await setDoc(documentRef, { name1: newValue });
+    }, [id]);
+
+    const updateFirestoreWithValue = async (value) => {
+        try {
+            const docRef = doc(database1, '4 - Student Records', id);
+            await updateDoc(docRef, { buttonValue: value });
+            console.log('Document successfully updated!');
+        } catch (error) {
+            console.error('Error updating document:', error);
+        }
     };
-    // Matchig Name1 value to change Background Color
+    // Matchig buttonValue value to change Background Color
     useEffect(() => {
-        if (name1 === "Application Received") {
+        if (buttonValue === "Application Received") {
             // Button 1
             setButton1Color('#FFC300');
             // ---- Extra Color Off ----
@@ -107,7 +126,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Document Verification") {
+        else if (buttonValue === "Document Verification") {
             // Button 2
             setButton2Color('#FFC300');
             // Button 1
@@ -122,7 +141,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Conditional Offer") {
+        else if (buttonValue === "Conditional Offer") {
             // Button 3
             setButton3Color('#FFC300');
             // Button 2
@@ -140,7 +159,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Document Request") {
+        else if (buttonValue === "Document Request") {
             // Button 4
             setButton4Color('#FFC300');
             // Button 3
@@ -161,7 +180,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Unconditional Offer") {
+        else if (buttonValue === "Unconditional Offer") {
             // Button 5
             setButton5Color('#FFC300');
             // Button 4
@@ -185,7 +204,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Confirmation Enrolment") {
+        else if (buttonValue === "Confirmation Enrolment") {
             // Button 6
             setButton6Color('#FFC300');
             // Button 5
@@ -212,7 +231,7 @@ export default function PTStatus() {
             setButton7Color('white');
             setButton8Color('white');
         }
-        else if (name1 === "Visa App Submitted") {
+        else if (buttonValue === "Visa App Submitted") {
             // Button 7
             setButton7Color('#FFC300');
             // Button 6
@@ -242,7 +261,7 @@ export default function PTStatus() {
             // ---- Extra Color Off ----
             setButton8Color('white');
         }
-        else if (name1 === "Visa Granted") {
+        else if (buttonValue === "Visa Granted") {
             // Button 8
             setButton8Color('#FFC300');
             // Button 7
@@ -284,7 +303,7 @@ export default function PTStatus() {
             setButton7Color("transparent");
             setButton8Color("transparent");
         }
-    }, [name1]);
+    }, [buttonValue]);
     // Main Body
     return (
         <div>
@@ -314,16 +333,16 @@ export default function PTStatus() {
                                         Student Name
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        Qazi Rehmat Hussain
+                                        {P3_givenName}
                                     </div>
                                 </div>
                                 {/* 1 - G */}
                                 <div id="PTS_Pre_Box_Detail_Box_L">
                                     <div id="PTS_Pre_Box_Detail_Box_P1">
-                                        CNIC
+                                        Email
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        42501-3205936-9
+                                        {P8_email}
                                     </div>
                                 </div>
                                 {/* 2 - O */}
@@ -332,7 +351,7 @@ export default function PTStatus() {
                                         University Name
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        Deakin University
+                                        {U1_UniversityName}
                                     </div>
                                 </div>
                                 {/* 2 - G */}
@@ -341,7 +360,7 @@ export default function PTStatus() {
                                         Course Name
                                     </div>
                                     <div id="PTS_Pre_Box_Detail_Box_P2">
-                                        Applied Sciences
+                                        {U4_courseName}
                                     </div>
                                 </div>
                             </div>
@@ -352,7 +371,7 @@ export default function PTStatus() {
                 {/* --- Status Writing --- */}
                 <div id="Ext_Firebase_Status">
                     <h5>Status : </h5>
-                    <h2>{name1}</h2>
+                    <h2>{buttonValue}</h2>
                 </div>
                 {/* --- Status Writing --- */}
                 <br />
