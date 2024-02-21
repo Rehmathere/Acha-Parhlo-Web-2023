@@ -105,7 +105,7 @@ export default function HomeLast() {
               </div>
             </div>
             <div id="fir_3">
-              <a href="#" id="fir_3_1">
+              <a href="#" id="fir_3_1" onClick={() => navigate('/PLogin')}>
                 {/* Shining Color Button */}
                 <span></span>
                 <span></span>
@@ -127,7 +127,7 @@ export default function HomeLast() {
               <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/blogpage')}>Blogs</a>
               <a href="#" id="fir_2_s" style={{ color: "white" }} onClick={() => navigate('/contact')}>Contact</a>
               {/* Shining Color Button */}
-              <a href="#" id="fir_3_1" style={{ color: "white" }}>
+              <a href="#" id="fir_3_1" style={{ color: "white" }} onClick={() => navigate('/PLogin')}>
                 <span></span>
                 <span></span>
                 <span></span>

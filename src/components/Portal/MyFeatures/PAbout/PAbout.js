@@ -20,7 +20,7 @@ export default function PAbout() {
     const handleClick = () => {
         signOut(database).then(val => {
             console.log(val, 'val');
-            navigate('/');
+            navigate('/PLogin');
         })
     }
     const { userEmail } = location.state || { userEmail: ' ' };

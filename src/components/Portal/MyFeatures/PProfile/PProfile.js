@@ -145,7 +145,7 @@ export default function PProfile() {
     const handleClick = () => {
         signOut(database).then(val => {
             console.log(val, 'val');
-            navigate('/');
+            navigate('/PLogin');
         })
     }
     // Use state to manage the visibility of the Logout Box
@@ -405,7 +405,7 @@ export default function PProfile() {
                                                         <span>Country</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="text" placeholder='Enter Full Email Address' onChange={handleNameChange5} />
+                                                        <input type="text" placeholder='Enter Country' onChange={handleNameChange5} />
                                                     </div>
                                                 </div>
                                                 {/* 2 */}

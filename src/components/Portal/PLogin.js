@@ -61,7 +61,7 @@ export default function PLogin() {
                                 {/* Sign Up Button */}
                                 <button id='Login_First_Create' onClick={() => navigate('/PSignUp')}>Create Account</button>
                                 {/* Home Page Button */}
-                                <button id='Login_First_Back'>Back To Home <i class="fa fa-home"></i></button>
+                                <button id='Login_First_Back' onClick={() => navigate('/')}>Back To Home <i class="fa fa-home"></i></button>
                             </form>
                         </div>
                     </div>

@@ -45,7 +45,7 @@ export default function PTStatus() {
     const handleClick = () => {
         signOut(database).then(val => {
             console.log(val, 'val');
-            navigate('/');
+            navigate('/PLogin');
         })
     }
     // Use state to manage the visibility of the Logout Box

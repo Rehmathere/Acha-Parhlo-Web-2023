@@ -91,7 +91,7 @@ export default function PAdd_Uni_Update() {
     const handleClick = () => {
         signOut(database).then(val => {
             console.log(val, 'val');
-            navigate('/');
+            navigate('/PLogin');
         })
     }
     // Use state to manage the visibility of the Logout Box
