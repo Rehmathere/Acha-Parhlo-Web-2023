@@ -377,7 +377,7 @@ section .loader span::before {
 }
 .progress-bar {
   border: 0.1px solid transparent;
-  background: #004600;
+  background: #006d00;
   border-radius: 35px;
 }
 .progress-number {
@@ -479,7 +479,7 @@ section .loader span::before {
 /* --- 2 - Forth --- */
 #forth {
   border: 0px solid transparent;
-  padding: 2em 1em;
+  padding: 3em 1em;
   font-family: Arial, Helvetica, sans-serif;
 }
 #forth_1_sub {
@@ -749,6 +749,10 @@ section .loader span::before {
   border: 0.1px solid transparent;
   padding: 0em 0.8em;
 }
+#eig_1_2_sub p:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
 #eig_1_3 {
   border: 0.1px solid transparent;
   width: 25%;
@@ -818,7 +822,7 @@ section .loader span::before {
 #sixth {
   border: 0px solid transparent;
   padding: 1em 1em;
-  background: linear-gradient(to right, #002900, #014e01);
+  background: linear-gradient(to right, #002900, #004b00);
 }
 #sub_sixth {
   border: 0.1px solid transparent;
@@ -988,14 +992,15 @@ section .loader span::before {
   letter-spacing: 0.2px;
   font-size: 1em;
 }
-#seven_1_1 button:active {
-  border: 0.1px solid transparent;
-  background: black;
-}
 #seven_1_1 button:hover {
   color: white;
-  background: linear-gradient(to top, orangered, orange);
+  background: linear-gradient(to top, #005200, #04df04);
   cursor: pointer;
+}
+#seven_1_1 button:focus {
+  color: white;
+  outline: none;
+  background: linear-gradient(to top, orangered, orange);
 }
 /* - Fifth - */
 #fifth {     
@@ -1060,7 +1065,8 @@ section .loader span::before {
 #nine {
   border: 0px solid transparent;
   padding: 2em 1em;
-  background-color: #d2d6db;
+  /* background-color: #d2d6db; */
+  background-color: #ccf0cc;
 }
 #sub_nine {
   border: 0.1px solid transparent;
@@ -1077,7 +1083,7 @@ section .loader span::before {
   font-weight: bolder;
   text-transform: uppercase;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #002900;
 }
 #sub_nine p {
   border: 0.1px solid transparent;
