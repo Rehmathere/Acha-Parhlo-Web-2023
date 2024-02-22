@@ -77,6 +77,7 @@ export default function PTStatus() {
     const { id } = useParams();
     const [U1_UniversityName, setU1_UniversityName] = useState('');
     const [P3_givenName, setP3_givenName] = useState('');
+    const [P3_documentId, setP3_documentId] = useState(''); // New state for document ID
     const [P8_email, setP8_email] = useState('');
     const [U4_courseName, setU4_courseName] = useState('');
     const [buttonValue, setbuttonValue] = useState('');
@@ -90,6 +91,7 @@ export default function PTStatus() {
                     const data = docSnap.data();
                     setU1_UniversityName(data.U1_universityName || '');
                     setP3_givenName(data.P3_givenName || '');
+                    setP3_documentId(docSnap.id || ''); // Set the document ID
                     setP8_email(data.P8_email || '');
                     setU4_courseName(data.U4_courseName || '');
                     setbuttonValue(data.buttonValue || '');
@@ -378,7 +380,7 @@ export default function PTStatus() {
                 <div id="PTS_first">
                     <div id="PTS_first_Box">
                         <h3>Application Status</h3>
-                        <h4>Id No: 1234567890</h4>
+                        <h4>Id No: <span>{P3_documentId}</span></h4>
                         {/* Boxes Portion */}
                         <div id="pre_Box_Light">
                             {/* --- Box 1 --- */}

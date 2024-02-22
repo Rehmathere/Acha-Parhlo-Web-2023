@@ -547,26 +547,26 @@ export default function HomeLast() {
               <div id="seven_1_1_img">
                 <img src={map} alt="NA" />
               </div>
-              <h2>Australia Border News</h2>
+              <h2>Australia Visa News</h2>
               <p>Latest Announcements, Australia University Updates For International Student</p>
               <button>Continue Reading</button>
             </div>
             {/* Box 2 */}
             <div id="seven_1_1">
               <div id="seven_1_1_img">
-                <img src={map_2} alt="NA" />
+                <img src={map_3} alt="NA" />
               </div>
-              <h2>Scholarship Alert</h2>
-              <p>Stay informed about the latest scholarship opportunities for international students</p>
+              <h2>Health Care</h2>
+              <p>Stay informed about the latest Updated Document for Health Insurance</p>
               <button>Continue Reading</button>
             </div>
             {/* Box 3 */}
             <div id="seven_1_1">
               <div id="seven_1_1_img">
-                <img src={map_3} alt="NA" />
+                <img src={map_2} alt="NA" />
               </div>
-              <h2>Explore Consultants</h2>
-              <p>Discover valuable insights and guidance from trusted educational consultants</p>
+              <h2>Explore Universities</h2>
+              <p>Stay informed about the latest Admission opportunities for international students</p>
               <button>Continue Reading</button>
             </div>
           </div>

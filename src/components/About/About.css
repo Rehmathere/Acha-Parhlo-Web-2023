@@ -149,7 +149,7 @@ body {
   padding: 0.5em 0em;
   border-radius: 5px;
   text-align: center;
-  background-image: linear-gradient(to right, #524f4f 0%, #001400 100%);
+  background-image: linear-gradient(to right, #001d00 0%, #076807 100%);
   cursor: pointer;
 }
 #counter h3 {
