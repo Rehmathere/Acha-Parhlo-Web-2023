@@ -13,7 +13,7 @@ import mel from './Pics/z_Mel.jpg'
 import bri from './Pics/z_Bri.jpg'
 import map from './Pics/map.jpg'
 import map_2 from './Pics/map_2.jpg'
-import map_3 from './Pics/map_3.jpg'
+import map_3 from './Pics/map_E_2.jpg'
 import flag from './Pics/flag.png'
 // Uni Pics
 import u1 from './Pics/Uni Pics/Adelaide.png'
@@ -549,7 +549,7 @@ export default function HomeLast() {
               </div>
               <h2>Australia Visa News</h2>
               <p>Latest Announcements, Australia University Updates For International Student</p>
-              <button>Continue Reading</button>
+              <button onClick={() => navigate('/blogpage')}>Continue Reading</button>
             </div>
             {/* Box 2 */}
             <div id="seven_1_1">
@@ -558,7 +558,7 @@ export default function HomeLast() {
               </div>
               <h2>Health Care</h2>
               <p>Stay informed about the latest Updated Document for Health Insurance</p>
-              <button>Continue Reading</button>
+              <button onClick={() => navigate('/blogpage')}>Continue Reading</button>
             </div>
             {/* Box 3 */}
             <div id="seven_1_1">
@@ -567,7 +567,7 @@ export default function HomeLast() {
               </div>
               <h2>Explore Universities</h2>
               <p>Stay informed about the latest Admission opportunities for international students</p>
-              <button>Continue Reading</button>
+              <button onClick={() => navigate('/blogpage')}>Continue Reading</button>
             </div>
           </div>
         </div>

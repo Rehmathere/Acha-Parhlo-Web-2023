@@ -14,7 +14,7 @@ import confirm_u from '../../../Pics/del_a.png'
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Firebase
-import { doc, getDocs, collection } from 'firebase/firestore';
+import { doc, getDocs, deleteDoc, collection } from 'firebase/firestore';
 import { database1 } from '../../firebase';
 
 export default function PTracking() {
@@ -29,11 +29,24 @@ export default function PTracking() {
             console.error("Error fetching data from Firestore:", error);
         }
     }
+    const deleteData = async (id) => {
+        try {
+            const docRef = doc(database1, "4 - Student Records", id);
+            await deleteDoc(docRef);
+            // Refresh data after deletion
+            getData();
+        } catch (error) {
+            console.error("Error deleting data from Firestore:", error);
+        }
+    }
     useEffect(() => {
         getData();
     }, []);
     const handleEdit = (id, values) => {
-        navigate(`/PTStatus/${id}`, { state: { values } });
+        navigate(`/Z_Test_2/${id}`, { state: { values } });
+    }
+    const handleDelete = (id) => {
+        deleteData(id);
     }
     // --------- Backend Part Logic ---------  
     // ------ Confirm Add University Logic ------
@@ -133,7 +146,7 @@ export default function PTracking() {
                                         {values.P3_givenName}
                                     </div>
                                     <div id="PR_Third_Box_Part_3">
-                                        <button id='PR_Third_B_P_3_Btn' onClick={handleAddUniversityClick}>Delete <i class="fa fa-trash"></i></button>
+                                        <button id='PR_Third_B_P_3_Btn' onClick={ () => { handleAddUniversityClick(); handleDelete(values.id); }}>Delete <i class="fa fa-trash"></i></button>
                                     </div>
                                 </div>
                             ))}
