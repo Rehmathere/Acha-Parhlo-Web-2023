@@ -58,7 +58,7 @@ export default function App() {
     <>
       {/* --------------------------------------------------- */}
       {/* Final Code */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         {showNavbar && <Navbar />}
         <Routes>
           {showImgSlider && (
@@ -73,7 +73,7 @@ export default function App() {
           <Route path='/BlogPage3_V' element={<BlogPage3_V />} />
           <Route path='/BlogPage4_D' element={<BlogPage4_D />} />
           <Route path='/BlogPage5_E' element={<BlogPage5_E />} />
-          {/* Portal */}
+          Portal
           <Route path='/PLogin' element={<PLogin />} />
           <Route path='/PSideBar' element={<PSidebar />} />
           <Route path='/PSignUp' element={<PSignUp />} />
@@ -91,13 +91,12 @@ export default function App() {
           <Route path='/PAdd_U_add' element={<PAdd_U_add />} />
           <Route path='/PAdd_Uni_Update/:id' element={<PAdd_Uni_Update />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* --------------------------------------------------- */}
       {/* Extra Working */}
-      {/* <NavigatePortal /> */}
+      <NavigatePortal />
       {/* <FinalChat /> */}
       {/* <Z_Test_Parent /> */}
-      {/* <Z_Test /> */}
     </>
   );
 }
