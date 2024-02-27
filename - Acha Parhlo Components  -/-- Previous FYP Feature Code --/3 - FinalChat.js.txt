@@ -1,0 +1,67 @@
+import React, { useState, useEffect } from 'react';
+import { onSnapshot, collection, query, orderBy, addDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { auth, database } from './firebase';
+
+function FinalChat() {
+  const [user] = useAuthState(auth);
+
+  const messagesRef = collection(database, '2 - Chat');
+  const queryRef = query(messagesRef, orderBy('createdAt', 'desc'));
+  const [messages] = useCollectionData(queryRef, { idField: '_id' });
+
+  const [newMessage, setNewMessage] = useState('');
+
+  const sendMessage = async () => {
+    if (newMessage.trim() !== '') {
+      await addDoc(messagesRef, {
+        createdAt: new Date(),
+        text: newMessage,
+        user: {
+          _id: user.email,
+          avatar: 'https://i.pravatar.cc/300',
+        },
+      });
+      setNewMessage('');
+    }
+  };
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(queryRef, (querySnapshot) => {
+      const updatedMessages = querySnapshot.docs.map((doc) => ({
+        _id: doc.id,
+        createdAt: doc.data().createdAt.toDate(),
+        text: doc.data().text,
+        user: doc.data().user,
+      }));
+      // Handle the updated messages as needed
+    });
+
+    return unsubscribe;
+  }, [queryRef]);
+
+  return (
+    <div>
+      <div style={{ height: '80vh', overflowY: 'scroll' }}>
+        {messages &&
+          messages.map((message) => (
+            <div key={message._id}>
+              <strong>{message.user._id}</strong>: {message.text}
+            </div>
+          ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
+    </div>
+  );
+}
+
+export default FinalChat;

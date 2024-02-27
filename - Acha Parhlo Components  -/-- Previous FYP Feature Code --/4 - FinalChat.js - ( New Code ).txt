@@ -1,0 +1,90 @@
+import React, { useState, useEffect } from 'react';
+import { onSnapshot, collection, query, orderBy, addDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { auth, database } from './firebase';
+
+function FinalChat() {
+  const [user] = useAuthState(auth);
+
+  const messagesRef = collection(database, '2 - Chat');
+  const queryRef = query(messagesRef, orderBy('createdAt', 'desc'));
+  const [messages] = useCollectionData(queryRef, { idField: '_id' });
+
+  const [newMessage, setNewMessage] = useState('');
+
+  const sendMessage = async () => {
+    if (newMessage.trim() !== '') {
+      await addDoc(messagesRef, {
+        createdAt: new Date(),
+        text: newMessage,
+        user: {
+          _id: user.email,
+          avatar: 'https://i.pravatar.cc/300',
+        },
+      });
+      setNewMessage('');
+    }
+  };
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(queryRef, (querySnapshot) => {
+      const updatedMessages = querySnapshot.docs.map((doc) => ({
+        _id: doc.id,
+        createdAt: doc.data().createdAt.toDate(),
+        text: doc.data().text,
+        user: doc.data().user,
+      }));
+      // Handle the updated messages as needed
+    });
+
+    return unsubscribe;
+  }, [queryRef]);
+
+  return (
+    <div>
+      <div style={{ height: '80vh', overflowY: 'scroll' }}>
+        {messages &&
+          messages.map((message) => (
+            <div
+              key={message._id}
+              style={{
+                textAlign: message.user._id === user.email ? 'right' : 'left',
+                backgroundColor:
+                  message.user._id === user.email ? '#EB2F06' : '#015E01',
+                fontSize: '0.9em',
+                padding: '5px',
+                margin: '5px',
+                borderRadius: '10px',
+                color: 'white',
+                fontFamily: 'Kanit',
+                maxWidth: '60%', // Set maximum width for the message box
+                alignSelf: 'flex-start', // Align left for receiver messages
+                display: 'flex',
+              }}
+            >
+              {message.user._id !== user.email && (
+                <img
+                  src={message.user.avatar}
+                  alt="Avatar"
+                  style={{ width: '30px', height: '30px', borderRadius: '50%', marginRight: '5px' }}
+                />
+              )}
+              {message.text}
+            </div>
+          ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
+    </div>
+  );
+}
+
+export default FinalChat;
