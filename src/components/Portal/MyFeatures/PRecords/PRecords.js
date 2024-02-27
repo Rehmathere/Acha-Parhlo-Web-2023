@@ -44,7 +44,7 @@ export default function PRecords() {
         getData();
     }, []);
     const handleEdit = (id, values) => {
-        navigate(`/Z_Test_2/${id}`, { state: { values } });
+        navigate(`/PR_List/${id}`, { state: { values } });
     }
     const handleDelete = (id) => {
         deleteData(id);

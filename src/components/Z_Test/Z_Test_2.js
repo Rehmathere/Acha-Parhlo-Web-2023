@@ -1,49 +1,67 @@
-import React, { useState } from 'react';
-import { db } from './firebase'; // Import only 'db' from firebase
-import { FieldValue } from 'firebase/firestore'; // Import FieldValue from firestore
+import React, { useState, useEffect } from 'react';
+import { onSnapshot, collection, query, orderBy, addDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { auth, database } from './firebase';
 
-function Z_Test_2({ scroll }) {
-    const [msg, setMsg] = useState('');
+function ChatApp() {
+  const [user] = useAuthState(auth);
 
-    async function sendMessage(e) {
-        e.preventDefault();
+  const messagesRef = collection(database, '2 - Chat');
+  const queryRef = query(messagesRef, orderBy('createdAt', 'desc'));
+  const [messages] = useCollectionData(queryRef, { idField: '_id' });
 
-        // No authentication conditions here
-        const photoURL = ''; // Replace with any default value or logic if needed
+  const [newMessage, setNewMessage] = useState('');
 
-        await db.collection('messages').add({
-            text: msg,
-            photoURL,
-            createdAt: FieldValue.serverTimestamp(), // Use FieldValue directly
-        });
-
-        setMsg('');
-        scroll.current.scrollIntoView({ behavior: 'smooth' });
+  const sendMessage = async () => {
+    if (newMessage.trim() !== '') {
+      await addDoc(messagesRef, {
+        createdAt: new Date(),
+        text: newMessage,
+        user: {
+          _id: user.email,
+          avatar: 'https://i.pravatar.cc/300',
+        },
+      });
+      setNewMessage('');
     }
+  };
 
-    return (
-        <div>
-            <form onSubmit={sendMessage}>
-                <div className="sendMsg">
-                    {/* Input Message */}
-                    <input
-                        style={{ width: '78%', fontSize: '15px', fontWeight: '550', marginLeft: '5px', marginBottom: '-3px' }}
-                        placeholder='Message...'
-                        type="text"
-                        value={msg}
-                        onChange={(e) => setMsg(e.target.value)}
-                    />
-                    {/* Button */}
-                    <button
-                        style={{ width: '18%', fontSize: '15px', fontWeight: '550', margin: '4px 5% -13px 5%', maxWidth: '200px' }}
-                        type="submit"
-                    >
-                        Send
-                    </button>
-                </div>
-            </form>
-        </div>
-    );
+  useEffect(() => {
+    const unsubscribe = onSnapshot(queryRef, (querySnapshot) => {
+      const updatedMessages = querySnapshot.docs.map((doc) => ({
+        _id: doc.id,
+        createdAt: doc.data().createdAt.toDate(),
+        text: doc.data().text,
+        user: doc.data().user,
+      }));
+      // Handle the updated messages as needed
+    });
+
+    return unsubscribe;
+  }, [queryRef]);
+
+  return (
+    <div>
+      <div style={{ height: '80vh', overflowY: 'scroll' }}>
+        {messages &&
+          messages.map((message) => (
+            <div key={message._id}>
+              <strong>{message.user._id}</strong>: {message.text}
+            </div>
+          ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
+    </div>
+  );
 }
 
-export default Z_Test_2;
+export default ChatApp;

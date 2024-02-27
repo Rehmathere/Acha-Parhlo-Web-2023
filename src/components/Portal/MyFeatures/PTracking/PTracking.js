@@ -43,7 +43,7 @@ export default function PTracking() {
         getData();
     }, []);
     const handleEdit = (id, values) => {
-        navigate(`/Z_Test_2/${id}`, { state: { values } });
+        navigate(`/PTStatus/${id}`, { state: { values } });
     }
     const handleDelete = (id) => {
         deleteData(id);

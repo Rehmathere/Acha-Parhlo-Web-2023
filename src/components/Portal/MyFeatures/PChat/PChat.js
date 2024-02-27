@@ -111,13 +111,13 @@ export default function PChat() {
                         <div id="sub_PR_Third">
                             {/* Record Box 1 */}
                             <div id="PR_Third_Box">
-                                <div id="PR_Third_Box_Part_0">
+                                <div id="PR_Third_Box_Part_0" onClick={() => navigate('/FinalChat')}> 
                                     9 : 00
                                 </div>
-                                <div id="PR_Third_Box_Part_1">
+                                <div id="PR_Third_Box_Part_1" onClick={() => navigate('/FinalChat')}>
                                     <img src={Str_10} alt="NA" />
                                 </div>
-                                <div id="PR_Third_Box_Part_2">
+                                <div id="PR_Third_Box_Part_2" onClick={() => navigate('/FinalChat')}>
                                     Rehmat Qazi
                                 </div>
                                 <div id="PR_Third_Box_Part_3">
