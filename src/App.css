@@ -16,7 +16,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #028a02, #015e01, #002b00);
   height: 100%;
   width: 100%;
   display: flex;
@@ -78,9 +78,8 @@ section .loader span::before {
   left: 0;
   width: 15px;
   height: 15px;
-  background-color: orange;
-  box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 40px orange, 0 0 60px orange,
-    0 0 80px orange, 0 0 100px orange;
+  background-color: yellow;
+  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow,  0 0 80px yellow, 0 0 100px yellow;
   border-radius: 50%;
   animation: animate 2s linear infinite;
   animation-delay: calc(0.1s * var(--i));
