@@ -74,10 +74,11 @@
   padding: 0.8em 2em;
 }
 #PAdd_U_first_Box {
-  border: 0.1px solid #f28500;
+  border: 0px solid transparent;
   padding: 0.2em 1em;
   border-radius: 20px;
-  background-color: #f28500;
+  /* background-color: #f28500; */
+  background-image: linear-gradient(to right, orangered, orange);
   display: flex;
   flex-direction: row;
   justify-content: center;

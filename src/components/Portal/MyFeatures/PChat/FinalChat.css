@@ -2,15 +2,23 @@
 /* -- FinalChat.css -- */
 /* ------------------------- */
 #Final_Chat_Parent {
-  width: 50%;
-  float: right;
-}
-#Sub_FinalChat_Parent {
-  border: 1px solid black;
+  border: 0.1px solid black;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0.5em;
+}
+#Sub_FinalChat_Parent_2 {
+  border: 1px solid grey;
+  width: 50%;
+  display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 84vh;
+  border-radius: 10px;
+  padding: 0.1em 0.1em;
+  background-color: #dbfddb;
 }
 #FinalChat_Input {
   padding: 8px 15px 8px 10px;
@@ -19,35 +27,34 @@
   border-radius: 5px;
   letter-spacing: 1.5px;
   color: #001400;
+  font-size: 1em;
 }
 #FinalChat_Input:focus {
   outline: none;
   background-color: #d3f3d3;
 }
 #FinalChat_Input_Btn {
-    background-color: blue;
-    padding: 0.5em 1.1em;
-    color: white;
-    border-radius: 5px;
-    border: 0.1px solid transparent;
-    cursor: pointer;
-    margin-left: 5px;
-    letter-spacing: 1.5px,
+  background-color: blue;
+  padding: 0.5em 1.1em;
+  color: white;
+  border-radius: 5px;
+  border: 0.1px solid transparent;
+  cursor: pointer;
+  margin-left: 5px;
+  letter-spacing: 1.5px;
 }
-
-/* Media Queries In CSS */
-/* 1 */
-@media only screen and (max-width: 1400px) {
-  /* Adjust styles for screens up to 1400px */
-  #Final_Chat_Parent {
-    width: 100%;
-  }
+#FinalChat_Input_Btn:hover {
+  background-color: rgb(0, 0, 160);
+  cursor: pointer;
 }
-
-/* 2 */
-@media only screen and (max-width: 280px) {
-  /* Adjust styles for screens up to 280px */
-  #Final_Chat_Parent {
-    width: 100%;
-  }
+#FinalChat_Input_Btn:focus {
+  outline: none;
+  background-color: rgb(0, 0, 160);
+  cursor: pointer;
+}
+#Sub_FinalChat_Parent_1{
+  border: 0.1px solid black;
+  width: 50%;
+  padding: 2em 2em;
+  background-color: #c2f5c2;
 }

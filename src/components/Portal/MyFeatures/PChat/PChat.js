@@ -9,29 +9,14 @@ import "./PChat.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import Str_7 from "../../../Pics/Str_7.png"
-import Str_10 from "../../../Pics/Str_10.png"
-import add_u from '../../../Pics/del_aa.gif'
-import confirm_u from '../../../Pics/del_a.png'
+import chat from '../../../Pics/chat.png'
+import Z_chat from '../../../Pics/Str_10.png'
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
 
 export default function PChat() {
-    // ------ Confirm Add University Logic ------
-    // State to manage which box to display
-    const [showBox2, setShowBox2] = useState(false);
-    const [showConfirmation, setShowConfirmation] = useState(false);
-    const [showParent, setShowParent] = useState(false);
-
-    const handleAddUniversityClick = () => {
-        setShowParent(true);
-        setShowConfirmation(true);
-        setShowBox2(true); // Set showBox2 to true directly
-        setTimeout(() => {
-            setShowParent(false);
-        }, 2000);
-    };
     // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
@@ -79,70 +64,60 @@ export default function PChat() {
                             </div>
                         </div>
                     </div>
+                    {/* ----------------------------------------- */}
                     {/* PChat Code Start From Here */}
                     {/* 2 - PChat__first */}
-                    {/* <div id="PChat_first">
+                    <div id="PChat_first">
                         <div id="sub_PChat_first">
-                            Start
-                        </div>
-                    </div> */}
-                    {/* ----- Previous Code ----- */}
-                    {/* 2 - PR_Second */}
-                    <div id="PR_Second">
-                        <div id="sub_PR_Second">
-                            <div id="PR_Second_Box">
-                                <div id="PR_Second_Box_Part_0">
-                                    Time
-                                </div>
-                                <div id="PR_Second_Box_Part_1">
-                                    Image
-                                </div>
-                                <div id="PR_Second_Box_Part_2">
-                                    Name
-                                </div>
-                                <div id="PR_Second_Box_Part_3">
-                                    Status
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* ----- Previous Code Part 2 ----- */}
-                    <div id="PR_Third">
-                        <div id="sub_PR_Third">
-                            {/* Record Box 1 */}
-                            <div id="PR_Third_Box">
-                                <div id="PR_Third_Box_Part_0" onClick={() => navigate('/FinalChat')}> 
-                                    9 : 00
-                                </div>
-                                <div id="PR_Third_Box_Part_1" onClick={() => navigate('/FinalChat')}>
-                                    <img src={Str_10} alt="NA" />
-                                </div>
-                                <div id="PR_Third_Box_Part_2" onClick={() => navigate('/FinalChat')}>
-                                    Rehmat Qazi
-                                </div>
-                                <div id="PR_Third_Box_Part_3">
-                                    <button id='PR_Third_B_P_3_Btn' onClick={handleAddUniversityClick}>Delete <i class="fa fa-trash"></i></button>
-                                </div>
-                            </div>
-                            {/* Record Box 2 */}
-                        </div>
-                    </div>
-                    {/* ----- Confirm Add University Logic ----- */}
-                    <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
-                        {/* Basic Logic */}
-                        <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
-                            <div id="PA_U_ConfirmAdd_Parent_Box">
-                                {/* Box 2 */}
-                                <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2 ? 'block' : 'none' }}>
-                                    <div id="PA_U_ConfirmAdd_img">
-                                        <img src={add_u} alt="NA" />
+                            {/* Part 1 */}
+                            <div id="PChat_first_Part_1">
+                                {/* Image Bar */}
+                                <div id="PChat_first_Part_1_Image_Box">
+                                    <div id="PChat_first_Part_1_Image_Box_1">
+                                        <h4>Communicate With Students</h4>
                                     </div>
-                                    <h3>Deleted Successfully !</h3>
+                                    <div id="PChat_first_Part_1_Image_Box_2">
+                                        <img src={chat} alt="NA" />
+                                    </div>
+                                </div>
+                                {/* Points */}
+                                <div id="PChat_first_Part_1_Point">
+                                    <p><i class="fa fa-send"></i> Seen Unread Messsages</p>
+                                    <p><i class="fa fa-send"></i> New chat alert</p>
+                                    <p><i class="fa fa-send"></i> Sent a chat</p>
+                                    <p><i class="fa fa-send"></i> Chat viewed</p>
+                                </div>
+                            </div>
+                            {/* Part 2 */}
+                            <div id="PChat_first_Part_2">
+                                {/* Heading */}
+                                <div id="PChat_first_Part_Chat_Heading">
+                                    <div id="PCHat_Heading_Part_0">
+                                        Sr. No
+                                    </div>
+                                    <div id="PCHat_Heading_Part_1">
+                                        Logo
+                                    </div>
+                                    <div id="PCHat_Heading_Part_2">
+                                        Messages
+                                    </div>
+                                </div>
+                                {/* Chat Box Click */}
+                                <div id="PChat_Box_Messages" onClick={() => navigate('/FinalChat') }>
+                                    <div id="PChat_Box_Messages_Part_0">
+                                        1
+                                    </div>
+                                    <div id="PChat_Box_Messages_Part_1">
+                                        <img src={Z_chat} alt="NA" />
+                                    </div>
+                                    <div id="PChat_Box_Messages_Part_2">
+                                        Rehmat Qazi
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {/* Start */}
+                    {/* ----- Previous Code ----- */}
                     {/* ---------------------------------------- */}
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
