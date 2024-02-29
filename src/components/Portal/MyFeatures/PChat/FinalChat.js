@@ -9,6 +9,9 @@ import { signOut } from 'firebase/auth'
 // Images
 import logout from '../../../Pics/logout.png'
 import PSidebar from '../PSidebar'
+import chat_d_1 from '../../../Pics/chat_d_1.png'
+import line from '../../../Pics/line.png'
+import chat_d_2 from '../../../Pics/chat_d_2.png'
 
 function FinalChat() {
     const [user] = useAuthState(auth);
@@ -17,7 +20,6 @@ function FinalChat() {
     const [messages] = useCollectionData(queryRef, { idField: '_id' });
     const [newMessage, setNewMessage] = useState('');
     const messagesEndRef = useRef(null);
-
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -52,7 +54,6 @@ function FinalChat() {
             }));
             scrollToBottom();
         });
-
         return unsubscribe;
     }, [queryRef]);
 
@@ -60,7 +61,6 @@ function FinalChat() {
         scrollToBottom();
     }, []);
 
-    // Logout Logic
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -78,7 +78,6 @@ function FinalChat() {
 
     return (
         <div>
-            {/* Header Portion */}
             <div id="Header">
                 <div id="sub_Header">
                     <div id="Head_1">
@@ -91,12 +90,42 @@ function FinalChat() {
                     </div>
                 </div>
             </div>
-            {/* ------------- */}
+
             <PSidebar>
                 <div id="Final_Chat_Parent">
                     {/* Part 1 */}
                     <div id='Sub_FinalChat_Parent_1'>
-                        {/* Start */}
+                        {/* Heading */}
+                        <div id="Sub_FinalChat_P1_1">
+                            <h1>Start A Conversation ...</h1>
+                        </div>
+                        {/* Messages Color */}
+                        <div id="Sub_FinalChat_P1_2">
+                            {/* Box 1 */}
+                            <div id="Sub_FinalChat_P1_2_1">
+                                <div id="S_FC_P1_2_1_Part_1">
+                                    <img src={chat_d_1} alt="NA" />
+                                </div>
+                                <div id="S_FC_P1_2_1_Part_2">
+                                    <img src={line} alt="NA" />
+                                </div>
+                                <div id="S_FC_P1_2_1_Part_3">
+                                    Sender Message
+                                </div>
+                            </div>
+                            {/* Box 2 */}
+                            <div id="Sub_FinalChat_P1_2_1">
+                                <div id="S_FC_P1_2_1_Part_1">
+                                    <img src={chat_d_2} alt="NA" />
+                                </div>
+                                <div id="S_FC_P1_2_1_Part_2">
+                                    <img src={line} alt="NA" />
+                                </div>
+                                <div id="S_FC_P1_2_1_Part_3">
+                                    Receiver Message
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {/* Part 2 */}
                     <div id='Sub_FinalChat_Parent_2'>
@@ -112,7 +141,6 @@ function FinalChat() {
                                                 message.user._id === user.email ? '#001400' : 'orange',
                                             color:
                                                 message.user._id === user.email ? 'white' : 'black',
-                                            fontSize: '0.9em',
                                             padding: '10px 15px',
                                             margin: '5px',
                                             borderRadius: '10px',
@@ -123,7 +151,13 @@ function FinalChat() {
                                             flexDirection: 'column',
                                             letterSpacing: '1px',
                                         }}
+                                        id="My_Message"
                                     >
+                                        {message.user._id !== user.email && (
+                                            <div style={{ fontSize: '0.7em', color: 'black', marginBottom: '5px' }}>
+                                                {message.user._id} {/* Display receiver email */}
+                                            </div>
+                                        )}
                                         {message.user._id !== user.email && (
                                             <img
                                                 src={message.user.avatar}
@@ -158,7 +192,7 @@ function FinalChat() {
                         </div>
                     </div>
                 </div>
-                {/* Logout Logic */}
+
                 {isLogoutBoxVisible && (
                     <div id="Logout_Box">
                         <div id="sub_Logout_Box">
