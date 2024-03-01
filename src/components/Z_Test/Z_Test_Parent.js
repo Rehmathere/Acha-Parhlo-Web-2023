@@ -12,7 +12,7 @@ export default function Z_Test_Parent() {
                 {/* 1 Home Page */}
                 <Route path='/' element={<Z_Test />} />
                 {/* 2 Update Page */}
-                <Route path='/Z_Test_2' element={<Z_Test_2 />} />
+                <Route path='/Z_Test_2/:id' element={<Z_Test_2 />} />
                 {/* 3 Create Page */}
                 <Route path='/Z_Test_C' element={<Z_Test_C />} />
             </Routes>

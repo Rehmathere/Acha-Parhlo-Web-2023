@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { getDocs, collection } from 'firebase/firestore';
 import { database1, storage } from '../Portal/firebase';
 import { getDownloadURL, ref } from 'firebase/storage';
+// Navigate
+import { useNavigate } from "react-router-dom"
+import "../Portal/MyFeatures/PChat/FinalChat.css";
 
 export default function Z_Test_C() {
+  // Navigate
+  const navigate = useNavigate();
+  // ------------- Backend Part Logic -------------  
   const [imageBase64List, setImageBase64List] = useState([]);
 
   useEffect(() => {
@@ -17,7 +23,6 @@ export default function Z_Test_C() {
           const imagePaths = [
             data.D3_1_Image_Transcript,
             data.D3_2_Image_Degree,
-            // ... (other image paths)
           ];
 
           const imageBase64Array = await Promise.all(
@@ -59,6 +64,7 @@ export default function Z_Test_C() {
   return (
     <div className='container'>
       <div id='Z_T_C_Box'>
+        <h1>Images From Storage , Firebase</h1>
         {/* Display Images */}
         {imageBase64List.length > 0 && (
           <>
@@ -70,6 +76,8 @@ export default function Z_Test_C() {
             ))}
           </>
         )}
+      {/* Back Button */}
+      <button id='Btn_C_1' onClick={() => navigate('/')}>Move Back</button>
       </div>
     </div>
   );

@@ -37,7 +37,8 @@ function FinalChat() {
                 text: newMessage,
                 user: {
                     _id: user.email,
-                    avatar: 'https://i.pravatar.cc/300',
+                    // avatar: 'https://i.pravatar.cc/300',
+                    avatar: 'https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_640.png',
                 },
             });
             setNewMessage('');
