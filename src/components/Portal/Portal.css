@@ -160,6 +160,12 @@
   cursor: pointer;
   border-bottom: 1px solid black;
 }
+#Login_First_Back:focus {
+  outline: none;
+  cursor: pointer;
+  border-bottom: 0px solid transparent;
+  border-bottom: 1px solid black;
+}
 /* Start */
 
 /* 2 - PSignUp.js */
@@ -609,8 +615,13 @@
     margin: 1em 0em;
   }
   #Login_First_Back {
+    border: 0px solid transparent;
     font-size: 0.83em;
     margin: 1em auto 0em auto;
+  }
+  #Login_First_Back:focus {
+    outline: none;
+    background-color: yellow;
   }
   /* - Sign Up First - */
   #Signup_First {

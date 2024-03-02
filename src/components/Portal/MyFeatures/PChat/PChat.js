@@ -15,8 +15,12 @@ import Z_chat from '../../../Pics/Str_10.png'
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 
 export default function PChat() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // ------ Logout Logic ------
     // useNavigate 
     const navigate = useNavigate();
@@ -103,7 +107,7 @@ export default function PChat() {
                                     </div>
                                 </div>
                                 {/* Chat Box Click */}
-                                <div id="PChat_Box_Messages" onClick={() => navigate('/FinalChat') }>
+                                <div id="PChat_Box_Messages" onClick={() => navigate('/FinalChat')}>
                                     <div id="PChat_Box_Messages_Part_0">
                                         1
                                     </div>
@@ -122,9 +126,15 @@ export default function PChat() {
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">
+                            {/* Above */}
+                            <div id="sub_Logout_Box_Fir">
+                                <img src={E_User} alt="NA" />
+                                <span>{user.email}</span>
+                            </div>
+                            {/* Below */}
                             <div id="sub_Logout_Box">
                                 <div id="Logout_Box_1">
-                                    Are You Sure You Want To Logout ?
+                                    You Want To Logout ?
                                 </div>
                                 <div id="Logout_Box_2">
                                     <button onClick={handleClick}>Yes, Logout</button>

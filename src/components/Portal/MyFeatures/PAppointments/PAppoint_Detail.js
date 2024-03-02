@@ -11,6 +11,8 @@ import confirm_u from '../../../Pics/appoint_sent.gif';
 // useNavigate
 import { useNavigate, useParams } from "react-router-dom"
 // Logout Logic 
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 import { database1 } from '../../firebase';
@@ -18,6 +20,8 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore';
 
 
 export default function PAppoint_Detail() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // useNavigate 
     const navigate = useNavigate();
     // ------------- Backend Part Logic -------------
@@ -240,9 +244,15 @@ export default function PAppoint_Detail() {
                 {/* ---Logout Logic --- */}
                 {isLogoutBoxVisible && (
                     <div id="Logout_Box">
+                        {/* Above */}
+                        <div id="sub_Logout_Box_Fir">
+                            <img src={E_User} alt="NA" />
+                            <span>{user.email}</span>
+                        </div>
+                        {/* Below */}
                         <div id="sub_Logout_Box">
                             <div id="Logout_Box_1">
-                                Are You Sure You Want To Logout ?
+                                You Want To Logout ?
                             </div>
                             <div id="Logout_Box_2">
                                 <button onClick={handleClick}>Yes, Logout</button>

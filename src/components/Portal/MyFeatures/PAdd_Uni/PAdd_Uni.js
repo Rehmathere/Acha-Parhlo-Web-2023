@@ -12,7 +12,6 @@ import Str_6 from "../../../Pics/Str_6.png"
 import PADD_Img from "../../../Pics/Adduni_z.png"
 import Str_9 from "../../../Pics/Str_9.png"
 import add_u from '../../../Pics/del_aa.gif'
-import confirm_u from '../../../Pics/del_a.png'
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
@@ -20,8 +19,12 @@ import "../PAppointments/PAppoint.css"
 // Firebase
 import { database1 } from '../../firebase';
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 
 export default function PAdd_Uni() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // ------------- Backend Logic Part -------------
     // Some List Shown, Edit ( Data Passing ) & Delete JS Logic
     const [val, setVal] = useState([]);
@@ -195,9 +198,15 @@ export default function PAdd_Uni() {
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">
+                            {/* Above */}
+                            <div id="sub_Logout_Box_Fir">
+                                <img src={E_User} alt="NA" />
+                                <span>{user.email}</span>
+                            </div>
+                            {/* Below */}
                             <div id="sub_Logout_Box">
                                 <div id="Logout_Box_1">
-                                    Are You Sure You Want To Logout ?
+                                    You Want To Logout ?
                                 </div>
                                 <div id="Logout_Box_2">
                                     <button onClick={handleClick}>Yes, Logout</button>

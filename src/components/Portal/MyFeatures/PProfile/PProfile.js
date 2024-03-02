@@ -8,7 +8,10 @@ import logout from '../../../Pics/logout.png'
 import user from '../../../Pics/user_P.png'
 import Str_P from "../../../Pics/Str_P.png"
 import add_u from '../../../Pics/PassChanged.png'
+import E_Edit from '../../../Pics/E_Edited.png'
 // Reset Password 
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 import { database } from '../../firebase'
 import { updatePassword } from 'firebase/auth'
 // Logout Logic 
@@ -17,6 +20,21 @@ import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
 
 export default function PProfile() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
+    // ------ Confirm Submit Button Logic ------
+    const [E_showBox2, E_setShowBox2] = useState(false);
+    const [E_showConfirmation, E_setShowConfirmation] = useState(false);
+    const [E_showParent, E_setShowParent] = useState(false);
+    const E_handleAddUniversityClick = () => {
+        E_setShowParent(true);
+        E_setShowConfirmation(true);
+        E_setShowBox2(true); // Set showBox2 to true directly
+        setTimeout(() => {
+            E_setShowParent(false);
+            // ---
+        }, 5000);
+    };
     // ------ Confirm Add University Logic ------
     // State to manage which box to display
     const [showBox2, setShowBox2] = useState(false);
@@ -421,7 +439,7 @@ export default function PProfile() {
                                             {/* Row 4 */}
                                             <div id="ProfileBox_2_Row">
                                                 {/* Submit Button */}
-                                                <input type="submit" value="Edit Profile" id='ProfileBox_2_Row_Submit_Btn' />
+                                                <button id='ProfileBox_2_Row_Submit_Btn' onClick={() => { E_handleAddUniversityClick(); }}>Edit Profile</button>
                                             </div>
                                         </div>
                                     </div>
@@ -462,19 +480,43 @@ export default function PProfile() {
                                     <h3>Password Changed</h3>
                                     <p>Your Password Has Been Changed, Now Access This Account With Your New Password.</p>
                                     {/* Close Button */}
-                                    <button id='PA_U_ConfirmAdd_1_A' onClick={handleCancelClick}>Ok, Close</button>
+                                    <button id='PA_U_ConfirmAdd_1_A' onClick={handleCancelClick}>Ok , Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* ---------------------------------------------------------- */}
+                    {/* ---------------       Edit Profile     ------------------ */}
+                    {/* ---------------------------------------------------------- */}
+                    <div id='PA_U_ConfirmAdd_Parent' style={{ display: E_showParent ? 'block' : 'none' }}>
+                        {/* Basic Logic */}
+                        <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: E_showConfirmation ? 'block' : 'none' }}>
+                            <div id="PA_U_ConfirmAdd_Parent_Box">
+                                {/* Box 2 */}
+                                <div id="PA_U_ConfirmAdd_2" style={{ display: E_showBox2 ? 'block' : 'none' }}>
+                                    <div id="PA_U_ConfirmAdd_img">
+                                        <img src={E_Edit} alt="NA" />
+                                    </div>
+                                    <h3>Profile Edited !</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* ---------------------------------------------------------- */}
                     {/* Start */}
                     {/* ---------------------------------------- */}
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">
+                            {/* Above */}
+                            <div id="sub_Logout_Box_Fir">
+                                <img src={E_User} alt="NA" />
+                                <span>{user.email}</span>
+                            </div>
+                            {/* Below */}
                             <div id="sub_Logout_Box">
                                 <div id="Logout_Box_1">
-                                    Are You Sure You Want To Logout ?
+                                    You Want To Logout ?
                                 </div>
                                 <div id="Logout_Box_2">
                                     <button onClick={handleClick}>Yes, Logout</button>

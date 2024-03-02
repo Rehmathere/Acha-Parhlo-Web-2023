@@ -9,15 +9,18 @@ import logout from '../../../Pics/logout.png'
 import Ptr from "../../../Pics/PTr.png"
 import Str_8 from "../../../Pics/Str_8.png"
 import add_u from '../../../Pics/del_aa.gif'
-import confirm_u from '../../../Pics/del_a.png'
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Firebase
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 import { doc, getDocs, deleteDoc, collection } from 'firebase/firestore';
 import { database1 } from '../../firebase';
 
 export default function PTracking() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // --------- Backend Part Logic ---------  
     const [val, setVal] = useState([]);
     const value = collection(database1, "4 - Student Records");
@@ -137,7 +140,7 @@ export default function PTracking() {
                             {val.map(values => (
                                 <div id="PR_Third_Box">
                                     <div id="PR_Third_Box_Part_0" onClick={() => handleEdit(values.id)}>
-                                        {values.P8_email}
+                                        {values.P8_email.substring(0, 7)}
                                     </div>
                                     <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id)}>
                                         <img src={Str_8} alt="NA" />
@@ -146,7 +149,7 @@ export default function PTracking() {
                                         {values.P3_givenName}
                                     </div>
                                     <div id="PR_Third_Box_Part_3">
-                                        <button id='PR_Third_B_P_3_Btn' onClick={ () => { handleAddUniversityClick(); handleDelete(values.id); }}>Delete <i class="fa fa-trash"></i></button>
+                                        <button id='PR_Third_B_P_3_Btn' onClick={() => { handleAddUniversityClick(); handleDelete(values.id); }}>Delete <i class="fa fa-trash"></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -174,9 +177,15 @@ export default function PTracking() {
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">
+                            {/* Above */}
+                            <div id="sub_Logout_Box_Fir">
+                                <img src={E_User} alt="NA" />
+                                <span>{user.email}</span>
+                            </div>
+                            {/* Below */}
                             <div id="sub_Logout_Box">
                                 <div id="Logout_Box_1">
-                                    Are You Sure You Want To Logout ?
+                                    You Want To Logout ?
                                 </div>
                                 <div id="Logout_Box_2">
                                     <button onClick={handleClick}>Yes, Logout</button>

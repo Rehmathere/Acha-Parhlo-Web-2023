@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PSidebar from '../PSidebar'
 // Firebase
 import { signOut } from 'firebase/auth'
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { database } from '../../firebase'
 // useNavigate
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -11,8 +12,11 @@ import '../PProfile/PProfile.css'
 // Images
 import PAbout1 from '../../../Pics/PAbout1.png'
 import logout from '../../../Pics/logout.png'
+import E_User from "../../../Pics/E_User.png"
 
 export default function PAbout() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // useNavigate 
     const navigate = useNavigate();
     const location = useLocation();
@@ -69,7 +73,8 @@ export default function PAbout() {
                                 {/* Displaying Date */}
                                 <p id='PAbout_First_1_Box_1_P1'>{currentDateTime.toDateString()}</p>
                                 {/* Displaying User Email */}
-                                <h3>Hello <span>{userEmail.slice(0, 10)}</span> !</h3>
+                                {/* <h3>Hello <span>{userEmail.slice(0, 10)}</span> !</h3> */}
+                                <h3>Hello <span>{user.email.slice(0, 10)}</span> !</h3>
                                 <p id='PAbout_First_1_Box_1_P2'>Hey Consultant, Let's make today count.</p>
                             </div>
                             <div id="PAbout_First_1_Box_2">
@@ -104,9 +109,15 @@ export default function PAbout() {
                 {/* ---Logout Logic --- */}
                 {isLogoutBoxVisible && (
                     <div id="Logout_Box">
+                        {/* Above */}
+                        <div id="sub_Logout_Box_Fir">
+                            <img src={E_User} alt="NA" />
+                            <span>{user.email}</span>
+                        </div>
+                        {/* Below */}
                         <div id="sub_Logout_Box">
                             <div id="Logout_Box_1">
-                                Are You Sure You Want To Logout ?
+                                You Want To Logout ?
                             </div>
                             <div id="Logout_Box_2">
                                 <button onClick={handleClick}>Yes, Logout</button>

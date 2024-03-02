@@ -18,8 +18,12 @@ import "../PAppointments/PAppoint.css"
 // Firebase
 import { database1 } from '../../firebase';
 import { collection, doc, updateDoc, getDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 
 export default function PAdd_Uni_Update() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // ------------- Backend Logic Part -------------
     // Update Specific Box Data Logic
     const { id } = useParams();
@@ -230,9 +234,15 @@ export default function PAdd_Uni_Update() {
                     {/* ---Logout Logic --- */}
                     {isLogoutBoxVisible && (
                         <div id="Logout_Box">
+                            {/* Above */}
+                            <div id="sub_Logout_Box_Fir">
+                                <img src={E_User} alt="NA" />
+                                <span>{user.email}</span>
+                            </div>
+                            {/* Below */}
                             <div id="sub_Logout_Box">
                                 <div id="Logout_Box_1">
-                                    Are You Sure You Want To Logout ?
+                                    You Want To Logout ?
                                 </div>
                                 <div id="Logout_Box_2">
                                     <button onClick={handleClick}>Yes, Logout</button>

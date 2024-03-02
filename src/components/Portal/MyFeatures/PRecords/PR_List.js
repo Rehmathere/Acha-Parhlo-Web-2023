@@ -14,8 +14,12 @@ import { database1 } from '../../firebase';
 // Logout Logic 
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 
 export default function PR_List() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // --------- Backend Part Logic ---------
     const { id } = useParams();
     // 1 - University Detail
@@ -633,9 +637,15 @@ export default function PR_List() {
                 {/* ---Logout Logic --- */}
                 {isLogoutBoxVisible && (
                     <div id="Logout_Box">
+                        {/* Above */}
+                        <div id="sub_Logout_Box_Fir">
+                            <img src={E_User} alt="NA" />
+                            <span>{user.email}</span>
+                        </div>
+                        {/* Below */}
                         <div id="sub_Logout_Box">
                             <div id="Logout_Box_1">
-                                Are You Sure You Want To Logout ?
+                                You Want To Logout ?
                             </div>
                             <div id="Logout_Box_2">
                                 <button onClick={handleClick}>Yes, Logout</button>

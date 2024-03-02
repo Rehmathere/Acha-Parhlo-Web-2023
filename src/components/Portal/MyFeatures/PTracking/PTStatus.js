@@ -16,8 +16,9 @@ import PT_8 from '../../../Pics/PT_8.png'
 import { useNavigate, useParams } from 'react-router-dom';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { database1 } from '../../firebase';
-
 // Logout Logic 
+import { useAuthState } from 'react-firebase-hooks/auth';
+import E_User from "../../../Pics/E_User.png"
 import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Confirm Submit Btn
@@ -25,6 +26,8 @@ import confirm_u from '../../../Pics/StatusChange.png'
 
 
 export default function PTStatus() {
+    // Email Address For Logout Dialog Box
+    const [user] = useAuthState(database);
     // ------ Confirm Submit Button Logic ------
     const [showBox2, setShowBox2] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
@@ -623,9 +626,15 @@ export default function PTStatus() {
                 {/* ---Logout Logic --- */}
                 {isLogoutBoxVisible && (
                     <div id="Logout_Box">
+                        {/* Above */}
+                        <div id="sub_Logout_Box_Fir">
+                            <img src={E_User} alt="NA" />
+                            <span>{user.email}</span>
+                        </div>
+                        {/* Below */}
                         <div id="sub_Logout_Box">
                             <div id="Logout_Box_1">
-                                Are You Sure You Want To Logout ?
+                                You Want To Logout ?
                             </div>
                             <div id="Logout_Box_2">
                                 <button onClick={handleClick}>Yes, Logout</button>
