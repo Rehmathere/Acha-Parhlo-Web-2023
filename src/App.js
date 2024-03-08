@@ -28,6 +28,7 @@ import PAdd_U_add from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_U_add";
 import PAdd_Uni_Update from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni_Update";
 import FinalChat from "./components/Portal/MyFeatures/PChat/FinalChat";
 import PrivateRoutes from "./components/Portal/PrivateRoutes";
+import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
 
 export default function App() {
   const [showImgSlider, setShowImgSlider] = useState(false);
@@ -92,6 +93,9 @@ export default function App() {
           <Route path='/PAdd_Uni_Update/:id' element={<PAdd_Uni_Update />} />
         </Routes>
       </BrowserRouter>
+      {/* --------------------------------------------------- */}
+      {/* Extra Working */}
+      {/* <Z_Test_Parent /> */}
     </>
   );
 }
