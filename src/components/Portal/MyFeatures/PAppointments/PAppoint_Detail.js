@@ -43,9 +43,9 @@ export default function PAppoint_Detail() {
                 setValue_1(data.value_1 || "");
                 setValue_2(data.value_2 || "");
                 setValue_3(data.value_3 || "");
-                setTimeSlot(data.Date || "");
+                setTimeSlot(data.TimeSlot || "");
                 setGender(data.gender || "");
-                setDate(data.TimeSlot || "");
+                setDate(data.Date || "");
                 // Check if status exists, otherwise set default
                 setStatus(data.status || "Processing");
             }
