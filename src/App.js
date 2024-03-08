@@ -4,20 +4,12 @@ import Navbar from "./components/Navbar";
 import HomeLast from "./components/HomeLast";
 import AboutUs from "./components/About/AboutUs";
 import Contact from "./components/Contact/Contact";
-import BlogPage from './components/Blog/BlogPage'
-// Blog Pages Link
+import BlogPage from './components/Blog/BlogPage';
 import BlogUniDetails from "./components/Blog/BlogUniDetails";
 import BlogPage2_H from "./components/Blog/BlogPage2_H";
 import BlogPage3_V from "./components/Blog/BlogPage3_V";
 import BlogPage4_D from "./components/Blog/BlogPage4_D";
 import BlogPage5_E from "./components/Blog/BlogPage5_E";
-// --- Extra Work ---
-import NavigatePortal from './components/Portal/NavigatePortal'
-import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
-import Free from "./components/Free";
-import Z_Test_C from "./components/Z_Test/Z_Test_C";
-import Z_Test from "./components/Z_Test/Z_Test";
-// Portal
 import PLogin from "./components/Portal/PLogin";
 import PSidebar from "./components/Portal/MyFeatures/PSidebar";
 import PSignUp from "./components/Portal/PSignUp";
@@ -35,30 +27,37 @@ import PAdd_Uni from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni";
 import PAdd_U_add from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_U_add";
 import PAdd_Uni_Update from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni_Update";
 import FinalChat from "./components/Portal/MyFeatures/PChat/FinalChat";
-
+import PrivateRoutes from "./components/Portal/PrivateRoutes";
 
 export default function App() {
-  // Loader
   const [showImgSlider, setShowImgSlider] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
-    // Show ImgSlider after a delay (e.g., 7000 milliseconds)
+    // Simulate checking if the user is logged in (replace with your actual authentication logic)
+    const isLoggedIn = /* Check if the user is logged in */ true;
+    setUser(isLoggedIn ? { token: true } : null);
+
     const delay = 7000;
     const timer = setTimeout(() => {
       setShowImgSlider(true);
       setShowNavbar(false);
     }, delay);
 
-    // Clear the timer to prevent showing the ImgSlider if the component unmounts
     return () => {
       clearTimeout(timer);
     };
   }, []);
-  // Main Body
+
+  const handleLogout = () => {
+    // Clear user data when logging out
+    setUser(null);
+    // Other logout logic if needed
+  };
+
   return (
     <>
-      {/* --------------------------------------------------- */}
-      {/* Final Code */}
       <BrowserRouter>
         {showNavbar && <Navbar />}
         <Routes>
@@ -74,8 +73,7 @@ export default function App() {
           <Route path='/BlogPage3_V' element={<BlogPage3_V />} />
           <Route path='/BlogPage4_D' element={<BlogPage4_D />} />
           <Route path='/BlogPage5_E' element={<BlogPage5_E />} />
-          {/* Portal */}
-          <Route path='/PLogin' element={<PLogin />} />
+          <Route path='/PLogin' element={<PLogin onLogout={handleLogout} />} />
           <Route path='/PSideBar' element={<PSidebar />} />
           <Route path='/PSignUp' element={<PSignUp />} />
           <Route path='/PForgetPass' element={<PForgetPass />} />
@@ -94,11 +92,6 @@ export default function App() {
           <Route path='/PAdd_Uni_Update/:id' element={<PAdd_Uni_Update />} />
         </Routes>
       </BrowserRouter>
-      {/* --------------------------------------------------- */}
-      {/* Extra Working */}
-      {/* <NavigatePortal /> */}
-      {/* <FinalChat /> */}
-      {/* <Z_Test_Parent /> */}
     </>
   );
 }
