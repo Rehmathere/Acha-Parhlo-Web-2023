@@ -126,7 +126,7 @@ export default function PRecords() {
                                     Image
                                 </div>
                                 <div id="PR_Second_Box_Part_2">
-                                    Name
+                                    Insitution
                                 </div>
                                 <div id="PR_Second_Box_Part_3">
                                     Action
@@ -147,7 +147,7 @@ export default function PRecords() {
                                         <img src={Str_3} alt="NA" />
                                     </div>
                                     <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id)}>
-                                        {values.P3_givenName.substring(0, 7)}
+                                        {values.U1_universityName.substring(0, 7)}
                                     </div>
                                     <div id="PR_Third_Box_Part_3">
                                         <button id='PR_Third_B_P_3_Btn' onClick={() => { handleAddUniversityClick(); handleDelete(values.id); }}>Delete <i class="fa fa-trash"></i></button>

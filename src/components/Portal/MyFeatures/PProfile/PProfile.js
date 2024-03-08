@@ -5,7 +5,7 @@ import '../PProfile/PProfile.css'
 import '../PRecords/PRecords.css'
 // Images
 import logout from '../../../Pics/logout.png'
-import user from '../../../Pics/user_P.png'
+import P_user from '../../../Pics/user_P.png'
 import Str_P from "../../../Pics/Str_P.png"
 import add_u from '../../../Pics/PassChanged.png'
 import E_Edit from '../../../Pics/E_Edited.png'
@@ -255,7 +255,7 @@ export default function PProfile() {
                                                     {isEditing && (
                                                         <div id="ProfileBox_2_Part_1_1_P1_ImgP">
                                                             {/* Use the state variable for the image source */}
-                                                            <img src={image ? image : user} alt="Na" />
+                                                            <img src={image ? image : P_user} alt="Na Image" />
                                                         </div>
                                                     )}
                                                 </div>
@@ -353,7 +353,7 @@ export default function PProfile() {
                                                         {isEditing && (
                                                             <div id="PrBx_2_Sec_Part_1_P2_Box">
                                                                 {/* Use the state variable for the image source */}
-                                                                <img src={image ? image : user} alt="Na" />
+                                                                <img src={image ? image : P_user} alt="Na" />
                                                             </div>
                                                         )}
                                                     </div>
@@ -432,7 +432,7 @@ export default function PProfile() {
                                                         <span>Status</span>
                                                     </div>
                                                     <div id="ProfileBox_2_Row_Part_1_P1">
-                                                        <input type="text" placeholder='Enter Your Phone No' onChange={handleNameChange6} />
+                                                        <input type="text" placeholder='Enter Your Status' onChange={handleNameChange6} />
                                                     </div>
                                                 </div>
                                             </div>
