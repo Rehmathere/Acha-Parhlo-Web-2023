@@ -145,7 +145,7 @@ function FinalChat() {
                     <div id='Sub_FinalChat_Parent_2'>
                         <div style={{ flex: 1, overflowY: 'auto', padding: '10px' }}>
                             {messages &&
-                                messages.map((message, index, array) => (
+                                messages.slice().reverse().map((message, index, array) => (
                                     <div key={message._id}>
                                         {index === 0 ||
                                             getFormattedDate(message.createdAt) !==
