@@ -8,7 +8,7 @@ import '../PRecords/PRecords.css'
 import "../PAdd_Uni/PAdd_U.css"
 // Images
 import logout from '../../../Pics/logout.png'
-import user from '../../../Pics/fileupload.png'
+import P_user from '../../../Pics/fileupload.png'
 import add_u from '../../../Pics/add_sure_1.png'
 import confirm_u from '../../../Pics/add_confirm.png'
 // Logout Logic 
@@ -155,13 +155,13 @@ export default function PAdd_U_add() {
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
-                                        <h6>Courses Offered</h6>
-                                        <input type="text" placeholder='Enter Courses Name Offered ' value={name_1} onChange={(e) => setName_1(e.target.value)} />
+                                        <h6>Course Offered</h6>
+                                        <input type="text" placeholder='Enter Course Name Offered ' value={name_1} onChange={(e) => setName_1(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
-                                        <h6>Admission Fee</h6>
-                                        <input type="text" placeholder='Enter Admission Fee ' value={name_2} onChange={(e) => setName_2(e.target.value)} />
+                                        <h6>Semester Fee</h6>
+                                        <input type="text" placeholder='Enter Semester Fee ' value={name_2} onChange={(e) => setName_2(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
@@ -179,7 +179,7 @@ export default function PAdd_U_add() {
                                                 {/* Display Area - Render only when isEditing is true */}
                                                 <div id="P_U_AU_1_box_P2_sub_PicBox_s_s">
                                                     {/* Use the state variable for the image source */}
-                                                    <img src={image ? image : user} alt="Logo/Picture" />
+                                                    <img src={image ? image : P_user} alt="Logo/Picture" />
                                                 </div>
                                             </div>
                                             {/* Button */}

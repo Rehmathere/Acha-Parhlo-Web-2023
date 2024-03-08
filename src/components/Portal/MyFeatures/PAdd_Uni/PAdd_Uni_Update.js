@@ -151,13 +151,13 @@ export default function PAdd_Uni_Update() {
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
-                                        <h6>Courses Offered</h6>
-                                        <input type="text" placeholder='Enter Courses Name Offered ' value={name_1} onChange={(e) => setName_1(e.target.value)} />
+                                        <h6>Course Offered</h6>
+                                        <input type="text" placeholder='Enter Course Name Offered ' value={name_1} onChange={(e) => setName_1(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
-                                        <h6>Admission Fee</h6>
-                                        <input type="text" placeholder='Enter Admission Fee ' value={name_2} onChange={(e) => setName_2(e.target.value)} />
+                                        <h6>Semester Fee</h6>
+                                        <input type="text" placeholder='Enter Semester Fee ' value={name_2} onChange={(e) => setName_2(e.target.value)} />
                                     </div>
                                     {/* Input Field */}
                                     <div id="P_U_AU_1_box_P1_Input">
