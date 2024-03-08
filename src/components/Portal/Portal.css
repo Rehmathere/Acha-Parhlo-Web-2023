@@ -134,6 +134,12 @@
   color: white;
   background-color: #001400;
 }
+#Login_Submit_Btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#Login_Submit_Btn:focus {
+  outline: none;
+}
 #Login_First_Create {
   border: 1.5px solid #001400;
   display: block;
@@ -146,6 +152,12 @@
   margin: 1em 0em;
   color: #001400;
   background-color: white;
+}
+#Login_First_Create:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#Login_First_Create:focus {
+  outline: none;
 }
 #Login_First_Back {
   border: 0px solid transparent;
@@ -236,6 +248,12 @@
   color: white;
   background-color: #001400;
 }
+#SignUp_Btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#SignUp_Btn:focus {
+  outline: none;
+}
 #Alreday_Login {
   border: 1.5px solid #001400;
   display: block;
@@ -248,6 +266,12 @@
   margin: 1em 0em;
   color: #001400;
   background-color: white;
+}
+#Alreday_Login:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#Alreday_Login:focus {
+  outline: none;
 }
 #SignUp_First_2 {
   background-color: #001400;
@@ -364,27 +388,6 @@
 }
 /* Start */
 /* - Portal CSS - */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ------------------------- */
 /* - Media Queries In CSS - */

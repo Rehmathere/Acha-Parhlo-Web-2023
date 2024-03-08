@@ -49,7 +49,7 @@ export default function PSignUp() {
                                 {/* Sign Up Button */}
                                 <button id="SignUp_Btn">Sign Up</button>
                                 {/* Sign In Button */}
-                                <button id='Alreday_Login' onClick={() => navigate('/')}>Already Have An Account</button>
+                                <button id='Alreday_Login' onClick={() => navigate('/PLogin')}>Already Have An Account</button>
                             </form>
                         </div>
                     </div>
