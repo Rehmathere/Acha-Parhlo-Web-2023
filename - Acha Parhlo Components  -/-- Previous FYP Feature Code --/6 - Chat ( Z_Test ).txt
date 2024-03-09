@@ -1,0 +1,125 @@
+----------------------------------------------------------------------------------------
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Z_Test from './Z_Test';
+import Z_Test_2 from './Z_Test_2';
+import Z_Test_C from './Z_Test_C';
+
+export default function Z_Test_Parent() {
+    // Main Body
+    return (
+        <Router>
+            <Routes>
+                {/* 1 Home Page */}
+                <Route path='/' element={<Z_Test />} />
+                {/* 2 Update Page */}
+                <Route path='/Z_Test_2' element={<Z_Test_2 />} />
+                {/* 3 Create Page */}
+                <Route path='/Z_Test_C' element={<Z_Test_C />} />
+            </Routes>
+        </Router>
+    );
+}
+
+----------------------------------------------------------------------------------------
+
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Firebase
+import { doc, getDocs, deleteDoc, collection } from 'firebase/firestore';
+import { database1 } from '../Portal/firebase';
+
+export default function Z_Test() {
+  // Navigate
+  const navigate = useNavigate();
+  // Main Body
+  return (
+    <>
+      <div id="Z_Create">
+        <div id="Z_Create_Part_1">
+          <h4>Chat Feature</h4>
+        </div>
+      </div>
+      <div className='container'>
+        <div id='Z_T_1_Box'>
+          <h4>Want To Chat Us ?</h4>
+          <button onClick={() => navigate("/Z_Test_2")}>Yes , Chat Now</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+----------------------------------------------------------------------------------------
+
+import React, { useState, useEffect } from 'react';
+import { onSnapshot, collection, query, orderBy, addDoc } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { auth, database } from './firebase';
+
+function ChatApp() {
+  const [user] = useAuthState(auth);
+
+  const messagesRef = collection(database, '2 - Chat');
+  const queryRef = query(messagesRef, orderBy('createdAt', 'desc'));
+  const [messages] = useCollectionData(queryRef, { idField: '_id' });
+
+  const [newMessage, setNewMessage] = useState('');
+
+  const sendMessage = async () => {
+    if (newMessage.trim() !== '') {
+      await addDoc(messagesRef, {
+        createdAt: new Date(),
+        text: newMessage,
+        user: {
+          _id: user.email,
+          avatar: 'https://i.pravatar.cc/300',
+        },
+      });
+      setNewMessage('');
+    }
+  };
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(queryRef, (querySnapshot) => {
+      const updatedMessages = querySnapshot.docs.map((doc) => ({
+        _id: doc.id,
+        createdAt: doc.data().createdAt.toDate(),
+        text: doc.data().text,
+        user: doc.data().user,
+      }));
+      // Handle the updated messages as needed
+    });
+
+    return unsubscribe;
+  }, [queryRef]);
+
+  return (
+    <div>
+      <div style={{ height: '80vh', overflowY: 'scroll' }}>
+        {messages &&
+          messages.map((message) => (
+            <div key={message._id}>
+              <strong>{message.user._id}</strong>: {message.text}
+            </div>
+          ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
+    </div>
+  );
+}
+
+export default ChatApp;
+
+----------------------------------------------------------------------------------------

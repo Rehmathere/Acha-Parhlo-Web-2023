@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Z_Test from './Z_Test';
+import Z_Test_2 from './Z_Test_2';
+import Z_Test_C from './Z_Test_C';
+
+export default function Z_Test_Parent() {
+    // Main Body
+    return (
+        <Router>
+            <Routes>
+                {/* 1 Home Page */}
+                <Route path='/' element={<Z_Test />} />
+                {/* 2 Update Page */}
+                <Route path='/Z_Test_2' element={<Z_Test_2 />} />
+                {/* 3 Create Page */}
+                <Route path='/Z_Test_C' element={<Z_Test_C />} />
+            </Routes>
+        </Router>
+    );
+}
+
+--------------------------------------------------------------------------------
+
+import React, { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css"
+import "../Portal/Portal.css"
+// Images
+import L_Lock from '../Pics/L_Lock.png'
+
+export default function Z_Test() {
+    const navigate = useNavigate();
+    // ------ Login To Register Logic ------
+    const [showBox2, setShowBox2] = useState(false);
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [showParent, setShowParent] = useState(false);
+    const [passwordStatus, setPasswordStatus] = useState('');
+    const passwordInputRef = useRef(null);
+    const handleAddUniversityClick = () => {
+        setShowParent(true);
+        setShowConfirmation(true);
+    };
+    const handleCancelClick = () => {
+        setShowParent(false);
+    };
+    const handlePasswordCheck = (event) => {
+        event.preventDefault();
+        const enteredPassword = event.target.elements.password.value;
+        if (enteredPassword === 'Acha@12') {
+            setPasswordStatus('Password is Correct');
+            // Navigate to Z_Test_2 page after 3 seconds
+            setTimeout(() => {
+                navigate('/Z_Test_2');
+            }, 3500);
+        } else {
+            setPasswordStatus('Password is Wrong');
+        }
+        // Clear input field
+        passwordInputRef.current.value = '';
+    };
+    // Main Body
+    return (
+        <>
+            {/* First Part */}
+            <div id="Z_T_C_Box">
+                <div id="Z_Create_Part_1">
+                    <h4>LOGIN</h4>
+                </div>
+                <div id="Z_Create_Part_2">
+                    <button id='Btn_C_1' onClick={handleAddUniversityClick}>Register</button>
+                </div>
+            </div>
+            {/* ----- Password Modal ----- */}
+            <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
+                {/* Basic Logic */}
+                <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation ? 'block' : 'none' }}>
+                    <div id="PA_U_ConfirmAdd_Parent_Box">
+                        {/* Box 1 */}
+                        <div id="PA_U_ConfirmAdd_1" style={{ display: showBox2 ? 'none' : 'block' }}>
+                            <div id="PA_U_ConfirmAdd_img">
+                                <img src={L_Lock} alt="NA" />
+                            </div>
+                            <h3>Enter Secrect PIN</h3>
+                            <p>If PIN Is Correct Then You Will Able To Register Account Otherwise Not Allowed</p>
+                            {/* Password Input Area */}
+                            <form onSubmit={handlePasswordCheck}>
+                                <input ref={passwordInputRef} type="password" placeholder='Enter Secret PIN Here' id="PA_U_ConfirmAdd_Input" name="password" />
+                                {/* Password Status */}
+                                <h6 style={{ color: passwordStatus.includes('Correct') ? 'green' : 'red', textAlign: "center", paddingBottom: "1em", letterSpacing: "1.1px", fontWeight: "bold" }}>{passwordStatus}</h6>
+                                {/* Yes Button */}
+                                <button id='PA_U_ConfirmAdd_1_A' type="submit">Check Password</button>
+                                {/* Cancel Button */}
+                                <button id='PA_U_ConfirmAdd_1_B' onClick={handleCancelClick}>Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* ----- Password Modal ----- */}
+        </>
+    );
+};
+
+--------------------------------------------------------------------------------
+
+import React, { useState, useEffect } from 'react';
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Navigate
+import { useNavigate } from "react-router-dom"
+
+export default function Z_Test_2() {
+  // Navigate
+  const navigate = useNavigate();
+  // Main Body
+  return (
+    <>
+      <div className='container'>
+        <div id="Z_T_C_Box">
+          {/* Heading */}
+          <h1>Register Page</h1>
+          {/* Back Button */}
+          <button id='Btn_C_1' onClick={() => navigate('/')}>Move Back</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+--------------------------------------------------------------------------------
