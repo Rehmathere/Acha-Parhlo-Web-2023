@@ -157,7 +157,7 @@ export default function PAdd_Uni() {
                                 <div id="PR_Third_Box" key={values.id}>
                                     {/* Part 3 */}
                                     <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id)}>
-                                        {values.name1}
+                                        {values.name1.substring(0,18)}
                                     </div>
                                     {/* Part 2 */}
                                     <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id)}>
@@ -165,7 +165,7 @@ export default function PAdd_Uni() {
                                     </div>
                                     {/* Part 4 */}
                                     <div id="PR_Third_Box_Part_3" onClick={() => handleEdit(values.id)}>
-                                        {values.name3}
+                                        {values.name3.substring(0,18)}
                                     </div>
                                     {/* Part 1 */}
                                     <div id="PR_Third_Box_Part_0">

@@ -112,7 +112,7 @@
 #Login_First_P {
   border: 0px solid transparent;
   text-align: end;
-  padding: 0.3em 0em;
+  padding: 0.3em 0em 0.3em 0em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 0.8em;
@@ -386,6 +386,28 @@
   color: #001400;
   background-color: white;
 }
+/* Login Page Modal CSS */
+#PA_U_ConfirmAdd_Input {
+  border: 0.1px solid grey;
+  background-color: white;
+  width: 100%;
+  margin: 0em 0em 1.5em 0em;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  padding: 0.3em 1em;
+  color: black;
+}
+#PA_U_ConfirmAdd_Input:focus {
+  outline: none;
+  background-color: rgb(235, 234, 234);
+}
+/* - Password Status - */
+#PA_U_Special_Status {
+  text-align: center;
+  letter-spacing: 1.8px;
+  padding: 0em 0em 1em 0em;
+  font-weight: bold;
+}
 /* Start */
 /* - Portal CSS - */
 
@@ -445,7 +467,7 @@
     letter-spacing: 1px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3em 0em;
     font-size: 0.8em;
   }
   #Login_Submit_Btn {
@@ -547,6 +569,13 @@
     padding: 0.5em 0em;
     margin: 1em 0em;
   }
+  /* - Password Status - */
+  #PA_U_Special_Status {
+    text-align: center;
+    letter-spacing: 1.8px;
+    padding: 0em 0em 1em 0em;
+    font-weight: bold;
+  }
   /* - */
 }
 /* 2 */
@@ -602,7 +631,7 @@
     letter-spacing: 1px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3em 0em;
     font-size: 0.78em;
   }
   #Login_Submit_Btn {
@@ -764,7 +793,7 @@
     letter-spacing: 1px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3m 0em;
     font-size: 0.75em;
   }
   #Login_Submit_Btn {
@@ -868,6 +897,26 @@
     padding: 0.6em 0em;
     margin: 1em 0em;
   }
+  /* Login Page Modal CSS */
+  #PA_U_ConfirmAdd_Input {
+    border: 0.1px solid grey;
+    background-color: white;
+    width: 100%;
+    margin: 0em 0em 1em 0em;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    padding: 0.3em 1em;
+    color: black;
+    font-size: 0.9em;
+  }
+  /* - Password Status - */
+  #PA_U_Special_Status {
+    text-align: center;
+    letter-spacing: 1.8px;
+    padding: 0.5em 0em 1em 0em;
+    font-weight: bold;
+    font-size: 1em;
+  }
   /* - */
 }
 /* 4 */
@@ -923,7 +972,7 @@
     letter-spacing: 1px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3em 0em;
     font-size: 0.71em;
   }
   #Login_Submit_Btn {
@@ -1027,6 +1076,18 @@
     padding: 0.6em 0em;
     margin: 1em 0em;
   }
+  /* Login Page Modal CSS */
+  #PA_U_ConfirmAdd_Input {
+    border: 0.1px solid grey;
+    background-color: white;
+    width: 100%;
+    margin: 0em 0em 0.5em 0em;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    padding: 0.3em 1em;
+    color: black;
+    font-size: 0.8em;
+  }
   /* - */
 }
 /* 5 */
@@ -1088,7 +1149,7 @@
     letter-spacing: 2px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3em 0em;
     font-size: 0.68em;
   }
   #Login_Submit_Btn {
@@ -1195,6 +1256,26 @@
     padding: 0.6em 0em;
     margin: 1em 0em;
   }
+  /* Login Page Modal CSS */
+  #PA_U_ConfirmAdd_Input {
+    border: 0.1px solid grey;
+    background-color: white;
+    width: 100%;
+    margin: 0em 0em 0em 0em;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    padding: 0.25em 1em;
+    color: black;
+    font-size: 0.75em;
+  }
+  /* - Password Status - */
+  #PA_U_Special_Status {
+    text-align: center;
+    letter-spacing: 1.8px;
+    padding: 1em 0em 1em 0em;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
   /* - */
 }
 /* 6 */
@@ -1231,7 +1312,7 @@
   #Login_First_1 p {
     width: 100%;
     font-size: 0.65em;
-    padding: 0em 2em;
+    padding: 0em 2em 0em 2em;
     letter-spacing: 1px;
   }
   #Login_First_2 {
@@ -1256,7 +1337,7 @@
     letter-spacing: 2px;
   }
   #Login_First_P {
-    padding: 0.3em 0em;
+    padding: 0.3em 0em 0.3em 0em;
     font-size: 0.63em;
   }
   #Login_Submit_Btn {
@@ -1362,6 +1443,26 @@
     letter-spacing: 4px;
     padding: 0.6em 0em;
     margin: 1em 0em;
+  }
+  /* Login Page Modal CSS */
+  #PA_U_ConfirmAdd_Input {
+    border: 0.1px solid grey;
+    background-color: white;
+    width: 100%;
+    margin: 0em 0em 0em 0em;
+    border-radius: 5px;
+    letter-spacing: 0.8px;
+    padding: 0.25em 1em;
+    color: black;
+    font-size: 0.7em;
+  }
+  /* - Password Status - */
+  #PA_U_Special_Status {
+    text-align: center;
+    letter-spacing: 1.8px;
+    padding: 1.5em 0em 1em 0em;
+    font-weight: bold;
+    font-size: 0.75em;
   }
   /* - */
 }

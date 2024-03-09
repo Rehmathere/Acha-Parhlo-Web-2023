@@ -16,7 +16,7 @@ export default function PForgetPass() {
     const emalVal = e.target.email.value;
     sendPasswordResetEmail(database, emalVal).then(data => {
       alert("Check your Recovery Email")
-      navigate("/")
+      navigate("/PLogin")
     }).catch(err => {
       alert(err.code)
     })
@@ -38,7 +38,7 @@ export default function PForgetPass() {
             <button id="Reset_Btn">Reset</button>
           </form>
           {/* Back To Login Page */}
-          <button id="BackLogin_Btn" onClick={() => navigate('/')}>Back To Login</button>
+          <button id="BackLogin_Btn" onClick={() => navigate('/PLogin')}>Back To Login</button>
         </div>
       </div>
     </div>

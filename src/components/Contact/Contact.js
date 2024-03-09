@@ -184,8 +184,8 @@ export default function Contact() {
                   <img src={z5} alt="NA" />
                 </div>
                 <div id="con_forth_box_side_2">
-                  <h6>Free Assessment</h6>
-                  <p>Apply for free Assessment</p>
+                  <h6>Consultancy</h6>
+                  <p>Ask To Our AI Tool</p>
                 </div>
               </div>
             </div>

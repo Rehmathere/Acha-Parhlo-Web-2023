@@ -32,7 +32,10 @@ export default function PAppoint_Detail() {
     const [TimeSlot, setTimeSlot] = useState("");
     const [gender, setGender] = useState("");
     const [Date, setDate] = useState("");
-    const [status, setStatus] = useState("Processing"); // Default status
+    const [status, setStatus] = useState("Processing");
+    // -- Extra Time --
+    const [showExtraTime, setShowExtraTime] = useState(false);
+    const [showExtraTimeText, setShowExtraTimeText] = useState(false);
     // Function
     useEffect(() => {
         const fetchData = async () => {
@@ -48,6 +51,7 @@ export default function PAppoint_Detail() {
                 setDate(data.Date || "");
                 // Check if status exists, otherwise set default
                 setStatus(data.status || "Processing");
+                setShowExtraTimeText(data.showExtraTimeText || "No Time");
             }
         };
         fetchData();
@@ -71,6 +75,12 @@ export default function PAppoint_Detail() {
                 return "black";
         }
     };
+    //  -- Extra Time Text Logic --
+    const handle_TimeUpdate = async (showExtraTimeText) => {
+        const updateData = doc(database1, "3 - Appointment", id);
+        await updateDoc(updateData, { showExtraTimeText });
+        setShowExtraTimeText(showExtraTimeText);
+    }
     // ------------- Backend Part Logic -------------
     const [showBox2, setShowBox2] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
@@ -211,20 +221,34 @@ export default function PAppoint_Detail() {
                             <div id="PAD_first_B_3">
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn1" onClick={() => { handleStatusUpdate('Accepted'); handleAddUniversityClick(); }}>Accept</button>
+                                    <button id="PAD_first_B_3_Box_Btn1" onClick={() => { handleStatusUpdate('Accepted'); handleAddUniversityClick(); handle_TimeUpdate(''); }}>Accept</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn2" onClick={() => { handleStatusUpdate('Rejected'); handleAddUniversityClick(); }}>Reject</button>
+                                    <button id="PAD_first_B_3_Box_Btn2" onClick={() => { handleStatusUpdate('Rejected'); handleAddUniversityClick(); handle_TimeUpdate(''); }}>Reject</button>
                                 </div>
                                 {/* Button */}
                                 <div id="PAD_first_B_3_Box">
-                                    <button id="PAD_first_B_3_Box_Btn3" onClick={() => { handleStatusUpdate('Delayed'); handleAddUniversityClick(); }}>Delay</button>
+                                    <button id="PAD_first_B_3_Box_Btn3" onClick={() => { handleStatusUpdate('Delayed'); setShowExtraTime(!showExtraTime); }}>Delay</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {showExtraTime && (
+                    <div id="S_Extra_Time_Parent">
+                        <div id="sub_S_Extra_Time_Parent">
+                            <h3>Reschedule Delayed Time Slot <i class="fa fa-history"></i></h3>
+                            <p> New Time Slot :  <span>{showExtraTimeText}</span> </p>
+                            <div id="S_Extra_Time_Parent_Box">
+                                <button onClick={() => { handle_TimeUpdate('12:00 - 1:30 AM'); handleAddUniversityClick(); }}>12:00 - 1:30 AM</button>
+                                <button onClick={() => { handle_TimeUpdate('1:30 - 3:00 AM'); handleAddUniversityClick(); }}>1:30 - 3:00 AM</button>
+                                <button onClick={() => { handle_TimeUpdate('3:00 - 4:30 AM'); handleAddUniversityClick(); }}>3:00 - 4:30 AM</button>
+                                <button onClick={() => { handle_TimeUpdate('4:30 - 6:00 AM'); handleAddUniversityClick(); }}>4:30 - 6:00 AM</button>
+                            </div>
+                        </div>
+                    </div>
+                )}
                 {/* ----- Confirm Add University Logic ----- */}
                 <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent ? 'block' : 'none' }}>
                     {/* Basic Logic */}
