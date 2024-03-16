@@ -12,7 +12,7 @@ export default function Z_Test() {
     const navigate = useNavigate();
     // ------------- Backend Part Logic -------------
     const [val, setVal] = useState([]);
-    const value = collection(database1, "3 - Appointment");
+    const value = collection(database1, "New Practice App");
     // Function
     const getData = async () => {
         const dbVal = await getDocs(value);
@@ -25,11 +25,6 @@ export default function Z_Test() {
     const handleEdit = (id) => {
         navigate(`/Z_Test_2/${id}`);
     }
-    // Delete logic
-    const handleDelete = async (id) => {
-        await deleteDoc(doc(database1, "3 - Appointment", id));
-        getData(); // Refresh data after delete
-    }
     // ------------- Backend Part Logic -------------
     // Main Body
     return (
@@ -37,22 +32,19 @@ export default function Z_Test() {
             {/* Heading */}
             <div id="Z_Create">
                 <div id="Z_Create_Part_1">
-                    <h4>Appointment App Feature</h4>
+                    <h4>University Logo Showing</h4>
                 </div>
             </div>
             {/* Box */}
             <div className='container'>
                 {val.map(values =>
                     <div id='Z_T_1_Box' key={values.id}>
-                        <h4>1 - {values.value_1}</h4>
-                        <h4>2 - {values.value_2}</h4>
-                        <h4>3 - {values.value_3}</h4>
-                        <h4>4 - {values.TimeSlot}</h4>
-                        <h4>5 - {values.gender}</h4>
-                        <h4>6 - {values.Date}</h4>
-                        <button onClick={() => handleEdit(values.id)}>Appointment Detail</button>
-                        {/* Delete Btn */}
-                        <button onClick={() => handleDelete(values.id)}>Delete</button>
+                        <h1>1 - {values.U1_universityName}</h1>
+                        <h1>2 - {values.U2_campus}</h1>
+                        <h1>3 - {values.U3_intake}</h1>
+                        <h1>4 - {values.U4_courseName}</h1>
+                        <img src={values.U_Extra_Uni_Image} alt="NA" />
+                        <button onClick={() => handleEdit(values.id)}>See User Full Detail</button>
                     </div>
                 )}
             </div>

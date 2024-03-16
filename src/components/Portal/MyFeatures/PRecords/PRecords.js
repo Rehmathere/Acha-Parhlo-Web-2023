@@ -123,7 +123,7 @@ export default function PRecords() {
                                     Email
                                 </div>
                                 <div id="PR_Second_Box_Part_1">
-                                    Image
+                                    Logo
                                 </div>
                                 <div id="PR_Second_Box_Part_2">
                                     Insitution
@@ -144,7 +144,7 @@ export default function PRecords() {
                                         {values.P8_email.substring(0, 7)}
                                     </div>
                                     <div id="PR_Third_Box_Part_1" onClick={() => handleEdit(values.id)}>
-                                        <img src={Str_3} alt="NA" />
+                                        <img src={values.U_Extra_Uni_Image} alt="NA" />
                                     </div>
                                     <div id="PR_Third_Box_Part_2" onClick={() => handleEdit(values.id)}>
                                         {values.U1_universityName.substring(0, 7)}

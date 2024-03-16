@@ -23,6 +23,7 @@ import { database } from '../../firebase'
 import { signOut } from 'firebase/auth'
 // Confirm Submit Btn
 import confirm_u from '../../../Pics/StatusChange.png'
+import fileupload from '../../../Pics/fileupload.png'
 
 
 export default function PTStatus() {
@@ -84,7 +85,7 @@ export default function PTStatus() {
     const [P8_email, setP8_email] = useState('');
     const [U4_courseName, setU4_courseName] = useState('');
     const [buttonValue, setbuttonValue] = useState('');
-
+    const [U_Extra_Uni_Image, setU_Extra_Uni_Image] = useState("");
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -98,6 +99,7 @@ export default function PTStatus() {
                     setP8_email(data.P8_email || '');
                     setU4_courseName(data.U4_courseName || '');
                     setbuttonValue(data.buttonValue || '');
+                    setU_Extra_Uni_Image(data.U_Extra_Uni_Image || "");
                 } else {
                     console.error('Document not found.');
                 }
@@ -372,7 +374,18 @@ export default function PTStatus() {
                         </div>
                     </div>
                 </div>
-                <br />
+                {/* --- University Logo ( Coming From Apply Uni  ) --- */}
+                <div id="Ext_Uni_Logo_Coming">
+                    <div id="sub_Ext_Uni_Logo_Coming">
+                        <h3>University Logo</h3>
+                        <div id="Ext_Uni_Logo_Coimng_Img_Box">
+                            <div id="Ext_Uni_Logo_Coimng_Img">
+                                <img src={U_Extra_Uni_Image} alt="NA" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* --- University Logo ( Coming From Apply Uni  ) --- */}
                 {/* --- Status Writing --- */}
                 <div id="Ext_Firebase_Status">
                     <h5>Status : </h5>

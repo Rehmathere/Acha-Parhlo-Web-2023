@@ -7,6 +7,7 @@ import "../PTracking/PT.css"
 // Images
 import logout from '../../../Pics/logout.png'
 import user from '../../../Pics/fileupload.png'
+import fileupload from '../../../Pics/fileupload.png'
 // Firebase
 import { useNavigate, useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
@@ -96,6 +97,7 @@ export default function PR_List() {
     const [D7_1_Image_Resume, setD7_1_Image_Resume] = useState("");
     const [D8_1_Image_PassFirst, setD8_1_Image_PassFirst] = useState("");
     const [D8_2_Image_PassSign, setD8_2_Image_PassSign] = useState("");
+    const [U_Extra_Uni_Image, setU_Extra_Uni_Image] = useState("");
     // Function
     useEffect(() => {
         const fetchData = async () => {
@@ -179,6 +181,8 @@ export default function PR_List() {
                     setD7_1_Image_Resume(data.D7_1_Image_Resume || "");
                     setD8_1_Image_PassFirst(data.D8_1_Image_PassFirst || "");
                     setD8_2_Image_PassSign(data.D8_2_Image_PassSign || "");
+                    // Extra University Logo
+                    setU_Extra_Uni_Image(data.U_Extra_Uni_Image || "");
                 } else {
                     console.error('Document not found.');
                     // Handle the case where the document with the specified ID does not exist
@@ -236,6 +240,18 @@ export default function PR_List() {
                         <div id="PTS_Pre_Box">
                             <h2>Student Records Detail <i class="fa fa-id-card-o"></i></h2>
                         </div>
+                        <br />
+                        {/* --- University Logo ( Coming From Apply Uni  ) --- */}
+                        <div id="Ext_Uni_Logo_Coming">
+                            <div id="sub_Ext_Uni_Logo_Coming">
+                                <div id="Ext_Uni_Logo_Coimng_Img_Box">
+                                    <div id="Ext_Uni_Logo_Coimng_Img">
+                                        <img src={U_Extra_Uni_Image} alt="NA" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
                         {/* Information List */}
                         <div id="PR_List_Detail">
                             {/* ---- 1 - University Information ---- */}
