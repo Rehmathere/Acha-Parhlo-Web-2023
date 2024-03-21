@@ -241,10 +241,10 @@ export default function PAppoint_Detail() {
                             <h3>Reschedule Delayed Time Slot <i class="fa fa-history"></i></h3>
                             <p> New Time Slot :  <span>{showExtraTimeText}</span> </p>
                             <div id="S_Extra_Time_Parent_Box">
-                                <button onClick={() => { handle_TimeUpdate('12:00 - 1:30 AM'); handleAddUniversityClick(); }}>12:00 - 1:30 AM</button>
-                                <button onClick={() => { handle_TimeUpdate('1:30 - 3:00 AM'); handleAddUniversityClick(); }}>1:30 - 3:00 AM</button>
-                                <button onClick={() => { handle_TimeUpdate('3:00 - 4:30 AM'); handleAddUniversityClick(); }}>3:00 - 4:30 AM</button>
-                                <button onClick={() => { handle_TimeUpdate('4:30 - 6:00 AM'); handleAddUniversityClick(); }}>4:30 - 6:00 AM</button>
+                                <button onClick={() => { handle_TimeUpdate('2:00 - 3:00 PM'); handleAddUniversityClick(); }}>2:00 - 3:00 PM</button>
+                                <button onClick={() => { handle_TimeUpdate('3:00 - 4:00 PM'); handleAddUniversityClick(); }}>3:00 - 4:00 PM</button>
+                                <button onClick={() => { handle_TimeUpdate('4:00 - 5:00 PM'); handleAddUniversityClick(); }}>4:00 - 5:00 PM</button>
+                                <button onClick={() => { handle_TimeUpdate('5:00 - 6:00 PM'); handleAddUniversityClick(); }}>5:00 - 6:00 PM</button>
                             </div>
                         </div>
                     </div>
