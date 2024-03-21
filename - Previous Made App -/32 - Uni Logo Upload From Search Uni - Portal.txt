@@ -1,0 +1,144 @@
+--------------------------------------------------------------------------------
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Z_Test from './Z_Test';
+import Z_Test_2 from './Z_Test_2';
+import Z_Test_C from './Z_Test_C';
+
+export default function Z_Test_Parent() {
+    // Main Body
+    return (
+        <Router>
+            <Routes>
+                {/* 1 List Page */}
+                <Route path='/' element={<Z_Test />} />
+                {/* 2 Detail Page */}
+                <Route path='/Z_Test_2/:id' element={<Z_Test_2 />} />
+            </Routes>
+        </Router>
+    );
+}
+
+--------------------------------------------------------------------------------
+
+import React, { useEffect, useState } from 'react';
+// Navigation
+import { useNavigate } from 'react-router-dom';
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Firebase
+import { database1 } from '../Portal/firebase';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+
+export default function Z_Test() {
+    // Navigate
+    const navigate = useNavigate();
+    // ------------- Backend Part Logic -------------
+    const [val, setVal] = useState([]);
+    const value = collection(database1, "New Practice App");
+    // Function
+    const getData = async () => {
+        const dbVal = await getDocs(value);
+        setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    }
+    useEffect(() => {
+        getData();
+    }, []);
+    // View
+    const handleEdit = (id) => {
+        navigate(`/Z_Test_2/${id}`);
+    }
+    // ------------- Backend Part Logic -------------
+    // Main Body
+    return (
+        <>
+            {/* Heading */}
+            <div id="Z_Create">
+                <div id="Z_Create_Part_1">
+                    <h4>University Logo Showing</h4>
+                </div>
+            </div>
+            {/* Box */}
+            <div className='container'>
+                {val.map(values =>
+                    <div id='Z_T_1_Box' key={values.id}>
+                        <h1>1 - {values.U1_universityName}</h1>
+                        <h1>2 - {values.U2_campus}</h1>
+                        <h1>3 - {values.U3_intake}</h1>
+                        <h1>4 - {values.U4_courseName}</h1>
+                        <img src={values.U_Extra_Uni_Image} alt="NA" />
+                        <button onClick={() => handleEdit(values.id)}>See User Full Detail</button>
+                    </div>
+                )}
+            </div>
+        </>
+    );
+}
+
+--------------------------------------------------------------------------------
+
+import React, { useState, useEffect } from 'react';
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Firebase
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { database1 } from '../Portal/firebase';
+// Navigate
+import { useNavigate, useParams } from "react-router-dom"
+
+export default function Z_Test_2() {
+  // Navigate
+  const navigate = useNavigate();
+  // ------------- Backend Part Logic -------------
+  const { id } = useParams();
+  const [U1_universityName, setU1_universityName] = useState("");
+  const [U2_campus, setU2_campus] = useState("");
+  const [U3_intake, setU3_intake] = useState("");
+  const [U4_courseName, setU4_courseName] = useState("");
+  const [U_Extra_Uni_Image, setU_Extra_Uni_Image] = useState("");
+  useEffect(() => {
+    const fetchData = async () => {
+      const docRef = doc(database1, "New Practice App", id);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        setU1_universityName(data.U1_universityName || "");
+        setU2_campus(data.U2_campus || "");
+        setU3_intake(data.U3_intake || "");
+        setU4_courseName(data.U4_courseName || "");
+        setU_Extra_Uni_Image(data.U_Extra_Uni_Image || "");
+      }
+    };
+    fetchData();
+  }, [id]);
+  // ------------- Backend Part Logic -------------
+  // Main Body
+  return (
+    <>
+      <div className='container'>
+        <div id="Z_T_C_Box">
+          {/* Heading */}
+          <h1>User Full Detail</h1>
+          {/* Detail */}
+          <h6>1 - University Name</h6>
+          <h5>{U1_universityName}</h5>
+          <h6>2 - Campus</h6>
+          <h5>{U2_campus}</h5>
+          <h6>3 - Intake</h6>
+          <h5>{U3_intake}</h5>
+          <h6>4 - Course Name</h6>
+          <h5>{U4_courseName}</h5>
+          {/* Image Area */}
+          <h6>5 - University LOGO ( Show )</h6>
+          <img src={U_Extra_Uni_Image} alt="NA" />
+          {/* Image Area */}
+          {/* ---------------------- */}
+          {/* Back Button */}
+          <button id='Btn_C_1' onClick={() => navigate('/')}>Move Back</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+--------------------------------------------------------------------------------
