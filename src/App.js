@@ -27,19 +27,17 @@ import PAdd_Uni from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni";
 import PAdd_U_add from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_U_add";
 import PAdd_Uni_Update from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni_Update";
 import FinalChat from "./components/Portal/MyFeatures/PChat/FinalChat";
-import PrivateRoutes from "./components/Portal/PrivateRoutes";
-import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
+// Session Header File
+import ProtectedRoute from './components/Portal/ProtectedRoute';
+import { useAuth } from './components/Portal/AuthContext';
 
 export default function App() {
+  // Session
+  // const {userName}=useAuth();
+  // Splash
   const [showImgSlider, setShowImgSlider] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
-  const [user, setUser] = useState(null);
-
   useEffect(() => {
-    // Simulate checking if the user is logged in (replace with your actual authentication logic)
-    const isLoggedIn = /* Check if the user is logged in */ true;
-    setUser(isLoggedIn ? { token: true } : null);
-
     const delay = 7000;
     const timer = setTimeout(() => {
       setShowImgSlider(true);
@@ -50,13 +48,7 @@ export default function App() {
       clearTimeout(timer);
     };
   }, []);
-
-  const handleLogout = () => {
-    // Clear user data when logging out
-    setUser(null);
-    // Other logout logic if needed
-  };
-
+  // Main Body
   return (
     <>
       <BrowserRouter>
@@ -74,23 +66,23 @@ export default function App() {
           <Route path='/BlogPage3_V' element={<BlogPage3_V />} />
           <Route path='/BlogPage4_D' element={<BlogPage4_D />} />
           <Route path='/BlogPage5_E' element={<BlogPage5_E />} />
-          <Route path='/PLogin' element={<PLogin onLogout={handleLogout} />} />
+          <Route path='/PLogin' element={<PLogin />} />
           <Route path='/PSideBar' element={<PSidebar />} />
           <Route path='/PSignUp' element={<PSignUp />} />
           <Route path='/PForgetPass' element={<PForgetPass />} />
-          <Route path='/PAbout' element={<PAbout />} />
-          <Route path='/PProfile' element={<PProfile />} />
-          <Route path='/PAppointments' element={<PAppointments />} />
-          <Route path='/PAppointDetail/:id' element={<PAppoint_Detail />} />
-          <Route path='/PTracking' element={<PTracking />} />
-          <Route path='/PTStatus/:id' element={<PTStatus />} />
-          <Route path='/PRecords' element={<PRecords />} />
-          <Route path='/PR_List/:id' element={<PR_List />} />
-          <Route path='/PChat' element={<PChat />} />
-          <Route path='/FinalChat' element={<FinalChat />} />
-          <Route path='/PAdd_Uni' element={<PAdd_Uni />} />
-          <Route path='/PAdd_U_add' element={<PAdd_U_add />} />
-          <Route path='/PAdd_Uni_Update/:id' element={<PAdd_Uni_Update />} />
+          <Route path='/PAbout' element={<ProtectedRoute><PAbout /></ProtectedRoute>} />
+          <Route path='/PProfile' element={<ProtectedRoute><PProfile /></ProtectedRoute>} />
+          <Route path='/PAppointments' element={<ProtectedRoute><PAppointments /></ProtectedRoute>} />
+          <Route path='/PAppointDetail/:id' element={<ProtectedRoute><PAppoint_Detail /></ProtectedRoute>} />
+          <Route path='/PTracking' element={<ProtectedRoute><PTracking /></ProtectedRoute>} />
+          <Route path='/PTStatus/:id' element={<ProtectedRoute><PTStatus /></ProtectedRoute>} />
+          <Route path='/PRecords' element={<ProtectedRoute><PRecords /></ProtectedRoute>} />
+          <Route path='/PR_List/:id' element={<ProtectedRoute><PR_List /></ProtectedRoute>} />
+          <Route path='/PChat' element={<ProtectedRoute><PChat /></ProtectedRoute>} />
+          <Route path='/FinalChat' element={<ProtectedRoute><FinalChat /></ProtectedRoute>} />
+          <Route path='/PAdd_Uni' element={<ProtectedRoute><PAdd_Uni /></ProtectedRoute>} />
+          <Route path='/PAdd_U_add' element={<ProtectedRoute><PAdd_U_add /></ProtectedRoute>} />
+          <Route path='/PAdd_Uni_Update/:id' element={<ProtectedRoute><PAdd_Uni_Update /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
       {/* --------------------------------------------------- */}
@@ -99,3 +91,4 @@ export default function App() {
     </>
   );
 }
+
