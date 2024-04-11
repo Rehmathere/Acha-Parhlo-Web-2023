@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Z_Test_Parent from "./components/Z_Test/Z_Test_Parent";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomeLast from "./components/HomeLast";
@@ -33,7 +34,7 @@ import { useAuth } from './components/Portal/AuthContext';
 
 export default function App() {
   // Session
-  // const {userName}=useAuth();
+  const {userName}=useAuth();
   // Splash
   const [showImgSlider, setShowImgSlider] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);

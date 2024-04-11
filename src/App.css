@@ -78,8 +78,8 @@ section .loader span::before {
   left: 0;
   width: 15px;
   height: 15px;
-  background-color: yellow;
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow,  0 0 80px yellow, 0 0 100px yellow;
+  background-color: #EFEFEF;
+  box-shadow: 0 0 10px #EFEFEF, 0 0 20px #EFEFEF, 0 0 40px #EFEFEF, 0 0 60px #EFEFEF,  0 0 80px #EFEFEF, 0 0 100px #EFEFEF;
   border-radius: 50%;
   animation: animate 2s linear infinite;
   animation-delay: calc(0.1s * var(--i));
@@ -109,11 +109,12 @@ section .loader span::before {
   padding: 0em 1em 0.1em 1em;
 }
 #sub_sub_first {
-  border: 0.1px solid transparent;
   border-top-width: 0px;
+  border: 0.1px solid transparent;
   display: flex;
   flex-direction: row;
-  padding: 0em 2em 0.1em 2em;
+  padding: 0.2em 2em 0.1em 2em;
+  /* background-color: #00a7ff; */
 }
 #fir_1 {
   border: 0.1px solid transparent;
@@ -127,7 +128,7 @@ section .loader span::before {
 #fir_2 {
   border: 0.1px solid transparent;
   border-top-width: 0px;
-  /* background-color: yellow; */
+  /* background-color: #EFEFEF; */
   padding: 0em 0.2em 0em 0.2em;
   width: 60%;
 }
@@ -142,7 +143,7 @@ section .loader span::before {
 }
 #fir_4 {
   border: 0.1px solid transparent;
-  padding: 0.2em;
+  padding: 0.4em 0.2em;
   width: 20%;
   display: none;
 }
@@ -167,13 +168,16 @@ section .loader span::before {
   font-weight: bold;
   text-decoration: none;
   color: white;
+  border-radius: 2px;
 }
 #fir_2_s:hover {
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  border: 0.1px solid orangered;
+  border: 0px solid transparent;
   background-color: orangered;
+  background: linear-gradient(to right, orangered, rgb(253, 82, 20));
   color: white;
+  text-shadow: 0.5px 0.5px black;
 }
 #fir_1_img {
   /* border: 0.1px solid transparent; */
@@ -371,12 +375,12 @@ section .loader span::before {
   width: 650px;
   border: 0.1px solid transparent;
   height: 35px;
-  background: #b1e4b1;
+  background: #9ace9a;
   border-radius: 35px;
 }
 .progress-bar {
   border: 0.1px solid transparent;
-  background: #006d00;
+  background: #038f03;
   border-radius: 35px;
 }
 .progress-number {
@@ -614,7 +618,7 @@ section .loader span::before {
 #one {
   border: 0px solid transparent;
   padding: 3em 1em;
-  background-image: linear-gradient(to right, #001400, #fffde4);
+  background-image: linear-gradient(to right, #001400, #7d947d);
 }
 #sub_one {
   border: 0.1px solid transparent;
@@ -2377,10 +2381,11 @@ section .loader span::before {
     border: 0.1px solid transparent;
   }
   #third_sub0 p {
-    font-size: 1em;
+    font-size: 0.85em;
     text-align: center;
-    padding: 0.3em 1em;
+    padding: 0.3em 1.5em;
     border: 0.1px solid transparent;
+    /* background-color: #EFEFEF; */
   }
   /* 3 - Forth */
   #for_2 {
@@ -2985,11 +2990,12 @@ section .loader span::before {
     text-align: center;
     width: 100%;
     font-size: 0.7em;
+    padding: 0em 1em;
   }
   #fifth_2 h5 {
     border: 0.1px solid transparent;
     width: 100%;
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
   #fifth_2 i {
     padding: 0em 0.7em 0em 0em;
@@ -3098,7 +3104,7 @@ section .loader span::before {
 }
 .prev:hover,
 .next:hover {
-  color: red;
+  color: orange;
 }
 .next {
   right: 0;
@@ -3122,8 +3128,8 @@ section .loader span::before {
 /* javascript */
 .active,
 .dot:hover {
-  border-color: red;
-  background-color: red;
+  border-color: transparent;
+  background-color: orange;
 }
 /* muslide add fade */
 .fade {
@@ -3181,14 +3187,19 @@ section .loader span::before {
 .txt h1 {
   font-family: "Times New Roman", Times, serif;
   color: white; /* blue */
-  font-size: 3.5em;
-  -webkit-text-stroke: 1px grey;
+  font-size: 2.5em;
+  -webkit-text-stroke: 0.5px white;
   margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .txt p {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 1.5em;
+  -webkit-text-stroke: 0.1px white;
+  font-size: 1.4em;
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
 }
 /* 4 */
 .txt img {
