@@ -10,7 +10,7 @@
   padding: 0.5em 1em;
   /* background: #A2C2C3; */
   /* background: #ffad3a; */
-  background: #F28500;
+  background: #f28500;
   /* background: rgb(241, 103, 10); */
   display: flex;
   flex-direction: row;
@@ -125,6 +125,9 @@
   align-items: center;
   border-radius: 15px 15px 0px 0px;
 }
+#ProfileBox_1_O_1_B1:hover {
+  background-color: aquamarine;
+}
 #ProfileBox_1_O_1_B2 {
   cursor: pointer;
   border: 0px solid transparent;
@@ -147,6 +150,10 @@
   align-items: center;
   border-radius: 15px 15px 0px 0px;
 }
+/* #ProfileBox_1_O_1_B1:hover {
+  background-color: #dfe6e9;
+  border-bottom: 2.5px sold orangered;
+} */
 #ProfileBox_1_O_1_P {
   border: 0px solid transparent;
   padding: 0em 1em;
@@ -248,7 +255,6 @@
   font-weight: bold;
   text-align: center;
   background-color: #dafada;
-
 }
 #ProfileBox_2_Input_Box_3 {
   border: 0px solid transparent;
@@ -418,18 +424,21 @@
   font-weight: bold;
 }
 #ProfileBox_2_Row_Part_1_P1 input {
-  border: 0.1px solid rgb(189, 186, 186);
+  /* border: 0.1px solid rgb(189, 186, 186); */
+  border: 0px solid transparent;
+  border-bottom: 2.5px solid #001400;
   padding: 0.6em 1.2em;
   margin: 0em 0.18em;
   font-size: 1em;
   width: 100%;
   letter-spacing: 1.7px;
-  border-radius: 5px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: rgb(231, 231, 231);
 }
 #ProfileBox_2_Row_Part_1_P1 input:focus {
   outline: none;
-  border-color: rgb(75, 75, 75);
-  background-color: rgb(230, 229, 229);
+  /* border-color: rgb(75, 75, 75); */
+  background-color: rgb(207, 207, 207);
 }
 #ProfileBox_2_Row_Submit_Btn {
   border: 0px solid transparent;
@@ -462,7 +471,7 @@
 #sub_ProfileBox_2_Part_3 {
   border: 0px solid transparent;
   padding: 2em 1em;
-  width: 50%;
+  width: 60%;
   margin: 0em auto;
 }
 #sub_ProfileBox_2_Part_3 h2 {
@@ -487,15 +496,20 @@
   letter-spacing: 1px;
 }
 #ProfileBox_2_Part_3_Input_Box input {
-  border: 1px solid grey;
-  padding: 0.3em 1em;
+  border: 0px solid transparent;
+  border-bottom: 2px solid #001400;
+  padding: 0.5em 1em;
   width: 60%;
   margin: 0em 0em 0.35em 0em;
-  border-radius: 10px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: rgb(231, 231, 231);
 }
 #ProfileBox_2_Part_3_Input_Box input:focus {
   outline: none;
-  border-color: rgb(51, 50, 50);
+  background-color: rgb(207, 207, 207);
+}
+#Password_Name_2 {
+  cursor: pointer;
 }
 #ProfileBox_2_Part_3_Input_Box_2 {
   border: 0px solid transparent;
@@ -518,7 +532,7 @@
 }
 #ProfileBox_2_Part_3_Input_Box_2 button:focus {
   outline: none;
-  background-color: #F28500;
+  background-color: #f28500;
   color: black;
   font-weight: bold;
 }
@@ -693,7 +707,7 @@
   }
   #sub_ProfileBox_2_Part_3 {
     padding: 2em 1em;
-    width: 60%;
+    width: 70%;
     margin: 0em auto;
   }
   #sub_ProfileBox_2_Part_3 h2 {
@@ -990,7 +1004,7 @@
   }
   #sub_ProfileBox_2_Part_3 {
     padding: 1em 1em;
-    width: 60%;
+    width: 65%;
     margin: 0em auto;
   }
   #sub_ProfileBox_2_Part_3 h2 {
@@ -1007,7 +1021,7 @@
     align-items: center;
   }
   #ProfileBox_2_Part_3_Input_Box label {
-    font-size: 1.1em;
+    font-size: 1.08em;
     padding: 0em 1em;
     letter-spacing: 1px;
   }
@@ -1298,7 +1312,7 @@
   }
   #sub_ProfileBox_2_Part_3 {
     padding: 2em 1em;
-    width: 60%;
+    width: 65%;
     margin: 0em auto;
   }
   #sub_ProfileBox_2_Part_3 h2 {
@@ -1608,7 +1622,7 @@
   }
   #sub_ProfileBox_2_Part_3 {
     padding: 1em 1em;
-    width: 85%;
+    width: 88%;
     margin: 0em auto;
   }
   #sub_ProfileBox_2_Part_3 h2 {
@@ -1625,11 +1639,12 @@
     align-items: center;
   }
   #ProfileBox_2_Part_3_Input_Box label {
-    font-size: 1em;
-    padding: 0em 0.5em;
+    font-size: 0.9em;
+    padding: 0em 0.4em;
     letter-spacing: 1px;
   }
   #ProfileBox_2_Part_3_Input_Box input {
+    font-size: 0.9em;
     padding: 0.2em 1em;
     width: 50%;
   }
@@ -1924,7 +1939,7 @@
   }
   #sub_ProfileBox_2_Part_3 {
     padding: 1em 1em;
-    width: 85%;
+    width: 100%;
     margin: 0em auto;
   }
   #sub_ProfileBox_2_Part_3 h2 {
@@ -1934,21 +1949,24 @@
     color: #001400;
   }
   #ProfileBox_2_Part_3_Input_Box {
-    padding: 1.5em 0em 1.5em 0.5em;
+    padding: 1.5em 1em 1.5em 1em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
   }
   #ProfileBox_2_Part_3_Input_Box label {
     font-size: 1em;
     padding: 0em 0.5em;
     letter-spacing: 1px;
+    align-self: flex-start;
   }
   #ProfileBox_2_Part_3_Input_Box input {
     padding: 0.2em 1em;
-    margin: 0.5em 0em 0em 0.5em;
-    width: 90%;
+    margin: 0.5em 0em 0em 0em;
+    width: 96%;
+  }
+  #Password_Name_2 {
+    width: 100%;
+    align-self: flex-end;
   }
   #ProfileBox_2_Part_3_Input_Box_2 {
     padding: 0.5em 1em;
@@ -2269,9 +2287,9 @@
     letter-spacing: 1px;
   }
   #ProfileBox_2_Part_3_Input_Box input {
-    padding: 0.2em 0.2em;
+    padding: 0.3em 0.2em 0.3em 0.8em;
     margin: 0.6em 0em 0em 0.5em;
-    width: 90%;
+    width: 91%;
   }
   #ProfileBox_2_Part_3_Input_Box_2 {
     padding: 0.8em 0.5em;
@@ -2280,6 +2298,11 @@
     padding: 0.45em 1em;
     font-size: 0.75em;
     letter-spacing: 1px;
+  }
+  #Password_Name_2 {
+    width: 100%;
+    align-self: flex-end;
+    margin: 0.5em 1em 0em 1em;
   }
   /* - */
 }

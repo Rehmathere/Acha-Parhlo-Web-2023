@@ -20,6 +20,31 @@ import { signOut } from 'firebase/auth'
 import "../PAppointments/PAppoint.css"
 
 export default function PProfile() {
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleToggleVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const handleSubmit = async () => {
+        try {
+            const user = database.currentUser;
+            if (user) {
+                await updatePassword(user, password);
+                setErrorMessage('');
+            } else {
+                setErrorMessage('User not found. Please log in again.');
+            }
+        } catch (error) {
+            setErrorMessage(error.message);
+        }
+    };
     // Email Address For Logout Dialog Box
     const [user] = useAuthState(database);
     // ------ Confirm Submit Button Logic ------
@@ -52,24 +77,6 @@ export default function PProfile() {
     // Function to handle "Don't Add This University" button click and hide the entire parent div
     const handleCancelClick = () => {
         setShowParent(false);
-    };
-    // ------------------------------------------------------
-    const [newPassword, setNewPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-
-    const handleChangePassword = async () => {
-        try {
-            const user = database.currentUser;
-
-            if (user) {
-                await updatePassword(user, newPassword);
-                setErrorMessage('');
-            } else {
-                setErrorMessage('User not found. Please log in again.');
-            }
-        } catch (error) {
-            setErrorMessage(error.message);
-        }
     };
     // Edit Profile useSatte
     const [image, setImage] = useState(null);
@@ -452,13 +459,21 @@ export default function PProfile() {
                                         <div id='ProfileBox_2_Part_3_Input_Box'>
                                             <label>New Password:</label>
                                             <input
-                                                type="password"
-                                                value={newPassword}
-                                                onChange={(e) => setNewPassword(e.target.value)}
+                                                type={showPassword ? 'text' : 'password'}
+                                                value={password}
+                                                placeholder="Enter Your Password"
+                                                onChange={handleChange}
                                             />
+                                            <div id="Password_Name_2">
+                                                {showPassword ? (
+                                                    <i className="fa fa-eye-slash" onClick={handleToggleVisibility}></i>
+                                                ) : (
+                                                    <i className="fa fa-eye" onClick={handleToggleVisibility}></i>
+                                                )}
+                                            </div>
                                         </div>
                                         <div id='ProfileBox_2_Part_3_Input_Box_2'>
-                                            <button onClick={() => { handleChangePassword(); handleAddUniversityClick(); }}>Change Password</button>
+                                            <button onClick={() => { handleSubmit(); handleAddUniversityClick(); }}>Change Password</button>
                                         </div>
                                         {/* Errorr Message */}
                                         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}

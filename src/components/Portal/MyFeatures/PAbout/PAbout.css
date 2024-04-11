@@ -100,11 +100,12 @@
 /* 2 - PAbout Second */
 #PAbout_Sec {
   border: 0px solid transparent;
-  padding: 1.5em 2em 1em 2em;
+  border: 0.1px solid black;
+  padding: 1em 2em 0.5em 2em;
 }
 #PAbout_Sec h1 {
   border: 0px solid transparent;
-  padding: 0.8em 0.8em;
+  padding: 0.7em 0.8em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -117,7 +118,7 @@
   color: #001400;
 }
 /* 3 - PAbout Third */
-#PAbout_Third {
+/* #PAbout_Third {
   border: 0px solid transparent;
   padding: 1em 2em;
 }
@@ -137,7 +138,46 @@
   padding: 0em 0.7em 0em 0.5em;
   font-size: 19px;
   color: rgb(228, 61, 0);
+} */
+/* 3 ---- PAbout Third ( New ) ---- */
+#PAbout_Third {
+  border: 0.1px solid black;
+  padding: 0.5em 2em 2em 2em;
+  /* background-color: aqua; */
 }
+#sub_PAbout_Third {
+  border: 0.1px solid black;
+  padding: 0.2em 1em 0.5em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#Third_Box_1, #Third_Box_2, #Third_Box_3, #Third_Box_4 {
+  border: 0.1px solid black;
+  width: 20%;
+  padding: 1.5em 0em;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+#Third_Box_1 {
+  background: linear-gradient(to right, orange, rgb(255, 229, 181));
+}
+#Third_Box_2 {
+  background: linear-gradient(to right, #001400, #5ffd5f);
+}
+#Third_Box_3 {
+  background: linear-gradient(to right, red, rgb(250, 155, 155));
+}
+#Third_Box_4 {
+  background: linear-gradient(to right, blue, rgb(174, 174, 255));
+}
+#Third_Box_Num {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+/* Start */
+
 /* -------------------------------- */
 /* Media Queries In CSS */
 /* -------------------------------- */
@@ -191,10 +231,10 @@
   }
   /* 2 - PAbout Second */
   #PAbout_Sec {
-    padding: 1.2em 2em;
+    padding: 1em 2em;
   }
   #PAbout_Sec h1 {
-    padding: 0.8em 0.6em;
+    padding: 0.7em 0.6em;
     letter-spacing: 0.5px;
     font-size: 2.4em;
   }
@@ -203,7 +243,7 @@
     font-size: 37px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 1em 1.8em;
   }
   #sub_PAbout_Third {
@@ -216,7 +256,7 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.4em;
     font-size: 19px;
-  }
+  } */
   /* - */
 }
 /* 2 */
@@ -272,7 +312,7 @@
     padding: 1em 2em;
   }
   #PAbout_Sec h1 {
-    padding: 0.8em 0.65em;
+    padding: 0.7em 0.65em;
     letter-spacing: 0.5px;
     font-size: 2em;
   }
@@ -281,7 +321,7 @@
     font-size: 35px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 1em 1.6em;
   }
   #sub_PAbout_Third {
@@ -294,7 +334,7 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.4em;
     font-size: 18px;
-  }
+  } */
   /* - */
 }
 /* 3 */
@@ -359,7 +399,7 @@
     font-size: 32px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 0.5em 0.8em;
   }
   #sub_PAbout_Third {
@@ -372,7 +412,7 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.4em;
     font-size: 17px;
-  }
+  } */
   /* - */
 }
 /* 3 */
@@ -431,7 +471,7 @@
     font-size: 26px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 0.5em 0.2em;
   }
   #sub_PAbout_Third {
@@ -444,7 +484,7 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.2em;
     font-size: 17px;
-  }
+  } */
   /* - */
 }
 /* 4 */
@@ -513,7 +553,7 @@
     font-size: 28px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 0.5em 1em;
   }
   #sub_PAbout_Third {
@@ -526,7 +566,7 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.2em;
     font-size: 16px;
-  }
+  } */
   /* - */
 }
 /* 5 */
@@ -595,7 +635,7 @@
     font-size: 20px;
   }
   /* 3 - PAbout Third */
-  #PAbout_Third {
+  /* #PAbout_Third {
     padding: 0.5em 0.4em;
   }
   #sub_PAbout_Third {
@@ -608,6 +648,6 @@
   #sub_PAbout_Third p i {
     padding: 0em 0.7em 0em 0.2em;
     font-size: 14px;
-  }
+  } */
   /* - */
 }

@@ -94,14 +94,33 @@ export default function PAbout() {
                 {/* PAbout Third */}
                 <div id="PAbout_Third">
                     <div id="sub_PAbout_Third">
-                        {/* Paragraph 1 */}
-                        <p><i className='fa fa-exclamation-circle'></i>Experience the convenience of our streamlined management system designed to make your consultancy journey smooth and efficient.</p>
-                        {/* Paragraph 2 */}
-                        <p><i className='fa fa-exclamation-circle'></i>Complete your profile in 'My Profile' and manage student records effortlessly.</p>
-                        {/* Paragraph 3 */}
-                        <p><i className='fa fa-exclamation-circle'></i>Initiate conversations and address queries promptly using the 'Chat with Students'.</p>
-                        {/* Paragraph 4 */}
-                        <p><i className='fa fa-exclamation-circle'></i>Master application tracking, utilize affiliated universities, and stay informed</p>
+                        {/* ------ Old Code ------ */}
+                        {/* Paragraph 1
+                        <p><i className='fa fa-graduation-cap'></i>Experience the convenience of our streamlined management system designed to make your consultancy journey smooth and efficient.</p>
+                        Paragraph 2
+                        <p><i className='fa fa-graduation-cap'></i>Complete your profile in 'My Profile' and manage student records effortlessly.</p>
+                        Paragraph 3
+                        <p><i className='fa fa-graduation-cap'></i>Initiate conversations and address queries promptly using the 'Chat with Students'.</p>
+                        Paragraph 4
+                        <p><i className='fa fa-graduation-cap'></i>Master application tracking, utilize affiliated universities, and stay informed</p> */}
+                        {/* ------ Old Code ------ */}
+                        {/* Start */}
+                        <div id="Third_Box_1">
+                            <p id='Third_Box_Num'>1</p>
+                            <p>Feature</p>
+                        </div>
+                        <div id="Third_Box_2">
+                            <p id='Third_Box_Num'>2</p>
+                            <p>Feature</p>
+                        </div>
+                        <div id="Third_Box_3">
+                            <p id='Third_Box_Num'>3</p>
+                            <p>Feature</p>
+                        </div>
+                        <div id="Third_Box_4">
+                            <p id='Third_Box_Num'>4</p>
+                            <p>Feature</p>
+                        </div>
                     </div>
                 </div>
                 <br />
@@ -130,6 +149,5 @@ export default function PAbout() {
         </div>
     )
 }
-
 
 

@@ -1,52 +1,69 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 // Navigation
 import { useNavigate } from 'react-router-dom';
-// CSS
-import "../Portal/MyFeatures/PChat/FinalChat.css";
 // Firebase
 import { database1 } from '../Portal/firebase';
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
 export default function Z_Test() {
     // Navigate
     const navigate = useNavigate();
     // ------------- Backend Part Logic -------------
-    const [val, setVal] = useState([]);
-    const value = collection(database1, "New Practice App");
-    // Function
-    const getData = async () => {
-        const dbVal = await getDocs(value);
-        setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-    }
-    useEffect(() => {
-        getData();
+    // --- Dashboard Counting Feature File Numbers ---
+    const [fileCounts, setFileCounts] = useState({
+        addUniversity: 0,
+        appointment: 0,
+        trackingRecords: 0
+    });
+    useLayoutEffect(() => {
+        async function fetchData() {
+            const value1 = collection(database1, "1 - Add University");
+            const value2 = collection(database1, "3 - Appointment");
+            const value3 = collection(database1, "4 - Student Records");
+            // Functions 
+            const [data1, data2, data3] = await Promise.all([
+                getDocs(value1),
+                getDocs(value2),
+                getDocs(value3)
+            ]);
+            setFileCounts({
+                addUniversity: data1.size,
+                appointment: data2.size,
+                trackingRecords: data3.size
+            });
+        }
+        fetchData();
     }, []);
-    // View
-    const handleEdit = (id) => {
-        navigate(`/Z_Test_2/${id}`);
-    }
-    // ------------- Backend Part Logic -------------
+    // --- Dashboard Counting Feature File Numbers ---
     // Main Body
     return (
         <>
             {/* Heading */}
             <div id="Z_Create">
                 <div id="Z_Create_Part_1">
-                    <h4>University Logo Showing</h4>
+                    <h4>Appointment App Feature</h4>
                 </div>
             </div>
-            {/* Box */}
+            {/* Box 1 : Add University */}
             <div className='container'>
-                {val.map(values =>
-                    <div id='Z_T_1_Box' key={values.id}>
-                        <h1>1 - {values.U1_universityName}</h1>
-                        <h1>2 - {values.U2_campus}</h1>
-                        <h1>3 - {values.U3_intake}</h1>
-                        <h1>4 - {values.U4_courseName}</h1>
-                        <img src={values.U_Extra_Uni_Image} alt="NA" />
-                        <button onClick={() => handleEdit(values.id)}>See User Full Detail</button>
-                    </div>
-                )}
+                <div id='Z_T_1_Box'>
+                    <h4>No Of Add University : </h4>
+                    <h4>{fileCounts.addUniversity}</h4> {/* Display the file count */}
+                </div>
+            </div>
+            {/* Box 2 : Appointment */}
+            <div className='container'>
+                <div id='Z_T_1_Box'>
+                    <h4>No Of Appointment : </h4>
+                    <h4>{fileCounts.appointment}</h4> {/* Display the file count */}
+                </div>
+            </div>
+            {/* Box 3 : Application Tracking & Student Records */}
+            <div className='container'>
+                <div id='Z_T_1_Box'>
+                    <h4>No Of Tracking , Records : </h4>
+                    <h4>{fileCounts.trackingRecords}</h4> {/* Display the file count */}
+                </div>
             </div>
         </>
     );

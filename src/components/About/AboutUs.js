@@ -184,7 +184,7 @@ export default function AboutUs() {
                             </div>
                             {/* <!-- Number 2 Box --> */}
                             <div id="counter">
-                                <h3><span data-count="95">0</span> % </h3>
+                                <h3><span data-count="75">0</span> % </h3>
                                 <h2>Experience</h2>
                             </div>
                         </div>
@@ -197,8 +197,8 @@ export default function AboutUs() {
                             </div>
                             {/* <!-- Number 4 Box --> */}
                             <div id="counter">
-                                <h3><span data-count="10">0</span></h3>
-                                <h2>Consultant</h2>
+                                <h3><span data-count="90">0</span> % </h3>
+                                <h2>Consultancy</h2>
                             </div>
                         </div>
                     </div>

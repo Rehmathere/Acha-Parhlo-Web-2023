@@ -10,6 +10,12 @@ import './Portal.css'
 import register from '../Pics/register.png'
 
 export default function PSignUp() {
+    // Toggle Password
+    const [showPassword, setShowPassword] = useState(false);
+    const [password, setPassword] = useState('');
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
     // useState
     // useNavigate Variable
     const navigate = useNavigate();
@@ -41,11 +47,41 @@ export default function PSignUp() {
                             {/* Email Form */}
                             <form onSubmit={(e) => handleSubmit(e)}>
                                 {/* User Name */}
-                                <input name='text' placeholder=' Enter Your Username ' id='Signup_Name' /> <br />
+                                <div id="Input_Name_Parent">
+                                    {/* 1 */}
+                                    <div id="Input_Name_1">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input name='text' placeholder=' Enter Your Username ' id="Input_Name" /> <br />
+                                </div>
                                 {/* Email */}
-                                <input name='email' placeholder=' Enter Your Email ' id='Signup_Name' /> <br />
+                                <div id="Input_Name_Parent">
+                                    {/* 1 */}
+                                    <div id="Input_Name_1">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input name='email' placeholder=' Enter Your Email ' id="Input_Name" /> <br />
+                                </div>
                                 {/* Password */}
-                                <input name='password' type='password' placeholder=' Enter Your Password ' id='Signup_Name' /> <br />
+                                <div id="Input_Name_Parent">
+                                    {/* 1 */}
+                                    <div id="Input_Name_1">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input name='password' type={showPassword ? 'text' : 'password'} value={password} placeholder=' Enter Your Password ' id='Input_Name' onChange={(e) => setPassword(e.target.value)} /> <br />
+                                    {/* 3 */}
+                                    <div id="Input_Name_2">
+                                        {showPassword ? (
+                                            <i className="fa fa-eye-slash" onClick={togglePasswordVisibility}></i>
+                                        ) : (
+                                            <i className="fa fa-eye" onClick={togglePasswordVisibility}></i>
+                                        )}
+                                    </div>
+                                </div>
+                                <br />
                                 {/* Sign Up Button */}
                                 <button id="SignUp_Btn">Sign Up</button>
                                 {/* Sign In Button */}

@@ -12,6 +12,12 @@ import login_fir from '../Pics/login_fir.png'
 import L_Lock from '../Pics/L_Lock.png'
 
 export default function PLogin() {
+    // Toggle Password
+    const [showPassword, setShowPassword] = useState(false);
+    const [password, setPassword] = useState('');
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
     // useState
     // useNavigate Variable
     const navigate = useNavigate();
@@ -81,9 +87,31 @@ export default function PLogin() {
                             {/* Email Form */}
                             <form onSubmit={(e) => handleSubmit(e)}>
                                 {/* Email */}
-                                <input name='email' placeholder=' Enter Your Email ' id='Login_Name' /> <br />
+                                <div id="Input_Name_Parent">
+                                    {/* 1 */}
+                                    <div id="Input_Name_1">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input name='email' placeholder=' Enter Your Email ' id="Input_Name" /> <br />
+                                </div>
                                 {/* Password */}
-                                <input name='password' type='password' placeholder=' Enter Your Password ' id='Login_Name' /> <br />
+                                <div id="Input_Name_Parent">
+                                    {/* 1 */}
+                                    <div id="Input_Name_1">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input name='password' type={showPassword ? 'text' : 'password'} value={password} placeholder=' Enter Your Password ' id='Input_Name' onChange={(e) => setPassword(e.target.value)} /> <br />
+                                    {/* 3 */}
+                                    <div id="Input_Name_2">
+                                        {showPassword ? (
+                                            <i className="fa fa-eye-slash" onClick={togglePasswordVisibility}></i>
+                                        ) : (
+                                            <i className="fa fa-eye" onClick={togglePasswordVisibility}></i>
+                                        )}
+                                    </div>
+                                </div>
                                 {/* Forget Password */}
                                 <p id='Login_First_P' onClick={handleReset}>Forget Password</p>
                                 {/* Sign In Button */}
@@ -111,7 +139,14 @@ export default function PLogin() {
                             <p>If PIN Is Correct Then You Will Able To Register Account Otherwise Not Allowed</p>
                             {/* Password Input Area */}
                             <form onSubmit={handlePasswordCheck}>
-                                <input ref={passwordInputRef} type="password" placeholder='Enter Secret PIN Here' id="PA_U_ConfirmAdd_Input" name="password" />
+                                <div id="PA_U_ConfirmAdd_Input_Parent_Box">
+                                    {/* 1 */}
+                                    <div id="PA_U_ConfirmAdd_Input_1">
+                                        <i class="fa fa-key"></i>
+                                    </div>
+                                    {/* 2 */}
+                                    <input ref={passwordInputRef} type="password" placeholder='Enter Secret PIN Here' id="PA_U_ConfirmAdd_Input" name="password" />
+                                </div>
                                 {/* Password Status */}
                                 <h6 style={{ color: passwordStatus.includes('Correct') ? 'green' : 'red' }} id='PA_U_Special_Status'>{passwordStatus}</h6>
                                 {/* Yes Button */}

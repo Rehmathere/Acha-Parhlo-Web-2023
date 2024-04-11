@@ -70,13 +70,13 @@ export default function PTStatus() {
     const [button7Color, setButton7Color] = useState('white');
     const [button8Color, setButton8Color] = useState('white');
     // Line useState
-    const [Line1Color, setLine1Color] = useState('#807F7E');
-    const [Line2Color, setLine2Color] = useState('#807F7E');
-    const [Line3Color, setLine3Color] = useState('#807F7E');
-    const [Line4Color, setLine4Color] = useState('#807F7E');
-    const [Line5Color, setLine5Color] = useState('#807F7E');
-    const [Line6Color, setLine6Color] = useState('#807F7E');
-    const [Line7Color, setLine7Color] = useState('#807F7E');
+    const [Line1Color, setLine1Color] = useState('#C5C4C3');
+    const [Line2Color, setLine2Color] = useState('#C5C4C3');
+    const [Line3Color, setLine3Color] = useState('#C5C4C3');
+    const [Line4Color, setLine4Color] = useState('#C5C4C3');
+    const [Line5Color, setLine5Color] = useState('#C5C4C3');
+    const [Line6Color, setLine6Color] = useState('#C5C4C3');
+    const [Line7Color, setLine7Color] = useState('#C5C4C3');
     // ------------- Backend Logic -------------
     const { id } = useParams();
     const [U1_UniversityName, setU1_UniversityName] = useState('');
@@ -137,9 +137,9 @@ export default function PTStatus() {
             // Button 2
             setButton2Color('#FFC300');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // ---- Extra Color Off ----
             setButton3Color('white');
             setButton4Color('white');
@@ -152,13 +152,13 @@ export default function PTStatus() {
             // Button 3
             setButton3Color('#FFC300');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // ---- Extra Color Off ----
             setButton4Color('white');
             setButton5Color('white');
@@ -170,17 +170,17 @@ export default function PTStatus() {
             // Button 4
             setButton4Color('#FFC300');
             // Button 3
-            setButton3Color('#FBD1A5');
+            setButton3Color('#FFD8B0');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // -- Line 3
-            setLine3Color('#001400');
+            setLine3Color('#014101');
             // ---- Extra Color Off ----
             setButton5Color('white');
             setButton6Color('white');
@@ -191,21 +191,21 @@ export default function PTStatus() {
             // Button 5
             setButton5Color('#FFC300');
             // Button 4
-            setButton4Color('#FBD1A5');
+            setButton4Color('#FFD8B0');
             // Button 3
-            setButton3Color('#FBD1A5');
+            setButton3Color('#FFD8B0');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // -- Line 3
-            setLine3Color('#001400');
+            setLine3Color('#014101');
             // -- Line 4
-            setLine4Color('#001400');
+            setLine4Color('#014101');
             // ---- Extra Color Off ----
             setButton6Color('white');
             setButton7Color('white');
@@ -215,25 +215,25 @@ export default function PTStatus() {
             // Button 6
             setButton6Color('#FFC300');
             // Button 5
-            setButton5Color('#FBD1A5');
+            setButton5Color('#FFD8B0');
             // Button 4
-            setButton4Color('#FBD1A5');
+            setButton4Color('#FFD8B0');
             // Button 3
-            setButton3Color('#FBD1A5');
+            setButton3Color('#FFD8B0');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // -- Line 3
-            setLine3Color('#001400');
+            setLine3Color('#014101');
             // -- Line 4
-            setLine4Color('#001400');
+            setLine4Color('#014101');
             // -- Line 5
-            setLine5Color('#001400');
+            setLine5Color('#014101');
             // ---- Extra Color Off ----
             setButton7Color('white');
             setButton8Color('white');
@@ -242,29 +242,29 @@ export default function PTStatus() {
             // Button 7
             setButton7Color('#FFC300');
             // Button 6
-            setButton6Color('#FBD1A5');
+            setButton6Color('#FFD8B0');
             // Button 5
-            setButton5Color('#FBD1A5');
+            setButton5Color('#FFD8B0');
             // Button 4
-            setButton4Color('#FBD1A5');
+            setButton4Color('#FFD8B0');
             // Button 3
-            setButton3Color('#FBD1A5');
+            setButton3Color('#FFD8B0');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // -- Line 3
-            setLine3Color('#001400');
+            setLine3Color('#014101');
             // -- Line 4
-            setLine4Color('#001400');
+            setLine4Color('#014101');
             // -- Line 5
-            setLine5Color('#001400');
+            setLine5Color('#014101');
             // -- Line 6
-            setLine6Color('#001400');
+            setLine6Color('#014101');
             // ---- Extra Color Off ----
             setButton8Color('white');
         }
@@ -272,33 +272,33 @@ export default function PTStatus() {
             // Button 8
             setButton8Color('#FFC300');
             // Button 7
-            setButton7Color('#FBD1A5');
+            setButton7Color('#FFD8B0');
             // Button 6
-            setButton6Color('#FBD1A5');
+            setButton6Color('#FFD8B0');
             // Button 5
-            setButton5Color('#FBD1A5');
+            setButton5Color('#FFD8B0');
             // Button 4
-            setButton4Color('#FBD1A5');
+            setButton4Color('#FFD8B0');
             // Button 3
-            setButton3Color('#FBD1A5');
+            setButton3Color('#FFD8B0');
             // Button 2
-            setButton2Color('#FBD1A5');
+            setButton2Color('#FFD8B0');
             // Button 1
-            setButton1Color('#FBD1A5');
+            setButton1Color('#FFD8B0');
             // -- Line 1
-            setLine1Color('#001400');
+            setLine1Color('#014101');
             // -- Line 2
-            setLine2Color('#001400');
+            setLine2Color('#014101');
             // -- Line 3
-            setLine3Color('#001400');
+            setLine3Color('#014101');
             // -- Line 4
-            setLine4Color('#001400');
+            setLine4Color('#014101');
             // -- Line 5
-            setLine5Color('#001400');
+            setLine5Color('#014101');
             // -- Line 6
-            setLine6Color('#001400');
+            setLine6Color('#014101');
             // -- Line 7
-            setLine7Color('#001400');
+            setLine7Color('#014101');
         }
         else {
             setButton1Color("transparent");

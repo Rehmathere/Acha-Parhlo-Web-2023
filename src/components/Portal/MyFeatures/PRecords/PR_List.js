@@ -23,6 +23,8 @@ export default function PR_List() {
     const [user] = useAuthState(database);
     // --------- Backend Part Logic ---------
     const { id } = useParams();
+    // 0 - ID
+    const [P3_documentId, setP3_documentId] = useState(''); // New state for document ID
     // 1 - University Detail
     const [U1_UniversityName, setU1_UniversityName] = useState('');
     const [U2_Campus, setU2_Campus] = useState('');
@@ -107,6 +109,8 @@ export default function PR_List() {
 
                 if (docSnap.exists()) {
                     const data = docSnap.data();
+                    // ) - ID
+                    setP3_documentId(docSnap.id || ''); // Set the document ID
                     // 1 - University Detail
                     setU1_UniversityName(data.U1_universityName || '----------');
                     setU2_Campus(data.U2_campus || '----------');
@@ -241,6 +245,11 @@ export default function PR_List() {
                             <h2>Student Records Detail <i class="fa fa-id-card-o"></i></h2>
                         </div>
                         <br />
+                        {/* ----- ID ----- */}
+                        <div id="Extra_Firebase_Id">
+                            <h4>ID No: &nbsp; <span>{P3_documentId}</span></h4>
+                        </div>
+                        {/* ----- ID ----- */}
                         {/* --- University Logo ( Coming From Apply Uni  ) --- */}
                         <div id="Ext_Uni_Logo_Coming">
                             <div id="sub_Ext_Uni_Logo_Coming">

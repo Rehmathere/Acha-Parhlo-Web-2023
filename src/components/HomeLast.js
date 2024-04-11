@@ -449,14 +449,14 @@ export default function HomeLast() {
           </div>
           {/* 2 */}
           <div id="fifth_2">
-            <h1><span>Learn</span> About Immigration</h1>
-            <h1>Investment <span>Opportunities</span></h1>
-            <p>Navigate the complex path of immigration investment with us, where dedication gains the rewards of a bright future.</p>
+            <h1><span>Learn</span> About Abroad</h1>
+            <h1>Education <span>Opportunities</span></h1>
+            <p>Embark on a journey into the realm of abroad education investment with us, where commitment leads to the realization of a promising future.</p>
             {/* Point 1 */}
-            <h5><i class="fa fa-check-circle"></i> Seamless Immigration Guidance</h5>
-            <h5><i class="fa fa-check-circle"></i> Unlock Your Global Education Potential</h5>
-            <h5><i class="fa fa-check-circle"></i> Invest Wisely, Thrive Globally</h5>
-            <h5><i class="fa fa-check-circle"></i> Your Pathway to International Success</h5>
+            <h5><i class="fa fa-check-circle"></i> Seamless Education Guidance Abroad</h5>
+            <h5><i class="fa fa-check-circle"></i> Unlock Your Global Learning Potential</h5>
+            <h5><i class="fa fa-check-circle"></i>  Invest Wisely, Thrive Internationally</h5>
+            <h5><i class="fa fa-check-circle"></i> Your Pathway to Global Success</h5>
           </div>
         </div>
       </div>
@@ -484,8 +484,8 @@ export default function HomeLast() {
                   <div id="six_box_icon">
                     <i class="fa fa-mobile"></i>
                   </div>
-                  <h5>Consultation Conversation</h5>
-                  <p>Connect with Our Experts for Personalized Guidance</p>
+                  <h5>Chat With Consultant</h5>
+                  <p>Connect with Our Expert for Personalized Guidance</p>
                 </div>
               </div>
               {/* 3 */}
@@ -532,6 +532,31 @@ export default function HomeLast() {
                 </div>
               </div>
             </div>
+            {/* End Row 2 */}
+            {/* - Extra Row - */}
+            <div id="six_1_1">
+              {/* 1 */}
+              <div id="six_1_1_box">
+                <div id="six_box_1">
+                  <div id="six_box_icon">
+                    <i class="fa fa-database"></i>
+                  </div>
+                  <h5>Student Records</h5>
+                  <p>Smooth Database Process For Student Records</p>
+                </div>
+              </div>
+              {/* 2 */}
+              <div id="six_1_1_box">
+                <div id="six_box_1">
+                  <div id="six_box_icon">
+                    <i class="fa fa-android"></i>
+                  </div>
+                  <h5>Virtual Consultant</h5>
+                  <p>Ask Anything To Our Highly Customized AI Bot</p>
+                </div>
+              </div>
+            </div>
+            {/* End Row 2 */}
           </div>
         </div>
       </div>

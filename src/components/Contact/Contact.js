@@ -174,8 +174,8 @@ export default function Contact() {
                   <img src={z4} alt="NA" />
                 </div>
                 <div id="con_forth_box_side_2">
-                  <h6>Virtual Office</h6>
-                  <p>WhatsApp / Zoom meet up</p>
+                  <h6>University Blogs</h6>
+                  <p>Explore Our Blogs Part</p>
                 </div>
               </div>
               {/* Box 5 */}

@@ -33,7 +33,16 @@ export default function PForgetPass() {
             {/* Heading For Email Recovery */}
             <h5>Enter Email For Recovery</h5>
             {/* Email For Recovery */}
-            <input name="email" id='MyRecoveryInput' placeholder=' Enter Your Recovery Email ' /><br />
+            {/* <input name="email" id='MyRecoveryInput' placeholder=' Enter Your Recovery Email ' /><br /> */}
+            <div id="Input_Name_Parent">
+              {/* 1 */}
+              <div id="Input_Name_1">
+                <i class="fa fa-envelope"></i>
+              </div>
+              {/* 2 */}
+              <input name='email' placeholder=' Enter Your Recovery Email ' id="Input_Name" /> <br />
+            </div>
+            <br />
             {/* Reset Button */}
             <button id="Reset_Btn">Reset</button>
           </form>

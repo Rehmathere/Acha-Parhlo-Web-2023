@@ -228,6 +228,29 @@
   width: 60%;
   border-radius: 10px;
 }
+/* - Firebase ID - */
+#Extra_Firebase_Id {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+}
+#Extra_Firebase_Id h4 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  font-size: 1.1em;
+}
+#Extra_Firebase_Id h4 span {
+  border: 0px solid transparent;
+  padding: 0em 0.6em 0.12em 0.6em;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #d6f7d5;
+  border-radius: 20px;
+}
+/* - Firebase ID - */
 /* Start */
 
 /* ---------------------------- */
@@ -330,6 +353,18 @@
     font-size: 0.88em;
     letter-spacing: 0.3px;
   }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0.5em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0.5em;
+    font-size: 1.05em;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0em 0.6em 0.1em 0.6em;
+    font-size: 1.05em;
+  }
   /* - */
 }
 /* 2 */
@@ -431,6 +466,19 @@
     width: 60%;
     font-size: 0.88em;
     letter-spacing: 0.3px;
+  }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0.5em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0.5em;
+    font-size: 1.01em;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0em 0.6em 0.1em 0.6em;
+    font-size: 1.01em;
+    letter-spacing: 1.3px;
   }
   /* - */
 }
@@ -554,6 +602,19 @@
     width: 80%;
     border-radius: 10px;
   }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0.5em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0.5em;
+    font-size: 0.96em;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0em 0.5em 0.1em 0.5em;
+    font-size: 0.96em;
+    letter-spacing: 1.5px;
+  }
   /* - */
 }
 /* 4 */
@@ -675,6 +736,19 @@
   #PR_Detail_Box_Pic_Part_2 img {
     width: 80%;
     border-radius: 10px;
+  }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0.5em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0.5em;
+    font-size: 0.9em;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0em 0.55em 0.1em 0.55em;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
   }
   /* - */
 }
@@ -807,6 +881,24 @@
     width: 80%;
     border-radius: 10px;
   }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0em 0.1em 0em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0em 0.5em 0em;
+    font-size: 0.85em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 0.85em;
+    letter-spacing: 1.5px;
+    margin: 0.8em 0em;
+  }
   /* - */
 }
 /* 6 */
@@ -936,6 +1028,19 @@
   #PR_Detail_Box_Pic_Part_2 img {
     width: 80%;
     border-radius: 10px;
+  }
+  /* - Firebase ID - */
+  #Extra_Firebase_Id {
+    padding: 0.5em 0em 0.1em 0em;
+  }
+  #Extra_Firebase_Id h4 {
+    padding: 0.5em 0em 0.2em 0em;
+    font-size: 0.8em;
+  }
+  #Extra_Firebase_Id h4 span {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
   }
   /* - */
 }
