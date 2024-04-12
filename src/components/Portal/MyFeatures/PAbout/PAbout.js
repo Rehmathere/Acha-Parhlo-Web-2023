@@ -13,6 +13,10 @@ import '../PProfile/PProfile.css'
 import PAbout1 from '../../../Pics/PAbout1.png'
 import logout from '../../../Pics/logout.png'
 import E_User from "../../../Pics/E_User.png"
+import Fea_1 from "../../../Pics/Fea_1.png"
+import Fea_2 from "../../../Pics/Fea_2.png"
+import Fea_3 from "../../../Pics/Fea_3.png"
+import Fea_4 from "../../../Pics/Fea_4.png"
 
 export default function PAbout() {
     // Email Address For Logout Dialog Box
@@ -105,21 +109,45 @@ export default function PAbout() {
                         <p><i className='fa fa-graduation-cap'></i>Master application tracking, utilize affiliated universities, and stay informed</p> */}
                         {/* ------ Old Code ------ */}
                         {/* Start */}
+                        {/* Box */}
                         <div id="Third_Box_1">
-                            <p id='Third_Box_Num'>1</p>
-                            <p>Feature</p>
+                            <div id="Third_Box_1_Part1">
+                                <span id='Third_Box_Num'>1</span>
+                                <span id='Third_Box_P'>Feature</span>
+                            </div>
+                            <div id="Third_Box_1_Part2">
+                                <img src={Fea_1} alt="NA" />
+                            </div>
                         </div>
+                        {/* Box */}
                         <div id="Third_Box_2">
-                            <p id='Third_Box_Num'>2</p>
-                            <p>Feature</p>
+                            <div id="Third_Box_1_Part1">
+                                <span id='Third_Box_Num'>1</span>
+                                <span id='Third_Box_P'>Feature</span>
+                            </div>
+                            <div id="Third_Box_1_Part2">
+                                <img src={Fea_2} alt="NA" />
+                            </div>
                         </div>
+                        {/* Box */}
                         <div id="Third_Box_3">
-                            <p id='Third_Box_Num'>3</p>
-                            <p>Feature</p>
+                            <div id="Third_Box_1_Part1">
+                                <span id='Third_Box_Num'>1</span>
+                                <span id='Third_Box_P'>Feature</span>
+                            </div>
+                            <div id="Third_Box_1_Part2">
+                                <img src={Fea_3} alt="NA" />
+                            </div>
                         </div>
+                        {/* Box */}
                         <div id="Third_Box_4">
-                            <p id='Third_Box_Num'>4</p>
-                            <p>Feature</p>
+                            <div id="Third_Box_1_Part1">
+                                <span id='Third_Box_Num'>1</span>
+                                <span id='Third_Box_P'>Feature</span>
+                            </div>
+                            <div id="Third_Box_1_Part2">
+                                <img src={Fea_4} alt="NA" />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -154,17 +154,20 @@
 }
 #Third_Box_1, #Third_Box_2, #Third_Box_3, #Third_Box_4 {
   border: 0.1px solid black;
-  width: 20%;
-  padding: 1.5em 0em;
+  width: 21%;
+  padding: 0.7em 0.8em;
   border-radius: 5px;
-  text-align: center;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 #Third_Box_1 {
-  background: linear-gradient(to right, orange, rgb(255, 229, 181));
+  background: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 229, 181));
 }
 #Third_Box_2 {
-  background: linear-gradient(to right, #001400, #5ffd5f);
+  background: linear-gradient(to right, #014201, #5ffd5f);
 }
 #Third_Box_3 {
   background: linear-gradient(to right, red, rgb(250, 155, 155));
@@ -172,9 +175,35 @@
 #Third_Box_4 {
   background: linear-gradient(to right, blue, rgb(174, 174, 255));
 }
+#Third_Box_1_Part1{
+  border: 0.1px solid black;
+  width: 65%;
+  padding: 0.1em 0.3em;
+}
 #Third_Box_Num {
-  font-size: 1.8em;
+  border: 0.1px solid black;
+  font-size: 1.7em;
   font-weight: bold;
+  display: block;
+}
+#Third_Box_P{
+  border: 0.1px solid black;
+  width: 65%;
+  font-size: 0.85em;
+  display: block;
+  /* color: gray; */
+  font-weight: 600;
+}
+#Third_Box_1_Part2{
+  border: 0.1px solid black;
+  width: 35%;
+  padding: 0.2em 0em;
+}
+#Third_Box_1_Part2 img{
+  border: 0.1px solid black;
+  width: 75%;
+  display: block;
+  margin: 0em auto;
 }
 /* Start */
 
