@@ -17,12 +17,18 @@
   border: 0.1px solid orange;
   background-color: orange;
   padding: 1em 2em 0.5em 2em;
-  width: 35%;
+  width: 30%;
   border-radius: 10px;
-  margin: 1em 0em;
+  margin: 1em 1em;
+  display: inline-block;
 }
-#Z_T_1_Box h1 {
-  font-size: 0.9em;
+#Z_T_1_Box h6 {
+  font-size: 0.8em;
+}
+#Z_T_1_Box h6:last-of-type {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: bold;
 }
 #Z_T_1_Box img {
   border: 0.1px solid red;
@@ -37,8 +43,9 @@
   padding: 0.2em 0.5em;
   border-radius: 10px;
   color: white;
-  margin: 0.5em 0.5em;
+  margin: 0.5em 0.5em 0.5em 0.5em;
   width: 94%;
+  font-size: 0.95em;
 }
 #Z_T_C_Box {
   border: 0.1px solid pink;
@@ -103,6 +110,31 @@
   color: white;
   border-radius: 10px;
 }
+#Date_Parent_Box {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  margin: 1em 0em;
+}
+#Date_Sub_Parent_Box {
+  border: 0.1px solid black;
+  padding: 1em 1em;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+}
+.Date_Sub_Child_Box {
+  margin-right: 0px;
+  margin-bottom: 1px;
+  width: 8%;
+}
+.Date_Sub_Child_Box Button:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.Date_Sub_Child_Box Button:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* --- Appointment Date ( New ) --- */
 
 /* ----------------------------------- */
 /* ------------------------- */

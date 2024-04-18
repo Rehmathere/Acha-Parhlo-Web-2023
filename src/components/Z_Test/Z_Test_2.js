@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import '../Portal/MyFeatures/PProfile/PProfile.css';
-import "../Portal/MyFeatures/PRecords/PRecords.css";
-import "../Portal/MyFeatures/PTracking/PT.css";
-import "../Portal/MyFeatures/PAppointments/PAppoint.css";
-import appoint_img from '../Pics/appoint_2.png';
-import { useParams } from "react-router-dom";
-import { database1 } from '../Portal/firebase';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import React, { useState, useEffect } from "react";
+import { doc, getDoc, updateDoc, collection, getDocs } from "firebase/firestore";
+import { database1 } from "../Portal/firebase";
+import { useNavigate, useParams } from "react-router-dom";
 
-export default function Z_Test_2() {
+function Z_Test_2() {
+  // Navigate
+  const navigate = useNavigate();
   const { id } = useParams();
+
+  // Backend Part Logic
+  // Firestore Logic
   const [value_1, setValue_1] = useState("");
   const [value_2, setValue_2] = useState("");
   const [value_3, setValue_3] = useState("");
   const [TimeSlot, setTimeSlot] = useState("");
   const [gender, setGender] = useState("");
-  const [Date, setDate] = useState("");
+  const [appointmentDate, setAppointmentDate] = useState(""); // Changed from Date to appointmentDate
   const [status, setStatus] = useState("Processing");
   const [showExtraTime, setShowExtraTime] = useState(false);
   const [showExtraTimeText, setShowExtraTimeText] = useState("");
-  const [pastDatesData, setPastDatesData] = useState({});
-
+  const [existingAppointments, setExistingAppointments] = useState([]);
+  
   useEffect(() => {
     const fetchData = async () => {
       const docRef = doc(database1, "3 - Appointment", id);
@@ -32,38 +32,52 @@ export default function Z_Test_2() {
         setValue_3(data.value_3 || "");
         setTimeSlot(data.TimeSlot || "");
         setGender(data.gender || "");
-        setDate(data.Date || "");
+        setAppointmentDate(data.Date || ""); // Changed from Date to appointmentDate
         setStatus(data.status || "Processing");
-        setShowExtraTimeText(data.showExtraTimeText || "");
-        setShowExtraTime(data.showExtraTime || false); // Set showExtraTime based on Firestore data
+        setShowExtraTimeText(data.showExtraTimeText || "No Time Alloted");
+        // Use the appointmentDate from Firebase data to set existing appointments
+        if (data.Date) {
+          const appointments = [{ Date: data.Date }];
+          setExistingAppointments(appointments);
+        }
       }
     };
     fetchData();
   }, [id]);
-
+  
   useEffect(() => {
-    const fetchPastDatesData = async () => {
-      // Assuming 'past_dates' is the collection where past dates data is stored
-      const pastDatesRef = doc(database1, "3 - Appointment", id);
-      const pastDatesSnap = await getDoc(pastDatesRef);
-      if (pastDatesSnap.exists()) {
-        setPastDatesData(pastDatesSnap.data());
-      }
+    const fetchAppointments = async () => {
+      const appointmentsCollection = collection(database1, "3 - Appointment");
+      const snapshot = await getDocs(appointmentsCollection);
+      const appointments = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.Date) {
+          appointments.push({ Date: data.Date });
+        }
+      });
+      setExistingAppointments(appointments);
     };
-    fetchPastDatesData();
-  }, [id]);
+    fetchAppointments();
+  }, []);
+
+  const handleTimeUpdate = async (showExtraTimeText) => {
+    const updateData = doc(database1, "3 - Appointment", id);
+    await updateDoc(updateData, { showExtraTimeText });
+    setShowExtraTimeText(showExtraTimeText);
+  };
 
   const handleStatusUpdate = async (status) => {
     const updateData = doc(database1, "3 - Appointment", id);
     await updateDoc(updateData, { status });
     setStatus(status);
-  }
+  };
 
-  const handle_TimeUpdate = async (showExtraTimeText) => {
+  const handleDateUpdate = async (selectedDate) => {
     const updateData = doc(database1, "3 - Appointment", id);
-    await updateDoc(updateData, { showExtraTimeText });
-    setShowExtraTimeText(showExtraTimeText);
-  }
+    await updateDoc(updateData, { Date: selectedDate });
+    setAppointmentDate(selectedDate);
+  };
 
   const getStatusColor = () => {
     switch (status) {
@@ -78,150 +92,169 @@ export default function Z_Test_2() {
     }
   };
 
-  const isPastDateAndText = (date, text) => {
-    const appointmentDateTime = new Date(date + ' ' + text.split(' ')[0]);
-
-    return (Date.now() > appointmentDateTime);
+  const isDateBooked = (date) => {
+    return existingAppointments.some((appointment) => appointment.Date === date);
   };
 
+  const getDays = (month) => {
+    let days = 0;
+    if (
+      month === 1 ||
+      month === 3 ||
+      month === 5 ||
+      month === 7 ||
+      month === 8 ||
+      month === 10 ||
+      month === 12
+    ) {
+      days = 31;
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+      days = 30;
+    } else if (month === 2) {
+      days = 28; // Assuming it's not a leap year for simplicity
+    }
+    return days;
+  };
+
+  // Main Body
   return (
-    <div>
-      <div id="PAD_first">
-        <div id="sub_PAD_first">
-          <div id="PAD_first_Box">
-            <div id="PAD_first_B_1">
-              <div id="PAD_first_B_1_Box">
-                <img src={appoint_img} alt="NA" />
-              </div>
-              <div id="PAD_first_B_1_Box_2">
-                <p> Status :  <span style={{ color: getStatusColor() }}>{status}</span> </p>
-              </div>
-            </div>
-            <div id="PAD_first_B_2">
-              <div id="PAD_first_B_2_P1">
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Name
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {value_1}
-                  </div>
-                </div>
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Gender
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {gender}
-                  </div>
-                </div>
-              </div>
-              <div id="PAD_first_B_2_P2">
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Date
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {Date}
-                  </div>
-                </div>
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Time Slot
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {TimeSlot}
-                  </div>
-                </div>
-              </div>
-              <div id="PAD_first_B_2_P2">
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Email
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {value_2}
-                  </div>
-                </div>
-                <div id="PAD_first_B_2_P_InputBox">
-                  <div id="PAD_first_B_2_P_InputBox_P1">
-                    Contact No
-                  </div>
-                  <div id="PAD_first_B_2_P_InputBox_P2">
-                    {value_3}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="PAD_first_B_3">
-              <div id="PAD_first_B_3_Box">
-                <button id="PAD_first_B_3_Box_Btn1" onClick={() => { handleStatusUpdate('Accepted'); handle_TimeUpdate(''); }}>Accept</button>
-              </div>
-              <div id="PAD_first_B_3_Box">
-                <button id="PAD_first_B_3_Box_Btn2" onClick={() => { handleStatusUpdate('Rejected'); handle_TimeUpdate(''); }}>Reject</button>
-              </div>
-              <div id="PAD_first_B_3_Box">
-                <button id="PAD_first_B_3_Box_Btn3" onClick={() => { handleStatusUpdate('Delayed'); setShowExtraTime(!showExtraTime); }}>Delay</button>
-              </div>
-            </div>
+    <>
+      <div className="container">
+        <div id="Z_T_C_Box">
+          {/* Heading */}
+          <h1>Appointment Detail</h1>
+          {/* Detail */}
+          <h6>1 - Name</h6>
+          <h5>{value_1}</h5>
+          <h6>2 - Email</h6>
+          <h5>{value_2}</h5>
+          <h6>3 - Phone Number</h6>
+          <h5>{value_3}</h5>
+          <h6>4 - Time Slot</h6>
+          <h5>{TimeSlot}</h5>
+          <h6>5 - Gender</h6>
+          <h5>{gender}</h5>
+          <h6>6 - Date</h6>
+          <h5>{appointmentDate}</h5>{" "}
+          {/* Changed from Date to appointmentDate */}
+          {/* Status with color-coded styling */}
+          <h6>Status</h6>
+          <h5 style={{ color: getStatusColor() }}>{status}</h5>
+          {/* Status Div */}
+          <div id="Status_Parent">
+            {/* Button 1 */}
+            <button
+              id="A_Btn_1"
+              style={{ backgroundColor: "darkgreen" }}
+              onClick={() => handleStatusUpdate("Accepted")}
+            >
+              Accept
+            </button>
+            {/* Button 2 */}
+            <button
+              id="A_Btn_2"
+              style={{ backgroundColor: "red" }}
+              onClick={() => handleStatusUpdate("Rejected")}
+            >
+              Reject
+            </button>
+            {/* Button 3 */}
+            <button
+              id="A_Btn_3"
+              style={{ backgroundColor: "black" }}
+              onClick={() => handleStatusUpdate("Delayed")}
+            >
+              Delay
+            </button>
           </div>
+          {/* ----- Input Time ----- */}
+          <button onClick={() => setShowExtraTime(!showExtraTime)}>
+            Extra Time
+          </button>
+          {/* --- Delayed Time Schedule --- */}
+          {showExtraTime && (
+            <div id="E_Extra_Time_Parent">
+              <div id="sub_E_Extra_Time_Parent">
+                <h1>Reschedule Time Slot</h1>
+                {/* Extra Time Slot */}
+                <h5 style={{ color: getStatusColor() }}>{showExtraTimeText}</h5>
+                <div id="E_Extra_Time_Parent_Box">
+                  <button onClick={() => handleTimeUpdate("12:00 - 1:30 AM")}>
+                    12:00 - 1:30 AM
+                  </button>
+                  <button onClick={() => handleTimeUpdate("1:30 - 3:00 AM")}>
+                    1:30 - 3:00 AM
+                  </button>
+                  <button onClick={() => handleTimeUpdate("3:00 - 4:30 AM")}>
+                    3:00 - 4:30 AM
+                  </button>
+                  <button onClick={() => handleTimeUpdate("4:30 - 6:00 AM")}>
+                    4:30 - 6:00 AM
+                  </button>
+                </div>
+                {/* Extra Date */}
+                <div id="Date_Parent_Box">
+                  {/* Flatlist For Day */}
+                  <div id="Date_Sub_Parent_Box">
+                    {Array.from({ length: getDays(new Date().getMonth() + 1) }, (_, i) => i + 1).map((day, index) => (
+                      <div className="Date_Sub_Child_Box" key={day}>
+                        <button
+                          style={{
+                            borderRadius: 5,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backgroundColor:
+                              appointmentDate === day
+                                ? "orangered"
+                                : isDateBooked(day)
+                                ? "green"
+                                : "white",
+                            borderColor:
+                              appointmentDate === day
+                                ? "orangered"
+                                : isDateBooked(day)
+                                ? "green"
+                                : "#D2D2D2",
+                            borderWidth: appointmentDate === day ? 0.1 : 0.1,
+                          }}
+                          onClick={() => {
+                            if (day < new Date().getDate()) {
+                              // Do nothing for past dates
+                            } else {
+                              handleDateUpdate(day); // Update Firestore with selected date
+                            }
+                          }}
+                        >
+                          <span
+                            style={{
+                              color:
+                              appointmentDate === day
+                              ? "white"
+                              : isDateBooked(day)
+                              ? "white"
+                              : "black",
+                            }}
+                          >
+                            {day}
+                          </span>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {/* --- Delayed Time Schedule --- */}
+          {/* Back Button */}
+          <button id="Btn_C_1" onClick={() => navigate("/")}>
+            Move Back
+          </button>
         </div>
-        {showExtraTime && (
-          <div id="S_Extra_Time_Parent">
-            <div id="sub_S_Extra_Time_Parent">
-              <h3>Reschedule Delayed Time Slot <i className="fa fa-history"></i></h3>
-              <p> New Time Slot :  <span>{showExtraTimeText}</span> </p>
-              <div id="S_Extra_Time_Parent_Box">
-                {showExtraTimeText && (
-                  <>
-                    <button
-                      onClick={() => {
-                        handle_TimeUpdate('2:00 - 3:00 PM');
-                      }}
-                      style={{
-                        backgroundColor: pastDatesData[{Date}] && showExtraTime && isPastDateAndText({Date}, '2:00 - 3:00 PM') ? 'red' : 'orange'
-                      }}
-                    >
-                      2:00 - 3:00 PM
-                    </button>
-                    <button
-                      onClick={() => {
-                        handle_TimeUpdate('3:00 - 4:00 PM');
-                      }}
-                      style={{
-                        backgroundColor: pastDatesData[{Date}] && showExtraTime && isPastDateAndText({Date}, '3:00 - 4:00 PM') ? 'red' : 'orange'
-                      }}
-                    >
-                      3:00 - 4:00 PM
-                    </button>
-                    <button
-                      onClick={() => {
-                        handle_TimeUpdate('4:00 - 5:00 PM');
-                      }}
-                      style={{
-                        backgroundColor: pastDatesData[Date] && showExtraTime && isPastDateAndText(Date, '4:00 - 5:00 PM') ? 'red' : 'orange'
-                      }}
-                    >
-                      4:00 - 5:00 PM
-                    </button>
-                    <button
-                      onClick={() => {
-                        handle_TimeUpdate('5:00 - 6:00 PM');
-                      }}
-                      style={{
-                        backgroundColor: pastDatesData[Date] && showExtraTime && isPastDateAndText(Date, '5:00 - 6:00 PM') ? 'red' : 'orange'
-                      }}
-                    >
-                      5:00 - 6:00 PM
-                    </button>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
-    </div>
-  )
+    </>
+  );
 }
+
+export default Z_Test_2;
 

@@ -164,16 +164,16 @@
   align-items: center;
 }
 #Third_Box_1 {
-  background: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 229, 181));
+  background: linear-gradient(to right, #ce5702, #fcbf0a);
 }
 #Third_Box_2 {
-  background: linear-gradient(to right, #014201, #5ffd5f);
+  background: linear-gradient(to right, #027902, #62ca66);
 }
 #Third_Box_3 {
-  background: linear-gradient(to right, red, rgb(250, 155, 155));
+  background: linear-gradient(to right, #fd0e42, #FD9088);
 }
 #Third_Box_4 {
-  background: linear-gradient(to right, blue, rgb(174, 174, 255));
+  background: linear-gradient(to right, #0251aa, #18c9f5);
 }
 #Third_Box_1_Part1{
   border: 0.1px solid black;
@@ -185,14 +185,17 @@
   font-size: 1.7em;
   font-weight: bold;
   display: block;
+  color: white;
 }
 #Third_Box_P{
   border: 0.1px solid black;
   width: 65%;
+  color: white;
   font-size: 0.85em;
   display: block;
   /* color: gray; */
-  font-weight: 600;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 #Third_Box_1_Part2{
   border: 0.1px solid black;
@@ -204,6 +207,7 @@
   width: 75%;
   display: block;
   margin: 0em auto;
+  filter: brightness(0) invert(1) grayscale(1);
 }
 /* Start */
 

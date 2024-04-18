@@ -8,9 +8,9 @@ export default function Z_Test_Parent() {
     return (
         <Router>
             <Routes>
-                {/* 1 List Page */}
+                {/* 1 Home Page */}
                 <Route path='/' element={<Z_Test />} />
-                {/* 2 Detail Page */}
+                {/* 2 Update Page */}
                 <Route path='/Z_Test_2/:id' element={<Z_Test_2 />} />
             </Routes>
         </Router>

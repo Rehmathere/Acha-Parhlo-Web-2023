@@ -1,40 +1,36 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // Navigation
 import { useNavigate } from 'react-router-dom';
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css";
 // Firebase
 import { database1 } from '../Portal/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
 export default function Z_Test() {
     // Navigate
     const navigate = useNavigate();
     // ------------- Backend Part Logic -------------
-    // --- Dashboard Counting Feature File Numbers ---
-    const [fileCounts, setFileCounts] = useState({
-        addUniversity: 0,
-        appointment: 0,
-        trackingRecords: 0
-    });
-    useLayoutEffect(() => {
-        async function fetchData() {
-            const value1 = collection(database1, "1 - Add University");
-            const value2 = collection(database1, "3 - Appointment");
-            const value3 = collection(database1, "4 - Student Records");
-            // Functions 
-            const [data1, data2, data3] = await Promise.all([
-                getDocs(value1),
-                getDocs(value2),
-                getDocs(value3)
-            ]);
-            setFileCounts({
-                addUniversity: data1.size,
-                appointment: data2.size,
-                trackingRecords: data3.size
-            });
-        }
-        fetchData();
+    const [val, setVal] = useState([]);
+    const value = collection(database1, "3 - Appointment");
+    // Function
+    const getData = async () => {
+        const dbVal = await getDocs(value);
+        setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    }
+    useEffect(() => {
+        getData();
     }, []);
-    // --- Dashboard Counting Feature File Numbers ---
+    // View
+    const handleEdit = (id) => {
+        navigate(`/Z_Test_2/${id}`);
+    }
+    // Delete logic
+    const handleDelete = async (id) => {
+        await deleteDoc(doc(database1, "3 - Appointment", id));
+        getData(); // Refresh data after delete
+    }
+    // ------------- Backend Part Logic -------------
     // Main Body
     return (
         <>
@@ -44,26 +40,19 @@ export default function Z_Test() {
                     <h4>Appointment App Feature</h4>
                 </div>
             </div>
-            {/* Box 1 : Add University */}
+            {/* Box */}
             <div className='container'>
-                <div id='Z_T_1_Box'>
-                    <h4>No Of Add University : </h4>
-                    <h4>{fileCounts.addUniversity}</h4> {/* Display the file count */}
-                </div>
-            </div>
-            {/* Box 2 : Appointment */}
-            <div className='container'>
-                <div id='Z_T_1_Box'>
-                    <h4>No Of Appointment : </h4>
-                    <h4>{fileCounts.appointment}</h4> {/* Display the file count */}
-                </div>
-            </div>
-            {/* Box 3 : Application Tracking & Student Records */}
-            <div className='container'>
-                <div id='Z_T_1_Box'>
-                    <h4>No Of Tracking , Records : </h4>
-                    <h4>{fileCounts.trackingRecords}</h4> {/* Display the file count */}
-                </div>
+                {val.map(values =>
+                    <div id='Z_T_1_Box' key={values.id}>
+                        <h6>Name : &nbsp; {values.value_1}</h6>
+                        <h6>Date : &nbsp; {values.Date}</h6>
+                        <h6>Time Slot : &nbsp; {values.TimeSlot}</h6>
+                        <h6>{values.showExtraTimeText}</h6>
+                        <button onClick={() => handleEdit(values.id)}>Appointment Detail</button>
+                        {/* Delete Btn */}
+                        <button onClick={() => handleDelete(values.id)}>Delete</button>
+                    </div>
+                )}
             </div>
         </>
     );

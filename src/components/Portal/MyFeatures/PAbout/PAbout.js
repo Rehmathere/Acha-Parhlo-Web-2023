@@ -113,7 +113,7 @@ export default function PAbout() {
                         <div id="Third_Box_1">
                             <div id="Third_Box_1_Part1">
                                 <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Feature</span>
+                                <span id='Third_Box_P'>Appointment</span>
                             </div>
                             <div id="Third_Box_1_Part2">
                                 <img src={Fea_1} alt="NA" />
@@ -123,7 +123,7 @@ export default function PAbout() {
                         <div id="Third_Box_2">
                             <div id="Third_Box_1_Part1">
                                 <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Feature</span>
+                                <span id='Third_Box_P'>Application</span>
                             </div>
                             <div id="Third_Box_1_Part2">
                                 <img src={Fea_2} alt="NA" />
@@ -133,7 +133,7 @@ export default function PAbout() {
                         <div id="Third_Box_3">
                             <div id="Third_Box_1_Part1">
                                 <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Feature</span>
+                                <span id='Third_Box_P'>Records</span>
                             </div>
                             <div id="Third_Box_1_Part2">
                                 <img src={Fea_3} alt="NA" />
@@ -143,7 +143,7 @@ export default function PAbout() {
                         <div id="Third_Box_4">
                             <div id="Third_Box_1_Part1">
                                 <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Feature</span>
+                                <span id='Third_Box_P'>Universities</span>
                             </div>
                             <div id="Third_Box_1_Part2">
                                 <img src={Fea_4} alt="NA" />
