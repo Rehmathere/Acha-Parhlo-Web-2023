@@ -282,14 +282,14 @@
 #S_Extra_Time_Parent_Box button {
   border: 0px solid transparent;
   width: 20%;
-  background-color: orange;
+  background-color: #DBDADA;
   padding: 0.3em 0em;
   border-radius: 20px;
-  color: black;
+  /* color: black; */
   letter-spacing: 1px;
 }
 #S_Extra_Time_Parent_Box button:hover {
-  background-color: rgb(255, 181, 42);
+  background-color: #cecccc;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #S_Extra_Time_Parent_Box button:focus {
@@ -297,6 +297,33 @@
   background-color: rgb(255, 181, 42);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+/* -- New Date Concept -- */
+#S_Extra_Date_Parent_Box {
+  border: 0px solid transparent;
+  padding: 2em 1em 1.5em 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Date_Sub_Child_Box {
+  border: 0px solid transparent;
+  margin-right: 0px;
+  margin-bottom: 1px;
+  width: 9%;
+}
+.Date_Sub_Child_Box Button {
+  width: 25%;
+  padding: 0.1em 0em;
+  display: block;
+  margin: 1em auto;
+}
+.Date_Sub_Child_Box Button:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.Date_Sub_Child_Box Button:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 /* Start */
 
 /* ---------------------------- */
@@ -454,6 +481,20 @@
     letter-spacing: 1px;
     font-size: 1em;
   }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 2em 1em 1.5em 1em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 9%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 29%;
+    padding: 0.1em 0em;
+    margin: 1em auto;
+  }
   /* - */
 }
 /* 2 */
@@ -607,6 +648,20 @@
     border-radius: 20px;
     letter-spacing: 1px;
     font-size: 0.9em;
+  }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 2em 1em 1.5em 1em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 9%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 35%;
+    padding: 0.12em 0em;
+    margin: 1em auto;
   }
   /* - */
 }
@@ -771,6 +826,21 @@
     border-radius: 20px;
     letter-spacing: 1px;
     font-size: 0.8em;
+  }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 1.5em 1em 1.5em 1em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 10%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 40%;
+    padding: 0.05em 0em;
+    margin: 1em auto;
+    font-size: 0.9em;
   }
   /* - */
 }
@@ -937,6 +1007,21 @@
     border-radius: 20px;
     letter-spacing: 1px;
     font-size: 0.69em;
+  }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 1.5em 0em 1.5em 0em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 10%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 50%;
+    padding: 0.15em 0.1em;
+    margin: 1em auto;
+    font-size: 0.85em;
   }
   /* - */
 }
@@ -1123,6 +1208,21 @@
     letter-spacing: 2px;
     font-size: 0.8em;
   }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 1.5em 0em 1.5em 0em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 14%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 58%;
+    padding: 0.15em 0.1em;
+    margin: 1em auto;
+    font-size: 0.8em;
+  }
   /* - */
 }
 /* 6 */
@@ -1294,6 +1394,21 @@
     border-radius: 20px;
     letter-spacing: 1px;
     font-size: 0.75em;
+  }
+  /* -- New Date Concept -- */
+  #S_Extra_Date_Parent_Box {
+    padding: 0.5em 0em 1.5em 0em;
+  }
+  .Date_Sub_Child_Box {
+    margin-right: 0px;
+    margin-bottom: 1px;
+    width: 14.25%;
+  }
+  .Date_Sub_Child_Box Button {
+    width: 69%;
+    padding: 0.15em 0.1em 0.2em 0.1em;
+    margin: 1em auto;
+    font-size: 0.73em;
   }
   /* - */
 }

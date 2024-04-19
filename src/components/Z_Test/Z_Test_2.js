@@ -20,7 +20,8 @@ function Z_Test_2() {
   const [showExtraTime, setShowExtraTime] = useState(false);
   const [showExtraTimeText, setShowExtraTimeText] = useState("");
   const [existingAppointments, setExistingAppointments] = useState([]);
-  
+  const [extraTimeSlots, setExtraTimeSlots] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const docRef = doc(database1, "3 - Appointment", id);
@@ -44,19 +45,24 @@ function Z_Test_2() {
     };
     fetchData();
   }, [id]);
-  
+
   useEffect(() => {
     const fetchAppointments = async () => {
       const appointmentsCollection = collection(database1, "3 - Appointment");
       const snapshot = await getDocs(appointmentsCollection);
       const appointments = [];
+      const extraSlots = [];
       snapshot.forEach((doc) => {
         const data = doc.data();
         if (data.Date) {
           appointments.push({ Date: data.Date });
+          if (data.showExtraTimeText) {
+            extraSlots.push({ Date: data.Date, showExtraTimeText: data.showExtraTimeText });
+          }
         }
       });
       setExistingAppointments(appointments);
+      setExtraTimeSlots(extraSlots);
     };
     fetchAppointments();
   }, []);
@@ -93,7 +99,12 @@ function Z_Test_2() {
   };
 
   const isDateBooked = (date) => {
-    return existingAppointments.some((appointment) => appointment.Date === date);
+    const hasExtraTimeSlot = extraTimeSlots.some(slot => slot.Date === date);
+    return existingAppointments.some((appointment) => appointment.Date === date) || hasExtraTimeSlot;
+  };
+
+  const isSlotDisabled = (date, timeSlot) => {
+    return extraTimeSlots.some(slot => slot.Date === date && slot.showExtraTimeText === timeSlot);
   };
 
   const getDays = (month) => {
@@ -179,17 +190,33 @@ function Z_Test_2() {
                 {/* Extra Time Slot */}
                 <h5 style={{ color: getStatusColor() }}>{showExtraTimeText}</h5>
                 <div id="E_Extra_Time_Parent_Box">
-                  <button onClick={() => handleTimeUpdate("12:00 - 1:30 AM")}>
-                    12:00 - 1:30 AM
+                  <button
+                    disabled={isSlotDisabled(appointmentDate, "2:00 - 3:00 PM")}
+                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "2:00 - 3:00 PM") ? "red" : "" }}
+                    onClick={() => handleTimeUpdate("2:00 - 3:00 PM")}
+                  >
+                    2:00 - 3:00 PM
                   </button>
-                  <button onClick={() => handleTimeUpdate("1:30 - 3:00 AM")}>
-                    1:30 - 3:00 AM
+                  <button
+                    disabled={isSlotDisabled(appointmentDate, "3:00 - 4:00 PM")}
+                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "3:00 - 4:00 PM") ? "red" : "" }}
+                    onClick={() => handleTimeUpdate("3:00 - 4:00 PM")}
+                  >
+                    3:00 - 4:00 PM
                   </button>
-                  <button onClick={() => handleTimeUpdate("3:00 - 4:30 AM")}>
-                    3:00 - 4:30 AM
+                  <button
+                    disabled={isSlotDisabled(appointmentDate, "4:00 - 5:00 PM")}
+                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "4:00 - 5:00 PM") ? "red" : "" }}
+                    onClick={() => handleTimeUpdate("4:00 - 5:00 PM")}
+                  >
+                    4:00 - 5:00 PM
                   </button>
-                  <button onClick={() => handleTimeUpdate("4:30 - 6:00 AM")}>
-                    4:30 - 6:00 AM
+                  <button
+                    disabled={isSlotDisabled(appointmentDate, "5:00 - 6:00 PM")}
+                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "5:00 - 6:00 PM") ? "red" : "" }}
+                    onClick={() => handleTimeUpdate("5:00 - 6:00 PM")}
+                  >
+                    5:00 - 6:00 PM
                   </button>
                 </div>
                 {/* Extra Date */}
@@ -257,4 +284,3 @@ function Z_Test_2() {
 }
 
 export default Z_Test_2;
-
