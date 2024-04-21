@@ -15,7 +15,7 @@ function Z_Test_2() {
   const [value_3, setValue_3] = useState("");
   const [TimeSlot, setTimeSlot] = useState("");
   const [gender, setGender] = useState("");
-  const [appointmentDate, setAppointmentDate] = useState(""); // Changed from Date to appointmentDate
+  const [appointmentDate, setAppointmentDate] = useState("");
   const [status, setStatus] = useState("Processing");
   const [showExtraTime, setShowExtraTime] = useState(false);
   const [showExtraTimeText, setShowExtraTimeText] = useState("");
@@ -33,9 +33,9 @@ function Z_Test_2() {
         setValue_3(data.value_3 || "");
         setTimeSlot(data.TimeSlot || "");
         setGender(data.gender || "");
-        setAppointmentDate(data.Date || ""); // Changed from Date to appointmentDate
+        setAppointmentDate(data.Date || "");
         setStatus(data.status || "Processing");
-        setShowExtraTimeText(data.showExtraTimeText || "No Time Alloted");
+        setShowExtraTimeText(data.showExtraTimeText || "No Time Allotted");
         // Use the appointmentDate from Firebase data to set existing appointments
         if (data.Date) {
           const appointments = [{ Date: data.Date }];
@@ -103,6 +103,16 @@ function Z_Test_2() {
     return existingAppointments.some((appointment) => appointment.Date === date) || hasExtraTimeSlot;
   };
 
+  const getSlotColor = (date, timeSlot) => {
+    if (date === appointmentDate && timeSlot === showExtraTimeText) {
+      return "red";
+    } else if (extraTimeSlots.some(slot => slot.Date === date && slot.showExtraTimeText === timeSlot)) {
+      return "blue";
+    } else {
+      return "orange";
+    }
+  };
+
   const isSlotDisabled = (date, timeSlot) => {
     return extraTimeSlots.some(slot => slot.Date === date && slot.showExtraTimeText === timeSlot);
   };
@@ -146,8 +156,7 @@ function Z_Test_2() {
           <h6>5 - Gender</h6>
           <h5>{gender}</h5>
           <h6>6 - Date</h6>
-          <h5>{appointmentDate}</h5>{" "}
-          {/* Changed from Date to appointmentDate */}
+          <h5>{appointmentDate}</h5>
           {/* Status with color-coded styling */}
           <h6>Status</h6>
           <h5 style={{ color: getStatusColor() }}>{status}</h5>
@@ -187,33 +196,32 @@ function Z_Test_2() {
             <div id="E_Extra_Time_Parent">
               <div id="sub_E_Extra_Time_Parent">
                 <h1>Reschedule Time Slot</h1>
-                {/* Extra Time Slot */}
                 <h5 style={{ color: getStatusColor() }}>{showExtraTimeText}</h5>
                 <div id="E_Extra_Time_Parent_Box">
                   <button
                     disabled={isSlotDisabled(appointmentDate, "2:00 - 3:00 PM")}
-                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "2:00 - 3:00 PM") ? "red" : "" }}
+                    style={{ backgroundColor: getSlotColor(appointmentDate, "2:00 - 3:00 PM") }}
                     onClick={() => handleTimeUpdate("2:00 - 3:00 PM")}
                   >
                     2:00 - 3:00 PM
                   </button>
                   <button
                     disabled={isSlotDisabled(appointmentDate, "3:00 - 4:00 PM")}
-                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "3:00 - 4:00 PM") ? "red" : "" }}
+                    style={{ backgroundColor: getSlotColor(appointmentDate, "3:00 - 4:00 PM") }}
                     onClick={() => handleTimeUpdate("3:00 - 4:00 PM")}
                   >
                     3:00 - 4:00 PM
                   </button>
                   <button
                     disabled={isSlotDisabled(appointmentDate, "4:00 - 5:00 PM")}
-                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "4:00 - 5:00 PM") ? "red" : "" }}
+                    style={{ backgroundColor: getSlotColor(appointmentDate, "4:00 - 5:00 PM") }}
                     onClick={() => handleTimeUpdate("4:00 - 5:00 PM")}
                   >
                     4:00 - 5:00 PM
                   </button>
                   <button
                     disabled={isSlotDisabled(appointmentDate, "5:00 - 6:00 PM")}
-                    style={{ backgroundColor: extraTimeSlots.some(slot => slot.Date === appointmentDate && slot.showExtraTimeText === "5:00 - 6:00 PM") ? "red" : "" }}
+                    style={{ backgroundColor: getSlotColor(appointmentDate, "5:00 - 6:00 PM") }}
                     onClick={() => handleTimeUpdate("5:00 - 6:00 PM")}
                   >
                     5:00 - 6:00 PM

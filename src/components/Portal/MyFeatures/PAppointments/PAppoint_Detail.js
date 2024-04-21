@@ -181,6 +181,20 @@ export default function PAppoint_Detail() {
     setLogoutBoxVisibility(!isLogoutBoxVisible);
   };
   // ----------------------------------------------------
+  // Time Slots Color ( Current -> #001400 , Booked -> Orange , Other White )
+  const getSlotColor = (date, timeSlot) => {
+    if (date === appointmentDate && timeSlot === showExtraTimeText) {
+      return { background: "#001400", color: "white" };
+    } else if (
+      extraTimeSlots.some(
+        (slot) => slot.Date === date && slot.showExtraTimeText === timeSlot
+      )
+    ) {
+      return { background: "orange", color: "black" };
+    } else {
+      return { background: "#DBDADA", color: "black" };
+    }
+  };
   // Main Body
   return (
     <div>
@@ -393,20 +407,19 @@ export default function PAppoint_Detail() {
                 <button
                   disabled={isSlotDisabled(appointmentDate, "2:00 - 3:00 PM")}
                   style={{
-                    backgroundColor: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "2:00 - 3:00 PM"
-                    )
-                      ? "#001400"
-                      : "",
-                    color: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "2:00 - 3:00 PM"
-                    )
-                      ? "white"
-                      : "black",
+                    backgroundColor: getSlotColor(
+                      appointmentDate,
+                      "2:00 - 3:00 PM"
+                    ).background,
+                    color: getSlotColor(appointmentDate, "2:00 - 3:00 PM")
+                      .color,
+                    // backgroundColor: extraTimeSlots.some(
+                    //   (slot) =>
+                    //     slot.Date === appointmentDate &&
+                    //     slot.showExtraTimeText === "2:00 - 3:00 PM"
+                    // )
+                    //   ? "#001400"
+                    //   : "",
                   }}
                   onClick={() => {
                     handle_TimeUpdate("2:00 - 3:00 PM");
@@ -419,20 +432,19 @@ export default function PAppoint_Detail() {
                 <button
                   disabled={isSlotDisabled(appointmentDate, "3:00 - 4:00 PM")}
                   style={{
-                    backgroundColor: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "3:00 - 4:00 PM"
-                    )
-                      ? "#001400"
-                      : "",
-                    color: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "3:00 - 4:00 PM"
-                    )
-                      ? "white"
-                      : "black",
+                    backgroundColor: getSlotColor(
+                      appointmentDate,
+                      "3:00 - 4:00 PM"
+                    ).background,
+                    color: getSlotColor(appointmentDate, "3:00 - 4:00 PM")
+                      .color,
+                    // backgroundColor: extraTimeSlots.some(
+                    //   (slot) =>
+                    //     slot.Date === appointmentDate &&
+                    //     slot.showExtraTimeText === "3:00 - 4:00 PM"
+                    // )
+                    //   ? "#001400"
+                    //   : "",
                   }}
                   onClick={() => {
                     handle_TimeUpdate("3:00 - 4:00 PM");
@@ -445,20 +457,19 @@ export default function PAppoint_Detail() {
                 <button
                   disabled={isSlotDisabled(appointmentDate, "4:00 - 5:00 PM")}
                   style={{
-                    backgroundColor: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "4:00 - 5:00 PM"
-                    )
-                      ? "#001400"
-                      : "",
-                    color: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "4:00 - 5:00 PM"
-                    )
-                      ? "white"
-                      : "black",
+                    backgroundColor: getSlotColor(
+                      appointmentDate,
+                      "4:00 - 5:00 PM"
+                    ).background,
+                    color: getSlotColor(appointmentDate, "4:00 - 5:00 PM")
+                      .color,
+                    // backgroundColor: extraTimeSlots.some(
+                    //   (slot) =>
+                    //     slot.Date === appointmentDate &&
+                    //     slot.showExtraTimeText === "4:00 - 5:00 PM"
+                    // )
+                    //   ? "#001400"
+                    //   : "",
                   }}
                   onClick={() => {
                     handle_TimeUpdate("4:00 - 5:00 PM");
@@ -471,20 +482,19 @@ export default function PAppoint_Detail() {
                 <button
                   disabled={isSlotDisabled(appointmentDate, "5:00 - 6:00 PM")}
                   style={{
-                    backgroundColor: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "5:00 - 6:00 PM"
-                    )
-                      ? "#001400"
-                      : "",
-                    color: extraTimeSlots.some(
-                      (slot) =>
-                        slot.Date === appointmentDate &&
-                        slot.showExtraTimeText === "5:00 - 6:00 PM"
-                    )
-                      ? "white"
-                      : "black",
+                    backgroundColor: getSlotColor(
+                      appointmentDate,
+                      "5:00 - 6:00 PM"
+                    ).background,
+                    color: getSlotColor(appointmentDate, "5:00 - 6:00 PM")
+                      .color,
+                    // backgroundColor: extraTimeSlots.some(
+                    //   (slot) =>
+                    //     slot.Date === appointmentDate &&
+                    //     slot.showExtraTimeText === "5:00 - 6:00 PM"
+                    // )
+                    //   ? "#001400"
+                    //   : "",
                   }}
                   onClick={() => {
                     handle_TimeUpdate("5:00 - 6:00 PM");
