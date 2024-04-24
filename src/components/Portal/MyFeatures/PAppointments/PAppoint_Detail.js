@@ -8,6 +8,10 @@ import "../PTracking/PT.css";
 import logout from "../../../Pics/logout.png";
 import appoint_img from "../../../Pics/appoint_2.png";
 import confirm_u from "../../../Pics/appoint_sent.gif";
+import E_Hint_1 from "../../../Pics/E_Hint_1.png";
+import E_Hint_2 from "../../../Pics/E_Hint_2.png";
+import E_Hint_3 from "../../../Pics/E_Hint_3.png";
+import E_Line from "../../../Pics/line.png";
 // useNavigate
 import { useNavigate, useParams } from "react-router-dom";
 // Logout Logic
@@ -334,6 +338,30 @@ export default function PAppoint_Detail() {
         </div>
         {showExtraTime && (
           <div id="S_Extra_Time_Parent">
+            {/* -------------------------------- */}
+            <div id="S_Extra_Hint_Parent">
+              <div id="sub_S_Extra_Hint_Parent">
+                {/* Box */}
+                <div id="sub_S_Extra_Hint_Box">
+                  <img id="sub_S_Extra_Hint_Box_Img_1" src={E_Hint_1} alt="NA" />
+                  <img id="sub_S_Extra_Hint_Box_Img_2" src={E_Line} alt="NA" />
+                  <span>Current</span>
+                </div>
+                {/* Box */}
+                <div id="sub_S_Extra_Hint_Box">
+                  <img id="sub_S_Extra_Hint_Box_Img_1" src={E_Hint_2} alt="NA" />
+                  <img id="sub_S_Extra_Hint_Box_Img_2" src={E_Line} alt="NA" />
+                  <span>Reserved</span>
+                </div>
+                {/* Box */}
+                <div id="sub_S_Extra_Hint_Box">
+                  <img id="sub_S_Extra_Hint_Box_Img_1" src={E_Hint_3} alt="NA" />
+                  <img id="sub_S_Extra_Hint_Box_Img_2" src={E_Line} alt="NA" />
+                  <span>Unreserved</span>
+                </div>
+              </div>
+            </div>
+            {/* -------------------------------- */}
             {/* ----- Reschedule Date Slot ----- */}
             <div id="sub_S_Extra_Time_Parent">
               <h3>

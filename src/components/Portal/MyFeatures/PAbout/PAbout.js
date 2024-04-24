@@ -99,56 +99,15 @@ export default function PAbout() {
                 <div id="PAbout_Third">
                     <div id="sub_PAbout_Third">
                         {/* ------ Old Code ------ */}
-                        {/* Paragraph 1
+                        {/* Paragraph 1 */}
                         <p><i className='fa fa-graduation-cap'></i>Experience the convenience of our streamlined management system designed to make your consultancy journey smooth and efficient.</p>
-                        Paragraph 2
+                        {/* Paragraph 2 */}
                         <p><i className='fa fa-graduation-cap'></i>Complete your profile in 'My Profile' and manage student records effortlessly.</p>
-                        Paragraph 3
+                        {/* Paragraph 3 */}
                         <p><i className='fa fa-graduation-cap'></i>Initiate conversations and address queries promptly using the 'Chat with Students'.</p>
-                        Paragraph 4
-                        <p><i className='fa fa-graduation-cap'></i>Master application tracking, utilize affiliated universities, and stay informed</p> */}
+                        {/* Paragraph 4 */}
+                        <p><i className='fa fa-graduation-cap'></i>Master application tracking, utilize affiliated universities, and stay informed</p>
                         {/* ------ Old Code ------ */}
-                        {/* Start */}
-                        {/* Box */}
-                        <div id="Third_Box_1">
-                            <div id="Third_Box_1_Part1">
-                                <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Appointment</span>
-                            </div>
-                            <div id="Third_Box_1_Part2">
-                                <img src={Fea_1} alt="NA" />
-                            </div>
-                        </div>
-                        {/* Box */}
-                        <div id="Third_Box_2">
-                            <div id="Third_Box_1_Part1">
-                                <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Application</span>
-                            </div>
-                            <div id="Third_Box_1_Part2">
-                                <img src={Fea_2} alt="NA" />
-                            </div>
-                        </div>
-                        {/* Box */}
-                        <div id="Third_Box_3">
-                            <div id="Third_Box_1_Part1">
-                                <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Records</span>
-                            </div>
-                            <div id="Third_Box_1_Part2">
-                                <img src={Fea_3} alt="NA" />
-                            </div>
-                        </div>
-                        {/* Box */}
-                        <div id="Third_Box_4">
-                            <div id="Third_Box_1_Part1">
-                                <span id='Third_Box_Num'>1</span>
-                                <span id='Third_Box_P'>Universities</span>
-                            </div>
-                            <div id="Third_Box_1_Part2">
-                                <img src={Fea_4} alt="NA" />
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <br />
