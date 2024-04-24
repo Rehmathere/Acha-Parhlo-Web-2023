@@ -1,0 +1,41 @@
+import React, { useState } from 'react';
+import DisabledSlot_confirm_u from '../Pics/del_a.png';
+import "../Portal/MyFeatures/PAdd_Uni/PAdd_U.css";
+
+export default function Z_Test() {
+    const [showBox2_DS, setshowBox2_DS] = useState(false);
+    const [showConfirmation_DS, setshowConfirmation_DS] = useState(false);
+    const [showParent_DS, setshowParent_DS] = useState(false);
+
+    const DS_handleAddUniversityClick = () => {
+        setshowParent_DS(true);
+        setshowConfirmation_DS(true);
+        setshowBox2_DS(true); // Set showBox2_DS to true directly
+        setTimeout(() => {
+            setshowParent_DS(false);
+        }, 2000);
+    };
+
+    return (
+        <>
+            <div>
+                <button onClick={DS_handleAddUniversityClick}>Cancel</button>
+                {/* ----- Confirm Add University Logic ----- */}
+                <div id='PA_U_ConfirmAdd_Parent' style={{ display: showParent_DS ? 'block' : 'none' }}>
+                    {/* Basic Logic */}
+                    <div id="sub_PA_U_ConfirmAdd_Parent" style={{ display: showConfirmation_DS ? 'block' : 'none' }}>
+                        <div id="PA_U_ConfirmAdd_Parent_Box">
+                            {/* Box 2 */}
+                            <div id="PA_U_ConfirmAdd_2" style={{ display: showBox2_DS ? 'block' : 'none' }}>
+                                <div id="PA_U_ConfirmAdd_img">
+                                    <img src={DisabledSlot_confirm_u} alt="NA" />
+                                </div>
+                                <h3>Disabled Slots !</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
