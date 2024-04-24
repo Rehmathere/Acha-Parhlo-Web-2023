@@ -1,0 +1,690 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ---  PAbout.css  --- */
+#PAbout_container {
+  border: 0px solid transparent;
+}
+/* 1 - PAbout First */
+#PAbout_First {
+  border: 0px solid transparent;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: row;
+}
+#PAbout_First_1 {
+  border: 0px solid transparent;
+  padding: 1em 1.5em;
+}
+#PAbout_First_1_Box {
+  border: 0px solid transparent;
+  padding: 0.1em 1em;
+  display: flex;
+  flex-direction: row;
+  background-color: #001400;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#PAbout_First_1_Box_1 {
+  border: 0px solid transparent;
+  padding: 1em 0.5em;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#PAbout_First_1_Box_1_P1 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  color: white;
+  width: 90%;
+  margin: 0em auto;
+  letter-spacing: 0.5px;
+  font-size: 0.95em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#PAbout_First_1_Box_1 h3 {
+  border: 0px solid transparent;
+  padding: 0.2em 0.35em;
+  color: white;
+  width: 90%;
+  margin: 1.5em auto 0em auto;
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#PAbout_First_1_Box_1 h3 span {
+  text-transform: capitalize;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#PAbout_First_1_Box_1_P2 {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  color: white;
+  width: 90%;
+  margin: 0em auto;
+  font-size: 0.95em;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+  word-spacing: 1px;
+  text-transform: capitalize;
+}
+#PAbout_First_1_Box_2 {
+  border: 0px solid transparent;
+  padding: 0.5em 0.5em;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#PAbout_First_1_Box_2_ImgParent {
+  border: 0px solid transparent;
+  padding: 0.1em;
+}
+#sub_PAbout_First_1_Box_2_ImgParent {
+  border: 0px solid transparent;
+  padding: 0.1em;
+}
+#sub_PAbout_First_1_Box_2_ImgParent img {
+  border: 0px solid transparent;
+  width: 100%;
+}
+/* 2 - PAbout Second */
+#PAbout_Sec {
+  border: 0px solid transparent;
+  border: 0.1px solid black;
+  padding: 1em 2em 0.5em 2em;
+}
+#PAbout_Sec h1 {
+  border: 0px solid transparent;
+  padding: 0.7em 0.8em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #001400;
+}
+#PAbout_Sec h1 i {
+  border: 0px solid transparent;
+  padding: 0em 0.4em;
+  font-size: 40px;
+  color: #001400;
+}
+/* 3 - PAbout Third */
+#PAbout_Third {
+  border: 0px solid transparent;
+  padding: 1em 2em;
+}
+#sub_PAbout_Third {
+  border: 0px solid transparent;
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sub_PAbout_Third p {
+  border: 0.1px solid black;
+  padding: 0.2em 0.6em;
+  font-size: 1.1em;
+  color: #001400;
+  text-transform: capitalize;
+}
+#sub_PAbout_Third p i {
+  border: 0px solid transparent;
+  padding: 0em 0.7em 0em 0.5em;
+  font-size: 19px;
+  color: rgb(228, 61, 0);
+}
+/* 3 ---- PAbout Third ( New ) ---- */
+#PAbout_Third {
+  border: 0.1px solid black;
+  padding: 0.5em 2em 2em 2em;
+  /* background-color: aqua; */
+}
+#sub_PAbout_Third {
+  border: 0.1px solid black;
+  padding: 0.2em 1em 0.5em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#Third_Box_1, #Third_Box_2, #Third_Box_3, #Third_Box_4 {
+  border: 0.1px solid black;
+  width: 21%;
+  padding: 0.7em 0.8em;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#Third_Box_1 {
+  background: linear-gradient(to right, #ce5702, #fcbf0a);
+}
+#Third_Box_2 {
+  background: linear-gradient(to right, #027902, #62ca66);
+}
+#Third_Box_3 {
+  background: linear-gradient(to right, #fd0e42, #FD9088);
+}
+#Third_Box_4 {
+  background: linear-gradient(to right, #0251aa, #18c9f5);
+}
+#Third_Box_1_Part1{
+  border: 0.1px solid black;
+  width: 65%;
+  padding: 0.1em 0.3em;
+}
+#Third_Box_Num {
+  border: 0.1px solid black;
+  font-size: 1.7em;
+  font-weight: bold;
+  display: block;
+  color: white;
+}
+#Third_Box_P{
+  border: 0.1px solid black;
+  width: 65%;
+  color: white;
+  font-size: 0.85em;
+  display: block;
+  /* color: gray; */
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+#Third_Box_1_Part2{
+  border: 0.1px solid black;
+  width: 35%;
+  padding: 0.2em 0em;
+}
+#Third_Box_1_Part2 img{
+  border: 0.1px solid black;
+  width: 75%;
+  display: block;
+  margin: 0em auto;
+  filter: brightness(0) invert(1) grayscale(1);
+}
+/* Start */
+
+/* -------------------------------- */
+/* Media Queries In CSS */
+/* -------------------------------- */
+/* 1 */
+@media screen and (min-width: 1px) and (max-width: 1400px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 1em 2em;
+  }
+  #PAbout_First_1 {
+    padding: 1em 1.5em;
+  }
+  #PAbout_First_1_Box {
+    padding: 0.1em 1em;
+    display: flex;
+    flex-direction: row;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0.5em;
+    width: 70%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.5em 1em;
+    width: 90%;
+    letter-spacing: 0.5px;
+    font-size: 0.95em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0.2em 0.35em;
+    width: 90%;
+    margin: 1.5em auto 0em auto;
+    font-size: 2.1em;
+    letter-spacing: 1.5px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.5em 1em;
+    width: 90%;
+    font-size: 0.95em;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.5em 0.5em;
+    width: 30%;
+  }
+  #PAbout_First_1_Box_2_ImgParent {
+    padding: 0.1em;
+  }
+  #sub_PAbout_First_1_Box_2_ImgParent {
+    padding: 0.1em;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 1em 2em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.7em 0.6em;
+    letter-spacing: 0.5px;
+    font-size: 2.4em;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.4em;
+    font-size: 37px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 1em 1.8em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 1em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.2em 0.5em;
+    font-size: 1.1em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.4em;
+    font-size: 19px;
+  }
+  /* - */
+}
+/* 2 */
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 1em 1.5em;
+  }
+  #PAbout_First_1 {
+    padding: 1em 1.5em;
+  }
+  #PAbout_First_1_Box {
+    padding: 0.1em 0.2em;
+    display: flex;
+    flex-direction: row;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0em;
+    width: 70%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.5em 1em;
+    width: 90%;
+    letter-spacing: 0.5px;
+    font-size: 0.95em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0.2em 0.35em;
+    width: 90%;
+    margin: 1.5em auto 0.1em auto;
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.5em 1em;
+    width: 90%;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.5em 0.5em;
+    width: 30%;
+  }
+  #PAbout_First_1_Box_2_ImgParent {
+    padding: 0.1em;
+  }
+  #sub_PAbout_First_1_Box_2_ImgParent {
+    padding: 0.1em;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 1em 2em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.7em 0.65em;
+    letter-spacing: 0.5px;
+    font-size: 2em;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.4em;
+    font-size: 35px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 1em 1.6em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 1em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.2em 0.5em;
+    font-size: 1.05em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.4em;
+    font-size: 18px;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 1000px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 1em 0.5em;
+  }
+  #PAbout_First_1 {
+    padding: 1em 1em;
+  }
+  #PAbout_First_1_Box {
+    padding: 0.1em 0.1em;
+    display: flex;
+    flex-direction: row;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0em;
+    width: 70%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.3em 1em;
+    width: 90%;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0em 0.35em;
+    width: 90%;
+    margin: 1.5em auto 0.1em auto;
+    font-size: 1.4em;
+    letter-spacing: 1.5px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.3em 1em;
+    width: 90%;
+    font-size: 0.85em;
+    letter-spacing: 1.2px;
+    word-spacing: 0.5px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.2em 0.2em;
+    width: 30%;
+  }
+  #PAbout_First_1_Box_2_ImgParent {
+    padding: 0em;
+  }
+  #sub_PAbout_First_1_Box_2_ImgParent {
+    padding: 0em;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 1em 0.9em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.8em 0.6em;
+    letter-spacing: 0.5px;
+    font-size: 1.8em;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.4em;
+    font-size: 32px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 0.5em 0.8em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 0.8em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.1em 0.5em;
+    font-size: 1em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.4em;
+    font-size: 17px;
+  }
+  /* - */
+}
+/* 3 */
+@media screen and (min-width: 1px) and (max-width: 800px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 1em 0.2em;
+  }
+  #PAbout_First_1 {
+    padding: 1em 0.2em;
+  }
+  #PAbout_First_1_Box {
+    padding: 0.1em 0.1em;
+    display: flex;
+    flex-direction: row;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0em;
+    width: 70%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.3em 0.5em;
+    width: 95%;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0em 0.5em;
+    width: 95%;
+    margin: 1.2em auto 0.2em auto;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.3em 0.83em;
+    width: 95%;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.2em 0.2em;
+    width: 30%;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 1em 0.2em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.7em 0.45em;
+    letter-spacing: 0.5px;
+    font-size: 1.5em;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.4em;
+    font-size: 26px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 0.5em 0.2em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 0.3em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.1em 0.4em;
+    font-size: 1em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.2em;
+    font-size: 17px;
+  }
+  /* - */
+}
+/* 4 */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 1em 0.2em;
+  }
+  #PAbout_First_1 {
+    padding: 1em 0.2em;
+  }
+  #PAbout_First_1_Box {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0em;
+    width: 100%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.3em 0.3em;
+    width: 90%;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0em 0.3em;
+    width: 90%;
+    margin: 1.2em auto 0.2em auto;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.3em 0.6em;
+    width: 90%;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.5em 0.5em;
+    width: 100%;
+  }
+  #PAbout_First_1_Box_2_ImgParent {
+    padding: 0.5em 0.5em;
+  }
+  #sub_PAbout_First_1_Box_2_ImgParent {
+    padding: 0.5em 1em;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 1.1em 0.1em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.9em 0.35em;
+    letter-spacing: 0.3px;
+    font-size: 1.8em;
+    line-height: 1.8em;
+    text-align: center;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.1em;
+    font-size: 28px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 0.5em 1em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 0.5em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.2em;
+    font-size: 16px;
+  }
+  /* - */
+}
+/* 5 */
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  /* 1 - PAbout_First */
+  #PAbout_First {
+    padding: 0.5em 0.2em;
+  }
+  #PAbout_First_1 {
+    padding: 0.5em 0.2em;
+  }
+  #PAbout_First_1_Box {
+    padding: 0.5em 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #PAbout_First_1_Box_1 {
+    padding: 1em 0em;
+    width: 100%;
+  }
+  #PAbout_First_1_Box_1_P1 {
+    padding: 0.3em 0.5em;
+    width: 95%;
+    letter-spacing: 0.5px;
+    font-size: 0.75em;
+  }
+  #PAbout_First_1_Box_1 h3 {
+    padding: 0.5em 0.5em;
+    width: 95%;
+    margin: 1.2em auto 0.2em auto;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+  }
+  #PAbout_First_1_Box_1_P2 {
+    padding: 0.3em 0.6em;
+    width: 95%;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+    word-spacing: 0px;
+  }
+  #PAbout_First_1_Box_2 {
+    padding: 0.5em 0.2em;
+    width: 100%;
+  }
+  #PAbout_First_1_Box_2_ImgParent {
+    padding: 0.5em 0.2em;
+  }
+  #sub_PAbout_First_1_Box_2_ImgParent {
+    padding: 0.5em 0.2em;
+  }
+  /* 2 - PAbout Second */
+  #PAbout_Sec {
+    padding: 0.8em 0.1em;
+  }
+  #PAbout_Sec h1 {
+    padding: 0.5em 0.1em;
+    letter-spacing: 0.5px;
+    font-size: 1.3em;
+    line-height: 2em;
+    text-align: center;
+  }
+  #PAbout_Sec h1 i {
+    padding: 0em 0.3em;
+    font-size: 20px;
+  }
+  /* 3 - PAbout Third */
+  #PAbout_Third {
+    padding: 0.5em 0.4em;
+  }
+  #sub_PAbout_Third {
+    padding: 0.5em 0.1em;
+  }
+  #sub_PAbout_Third p {
+    padding: 0.1em 0.2em;
+    font-size: 0.75em;
+  }
+  #sub_PAbout_Third p i {
+    padding: 0em 0.7em 0em 0.2em;
+    font-size: 14px;
+  }
+  /* - */
+}

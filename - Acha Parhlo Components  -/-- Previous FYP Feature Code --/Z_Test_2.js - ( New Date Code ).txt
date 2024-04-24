@@ -1,0 +1,98 @@
+import React, { useState, useEffect } from 'react';
+
+function Z_Test_2() {
+    // ----------- Backend Part Logic -----------
+    const [selectedDay, setSelectedDay] = useState(-1);
+    const [existingAppointments, setExistingAppointments] = useState([]);
+    // Array For Date
+    let DaysList = [];
+
+    useEffect(() => {
+        // Simulating fetching data from Firebase
+        const appointments = [
+            { Date: 1 },
+            { Date: 3 },
+            { Date: 4 },
+            { Date: 6 },
+            { Date: 8 }
+        ];
+        setExistingAppointments(appointments);
+    }, []);
+
+    // useState For Date
+    const [days, setDays] = useState([]);
+
+    useEffect(() => {
+        DaysList = [];
+        for (let i = 1; i <= getDays(new Date().getMonth() + 1); i++) {
+            DaysList.push({ day: i, selected: false });
+        }
+        setDays(DaysList);
+    }, []);
+
+    const getDays = month => {
+        let days = 0;
+        if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
+            days = 31;
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+            days = 30;
+        } else if (month === 2) {
+            days = 28; // Assuming it's not a leap year for simplicity
+        }
+        return days;
+    };
+
+    // Main Body
+    return (
+        <div className="container">
+            {/* Date */}
+            <div style={{ marginTop: 200 }}>
+                {/* Flatlist For Day */}
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    {days.map((item, index) => {
+                        const isDateBooked = existingAppointments.find(appointment => appointment.Date === index + 1);
+                        return (
+                            <button
+                                key={item.day}
+                                style={{
+                                    width: 40,
+                                    height: 40,
+                                    borderRadius: 7,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    backgroundColor: selectedDay === index ? 'orangered' : isDateBooked ? 'pink' : 'white',
+                                    borderWidth: selectedDay === index ? 0 : 0.5,
+                                    marginLeft: 13,
+                                    borderColor: "grey",
+                                }}
+                                onClick={() => {
+                                    if (item.day < new Date().getDate()) {
+                                        // Do nothing for past dates
+                                    } else {
+                                        setSelectedDay(index);
+                                    }
+                                }}>
+                                <span style={{ color: selectedDay === index ? 'white' : 'black' }}>
+                                    {item.day}
+                                </span>
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const styles = {
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+    date_fig: {
+        fontFamily: 'HeeboExtra',
+        fontSize: 20,
+    },
+};
+
+export default Z_Test_2;
