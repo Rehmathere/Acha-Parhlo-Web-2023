@@ -52,7 +52,7 @@ export default function App() {
   // Main Body
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         {showNavbar && <Navbar />}
         <Routes>
           {showImgSlider && (
@@ -85,10 +85,10 @@ export default function App() {
           <Route path='/PAdd_U_add' element={<ProtectedRoute><PAdd_U_add /></ProtectedRoute>} />
           <Route path='/PAdd_Uni_Update/:id' element={<ProtectedRoute><PAdd_Uni_Update /></ProtectedRoute>} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* --------------------------------------------------- */}
       {/* Extra Working */}
-      <Z_Test_Parent />
+      {/* <Z_Test_Parent /> */}
     </>
   );
 }
