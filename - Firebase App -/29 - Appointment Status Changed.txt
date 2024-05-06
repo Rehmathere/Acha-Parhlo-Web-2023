@@ -1,0 +1,60 @@
+import React, { useEffect, useState } from "react";
+// CSS
+import "../Portal/MyFeatures/PChat/FinalChat.css";
+// Status Images
+import Status_Img_1 from "../Pics/Status_1.png";
+import Status_Img_2 from "../Pics/Status_2.png";
+import Status_Img_3 from "../Pics/Status_3.png";
+import Status_Img_4 from "../Pics/PT_4.png";
+// Firebase
+import { database1 } from "../Portal/firebase";
+import { collection, getDocs } from "firebase/firestore";
+
+// Status Function
+const getStatusImage = (status) => {
+  switch (status) {
+    case "Accepted":
+      return Status_Img_1;
+    case "Rejected":
+      return Status_Img_2;
+    case "Delayed":
+      return Status_Img_3;
+    default:
+      return Status_Img_4;
+  }
+};
+
+export default function Z_Test() {
+  // ------------- Backend Part Logic -------------
+  const [val, setVal] = useState([]);
+  const value = collection(database1, "3 - Appointment");
+  // Function
+  const getData = async () => {
+    const dbVal = await getDocs(value);
+    setVal(dbVal.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  // ------------- Backend Part Logic -------------
+  // Main Body
+  return (
+    <>
+      {/* Heading */}
+      <div id="Z_Create">
+        <div id="Z_Create_Part_1">
+          <h4>Appointment App Feature</h4>
+        </div>
+      </div>
+      {/* Box */}
+      <div className="container">
+        {val.map((values) => (
+          <div id="Z_T_1_Box" key={values.id}>
+            <img src={getStatusImage(values.status)} alt={values.status} />
+            <h6>{values.status}</h6>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
