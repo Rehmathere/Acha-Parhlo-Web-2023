@@ -54,7 +54,7 @@
   border: 0px solid transparent;
   width: 100%;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 0.81em;
   padding: 0em 4.5em;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -360,7 +360,7 @@
   border: 0px solid transparent;
   width: 100%;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 0.81em;
   padding: 0em 4.5em;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",

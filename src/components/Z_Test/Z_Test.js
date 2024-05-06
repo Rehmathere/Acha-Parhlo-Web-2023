@@ -1,59 +1,83 @@
-import React, { useEffect, useState } from 'react';
-// Navigation
-import { useNavigate } from 'react-router-dom';
-// CSS
-import "../Portal/MyFeatures/PChat/FinalChat.css";
-// Firebase
-import { database1 } from '../Portal/firebase';
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import React, { useState } from "react";
+import "../Portal/MyFeatures/PAdd_Uni/PAdd_U.css";
+// Images
+import E_Mail_1 from "../Pics/E_Mail_1.png";
 
 export default function Z_Test() {
-    // Navigate
-    const navigate = useNavigate();
-    // ------------- Backend Part Logic -------------
-    const [val, setVal] = useState([]);
-    const value = collection(database1, "3 - Appointment");
-    // Function
-    const getData = async () => {
-        const dbVal = await getDocs(value);
-        setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-    }
-    useEffect(() => {
-        getData();
-    }, []);
-    // View
-    const handleEdit = (id) => {
-        navigate(`/Z_Test_2/${id}`);
-    }
-    // Delete logic
-    const handleDelete = async (id) => {
-        await deleteDoc(doc(database1, "3 - Appointment", id));
-        getData(); // Refresh data after delete
-    }
-    // ------------- Backend Part Logic -------------
-    // Main Body
-    return (
-        <>
-            {/* Heading */}
-            <div id="Z_Create">
-                <div id="Z_Create_Part_1">
-                    <h4>Appointment App Feature</h4>
-                </div>
+  // ------ Confirm Add University Logic ------
+  // State to manage which box to display
+  const [showBox2, setShowBox2] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showParent, setShowParent] = useState(false);
+  // Function to handle button click and toggle between boxes
+  const handleButtonClick = () => {
+    setShowBox2(!showBox2);
+  };
+  // Function to handle "Add University" button click and toggle visibility of confirmation div
+  const handleAddUniversityClick = () => {
+    setShowParent(true); // Show the parent div
+    setShowConfirmation(true);
+    // Reset to show Box 1 whenever Add University button is clicked
+    setShowBox2(false);
+  };
+  // Function to handle "Don't Add This University" button click and hide the entire parent div
+  const handleCancelClick = () => {
+    setShowParent(false);
+  };
+  const handleCancelClick_2 = () => {
+    setShowParent(false);
+  };
+  // Main Body
+  return (
+    <>
+      {/* first */}
+      <div>
+        <h1>Confirm Portion Below</h1>
+        <button onClick={handleAddUniversityClick}>Add University</button>
+      </div>
+      {/* second */}
+      <div
+        id="E_PA_U_ConfirmAdd_Parent"
+        style={{ display: showParent ? "block" : "none" }}
+      >
+        {/* Basic Logic */}
+        <div
+          id="E_sub_PA_U_ConfirmAdd_Parent"
+          style={{ display: showConfirmation ? "block" : "none" }}
+        >
+          <div id="E_PA_U_ConfirmAdd_Parent_Box">
+            {/* Box 1 */}
+            <div
+              id="E_PA_U_ConfirmAdd_1"
+              style={{ display: showBox2 ? "none" : "block" }}
+            >
+              <div id="E_PA_U_1_Img_Box">
+                {/* 1 */}
+                <img src={E_Mail_1} alt="NA" />
+              </div>
+              {/* 2 */}
+              <h4>Email Verification Is Sent</h4>
+              {/* 3 */}
+              <p>
+                we need you to verify your email. Please check your Inbox and confirm it's really you.
+              </p>
+              {/* Button Box 1 */}
+              <button onClick={handleButtonClick}>Move To Next Box</button>
+              {/* Cancel Button */}
+              <button onClick={handleCancelClick}>Cancel</button>
             </div>
-            {/* Box */}
-            <div className='container'>
-                {val.map(values =>
-                    <div id='Z_T_1_Box' key={values.id}>
-                        <h6>Name : &nbsp; {values.value_1}</h6>
-                        <h6>Date : &nbsp; {values.Date}</h6>
-                        <h6>Time Slot : &nbsp; {values.TimeSlot}</h6>
-                        <h6>{values.showExtraTimeText}</h6>
-                        <button onClick={() => handleEdit(values.id)}>Appointment Detail</button>
-                        {/* Delete Btn */}
-                        <button onClick={() => handleDelete(values.id)}>Delete</button>
-                    </div>
-                )}
+            {/* Box 2 */}
+            <div
+              id="E_PA_U_ConfirmAdd_2"
+              style={{ display: showBox2 ? "block" : "none" }}
+            >
+              <h1>Now, It's Box 2</h1>
+              {/* Cancel Button */}
+              <button onClick={handleCancelClick_2}>Cancel</button>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

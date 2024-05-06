@@ -96,14 +96,14 @@ export default function PChat() {
                             <div id="PChat_first_Part_2">
                                 {/* Heading */}
                                 <div id="PChat_first_Part_Chat_Heading">
-                                    <div id="PCHat_Heading_Part_0">
-                                        Sr. No
-                                    </div>
+                                    {/* <div id="PCHat_Heading_Part_0">
+                                        Messages
+                                    </div> */}
                                     <div id="PCHat_Heading_Part_1">
-                                        Logo
+                                        Messages
                                     </div>
                                     <div id="PCHat_Heading_Part_2">
-                                        Messages
+                                        User
                                     </div>
                                 </div>
                                 {/* Chat Box Click */}
@@ -111,9 +111,9 @@ export default function PChat() {
                                     <div id="PChat_Box_Messages_Part_0">
                                         1
                                     </div>
-                                    <div id="PChat_Box_Messages_Part_1">
+                                    {/* <div id="PChat_Box_Messages_Part_1">
                                         <img src={Z_chat} alt="NA" />
-                                    </div>
+                                    </div> */}
                                     <div id="PChat_Box_Messages_Part_2">
                                         Rehmat Qazi
                                     </div>

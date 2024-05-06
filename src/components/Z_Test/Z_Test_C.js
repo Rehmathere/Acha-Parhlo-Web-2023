@@ -1,67 +1,74 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import {useEffect, useRef, useState} from "react";
 
-import ProtectedRoute from './ProtectedRoute';
+const Z_Test_C = ({length = 4, onOtpSubmit = () => {}}) => {
+  const [otp, setOtp] = useState(new Array(length).fill(""));
+  const inputRefs = useRef([]);
 
-//import { Getcontext } from './component/contextApi';
+  useEffect(() => {
+    if (inputRefs.current[0]) {
+      inputRefs.current[0].focus();
+    }
+  }, []);
 
-import Home from './Home';
-import About from './About';
-import Analysis from './Analysis';
-import Header from "./component/Header";
-import Login from './Login';
-import Signup from './Signup';
-import Logout from './Logout';
-// import PatientRecord from './component/PatientRecord';
-import PatientRecord from './component/PatientRecordNew';
-import PatientDetails from './component/singlepage';
-// import ServicesHomeThree from './component/ServicesHomeThree';
-import HeaderHomeEight from './component/HeaderHomeEight';
-import { useAuth } from './AuthContext';
-import ResetPassword from './passwordreset';
-// import { MessageProvider,useMessage } from './ContextApi/MessageContext';
+  const handleChange = (index, e) => {
+    const value = e.target.value;
+    if (isNaN(value)) return;
 
+    const newOtp = [...otp];
+    // allow only one input
+    newOtp[index] = value.substring(value.length - 1);
+    setOtp(newOtp);
 
-const App = () => {
-  const {userName}=useAuth();
-  // const { message } = useMessage();
-  // const userName = currentUser ? currentUser.displayName : 'Guest';
+    // submit trigger
+    const combinedOtp = newOtp.join("");
+    if (combinedOtp.length === length) onOtpSubmit(combinedOtp);
+
+    // Move to next input if current field is filled
+    if (value && index < length - 1 && inputRefs.current[index + 1]) {
+      inputRefs.current[index + 1].focus();
+    }
+  };
+
+  const handleClick = (index) => {
+    inputRefs.current[index].setSelectionRange(1, 1);
+
+    // optional
+    if (index > 0 && !otp[index - 1]) {
+      inputRefs.current[otp.indexOf("")].focus();
+    }
+  };
+
+  const handleKeyDown = (index, e) => {
+    if (
+      e.key === "Backspace" &&
+      !otp[index] &&
+      index > 0 &&
+      inputRefs.current[index - 1]
+    ) {
+      // Move focus to the previous input field on backspace
+      inputRefs.current[index - 1].focus();
+    }
+  };
+
   return (
-    
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<ProtectedRoute><Home name={userName}/></ProtectedRoute>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/analysis" element={<Analysis/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/signup" element={<Signup/>}/>
-          <Route path="/logout" element={<Logout/>}/>
-          <Route path="/reset-password" element={<ResetPassword/>}/>
-          <Route 
-            path="/patientRecord" 
-            element={
-              <ProtectedRoute>
-                <PatientRecord />
-              </ProtectedRoute>
-            } 
+    <div>
+      {otp.map((value, index) => {
+        return (
+          <input
+            key={index}
+            type="text"
+            ref={(input) => (inputRefs.current[index] = input)}
+            value={value}
+            onChange={(e) => handleChange(index, e)}
+            onClick={() => handleClick(index)}
+            onKeyDown={(e) => handleKeyDown(index, e)}
+            className="otpInput"
           />
-          
-          <Route 
-            path="/patient/:id" 
-            element={
-              
-              <ProtectedRoute>
-                <PatientDetails/>
-              </ProtectedRoute>
-              
-            } 
-          />
-          {/* Apply ProtectedRoute to any other routes needing protection */}
-        </Routes>
-      </BrowserRouter>
-   
+        );
+      })}
+    </div>
   );
 };
 
-export default App;
+export default Z_Test_C;

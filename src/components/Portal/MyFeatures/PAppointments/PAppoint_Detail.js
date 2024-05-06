@@ -104,6 +104,7 @@ export default function PAppoint_Detail() {
     const updateData = doc(database1, "3 - Appointment", id);
     await updateDoc(updateData, { Date: selectedDate });
     setAppointmentDate(selectedDate);
+    setShowExtraTimeText(" ");
   };
   // Define the status color based on its value
   const getStatusColor = () => {

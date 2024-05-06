@@ -117,7 +117,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.5em 0.5em;
+  padding: 1.2em 0.5em;
   border-radius: 5px;
   width: 85%;
   margin: 0em auto;
@@ -247,7 +247,7 @@
     width: 50%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.5em 0.5em;
+    padding: 1em 0.5em;
     width: 85%;
   }
   #PCHat_Heading_Part_0 {
@@ -341,7 +341,7 @@
     width: 50%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.5em 0.5em;
+    padding: 0.9em 0.5em;
     width: 85%;
   }
   #PCHat_Heading_Part_0 {
@@ -437,7 +437,7 @@
     width: 60%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.5em 0.5em;
+    padding: 0.81em 0.5em;
     width: 85%;
   }
   #PCHat_Heading_Part_0 {
@@ -533,7 +533,7 @@
     width: 60%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.5em 0.5em;
+    padding: 1.1em 0.5em;
     width: 85%;
   }
   #PCHat_Heading_Part_0 {
@@ -633,7 +633,7 @@
     width: 100%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.5em 0.5em;
+    padding: 1.2em 0.5em;
     width: 100%;
   }
   #PCHat_Heading_Part_0 {
@@ -738,7 +738,7 @@
     width: 100%;
   }
   #PChat_first_Part_Chat_Heading {
-    padding: 0.3em 0.5em;
+    padding: 1em 0.5em;
     width: 100%;
   }
   #PCHat_Heading_Part_0 {
@@ -748,13 +748,13 @@
     font-size: 0.65em;
   }
   #PCHat_Heading_Part_1 {
-    padding: 0.5em 0.5em;
+    padding: 0.5em 0em;
     width: 25%;
     letter-spacing: 1px;
     font-size: 0.65em;
   }
   #PCHat_Heading_Part_2 {
-    padding: 0.5em 0.5em;
+    padding: 0.5em 0em 0.5em 0.5em; 
     width: 50%;
     letter-spacing: 1px;
     font-size: 0.65em;
