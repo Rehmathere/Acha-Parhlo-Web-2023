@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import HomeLast from "./components/HomeLast";
 import AboutUs from "./components/About/AboutUs";
 import Contact from "./components/Contact/Contact";
-import BlogPage from './components/Blog/BlogPage';
+import BlogPage from "./components/Blog/BlogPage";
 import BlogUniDetails from "./components/Blog/BlogUniDetails";
 import BlogPage2_H from "./components/Blog/BlogPage2_H";
 import BlogPage3_V from "./components/Blog/BlogPage3_V";
@@ -29,12 +29,12 @@ import PAdd_U_add from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_U_add";
 import PAdd_Uni_Update from "./components/Portal/MyFeatures/PAdd_Uni/PAdd_Uni_Update";
 import FinalChat from "./components/Portal/MyFeatures/PChat/FinalChat";
 // Session Header File
-import ProtectedRoute from './components/Portal/ProtectedRoute';
-import { useAuth } from './components/Portal/AuthContext';
+import ProtectedRoute from "./components/Portal/ProtectedRoute";
+import { useAuth } from "./components/Portal/AuthContext";
 
 export default function App() {
   // Session
-  const {userName}=useAuth();
+  const { userName } = useAuth();
   // Splash
   const [showImgSlider, setShowImgSlider] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
@@ -52,7 +52,7 @@ export default function App() {
   // Main Body
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         {showNavbar && <Navbar />}
         <Routes>
           {showImgSlider && (
@@ -85,11 +85,10 @@ export default function App() {
           <Route path='/PAdd_U_add' element={<ProtectedRoute><PAdd_U_add /></ProtectedRoute>} />
           <Route path='/PAdd_Uni_Update/:id' element={<ProtectedRoute><PAdd_Uni_Update /></ProtectedRoute>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* --------------------------------------------------- */}
       {/* Extra Working */}
-      {/* <Z_Test_Parent /> */}
+      <Z_Test_Parent />
     </>
   );
 }
-
