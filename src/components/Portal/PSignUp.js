@@ -11,8 +11,34 @@ import { useNavigate } from "react-router-dom";
 import "./Portal.css";
 // Images
 import register from "../Pics/register.png";
+// Images
+import E_Mail_1 from "../Pics/E_Mail_1.png";
+import E_Tick from "../Pics/E_Tick.gif";
 
 export default function PSignUp() {
+  // -------- Verify Email Modal --------
+  const [showBox2, setShowBox2] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showParent, setShowParent] = useState(false);
+  // Function to handle button click and toggle between boxes
+  const handleButtonClick = () => {
+    setShowBox2(!showBox2);
+  };
+  // Function to handle toggle visibility of confirmation div
+  const handleAddUniversityClick = () => {
+    setShowParent(true); // Show the parent div
+    setShowConfirmation(true);
+    // Reset to show Box 1 whenever Add University button is clicked
+    setShowBox2(false);
+  };
+  // Function to d hide the entire parent div
+  const handleCancelClick = () => {
+    setShowParent(false);
+  };
+  const handleCancelClick_2 = () => {
+    setShowParent(false);
+  };
+  // -------- Verify Email Modal --------
   // Toggle Password
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
@@ -25,8 +51,12 @@ export default function PSignUp() {
       await database.currentUser.reload();
       if (database.currentUser.emailVerified) {
         console.log("Email is verified");
+        // Box 2 Modal ( Open )
+        setShowBox2(!showBox2);
         clearInterval(intervalId);
         setTimeout(() => {
+          // Box Modal Closing
+          setShowParent(false);
           navigate("/PAbout");
         }, 7000);
       }
@@ -47,6 +77,11 @@ export default function PSignUp() {
           .then(() => {
             console.log("Verification email sent");
             handleEmailVerification(); // Start monitoring email verification
+            // Box 1 Modal ( Open )
+            setShowParent(true); // Show the parent div
+            setShowConfirmation(true);
+            // Reset to show Box 1 whenever Add University button is clicked
+            setShowBox2(false);
           })
           .catch((error) => {
             console.error("Error sending verification email: ", error);
@@ -146,6 +181,58 @@ export default function PSignUp() {
           </div>
         </div>
       </div>
+      {/* -------- Verify Email Modal -------- */}
+      <div
+        id="E_PA_U_ConfirmAdd_Parent"
+        style={{ display: showParent ? "block" : "none" }}
+      >
+        {/* Basic Logic */}
+        <div
+          id="E_sub_PA_U_ConfirmAdd_Parent"
+          style={{ display: showConfirmation ? "block" : "none" }}
+        >
+          <div id="E_PA_U_ConfirmAdd_Parent_Box">
+            {/* Box 1 */}
+            <div
+              id="E_PA_U_ConfirmAdd_1"
+              style={{ display: showBox2 ? "none" : "block" }}
+            >
+              <div id="E_PA_U_1_Img_Box">
+                {/* 1 */}
+                <img src={E_Mail_1} alt="NA" />
+              </div>
+              {/* 2 */}
+              <h4>Email Verification Is Sent</h4>
+              {/* 3 */}
+              <p>
+                we need you to verify your email. Please check your Inbox and
+                confirm it's really you.
+              </p>
+              {/* Button Box 1 */}
+              {/* <button onClick={handleButtonClick}>Move To Next Box</button> */}
+              {/* Cancel Button */}
+              {/* <button onClick={handleCancelClick}>Cancel</button> */}
+            </div>
+            {/* Box 2 */}
+            <div
+              id="E_PA_U_ConfirmAdd_1"
+              style={{ display: showBox2 ? "block" : "none" }}
+            >
+              <div id="E_PA_U_1_Img_Box">
+                {/* 1 */}
+                <img src={E_Tick} alt="NA" />
+              </div>
+              {/* 2 */}
+              <h4>Your Email Is Verified</h4>
+              {/* 3 */}
+              {/* <p>Now You Can Use Our Services</p> */}
+              {/* Cancel Button */}
+              {/* <button onClick={handleCancelClick_2}>Cancel</button> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* -------- Verify Email Modal -------- */}
     </div>
   );
 }

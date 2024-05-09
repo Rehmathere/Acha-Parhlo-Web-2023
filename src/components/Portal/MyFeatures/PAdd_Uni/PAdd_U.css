@@ -57,7 +57,7 @@
   color: white;
   font-size: 1em;
 }
-#PR_Third_Box_Part_1 img{
+#PR_Third_Box_Part_1 img {
   border: 0px solid transparent;
   width: 25%;
   border-radius: 10px;
@@ -470,7 +470,7 @@
 }
 /* - Registration Email Verify CSS - */
 #E_PA_U_ConfirmAdd_Parent {
-  border: 0.1px solid red;
+  border: 0px solid transparent;
   padding: 1em 1em;
   position: fixed;
   top: 0;
@@ -484,55 +484,56 @@
   align-items: center;
 }
 #E_sub_PA_U_ConfirmAdd_Parent {
-  border: 0.1px solid red;
+  border: 0px solid transparent;
   background-color: transparent;
   width: 100%;
   height: 100%;
 }
 #E_PA_U_ConfirmAdd_Parent_Box {
-  border: 0.1px solid red;
+  border: 0px solid transparent;
   padding: 1em 0.5em;
   background-color: white;
   width: 35%;
-  border-radius: 5px;
+  border-radius: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(0, 0, 0, 0.664) 0px 22px 70px 4px;
 }
-#E_PA_U_ConfirmAdd_1{
-  border: 0.1px solid red;
+#E_PA_U_ConfirmAdd_1 {
+  border: 0px solid transparent;
+  border-radius: 10px;
   padding: 1em 0.5em;
-  background-color: white; 
+  background-color: white;
 }
-#E_PA_U_1_Img_Box{
-  border: 0.1px solid red;
+#E_PA_U_1_Img_Box {
+  border: 0px solid transparent;
   padding: 2em 1em 1em 1em;
   margin: 1em 0em 0.1em 0em;
-  background-color: white; 
+  background-color: white;
 }
-#E_PA_U_1_Img_Box Img{
-  border: 0.1px solid red;
+#E_PA_U_1_Img_Box Img {
+  border: 0px solid transparent;
   padding: 0.05em 0.05em;
   width: 40%;
   display: block;
   margin: 0em auto;
 }
-#E_PA_U_ConfirmAdd_1 h4{
-  border: 0.1px solid red;
+#E_PA_U_ConfirmAdd_1 h4 {
+  border: 0px solid transparent;
   padding: 0.2em 0.1em;
-  background-color: white; 
+  background-color: white;
   text-align: center;
   text-transform: capitalize;
   font-weight: bold;
   color: #001400;
   letter-spacing: 1px;
 }
-#E_PA_U_ConfirmAdd_1 p{
-  border: 0.1px solid red;
+#E_PA_U_ConfirmAdd_1 p {
+  border: 0px solid transparent;
   padding: 0.2em 2em;
-  background-color: white; 
+  background-color: white;
   text-align: center;
   text-transform: capitalize;
   color: #001400;
@@ -721,11 +722,45 @@
     letter-spacing: 4.5px;
     font-size: 0.9em;
   }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 1em 1em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 1em 0.5em;
+    width: 40%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 1em 0.5em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 1px;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+  }
   /* - */
 }
 /* 2 */
 @media screen and (min-width: 1px) and (max-width: 1200px) {
-  #PR_Third_Box_Part_1 img{
+  #PR_Third_Box_Part_1 img {
     width: 35%;
   }
   /* 1 - PAdd_U_first */
@@ -905,11 +940,46 @@
     letter-spacing: 4.5px;
     font-size: 0.8em;
   }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 0.5em 0.5em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.5em 0.5em;
+    width: 40%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 1em 0.5em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.91em;
+    letter-spacing: 1px;
+  }
   /* - */
 }
 /* 3 */
 @media screen and (min-width: 1px) and (max-width: 1000px) {
-  #PR_Third_Box_Part_1 img{
+  #PR_Third_Box_Part_1 img {
     width: 35%;
   }
   /* 1 - PAdd_U_first */
@@ -1090,11 +1160,46 @@
     letter-spacing: 4.5px;
     font-size: 0.7em;
   }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 0.5em 0.5em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.5em 0.5em;
+    width: 45%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 1em 0.5em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
   /* - */
 }
 /* 4 */
 @media screen and (min-width: 1px) and (max-width: 800px) {
-  #PR_Third_Box_Part_1 img{
+  #PR_Third_Box_Part_1 img {
     width: 45%;
   }
   /* 1 - PAdd_U_first */
@@ -1277,11 +1382,46 @@
     letter-spacing: 4.5px;
     font-size: 0.6em;
   }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.2em 0.2em;
+    width: 50%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 1em 0.5em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+  }
   /* - */
 }
 /* 5 */
 @media screen and (min-width: 1px) and (max-width: 600px) {
-  #PR_Third_Box_Part_1 img{
+  #PR_Third_Box_Part_1 img {
     width: 13%;
   }
   /* 1 - PAdd_U_first */
@@ -1483,11 +1623,46 @@
     letter-spacing: 4.5px;
     font-size: 0.6em;
   }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.2em 0.2em;
+    width: 60%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 0.5em 0.5em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 1px;
+    font-size: 1.05em;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.79em;
+    letter-spacing: 1px;
+  }
   /* - */
 }
 /* 6 */
 @media screen and (min-width: 1px) and (max-width: 400px) {
-  #PR_Third_Box_Part_1 img{
+  #PR_Third_Box_Part_1 img {
     width: 20%;
   }
   /* 1 - PAdd_U_first */
@@ -1687,6 +1862,41 @@
     width: 100%;
     letter-spacing: 4.5px;
     font-size: 0.55em;
+  }
+  /* - Registration Email Verify CSS - */
+  #E_PA_U_ConfirmAdd_Parent {
+    padding: 0.1em 0.1em;
+  }
+  #E_sub_PA_U_ConfirmAdd_Parent {
+    width: 100%;
+    height: 100%;
+  }
+  #E_PA_U_ConfirmAdd_Parent_Box {
+    padding: 0.2em 0.2em;
+    width: 75%;
+    border-radius: 20px;
+  }
+  #E_PA_U_ConfirmAdd_1 {
+    border-radius: 10px;
+    padding: 0.2em 0.2em;
+  }
+  #E_PA_U_1_Img_Box {
+    padding: 2em 1em 1em 1em;
+    margin: 1em 0em 0.1em 0em;
+  }
+  #E_PA_U_1_Img_Box Img {
+    padding: 0.05em 0.05em;
+    width: 40%;
+  }
+  #E_PA_U_ConfirmAdd_1 h4 {
+    padding: 0.2em 0.1em;
+    letter-spacing: 0.4px;
+    font-size: 0.9em;
+  }
+  #E_PA_U_ConfirmAdd_1 p {
+    padding: 0.2em 2em;
+    font-size: 0.7em;
+    letter-spacing: 1px;
   }
   /* - */
 }
