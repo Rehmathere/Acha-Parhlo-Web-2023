@@ -78,7 +78,7 @@ export default function PAbout() {
                                 <p id='PAbout_First_1_Box_1_P1'>{currentDateTime.toDateString()}</p>
                                 {/* Displaying User Email */}
                                 {/* <h3>Hello <span>{userEmail.slice(0, 10)}</span> !</h3> */}
-                                <h3>Hello <span>{user.email.slice(0, 10)}</span> !</h3>
+                                <h3>Hello <span>{user.email.split('@')[0]}</span> !</h3>
                                 <p id='PAbout_First_1_Box_1_P2'>Hey Consultant, Let's make today count.</p>
                             </div>
                             <div id="PAbout_First_1_Box_2">
