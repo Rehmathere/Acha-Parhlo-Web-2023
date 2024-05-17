@@ -1,0 +1,474 @@
+
+------------------------------------------------------------------------------
+
+
+import React, { useState, useEffect } from "react";
+import PSidebar from "../PSidebar";
+// useNavigate
+import { useNavigate } from "react-router-dom";
+// CSS
+import "../PProfile/PProfile.css";
+import "../PRecords/PRecords.css";
+import "./PChat.css";
+// Images
+import logout from "../../../Pics/logout.png";
+import Str_7 from "../../../Pics/Str_7.png";
+import chat from "../../../Pics/chat.png";
+import Z_chat from "../../../Pics/Str_10.png";
+// Firebase ( Portal )
+import { database } from "../../firebase";
+// Logout Logic
+import { signOut } from "firebase/auth";
+import "../PAppointments/PAppoint.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import E_User from "../../../Pics/E_User.png";
+import { collection, query, getDocs } from "firebase/firestore";
+// Firebase ( Chat )
+import { database1 } from "../../firebase";
+
+export default function PChat() {
+  const [documents, setDocuments] = useState([]);
+  useEffect(() => {
+    const fetchDocuments = async () => {
+      try {
+        const userCollectionRef = collection(database1, "2 - Chat");
+        const querySnapshot = await getDocs(userCollectionRef);
+        const documentsData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setDocuments(documentsData);
+      } catch (error) {
+        console.error("Error fetching documents:", error);
+      }
+    };
+
+    fetchDocuments();
+  }, []);
+
+  const navigateToChat = (docId) => {
+    navigate(`/FinalChat/${docId}`);
+  };
+
+  useEffect(() => {
+    console.log(documents);
+  }, [documents]);
+
+  // Email Address For Logout Dialog Box
+  const [user] = useAuthState(database);
+  // ------ Logout Logic ------
+  // useNavigate
+  const navigate = useNavigate();
+  // Logout Function
+  const handleClick = () => {
+    signOut(database).then((val) => {
+      console.log(val, "val");
+      navigate("/PLogin");
+    });
+  };
+  // Use state to manage the visibility of the Logout Box
+  const [isLogoutBoxVisible, setLogoutBoxVisibility] = useState(false);
+  // Function to toggle the visibility of the Logout Box
+  const toggleLogoutBox = () => {
+    setLogoutBoxVisibility(!isLogoutBoxVisible);
+  };
+  // ----------------------------------------------------
+  // Main Body
+  return (
+    <div>
+      {/* Header Portion */}
+      <div id="Header">
+        <div id="sub_Header">
+          <div id="Head_1">
+            <p>Acha Parhlo Consultant Portal</p>
+          </div>
+          <div id="Head_2">
+            <button id="sub_Head_2" onClick={toggleLogoutBox}>
+              <img src={logout} alt="NA" />
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* ------------- */}
+      <PSidebar>
+        <>
+          {/* 1 - Heading */}
+          <div id="PTr_first">
+            <div id="sub_PTr_first">
+              <div id="PTr_first_1">
+                <h1>Chat</h1>
+              </div>
+              <div id="PTr_first_2">
+                <img src={Str_7} alt="Na" />
+              </div>
+            </div>
+          </div>
+          {/* ----------------------------------------- */}
+          {/* PChat Code Start From Here */}
+          {/* 2 - PChat__first */}
+          <div id="PChat_first">
+            <div id="sub_PChat_first">
+              {/* Part 1 */}
+              <div id="PChat_first_Part_1">
+                {/* Image Bar */}
+                <div id="PChat_first_Part_1_Image_Box">
+                  <div id="PChat_first_Part_1_Image_Box_1">
+                    <h4>Communicate With Students</h4>
+                  </div>
+                  <div id="PChat_first_Part_1_Image_Box_2">
+                    <img src={chat} alt="NA" />
+                  </div>
+                </div>
+                {/* Points */}
+                <div id="PChat_first_Part_1_Point">
+                  <p>
+                    <i class="fa fa-send"></i> Seen Unread Messsages
+                  </p>
+                  <p>
+                    <i class="fa fa-send"></i> New chat alert
+                  </p>
+                  <p>
+                    <i class="fa fa-send"></i> Sent a chat
+                  </p>
+                  <p>
+                    <i class="fa fa-send"></i> Chat viewed
+                  </p>
+                </div>
+              </div>
+              {/* Part 2 */}
+              <div id="PChat_first_Part_2">
+                {/* Heading */}
+                <div id="PChat_first_Part_Chat_Heading">
+                  {/* <div id="PCHat_Heading_Part_0">
+                                        Messages
+                                    </div> */}
+                  <div id="PCHat_Heading_Part_1">Messages</div>
+                  <div id="PCHat_Heading_Part_2">User</div>
+                </div>
+                {/* Chat Box Click */}
+                {documents.map((doc, index) => (
+                  <div
+                    key={doc.id}
+                    id="PChat_Box_Messages"
+                    onClick={() => navigateToChat(doc.id)}
+                  >
+                    <div id="PChat_Box_Messages_Part_0">{index + 1}</div>
+                    <div id="PChat_Box_Messages_Part_2">{doc.id}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* ----- Previous Code ----- */}
+          {/* ---------------------------------------- */}
+          {/* ---Logout Logic --- */}
+          {isLogoutBoxVisible && (
+            <div id="Logout_Box">
+              {/* Above */}
+              <div id="sub_Logout_Box_Fir">
+                <img src={E_User} alt="NA" />
+                <span>{user.email}</span>
+              </div>
+              {/* Below */}
+              <div id="sub_Logout_Box">
+                <div id="Logout_Box_1">You Want To Logout ?</div>
+                <div id="Logout_Box_2">
+                  <button onClick={handleClick}>Yes, Logout</button>
+                </div>
+              </div>
+            </div>
+          )}
+          {/* ------------------- */}
+        </>
+      </PSidebar>
+    </div>
+  );
+}
+
+
+
+------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------
+
+
+import React, { useState, useEffect, useRef } from "react";
+import {
+  onSnapshot,
+  collection,
+  query,
+  orderBy,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, database } from "./firebase";
+import { signOut } from "firebase/auth";
+import "./FinalChat.css";
+import { useNavigate } from "react-router-dom";
+// Images
+import logout from "../../../Pics/logout.png";
+import PSidebar from "../PSidebar";
+import chat_d_1 from "../../../Pics/chat_d_1.png";
+import line from "../../../Pics/line.png";
+import chat_d_2 from "../../../Pics/chat_d_2.png";
+import E_User from "../../../Pics/E_User.png";
+
+function FinalChat() {
+  // Email Address For Logout Dialog Box
+  const [E_user] = useAuthState(auth);
+  // ------------- Backend Part Logic -------------
+  const [user] = useAuthState(auth);
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState("");
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const getFormattedDate = (timestamp) => {
+    const currentDate = new Date();
+    const messageDate = timestamp.toDate();
+    if (
+      currentDate.getDate() === messageDate.getDate() &&
+      currentDate.getMonth() === messageDate.getMonth() &&
+      currentDate.getFullYear() === messageDate.getFullYear()
+    ) {
+      return "Today";
+    } else if (
+      currentDate.getDate() - messageDate.getDate() === 1 &&
+      currentDate.getMonth() === messageDate.getMonth() &&
+      currentDate.getFullYear() === messageDate.getFullYear()
+    ) {
+      return "Yesterday";
+    } else {
+      const options = { month: "short", day: "numeric", year: "numeric" };
+      return messageDate.toLocaleDateString("en-US", options);
+    }
+  };
+  const formatTimestamp = (timestamp) => {
+    const date = timestamp.toDate();
+    const options = { hour: "2-digit", minute: "2-digit" };
+    return date.toLocaleTimeString("en-US", options);
+  };
+  // Inside sendMessage function:
+  // Inside sendMessage function:
+  const sendMessage = async () => {
+    if (newMessage.trim() !== "") {
+      await addDoc(collection(database, `2 - Chat/${user.email}/Chatting`), {
+        createdAt: serverTimestamp(), // Updated line
+        text: newMessage,
+        user: {
+          _id: user.email,
+          avatar:
+            "https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_640.png",
+        },
+      });
+      setNewMessage("");
+    }
+  };
+  // Inside useEffect hook:
+  // Inside useEffect hook:
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      query(
+        collection(database, `2 - Chat/${user.email}/Chatting`),
+        orderBy("createdAt", "desc")
+      ),
+      (querySnapshot) => {
+        const updatedMessages = querySnapshot.docs.map((doc) => ({
+          _id: doc.id,
+          createdAt:
+            doc.data().createdAt instanceof database.firestore.Timestamp
+              ? doc.data().createdAt.toDate()
+              : new Date(doc.data().createdAt),
+          text: doc.data().text,
+          user: doc.data().user,
+        }));
+        setMessages(updatedMessages);
+        scrollToBottom();
+      }
+    );
+    return unsubscribe;
+  }, []);
+  // ------------- Backend Part Logic -------------
+  // Logout
+  const navigate = useNavigate();
+  const handleClick = () => {
+    signOut(auth).then((val) => {
+      console.log(val, "val");
+      navigate("/PLogin");
+    });
+  };
+  const [isLogoutBoxVisible, setLogoutBoxVisibility] = useState(false);
+  const toggleLogoutBox = () => {
+    setLogoutBoxVisibility(!isLogoutBoxVisible);
+  };
+  // Main Body
+  return (
+    <div>
+      <div id="Header">
+        <div id="sub_Header">
+          <div id="Head_1">
+            <p>Acha Parhlo Consultant Portal</p>
+          </div>
+          <div id="Head_2">
+            <button id="sub_Head_2" onClick={toggleLogoutBox}>
+              <img src={logout} alt="NA" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <PSidebar>
+        <div id="Final_Chat_Parent">
+          <div id="Sub_FinalChat_Parent_1">
+            <div id="Sub_FinalChat_P1_1">
+              <h1>Start A Conversation ...</h1>
+            </div>
+            <div id="Sub_FinalChat_P1_2">
+              <div id="Sub_FinalChat_P1_2_1">
+                <div id="S_FC_P1_2_1_Part_1">
+                  <img src={chat_d_1} alt="NA" />
+                </div>
+                <div id="S_FC_P1_2_1_Part_2">
+                  <img src={line} alt="NA" />
+                </div>
+                <div id="S_FC_P1_2_1_Part_3">Sender Message</div>
+              </div>
+              <div id="Sub_FinalChat_P1_2_1">
+                <div id="S_FC_P1_2_1_Part_1">
+                  <img src={chat_d_2} alt="NA" />
+                </div>
+                <div id="S_FC_P1_2_1_Part_2">
+                  <img src={line} alt="NA" />
+                </div>
+                <div id="S_FC_P1_2_1_Part_3">Receiver Message</div>
+              </div>
+            </div>
+          </div>
+          <div id="Sub_FinalChat_Parent_2">
+            <div style={{ flex: 1, overflowY: "auto", padding: "10px" }}>
+              {messages.map((message, index, array) => (
+                <div key={message._id}>
+                  {index === 0 ||
+                  getFormattedDate(message.createdAt) !==
+                    getFormattedDate(array[index - 1].createdAt) ? (
+                    <div
+                      style={{
+                        textAlign: "center",
+                        color: "#777",
+                        fontSize: "0.9em",
+                        margin: "10px 0",
+                      }}
+                    >
+                      {getFormattedDate(message.createdAt)}
+                    </div>
+                  ) : null}
+                  <div
+                    style={{
+                      textAlign:
+                        message.user._id === user.email ? "right" : "left",
+                      marginLeft:
+                        message.user._id !== user.email ? "10px" : "auto",
+                      backgroundColor:
+                        message.user._id === user.email ? "#001400" : "orange",
+                      color:
+                        message.user._id === user.email ? "white" : "black",
+                      padding: "10px 15px",
+                      margin: "5px",
+                      borderRadius: "10px",
+                      fontFamily: "inherit",
+                      maxWidth: "fit-content",
+                      alignSelf:
+                        message.user._id === user.email
+                          ? "flex-end"
+                          : "flex-start",
+                      display: "flex",
+                      flexDirection: "column",
+                      letterSpacing: "1px",
+                    }}
+                    id="My_Message"
+                  >
+                    {message.user._id !== user.email && (
+                      <div
+                        style={{
+                          fontSize: "0.7em",
+                          color: "black",
+                          marginBottom: "5px",
+                        }}
+                      >
+                        {message.user._id}
+                      </div>
+                    )}
+                    {message.user._id !== user.email && (
+                      <img
+                        src={message.user.avatar}
+                        alt="Avatar"
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          borderRadius: "50%",
+                          marginRight: "5px",
+                        }}
+                      />
+                    )}
+                    <div style={{ paddingTop: "6px" }}>{message.text}</div>
+                    <span
+                      style={{
+                        fontSize: "0.7em",
+                        marginTop: "5px",
+                        alignSelf: "flex-end",
+                      }}
+                    >
+                      {formatTimestamp(message.createdAt)}
+                    </span>
+                  </div>
+                </div>
+              ))}
+              <div ref={messagesEndRef} />
+            </div>
+            <div
+              style={{ display: "flex", alignItems: "center", padding: "10px" }}
+            >
+              <input
+                id="FinalChat_Input"
+                type="text"
+                value={newMessage}
+                onChange={(e) => setNewMessage(e.target.value)}
+                placeholder=" Type Your Message Please ..."
+              />
+              <button onClick={sendMessage} id="FinalChat_Input_Btn">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+        {isLogoutBoxVisible && (
+          <div id="Logout_Box">
+            {/* Above */}
+            <div id="sub_Logout_Box_Fir">
+              <img src={E_User} alt="NA" />
+              <span>{user.email}</span>
+            </div>
+            {/* Below */}
+            <div id="sub_Logout_Box">
+              <div id="Logout_Box_1">You Want To Logout ?</div>
+              <div id="Logout_Box_2">
+                <button onClick={handleClick}>Yes, Logout</button>
+              </div>
+            </div>
+          </div>
+        )}
+      </PSidebar>
+    </div>
+  );
+}
+
+export default FinalChat;
+
+
+
+------------------------------------------------------------------------------
