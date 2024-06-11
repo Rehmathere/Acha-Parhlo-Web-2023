@@ -1,0 +1,21 @@
+Now, It's Turn to Demonstrate our Web Application Portal of ACHA PARHLO, Which is the Second Component of Our Final Year Project.
+
+In Essence, Web Application Management Portal has been Developed to Enhance the Capabilities of Consultants who aid Students in Securing Admissions to their Preferred Universities. It's Primary Functionalities : -
+
+🟩 Consultants are Empowered with the Authority to Update the Status of Applications submitted by Students, thereby Facilitating Effective Monitoring of Submission Progress by the Students.
+🟩 Consultants are afforded Access to comprehensive Student Profiles, inclusive of Personal Information and Pertinent Attached Documents. This Centralized Repository Streamlines the Efficient Management of Student Documentation.
+🟩 In the Event of Encountering Issues or Requiring further Information from Students, Consultants can Utilize our Bespoke Chat Feature for Direct Communication with the Students.
+🟩 Consultants possess the Capability to Seamlessly Integrate Universities from 5 Specific Australian Cities Including Perth, Brisbane, Melbourne, Sydney, and Adelaide—into their Web Management Portal. This feature provides them with the Flexibility to promptly update course details and Remove them as necessary.
+🟩 A User-Friendly feature enables Consultants to Oversee Student Appointments and adjust their Statuses accordingly. Consultants maintain the Option to Accept, Reject, or Reschedule Appointments to Alternative Dates and Times. Moreover, all Rescheduled Appointments are conveniently accessible within our Tailored Calendar Interface.
+
+
+🟥 Tools And Technology : 
+I Developed My Web Application Portal Using React And The Bootstrap Framework, Integrating Firebase For Backend Authentication, Database Management, Storage, And Security Purposes. This Approach Ensures A Seamless Experience Across Various Platforms While Maintaining Robust Functionality And Security Measures.
+
+
+
+I Would Like To Express My Appreciation To Mustafa Mehmood For His Invaluable Assistance In Both Web And Mobile Application Development. Mustafa's Beautifully Crafted Designs For Both Platforms Have Greatly Impressed Me And Inspired Me To Further Enhance My Skills In Development. Best Of Luck To Mustafa Mehmood, May You Achieve Great Success In The Future.
+
+
+
+Or Lastly, I Would Like To Extend My Gratitude To Our Diligent Supervisor, Mr. Qazi Mohsin Ijaz. Mr. Ijaz Provided Such Tremendous Support Throughout Our Entire Project That Any Issues That Arise Were Quickly Resolved. Thank You, My Mentor.
